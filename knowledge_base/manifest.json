@@ -1,0 +1,295 @@
+{
+  "course": "AIAA 2711",
+  "source_dir": "C:\\Users\\27059\\Desktop\\自学agent\\2711课件",
+  "chunking": "one chunk per PDF page (source-traceable by file + page)",
+  "extraction": {
+    "text_layer": "PDF embedded text layer (PyMuPDF)",
+    "vision": "page rendered to PNG, then transcribed by DeepSeek vision API (used for Lectures 1-9, whose PDFs are vector-outline and carry no text layer)"
+  },
+  "files": [
+    {
+      "file": "Lecture Slides S2026\\AIAA2711 Advanced Topic.pdf",
+      "lecture": null,
+      "title": "AIAA2711 Advanced Topic",
+      "pages": 17,
+      "pages_text_layer": 17,
+      "pages_vision": 0,
+      "sha256_16": "8f021f5f95211009",
+      "size_mb": 2.14
+    },
+    {
+      "file": "Lecture Slides S2026\\AIAA2711 Course Overview S2026.pdf",
+      "lecture": null,
+      "title": "AIAA2711 Course Overview S2026",
+      "pages": 17,
+      "pages_text_layer": 17,
+      "pages_vision": 0,
+      "sha256_16": "5e149f7a29faf7ae",
+      "size_mb": 3.71
+    },
+    {
+      "file": "Lecture Slides S2026\\AIAA2711 Week 2 Before Class.pdf",
+      "lecture": null,
+      "title": "AIAA2711 Week 2 Before Class",
+      "pages": 4,
+      "pages_text_layer": 4,
+      "pages_vision": 0,
+      "sha256_16": "9baa966d42d506bb",
+      "size_mb": 0.31
+    },
+    {
+      "file": "Lecture Slides S2026\\Introduction to Research Topics in SSS-CPS Lab.pdf",
+      "lecture": null,
+      "title": "Introduction to Research Topics in SSS-CPS Lab",
+      "pages": 23,
+      "pages_text_layer": 23,
+      "pages_vision": 0,
+      "sha256_16": "84fe23a64451b54f",
+      "size_mb": 4.46
+    },
+    {
+      "file": "Lecture Slides S2026\\Lecture 1 Affine Spaces Lecture Note.pdf",
+      "lecture": "L01",
+      "title": "Affine Spaces",
+      "pages": 8,
+      "pages_text_layer": 0,
+      "pages_vision": 8,
+      "sha256_16": "4895bdc95af731a7",
+      "size_mb": 6.86
+    },
+    {
+      "file": "Lecture Slides S2026\\Lecture 2 Analytic Geometry Norm, Inner Product and Positive Dfinite Lecture Note.pdf",
+      "lecture": "L02",
+      "title": "Analytic Geometry Norm, Inner Product and Positive Dfinite",
+      "pages": 7,
+      "pages_text_layer": 0,
+      "pages_vision": 7,
+      "sha256_16": "06bdbaf2b3bc449a",
+      "size_mb": 6.79
+    },
+    {
+      "file": "Lecture Slides S2026\\Lecture 3 Analytic Geometry Projection of Vector.pdf",
+      "lecture": "L03",
+      "title": "Analytic Geometry Projection of Vector",
+      "pages": 5,
+      "pages_text_layer": 0,
+      "pages_vision": 5,
+      "sha256_16": "abc83bac61c7beec",
+      "size_mb": 5.08
+    },
+    {
+      "file": "Lecture Slides S2026\\Lecture 4 Matrix Decomposition Eigendecomposition and Singular Value Decomposition sldies.pdf",
+      "lecture": "L04",
+      "title": "Matrix Decomposition Eigendecomposition and Singular Value Decomposition",
+      "pages": 8,
+      "pages_text_layer": 0,
+      "pages_vision": 8,
+      "sha256_16": "26670bb9839421b6",
+      "size_mb": 8.15
+    },
+    {
+      "file": "Lecture Slides S2026\\Lecture 5 Vector Caculus and Optimization Differential and Gradient.pdf",
+      "lecture": "L05",
+      "title": "Vector Caculus and Optimization Differential and Gradient",
+      "pages": 6,
+      "pages_text_layer": 0,
+      "pages_vision": 6,
+      "sha256_16": "ac2c4eedb23db543",
+      "size_mb": 6.81
+    },
+    {
+      "file": "Lecture Slides S2026\\Lecture 6 Backpropagation and Automatic Differentiation.pdf",
+      "lecture": "L06",
+      "title": "Backpropagation and Automatic Differentiation",
+      "pages": 12,
+      "pages_text_layer": 0,
+      "pages_vision": 8,
+      "sha256_16": "0a8525eb29fa349c",
+      "size_mb": 5.78
+    },
+    {
+      "file": "Lecture Slides S2026\\Lecture 7 Optimization Gradient decent and constrained optimization.pdf",
+      "lecture": "L07",
+      "title": "Optimization Gradient decent and constrained optimization",
+      "pages": 10,
+      "pages_text_layer": 0,
+      "pages_vision": 10,
+      "sha256_16": "bd7101419c0242d5",
+      "size_mb": 9.01
+    },
+    {
+      "file": "Lecture Slides S2026\\Lecture 8 Probability and Distribution.pdf",
+      "lecture": "L08",
+      "title": "Probability and Distribution",
+      "pages": 11,
+      "pages_text_layer": 0,
+      "pages_vision": 11,
+      "sha256_16": "84c8074c13424184",
+      "size_mb": 10.25
+    },
+    {
+      "file": "Lecture Slides S2026\\Lecture 9 Information Theory.pdf",
+      "lecture": "L09",
+      "title": "Information Theory",
+      "pages": 4,
+      "pages_text_layer": 0,
+      "pages_vision": 4,
+      "sha256_16": "82d9f837f2267454",
+      "size_mb": 3.83
+    }
+  ],
+  "lectures": [
+    {
+      "lecture": "L01",
+      "title": "Affine Spaces",
+      "pages": 8,
+      "chunk_ids": [
+        "l01-p01",
+        "l01-p02",
+        "l01-p03",
+        "l01-p04",
+        "l01-p05",
+        "l01-p06",
+        "l01-p07",
+        "l01-p08"
+      ]
+    },
+    {
+      "lecture": "L02",
+      "title": "Analytic Geometry Norm, Inner Product and Positive Dfinite",
+      "pages": 7,
+      "chunk_ids": [
+        "l02-p01",
+        "l02-p02",
+        "l02-p03",
+        "l02-p04",
+        "l02-p05",
+        "l02-p06",
+        "l02-p07"
+      ]
+    },
+    {
+      "lecture": "L03",
+      "title": "Analytic Geometry Projection of Vector",
+      "pages": 5,
+      "chunk_ids": [
+        "l03-p01",
+        "l03-p02",
+        "l03-p03",
+        "l03-p04",
+        "l03-p05"
+      ]
+    },
+    {
+      "lecture": "L04",
+      "title": "Matrix Decomposition Eigendecomposition and Singular Value Decomposition",
+      "pages": 8,
+      "chunk_ids": [
+        "l04-p01",
+        "l04-p02",
+        "l04-p03",
+        "l04-p04",
+        "l04-p05",
+        "l04-p06",
+        "l04-p07",
+        "l04-p08"
+      ]
+    },
+    {
+      "lecture": "L05",
+      "title": "Vector Caculus and Optimization Differential and Gradient",
+      "pages": 6,
+      "chunk_ids": [
+        "l05-p01",
+        "l05-p02",
+        "l05-p03",
+        "l05-p04",
+        "l05-p05",
+        "l05-p06"
+      ]
+    },
+    {
+      "lecture": "L06",
+      "title": "Backpropagation and Automatic Differentiation",
+      "pages": 12,
+      "chunk_ids": [
+        "l06-p01",
+        "l06-p02",
+        "l06-p03",
+        "l06-p04",
+        "l06-p05",
+        "l06-p06",
+        "l06-p07",
+        "l06-p08",
+        "l06-p09",
+        "l06-p10",
+        "l06-p11",
+        "l06-p12"
+      ]
+    },
+    {
+      "lecture": "L07",
+      "title": "Optimization Gradient decent and constrained optimization",
+      "pages": 10,
+      "chunk_ids": [
+        "l07-p01",
+        "l07-p02",
+        "l07-p03",
+        "l07-p04",
+        "l07-p05",
+        "l07-p06",
+        "l07-p07",
+        "l07-p08",
+        "l07-p09",
+        "l07-p10"
+      ]
+    },
+    {
+      "lecture": "L08",
+      "title": "Probability and Distribution",
+      "pages": 11,
+      "chunk_ids": [
+        "l08-p01",
+        "l08-p02",
+        "l08-p03",
+        "l08-p04",
+        "l08-p05",
+        "l08-p06",
+        "l08-p07",
+        "l08-p08",
+        "l08-p09",
+        "l08-p10",
+        "l08-p11"
+      ]
+    },
+    {
+      "lecture": "L09",
+      "title": "Information Theory",
+      "pages": 4,
+      "chunk_ids": [
+        "l09-p01",
+        "l09-p02",
+        "l09-p03",
+        "l09-p04"
+      ]
+    }
+  ],
+  "total_pages": 132,
+  "total_chunks": 128,
+  "total_chars": 151365,
+  "chunks_by_extraction": {
+    "text_layer": 61,
+    "vision": 67
+  },
+  "total_chars_by_extraction": {
+    "text_layer": 33458,
+    "vision": 117907
+  },
+  "missing_transcripts": [],
+  "blank_pages": [
+    "l06-p09",
+    "l06-p10",
+    "l06-p11",
+    "l06-p12"
+  ]
+}

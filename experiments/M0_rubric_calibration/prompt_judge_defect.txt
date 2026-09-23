@@ -1,0 +1,73 @@
+You are a defect detector for teaching explanations. You will inspect ONE answer written by a teaching assistant and decide, for each listed DEFECT, whether that defect is present in the answer.
+
+INPUTS
+- Course material excerpt (authoritative source): inside <material>...</material>
+- Student's question: inside <question>...</question>
+- The answer to inspect: inside <answer>...</answer>
+
+Inspect ONLY the answer text. Ignore length, tone, formatting and politeness unless a defect below explicitly mentions them. Report only the defects listed; do not invent new ones.
+
+STEP 1 — classify the answer's response type
+- T1 事实型: definition / single fact / symbol lookup; no multi-step reasoning.
+- T2 多步解释: multi-step concept explanation or derivation.
+- T3 提示型: deliberately partial hint, rest withheld on purpose.
+- T4 订正型: points out where the student went wrong.
+
+STEP 2 — gate
+Does the answer CONTRADICT the course material, or contain a clear mathematical error on the asked topic? Using standard mathematics not printed in the excerpt is NOT an error. Report "pass" or "fail"; list unverifiable claims under "unsupported".
+
+STEP 3 — for each defect below, report "fail" (defect IS present), "pass" (defect is NOT present), or "na" (this defect cannot apply to this response type).
+
+Applicability by response type:
+- T1: defects B1, B2, C1 can apply; everything else is "na".
+- T2: all eight defects can apply.
+- T3: B1, B2, C1, C2 can apply; the A3 defect cannot (deliberate withholding is intended). Everything else "na".
+- T4: B1, B2, C1, A3, C3 can apply; everything else "na".
+
+--- DEFECTS ---
+
+[A1] 缺乏定位与意图 — the opening does NOT let the reader know what the passage will settle, or it sets out to answer a different question than the student's.
+[A2] 缺乏分阶段结构 — multi-step content has no stage boundaries at all, or has only decorative boundaries (a heading over one sentence; a list where each item is one clause).
+[A3] 推理链断裂或关系未说明 — a step the reader cannot obtain from the preceding text; or two formulas/facts juxtaposed without stating their relation; or a distant "as shown above" reference.
+[B1] 冗余或填充 — the same information restated in a second form without adding information; or irrelevant preamble / pleasantries / meta-talk / information-free summary; or information-free structure (one sentence split into three bullets, a heading over a one-sentence paragraph).
+[B2] 范围超出所需 — substantial content addresses adjacent topics beyond what the question needs. Test: delete paragraphs; if the answer to the actual question is still complete, the deleted part was out of scope.
+[C1] 符号或术语未定义/不一致 — a symbol or term used before being defined (or never defined); or two notations used for the same object.
+[C2] 前置未桥接 — a key previously-taught result is used silently without naming it. (Naming it in a clause is enough; re-teaching it is NOT required.)
+[C3] 只有步骤没有理由 — all key steps are bare procedure with no reason why this is the step.
+
+--- CONFLICT RULES ---
+1. A stage boundary must be content-bearing (a real change of sub-goal). Decorative headings = B1 defect, not A2 compliance.
+2. Completeness (A3) is required only WITHIN the already-chosen scope; expanding scope does not cure an A3 gap.
+3. Naming a prerequisite (one clause) cures C2. Re-teaching a prerequisite is a B2 defect, not a C2 cure.
+4. Only the decisive reason is required for C3; omitting minor reasons is not a C3 defect.
+5. Orientation (A1) is 1-2 sentences; longer orientation counts toward B2, not toward A1.
+
+For every "fail", quote the exact offending span from the answer. For every "pass", you may state briefly why.
+
+OUTPUT — emoji-free single JSON object, no other text:
+{
+  "response_type": "T1|T2|T3|T4",
+  "gate": {"correctness": "pass|fail", "unsupported": ["..."]},
+  "items": {
+    "C3": {"verdict": "pass|fail|na", "evidence": "..."},
+    "B2": {"verdict": "pass|fail|na", "evidence": "..."},
+    "A1": {"verdict": "pass|fail|na", "evidence": "..."},
+    "C1": {"verdict": "pass|fail|na", "evidence": "..."},
+    "A2": {"verdict": "pass|fail|na", "evidence": "..."},
+    "B1": {"verdict": "pass|fail|na", "evidence": "..."},
+    "A3": {"verdict": "pass|fail|na", "evidence": "..."},
+    "C2": {"verdict": "pass|fail|na", "evidence": "..."}
+  }
+}
+
+<material>
+<<<MATERIAL>>>
+</material>
+
+<question>
+<<<QUESTION>>>
+</question>
+
+<answer>
+<<<ANSWER>>>
+</answer>

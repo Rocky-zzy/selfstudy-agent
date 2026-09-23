@@ -1,0 +1,373 @@
+--- page 1 ---
+March 11, 2014 
+ 
+ 
+1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+MATHEMATICAL QUALITY OF INSTRUCTION (MQI)  
+-EXCERPT- 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+©2014 Learning Mathematics for Teaching/Heather Hill 
+Use of these copyrighted materials; including, but not limited to reproduction, 
+modification, translation, publication, and creation of derivative works without the 
+expressed written consent of the author is prohibited. 
+ 
+This material is based upon work supported by the National Science Foundation under 
+grant numbers EHR-0233456, DUR-0335411 and DRL-0918383 and work supported by 
+the U.S. Department of Education under cooperative agreement number R305C090023
+
+
+--- page 2 ---
+Mathematical Quality of Instruction (MQI) - EXCERPT 
+ 
+March 11, 2014 
+ 
+ 
+2
+ 
+Mathematical Quality of Instruction (MQI) - EXCERPT 
+This excerpt contains two MQI codes. The first, Linking between Representations, is part of the Richness of the 
+Mathematics domain, and therefore refers to the richness of the mathematical content, without regard for who 
+is doing the lining (teacher or students). The second, Task Cognitive Demand, is part of the Common Core-
+Aligned Student Practices Domain, and refers to the cognitive demand of the lesson for students- the extent to 
+which the students, not the teacher, are engaging in cognitively demanding mathematics work. A brief overview 
+of the four domains of the MQI is below.  
+ 
+Mathematical Quality of Instruction (MQI) 
+An observational rubric that provides a framework for analyzing mathematics instruction in several domains, 
+described by the instructional triangle below. Within each domain, individual codes contain score points that 
+categorize instruction into different levels of quality. 
+ 
+Richness of the Mathematics 
+To what extent are teachers and students making sense of the mathematics of the lesson? Are there elements 
+of “why” and not just how? Do the teacher and students attend to precision in their use of mathematical 
+language? 
+ 
+Working With Students and Mathematics 
+To what extent does the teacher use student mathematical ideas or misconceptions to move the lesson 
+forward? 
+ 
+Common Core-Aligned Student Practices 
+To what extent are the students, as opposed to the teacher, doing the mathematics of the lesson—engaging in 
+mathematical thinking and reasoning, communicating about mathematics, and solving high-cognitive demand 
+tasks and contextualized problems? 
+ 
+Errors and Imprecision 
+Is the mathematics of the lesson clear and correct? 
+ 
+ 
+ 
+
+
+--- page 3 ---
+Mathematical Quality of Instruction (MQI) - EXCERPT 
+ 
+March 11, 2014 
+ 
+ 
+3
+Linking Between Representations 
+This code refers to teachers’ and students’ explicit linking and connections between different representations of a 
+mathematical idea or procedure. To count, these links must occur across different representational “families” e.g., a 
+linear graph and a table both capturing a linear relationship. So, two different representations that are both in the 
+symbolic family (e.g., 1/4 and 0.25) are not candidates for being linked. 
+For Linking Between Representations to be scored above a Not Present: 
+ 
+At least one representation must be visually present 
+ 
+The explicit linking between the two representations must be communicated out loud 
+ 
+For Linking Between Representations to be scored Mid or High, two conditions must be satisfied: 
+ 
+Both representations must be visually present 
+ 
+The correspondence between the representations must be explicitly pointed out in a way that focuses on 
+meaning (e.g., pointing to the numerator in 1/4, then commenting that you can see that one in the figure, 
+pointing to the four in the denominator, pointing to the four partitions in the whole. “You can see the 1 in the 
+1/4 corresponds to the upper left-hand box, which is shaded, showing one piece out of four total pieces...”) 
+                                     
+ 
+ 
+For geometry, we do not count shapes as a representation that can be linked—we consider those to be the “thing itself.” 
+However, links can be scored in geometry if the manipulation of geometric objects is linked to a computation, e.g., 
+showing that two 45-degree angles can be combined to get a 90 degree angle and linking that to the symbolic 
+representation 45 + 45 =90.  
+ 
+Note: If links are made but underlying representation/idea is incorrect, do NOT count as linking between 
+representations. 
+Not Present 
+Low  
+Mid 
+High 
+No linking occurs. 
+Representations may be 
+present, but no 
+connections are actively 
+made.  
+Links are present in a pro 
+forma way; For example,  
+the teacher may show the 
+above figure and state 
+that one quarter is one 
+part out of four. These 
+links will not be very 
+explicit or detailed; both 
+representations need not 
+be present.     
+Links and connections 
+have the features noted 
+under High, but they 
+occur as an isolated 
+instance in the 
+segment.  
+Links and connections are present 
+with extended, careful work 
+characterized by one of the 
+following features:  
+ 
+Explicitness about how two or 
+more representations are 
+related (e.g., pointing to 
+specific areas of 
+correspondence) OR 
+ 
+Detail and elaboration about 
+the relationship between two 
+mathematical representations 
+(e.g., noting meta-features; 
+providing information about 
+under what conditions the 
+relationship occurs; discussing 
+implications of relationship) 
+These links will be a characterizing 
+feature of the segment, in that 
+they may in fact be the focus of 
+instruction. They need not take up 
+the majority or even a significant 
+portion of the segment; however, 
+they will offer significant insight 
+into the mathematical material.   
+
+
+--- page 4 ---
+Mathematical Quality of Instruction (MQI) - EXCERPT 
+ 
+March 11, 2014 
+ 
+ 
+4
+Task Cognitive Demand 
+This code captures student engagement in tasks in which they think deeply and reason about mathematics. This code 
+refers to the enactment of the task, regardless of the initial demand of the curriculum/textbook task or how the teacher 
+sets up the task for students. 
+ 
+Notes: 
+ 
+Student confusion does not necessarily suggest that students are engaging with the content at a high cognitive level. 
+ 
+Working on review tasks or on ideas discussed in previous lessons does not necessarily mean that students use 
+lower order thinking skills. 
+ 
+This code should not be confounded with the difficulty of the task or whether it is appropriate for a certain grade-
+level. 
+ 
+Code a student presentation of a solution method at the same level of cognitive demand as the task itself was 
+coded.  
+Not Present 
+Low 
+Mid 
+High 
+Students are engaged in 
+cognitively undemanding 
+activities. 
+ 
+Examples of cognitively 
+undemanding activities 
+include:  
+ 
+Recalling and applying 
+well-established 
+procedures  
+ 
+Recalling or 
+reproducing known 
+facts, rules, or formulas  
+ 
+Listening to a teacher 
+presentation with 
+limited student input 
+ 
+Going over homework 
+with little additional 
+student work (e.g., 
+reporting numerical 
+answers) 
+ 
+Unsystematic 
+exploration (i.e., 
+students do not make 
+systematic and 
+sustained progress in 
+developing 
+mathematical 
+strategies or 
+understanding) 
+There is a brief example of 
+a cognitively demanding 
+activity, e.g. 
+ 
+ 
+A momentary think-
+pair-share where 
+students define a term 
+ 
+Direct instruction with 
+one or two examples of 
+student explanations or 
+SMQR   
+ 
+Tasks with a 
+momentary high 
+cognitive demand 
+element  
+ 
+Tasks that are not 
+completely routine, but 
+are heavily scaffolded 
+for students with hints 
+or directions 
+Segment features mix of 
+demanding and 
+undemanding tasks and 
+activities, e.g.  
+ 
+ 
+Tasks with variable 
+enactment (e.g., 
+demanding tasks 
+followed by a transition 
+to undemanding tasks; 
+or, when working in 
+small groups, some 
+groups work on a high-
+demand task while  
+some groups work on 
+an undemanding task)  
+ 
+Direct instruction with 
+student explanations 
+and/or SMQR input at 
+certain points 
+ 
+Tasks with middling 
+cognitive demand 
+Students engage with 
+content at a high level of 
+cognitive demand. 
+ 
+Examples of cognitively 
+demanding activities 
+include when students:  
+ 
+Determine the meaning 
+of mathematical 
+concepts, processes, or 
+relationships 
+ 
+Draw connections 
+among different 
+representations or 
+concepts 
+ 
+Make and test 
+conjectures 
+ 
+Look for patterns 
+ 
+Examine constraints 
+ 
+Explain and justify 
+ 
+ 
+ 
+
+
+--- page 5 ---
+Mathematical Quality of Instruction (MQI) - EXCERPT 
+ 
+March 11, 2014 
+ 
+ 
+5
+Guiding Questions for Describing Instruction using the MQI:  
+ 
+ 
+Linking Between Representations (from the Richness of the Mathematics domain) 
+ 
+ 
+Are the two (or more) representations referred to from different “families”? 
+ 
+How many of the representations are visually present? 
+ 
+Is there an explicit link between the representations communicated out loud? 
+ 
+Are the links made in a pro forma way with little detail? 
+ 
+What is the level of explicitness or detail and elaboration used in the linking? 
+ 
+Do these links occur as an isolated instance or are they a characterizing feature, the focus, of the clip? 
+ 
+ 
+Task Cognitive Demand (from the Common Core-Aligned Student Practices domain)\ 
+ 
+ 
+What are the mathematical tasks or activities students are engaged in?  
+ 
+To what extent are the students, as opposed to the teacher, the ones doing the mathematics in the 
+segment? 
+ 
+Are the students engaged in cognitively undemanding or demanding activities? 
+o What does the MQI provide as examples of cognitively undemanding activities? 
+o What does the MQI provide as examples of cognitively demanding activities? 
+ 
+Were the cognitively demanding activities brief or more sustained? 
+ 
+Did the cognitive demand level vary? 
+ 
+ 
+ 

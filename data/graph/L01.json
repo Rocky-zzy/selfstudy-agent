@@ -1,0 +1,158 @@
+{
+  "version": 1,
+  "scope": "L01",
+  "lecture_title": "Affine Spaces",
+  "note": "L0 最小知识结构。只做几章强相关的，不是整门课图谱。字段定义见 docs/04 §十 与 scripts/graph_check.py。",
+  "field_rationale": {
+    "prerequisites": "决定先讲什么；缺前置要先补（先行组织者 / pre-training）",
+    "broader": "决定讲多全（讲到上位就停还是下钻）（同上）",
+    "contrast": "给骨架的「常见的坑」与对比提供明确对象（docs/09 提取件；MQI 编码 13）",
+    "misconceptions": "让「常见的坑」有清单可对，而不是自由发挥（同上）",
+    "subgoals": "仅程序性节点；子目标标注有实验支持（Morrison 等 2020：给标签优于自己生成）",
+    "sources": "每个节点可回原文核对（chunk_id 必须真实存在）"
+  },
+  "nodes": [
+    {
+      "id": "vector_space",
+      "title": "向量空间",
+      "type": "concept",
+      "sources": ["l01-p02"],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": ["affine_space"],
+      "misconceptions": [
+        "以为「能加能乘」就够了，漏掉封闭性与八条公理",
+        "把 (R, ·) 也当成群（0 没有乘法逆元）"
+      ]
+    },
+    {
+      "id": "linear_combination",
+      "title": "线性组合",
+      "type": "concept",
+      "sources": ["l01-p03"],
+      "prerequisites": ["vector_space"],
+      "broader": "vector_space",
+      "contrast": [],
+      "misconceptions": []
+    },
+    {
+      "id": "linear_independence",
+      "title": "线性无关 / 线性相关",
+      "type": "concept",
+      "sources": ["l01-p03"],
+      "prerequisites": ["linear_combination"],
+      "broader": "vector_space",
+      "contrast": ["spanning_set"],
+      "misconceptions": [
+        "把「无关」理解成「彼此没关系」",
+        "漏掉条件：必须是「只有平凡解」（λ 全为 0）才算无关"
+      ]
+    },
+    {
+      "id": "spanning_set",
+      "title": "张成集 / 生成集",
+      "type": "concept",
+      "sources": ["l01-p03"],
+      "prerequisites": ["linear_combination"],
+      "broader": "vector_space",
+      "contrast": ["linear_independence"],
+      "misconceptions": [
+        "以为「能张成」就等于「线性无关」"
+      ]
+    },
+    {
+      "id": "linear_mapping",
+      "title": "线性映射 φ: V → W",
+      "type": "concept",
+      "sources": ["l01-p04"],
+      "prerequisites": ["vector_space"],
+      "broader": "vector_space",
+      "contrast": [],
+      "misconceptions": [
+        "把它当成「任意从 V 到 W 的函数」",
+        "只说「保持结构」而不验证 λx + ψy 这条定义式"
+      ]
+    },
+    {
+      "id": "rank",
+      "title": "秩 rank(W) 与满秩",
+      "type": "concept",
+      "sources": ["l01-p04", "l01-p05"],
+      "prerequisites": ["linear_mapping"],
+      "broader": null,
+      "contrast": ["kernel_image"],
+      "misconceptions": [
+        "把 rank 当成矩阵的尺寸（rank = min{m,n}，不是 m×n）",
+        "把升维/降维的方向搞反（rank = n < m 是升维，不是降维）"
+      ]
+    },
+    {
+      "id": "kernel_image",
+      "title": "核与像（null space / column space）",
+      "type": "concept",
+      "sources": ["l01-p06", "l01-p07"],
+      "prerequisites": ["linear_mapping"],
+      "broader": "linear_mapping",
+      "contrast": ["rank"],
+      "misconceptions": [
+        "把 kernel 与 image 的所属空间搞反（ker ⊆ V，im ⊆ W）"
+      ]
+    },
+    {
+      "id": "basis_change",
+      "title": "基变换矩阵 Â_φ = T⁻¹A_φS",
+      "type": "procedure",
+      "sources": ["l01-p06"],
+      "prerequisites": ["linear_mapping"],
+      "broader": "linear_mapping",
+      "contrast": [],
+      "misconceptions": [
+        "记成 A_φ = T⁻¹Â_φS（S 与 T⁻¹ 的位置反了）",
+        "忘了 S、T 必须是满秩（可逆）矩阵"
+      ],
+      "subgoals": [
+        {
+          "label": "换到标准基",
+          "source_line": "B~ → B : Sv",
+          "detail": "把在 B̃ 下表示的向量换成标准基 B 下的表示",
+          "not_in_source": "课件只给了这一步的式子，**没说为什么第一步要换到标准基**（为什么要先回到 B 再出发）。讲解若补这个理由，属于补充解释而非课件内容。"
+        },
+        {
+          "label": "施加线性映射",
+          "source_line": "B~ → B → C : A_φ Sv",
+          "detail": "在标准基下做 φ，得到 C 下的像",
+          "not_in_source": "课件未解释为什么可以直接用 A_φ 作用在 Sv 上（即 A_φ 是 φ 在标准基下的矩阵这一点课件没明说）。"
+        },
+        {
+          "label": "换到目标基",
+          "source_line": "B~ → B → C → C~ : T⁻¹A_φ Sv",
+          "detail": "再换到 C̃ 下，才是这个映射在新基下的矩阵",
+          "not_in_source": "课件未解释为什么用 T⁻¹ 而不是 T（方向相反）。"
+        }
+      ]
+    },
+    {
+      "id": "affine_space",
+      "title": "仿射空间 L = x₀ + U",
+      "type": "concept",
+      "sources": ["l01-p07"],
+      "prerequisites": ["vector_space"],
+      "broader": "vector_space",
+      "contrast": ["vector_space"],
+      "misconceptions": [
+        "以为仿射空间也是向量空间（漏掉 x₀ ∉ U 这个前提）",
+        "混淆 support point（x₀）与 direction space（U）的角色"
+      ]
+    },
+    {
+      "id": "affine_mapping",
+      "title": "仿射映射 φ'(x) = a + φ(x)",
+      "type": "concept",
+      "sources": ["l01-p08"],
+      "prerequisites": ["affine_space", "linear_mapping"],
+      "broader": "affine_space",
+      "contrast": [],
+      "misconceptions": []
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "pairs": [
+    {
+      "pair": "A-1",
+      "injected_variant": "inj_A1_q6",
+      "substrate": "q6",
+      "inject_item": "A1",
+      "inject_note": "删除开头的定位段（说明这段要settle什么），直接从 case 1 切入",
+      "left": "substrate"
+    },
+    {
+      "pair": "A-2",
+      "injected_variant": "inj_A2_q3",
+      "substrate": "q3",
+      "inject_item": "A2",
+      "inject_note": "删除全部阶段标题（## 1. ... ## 5.），阶段边界不再显式",
+      "left": "injected"
+    },
+    {
+      "pair": "A-3",
+      "injected_variant": "inj_A3_q4",
+      "substrate": "q4",
+      "inject_item": "A3",
+      "inject_note": "删除从 (A-λI)x=0 到 det(A-λI)=0 之间的推理桥（singular 等价条件）",
+      "left": "injected"
+    },
+    {
+      "pair": "A-4",
+      "injected_variant": "inj_B1_q7",
+      "substrate": "q7",
+      "inject_item": "B1",
+      "inject_note": "前置寒暄 + 同义复述条件熵 + 无信息量总结（覆盖 B1 的三个锚点）",
+      "left": "substrate"
+    },
+    {
+      "pair": "A-5",
+      "injected_variant": "inj_B2_q8",
+      "substrate": "q8",
+      "inject_item": "B2",
+      "inject_note": "事实型问题上追加 layout 体系、其他梯度恒等式、张量等超范围内容",
+      "left": "injected"
+    },
+    {
+      "pair": "A-6",
+      "injected_variant": "inj_C1_q8",
+      "substrate": "q8",
+      "inject_item": "C1",
+      "inject_note": "删除对 \\(\\vec{x}\\)、\\(\\vec{a}\\) 的定义从句，符号首次出现即未定义",
+      "left": "substrate"
+    },
+    {
+      "pair": "A-7",
+      "injected_variant": "inj_C2_q7",
+      "substrate": "q7",
+      "inject_item": "C2",
+      "inject_note": "把「关键关系来自概率的链式法则」换成「注意到」，前置结论被静默使用（难例）",
+      "left": "injected"
+    },
+    {
+      "pair": "A-8",
+      "injected_variant": "inj_C3_q3",
+      "substrate": "q3",
+      "inject_item": "C3",
+      "inject_note": "删除「## 3. 为什么减完就正交？」整节，只留做法与验证",
+      "left": "substrate"
+    }
+  ],
+  "solo": [
+    {
+      "id": "B-1",
+      "response": "q1"
+    },
+    {
+      "id": "B-2",
+      "response": "q2"
+    },
+    {
+      "id": "B-3",
+      "response": "q5"
+    }
+  ]
+}

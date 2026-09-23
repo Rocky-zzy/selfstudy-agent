@@ -1,0 +1,61 @@
+{
+  "_note": "M0 题库。每题的材料直接从知识库按 chunk_id 取出并交给模型——检索不是本实验的变量（属材料侧研究），因此固定输入材料，只考察「同样的材料怎么讲」。",
+  "items": [
+    {
+      "id": "q1",
+      "chunk_ids": ["l01-p01"],
+      "expected_type": "T2",
+      "topic": "群与阿贝尔群",
+      "question": "Lecture 1 里说 $(\\mathbb{R}\\setminus\\{0\\}, \\cdot)$ 是阿贝尔群，它是怎么验证的？为什么要一条一条检查？"
+    },
+    {
+      "id": "q2",
+      "chunk_ids": ["l03-p01", "l03-p02"],
+      "expected_type": "T2",
+      "topic": "向量投影与正交性条件",
+      "question": "投影那部分，为什么 $\\vec{x} - \\pi_U(\\vec{x})$ 一定垂直于子空间 $U$？这个条件是怎么来的？"
+    },
+    {
+      "id": "q3",
+      "chunk_ids": ["l03-p03"],
+      "expected_type": "T2",
+      "topic": "Gram–Schmidt 正交化",
+      "question": "Gram–Schmidt 正交化的步骤我背下来了但不太理解，能讲一下它每一步在做什么吗？"
+    },
+    {
+      "id": "q4",
+      "chunk_ids": ["l04-p02"],
+      "expected_type": "T2",
+      "topic": "特征多项式与特征值",
+      "question": "特征多项式 $p_A(\\lambda)$ 是怎么定义的？为什么它的根就是特征值？"
+    },
+    {
+      "id": "q5",
+      "chunk_ids": ["l04-p05", "l04-p06"],
+      "expected_type": "T2",
+      "topic": "SVD 的构造",
+      "question": "SVD 里的 $U$ 和 $V$ 是怎么来的？为什么 $\\sigma_i^2$ 等于 $AA^T$ 的特征值？"
+    },
+    {
+      "id": "q6",
+      "chunk_ids": ["l05-p03"],
+      "expected_type": "T2",
+      "topic": "梯度为何是行向量",
+      "question": "为什么梯度要写成行向量？课件里专门问了这个问题，我还是没懂。"
+    },
+    {
+      "id": "q7",
+      "chunk_ids": ["l09-p02"],
+      "expected_type": "T2",
+      "topic": "联合熵与条件熵",
+      "question": "联合熵、条件熵，以及 $H(X,Y) = H(X) + H(Y\\mid X)$ 这个关系是怎么来的？"
+    },
+    {
+      "id": "q8",
+      "chunk_ids": ["l05-p06"],
+      "expected_type": "T1",
+      "topic": "梯度恒等式（事实型）",
+      "question": "$\\frac{\\partial \\vec{x}^T \\vec{a}}{\\partial \\vec{x}}$ 等于多少？"
+    }
+  ]
+}

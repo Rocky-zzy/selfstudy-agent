@@ -1,0 +1,7 @@
+openai>=1.0.0
+flask>=3.0
+# 数学渲染：LaTeX -> MathML（浏览器原生支持 MathML，所以不需要在浏览器里塞 JS 库）
+# 选型依据与实测见 docs/10_数学渲染方案.md
+latex2mathml>=3.77
+# 临时素材处理（PPTX / PDF 抽取与渲染）
+PyMuPDF>=1.24

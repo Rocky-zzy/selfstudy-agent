@@ -1,0 +1,2888 @@
+--- page 1 ---
+March 11, 2014 
+ 
+ 
+1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+MATHEMATICAL QUALITY OF INSTRUCTION (MQI)  
+4-POINT VERSION 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+©2014 Learning Mathematics for Teaching/Heather Hill 
+Use of these copyrighted materials; including, but not limited to reproduction, 
+modification, translation, publication, and creation of derivative works without the 
+expressed written consent of the author is prohibited. 
+ 
+This material is based upon work supported by the National Science Foundation under 
+grant numbers EHR-0233456, DUR-0335411 and DRL-0918383 and work supported by 
+the U.S. Department of Education under cooperative agreement number R305C090023
+
+
+--- page 2 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+2 
+SEGMENT CODES 
+1. Classroom Work is Connected to Mathematics 
+Richness of the Mathematics 
+2. Linking Between Representations  
+3. Explanations 
+4. Mathematical Sense-Making  
+5. Multiple Procedures or Solution Methods 
+6. Patterns and Generalizations 
+7. Mathematical Language 
+8. Overall Richness of the Mathematics 
+Working with Students and Mathematics 
+9. Remediation of Student Errors and Difficulties 
+10. Teacher Uses Student Mathematical Contributions  
+11. Overall Working with Students and Mathematics  
+Errors and Imprecision 
+12. Mathematical Content Errors  
+13. Imprecision in Language or Notation 
+14. Lack of Clarity in Presentation of Mathematical Content 
+15. Overall Errors and Imprecision  
+Common Core Aligned Student Practices 
+16. Students Provide Explanations  
+17. Student Mathematical Questioning and Reasoning (SMQR) 
+18. Students Communicate about the Mathematics of the Segment 
+19. Task Cognitive Demand 
+20. Students Work with Contextualized Problems 
+21. Overall Common Core Aligned Student Practices  
+ 
+WHOLE LESSON CODES 
+1. Lesson Time is Used Efficiently 
+2. Lesson is Mathematically Dense   
+3. Students are Engaged 
+4. Lesson Contains Rich Mathematics  
+5. Teacher Attends to and Remediates Student Difficulty 
+6. Teacher Uses Student Ideas 
+7. Mathematics is Clear and not Distorted 
+8. Tasks and Activities Develop Mathematics 
+9. Lesson Contains Common Core Aligned Student Practices  
+10. Whole-Lesson Mathematical Quality of Instruction  
+ 
+ 
+ 
+
+
+--- page 3 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+3 
+SEGMENT CODES 
+Classroom Work is Connected to Mathematics 
+Score here for whether the focus is on mathematical content during half or more of the segment (3.75 minutes or more 
+total for a 7.5-minute segment). 
+No 
+Yes 
+Focus for majority of the segment (at least 3.75 minutes for a 
+7.5-minute segment) is on non-mathematical topics, or 
+student activities that have no clear connections to 
+developing mathematical content.  
+ 
+Examples:  
+• 
+Gathering or distributing materials, other administrative 
+issues  
+• 
+Disciplinary issues that severely impinge upon 
+instructional time 
+• 
+Students doing an activity (cutting, pasting, coloring) that 
+is not clearly connected to mathematics (“bad reform”) 
+Focus is on mathematical content for majority of the 
+segment (at least 3.75 minutes for a 7.5-minute segment).    
+ 
+Examples:  
+• 
+Teacher reviewing content from a prior lesson 
+• 
+Teacher introducing content 
+• 
+Students practicing content 
+• 
+Students working on a warm-up problem while 
+teacher takes attendance 
+ 
+Back to Table of Contents 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+--- page 4 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+4 
+Richness of the Mathematics 
+This dimension attempts to capture the depth of the mathematics offered to students. The codes within this dimension are 
+grouped into two broad categories: codes that capture the extent to which instruction focuses on the meaning of facts and 
+procedures (Linking Between Representations, Explanations, and Mathematical Sense-Making), and codes that capture the 
+degree to which instruction focuses on key mathematical practices (Multiple Procedures or Solution Methods, Patterns and 
+Generalizations, and Mathematical Language).  
+ 
+For all codes within this dimension, the aspect of instruction must be substantially correct to count as Low, Mid or High. 
+Richness elements that are not correct should be ignored (though the segment can be still credited for other correct 
+elements within the same code).  
+ 
+Back to Table of Contents 
+ 
+ 
+ 
+
+
+--- page 5 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+5 
+Linking Between Representations 
+This code refers to teachers’ and students’ explicit linking and connections between different representations of a 
+mathematical idea or procedure. To count, these links must occur across different representational “families” e.g., a linear 
+graph and a table both capturing a linear relationship. So, two different representations that are both in the symbolic family 
+(e.g., 1/4 and 0.25) are not candidates for being linked. 
+For Linking Between Representations to be scored above a Not Present: 
+• 
+At least one representation must be visually present 
+• 
+The explicit linking between the two representations must be communicated out loud 
+ 
+For Linking Between Representations to be scored Mid or High, two conditions must be satisfied: 
+• 
+Both representations must be visually present 
+• 
+The correspondence between the representations must be explicitly pointed out in a way that focuses on meaning 
+(e.g., pointing to the numerator in 1/4, then commenting that you can see that one in the figure, pointing to the 
+four in the denominator, pointing to the four partitions in the whole. “You can see the 1 in the 1/4 corresponds to 
+the upper left-hand box, which is shaded, showing one piece out of four total pieces...”) 
+                                     
+ 
+ 
+For geometry, we do not count shapes as a representation that can be linked—we consider those to be the “thing itself.” 
+However, links can be scored in geometry if the manipulation of geometric objects is linked to a computation, e.g., showing 
+that two 45-degree angles can be combined to get a 90 degree angle and linking that to the symbolic representation 45 + 
+45 =90.  
+ 
+Note: If links are made but underlying representation/idea is incorrect, do NOT count as linking between representations. 
+Not Present 
+Low  
+Mid 
+High 
+No linking occurs. 
+Representations may be 
+present, but no 
+connections are actively 
+made.  
+Links are present in a pro 
+forma way; For example,  
+the teacher may show the 
+above figure and state that 
+one quarter is one part out 
+of four. These links will not 
+be very explicit or detailed; 
+both representations need 
+not be present.     
+Links and connections 
+have the features noted 
+under High, but they 
+occur as an isolated 
+instance in the segment.  
+Links and connections are present 
+with extended, careful work 
+characterized by one of the 
+following features:  
+• 
+Explicitness about how two or 
+more representations are 
+related (e.g., pointing to 
+specific areas of 
+correspondence) OR 
+• 
+Detail and elaboration about 
+the relationship between two 
+mathematical representations 
+(e.g., noting meta-features; 
+providing information about 
+under what conditions the 
+relationship occurs; discussing 
+implications of relationship) 
+These links will be a characterizing 
+feature of the segment, in that they 
+may in fact be the focus of 
+instruction. They need not take up 
+the majority or even a significant 
+portion of the segment; however, 
+they will offer significant insight 
+into the mathematical material.   
+Back to Table of Contents 
+
+
+--- page 6 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+6 
+Explanations 
+Mathematical explanations focus on why, e.g.: 
+• 
+Why a procedure works (or doesn’t work) 
+• 
+Why a solution method is appropriate (or inappropriate) 
+• 
+Why an answer is true (or not true) 
+• 
+In geometry: justification using a definition, why an object is symmetrical, why a second figure is a transformation 
+of the first 
+• 
+In data analysis: why you would choose a specific graph to represent a set of data, why median is different than 
+mode or mean of a dataset, etc. 
+ 
+Do NOT count “how” e.g., simply providing descriptions of steps (first I did x, then I did y) or definitions unless meaning is 
+also attached. 
+ 
+Note: Do NOT count incorrect or incomplete explanations as explanations. 
+Not Present 
+Low  
+Mid 
+High 
+No mathematical 
+explanations are offered by 
+the teacher or students or 
+the “explanations” provided 
+are simply descriptions of 
+steps of a procedure. 
+A mathematical explanation 
+occurs as an isolated 
+instance in the segment.  
+Two or more brief 
+mathematical explanations 
+occur in the segment OR an 
+explanation is more than 
+briefly present but not the 
+focus of instruction.  
+One or more mathematical 
+explanation(s) is a focus of 
+instruction in the segment. 
+The explanation(s) need not 
+be most or even a majority of 
+the segment; what 
+distinguishes a High is the fact 
+that the explanation(s) are a 
+major feature of the teacher-
+student work (e.g., working 
+for 2-3 minutes to elucidate 
+the simplifying example 
+above). 
+Scoring Help -  Explanations 
+Examples of explanations:  
+• 
+Explaining the reason for steps in simplifying fractions (dividing by 2/2 is same as dividing by 1; anything divided by 
+1 is still itself)  
+• 
+Explaining why particular steps in a complex problem are justified or work to achieve the solution 
+• 
+Classifying triangles as polygons because they are closed and made up of line segments that do not cross 
+• 
+Explaining why a formula can be used to find an outcome (why ℓ x w works to find area) 
+ 
+Note that when scoring, you can count the build-up to an explanation as part of the explanation. Ask yourself: Was the 
+point of the instruction to provide the explanation, even if it only emerged at the end? If so, you may score that clip as a 
+High.  
+ 
+To help understand the difference between the Explanations code and the Mathematical Sense-Making code, see the 
+Scoring Help for Sense Making.  
+Back to Table of Contents 
+ 
+ 
+
+
+--- page 7 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+7 
+Mathematical Sense-Making  
+This code captures the extent to which the teacher or students attend to one or more of the following: 
+• 
+The meaning of numbers 
+• 
+Understanding relationships between numbers 
+• 
+The relationships between contexts and the numbers or operations that represent them 
+• 
+Connections between mathematical ideas or between ideas and representations 
+• 
+Giving meaning to mathematical ideas 
+• 
+Whether the modeling of and answers to problems make sense 
+ 
+Examples include: 
+• 
+Focusing on value of quantities (e.g., "7/8 is close to 1") 
+• 
+The meaning of quantities (e.g., "the six represents the number of groups") 
+• 
+Discussing reasonableness of an expression, solution method, or answer 
+• 
+Using estimation or number sense 
+• 
+Giving meaning to procedures (e.g., “1/4 x 2/3 means taking 1/4 of 2/3 of a whole”) 
+• 
+Giving meaning to expressions or equations 
+ 
+For word problems, score for activities like explaining why an operation is called for by a problem, why certain numbers are 
+used in the operation, reasonableness of answer, reasonableness of solution method, etc.    
+ 
+In geometry, include making sense of definitions (what counts as a polygon, what does not count as a polygon), formulas, 
+by elaborating them, applying them, finding counter-examples, etc. rather than just stating/executing them.  Do not count 
+“Give me examples of a circle” – instead, count cases where the definition or formula has meaning made around it. 
+ 
+If sense-making is partially correct and partially incorrect, only score the portion that is correct (e.g., would be a High, but 
+vague for parts, thus receives a Mid).  
+Not Present 
+Low  
+Mid 
+High 
+Not present or incorrect. 
+Teacher and/or students 
+focus briefly on meaning. 
+For instance, a student may 
+remark that 7/8 is "almost 
+1" or attends to 
+reasonableness of the 
+solution method.   
+  
+Teacher and/or students 
+focus on meaning more than 
+briefly (e.g., several 
+instances within the 
+segment or one somewhat 
+long instance), but this work 
+is not sustained or 
+substantial. 
+Teacher and/or students 
+focus on meaning in 
+sustained way during 
+segment.  Need not be the 
+entire segment, but must be 
+substantial.  
+Back to Table of Contents 
+ 
+ 
+ 
+
+
+--- page 8 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+8 
+Scoring Help -  Mathematical Sense-Making 
+In many cases, Sense-Making overlaps with events already scored in Explanations.  
+ 
+For example, a teacher may provide the explanation that dividing both the numerator and denominator by 4 is in essence 
+dividing by 4/4. And because dividing by 4/4 is the same as dividing by 1, dividing by 4/4 actually does not change the value 
+of the original fraction. This explanation would also count as sense-making, as the teacher is giving meaning to the fraction 
+4/4 and the procedure of making equivalent fractions.  
+ 
+While many explanations will also qualify as Sense-Making, some will not. For example, a teacher who walks through an 
+algebraic/geometric proof may get credit for explanations for explaining why a solution is true without meaning to the 
+mathematical ideas. 
+ 
+There also are instances of Sense-Making that do not count under Explanations. For example, attention to any of the 
+following may be scored as Sense-Making without meeting the criteria for Explanations:  
+• 
+The value or meaning of quantities 
+• 
+The reasonableness of an expression or answer 
+• 
+Using estimation or number sense 
+• 
+Making sense of word problems 
+ 
+Finally, it is important to note that instances that count under both Sense-Making and Explanations won’t necessarily earn 
+the same score point. For both codes, we ask raters to assess the quantity of the code, i.e., whether it occurs at all, is brief, 
+or is more extended. However, a High for Explanations means that the instance is the main feature of the segment, whereas 
+under Sense-Making it just needs to be sustained. Additionally, when scoring Explanations, you can count the build-up as a 
+part of the explanation, even if that build-up is procedural. When scoring Sense-Making, only count time in which sense is 
+actually being made; we do not count related procedural work or build-up as sense-making. 
+ 
+Back to Table of Contents 
+ 
+ 
+ 
+ 
+
+
+--- page 9 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+9 
+Multiple Procedures or Solution Methods 
+Multiple procedures or solution methods occur or are discussed in the segment:  
+• 
+Multiple solution methods for a single problem (including shortcuts) 
+• 
+Multiple procedures for a given problem type                                                                  _                                 
+ 
+Defined as, e.g.:         
+• 
+Taking different mathematical approaches to solving a problem (e.g., comparing fractions by finding a common 
+denominator AND comparing fractions by finding a common numerator) 
+• 
+Solving or discussing how to solve a word problem using two different strategies.   
+ 
+If the initial strategy or strategies occurred in a prior segment, score Multiple Procedures in the subsequent segment (i.e., 
+no need to go back and adjust your score in the initial segment).   
+ 
+Note: Do NOT count incorrect procedures or solution methods. 
+Not Present 
+Low 
+Mid 
+High 
+No evidence of multiple 
+procedures or solution 
+methods for single 
+problem or a given 
+problem type. 
+Teacher or student 
+briefly mentions a second 
+procedure or method, 
+but the method is not 
+discussed at length or 
+enacted (“we also 
+showed yesterday that 
+you can do it XYZ”).  
+Multiple procedures or 
+solution methods occur or 
+are discussed in the segment 
+(e.g., solving division 
+problems in two ways), but 
+does not include the special 
+features listed in High, or 
+feature these only 
+momentarily (e.g., “this 
+method is easier than the 
+other” without explicit 
+discussion of why).   
+Multiple procedures or solution 
+methods occur or are discussed in 
+the segment, and include special 
+features: 
+• 
+Explicit comparison of 
+multiple procedures or 
+solution methods for 
+efficiency, appropriateness, 
+ease of use, or other 
+advantages and 
+disadvantages 
+• 
+Explicit discussion of features 
+of a problem that cues the 
+selection of a particular 
+procedure 
+• 
+Explicit connections between 
+multiple procedures or 
+solution methods (e.g., how 
+one is like or unlike the other) 
+Scoring Help -  Multiple Procedures and Solution Methods 
+You will need to use some judgment when deciding whether to count two methods as distinct from one another. We 
+consider methods distinct when they feature two different mathematical paths to the solution. For instance, in the case of 
+comparing fractions, we would NOT consider it distinct if student A compares 3/5 and 7/10 by finding a common 
+denominator of 10, and student B finds a common denominator of 50. However, we would consider finding common 
+numerators  and finding common denominators to be distinct methods. 
+Back to Table of Contents 
+ 
+ 
+
+
+--- page 10 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+10
+Patterns and Generalizations 
+This code is meant to capture instruction during which the class first examines instances or examples, then uses this 
+information to develop or work on a mathematical generalization; to notice, extend or generalize a mathematical pattern; 
+to derive a mathematical property; or to build and test definitions. 
+ 
+Examples of this activity include:  
+• 
+Examining particular cases and then noticing and extending a pattern (e.g., looking at the sum of the angles in 3, 
+4, 5, and 6-sided regular polygons and extending the pattern or generalizing to an n-sided regular polygon)  
+• 
+Saying whether mathematical procedures work in all cases  
+• 
+“Building up” a mathematical definition or deriving a mathematical property (e.g., defining “polygons” after 
+considering different examples and non-examples of polygons)  
+ 
+Notes:  
+• 
+Patterns, generalizations and definitions must be based on at least two examples (either explicitly worked on or 
+referred to)  
+• 
+Do NOT count incorrect generalizations, incorrect pattern noticing, or incorrect definition building 
+• 
+Do NOT count when teachers and/or students state generalizations, patterns, or definitions without first 
+developing them from examples 
+Not Present 
+Low 
+Mid 
+High 
+No generalizations are 
+developed or worked 
+on; no patterns are 
+noticed or extended; no 
+definitions are built or 
+tested.  
+There is brief work on 
+developing a generalization 
+or building a definition, but 
+this work is undeveloped 
+and/or is not the primary 
+focus of the segment.  
+ 
+OR  
+ 
+Teachers and/or students 
+engage in pattern-noticing 
+and/or extending. This is 
+done in a pro forma way 
+(e.g. red, blue, blue, red, 
+blue, blue, ??, blue blue) 
+There is work on developing a 
+generalization, extending a 
+pattern or building a definition, 
+but the work is not finalized.  
+ 
+For instance, a pattern may be 
+noticed, extended, or reasoned 
+about but not codified (“it 
+looks like when we increase the 
+coefficient, the line might get 
+steeper”).  
+ 
+OR 
+ 
+Teachers and/or students 
+develop a generalization, 
+extend a pattern, or build a 
+definition, but the work is not 
+complete, clear or detailed.  
+The pattern or generalization 
+is codified, AND the work is 
+complete, clear and detailed. 
+ 
+For instance, the teacher 
+and/or students may carefully 
+develop a generalization from 
+examples in detail; or 
+summarize and codify a 
+pattern by describing how the 
+pattern is generated.  
+Back to Table of Contents 
+ 
+ 
+ 
+
+
+--- page 11 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+11
+Mathematical Language 
+This code captures how fluently the teacher (and students) use mathematical language and whether the teacher supports 
+students’ use of mathematical language.  
+ 
+Examples: 
+• 
+Fluent use of technical language 
+• 
+Explicitness about mathematical terminology 
+• 
+Encouraging students to use mathematical terms 
+Not Present 
+Low  
+Mid  
+High 
+Score here when NO 
+mathematical terms are 
+used.  
+Teacher uses non-
+mathematical terms to 
+describe mathematical 
+ideas and procedures 
+AND/OR teacher talk is 
+characterized by 
+sloppy/incorrect use of 
+mathematical terms.  
+ 
+ 
+Low density of mathematical 
+language. Not necessarily an 
+indication that teacher is not 
+“fluent” in mathematics, but 
+simply a segment where few 
+mathematical terms are used, 
+or the same term is used over 
+and over without features of 
+High.  
+ 
+Also score as Low when 
+segment has middling density, 
+but sloppy use. 
+Teacher uses mathematical 
+language as a vehicle for 
+conveying content, with 
+middling density. However, 
+the segment has few or 
+none of the special features 
+listed under High.  
+ 
+ 
+Also score as Mid when 
+segment has both features 
+of High but includes some 
+linguistic sloppiness or low 
+density.  
+ 
+Teacher uses mathematical 
+language correctly and 
+fluently. Can be achieved in 
+two ways: 
+ 
+1. Density of mathematical 
+language is high during 
+periods of teacher talk. 
+ 
+2. Moderate density, but also 
+explicitness about 
+terminology, reminding 
+students of meaning, pressing 
+students for accurate use of 
+terms, encouraging student 
+use of mathematical language.  
+ 
+Instances of students using 
+sophisticated mathematical 
+vocabulary can also count 
+toward a High. 
+Back to Table of Contents 
+ 
+ 
+
+
+--- page 12 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+12
+Overall Richness of the Mathematics 
+This code captures the depth of the mathematics offered to students.  
+ 
+Note: This is an overall code for each segment. It is not an average of the codes in this dimension, but an overall estimate of 
+richness.  
+Not Present 
+Low  
+Mid 
+High 
+Elements of richness are 
+present but are all 
+incorrect 
+OR 
+Elements of rich 
+mathematics are not 
+present. 
+Elements of rich 
+mathematics are 
+minimally present.  
+ 
+Note that there may be 
+isolated Mid scores in the 
+codes of this dimension.  
+ 
+ 
+Elements of rich mathematics 
+are more than minimally 
+present but the overall richness 
+of the segment does not rise to 
+the level of a High.  
+ 
+For example, a segment may be 
+characterized by some Mid 
+scores in the codes of this 
+dimension or by an isolated 
+High along with substantial 
+procedural focus, etc.    
+ 
+ 
+Elements of rich mathematics 
+are present, and either: 
+ 
+a) There is a combination of 
+elements that together 
+saturate the segment with rich 
+mathematics either through 
+meaning or mathematical 
+practices.  
+OR 
+b) There is truly outstanding 
+performance in one or more of 
+the elements.  
+Scoring Help -  Overall Richness of the Mathematics 
+In scoring Overall Richness, we assign a score of Not Present when there are no elements of richness present in the 
+segment, or the components of richness that are present are all incorrect. For this code, we do not consider middling 
+density of Mathematical Language to be an element of richness. That is, a segment could get a score of Low or Mid for 
+Mathematical Language and still get a score of Not Present for Overall Richness. 
+Back to Table of Contents 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+--- page 13 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+13
+Working with Students and Mathematics 
+This dimension captures whether teachers can understand and respond to students’ mathematical contributions 
+(utterances or written work) or mathematical errors. Student contributions include, but are not limited to, questions, 
+claims, explanations, solution methods, ideas, etc. By students’ mathematical errors, we mean those incorrect student 
+contributions that offer opportunities for addressing student difficulty. 
+Back to Table of Contents 
+ 
+ 
+ 
+
+
+--- page 14 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+14
+Remediation of Student Errors and Difficulties 
+With this code, we mean to record instances of remediation in which student misconceptions and difficulties with the 
+content are addressed.  
+ 
+Conceptual remediation gets at the root of student misunderstandings, rather than repairing just the procedure or fact. 
+Conceptual remediation includes: 
+• 
+Identifying/addressing the source of student errors or misconceptions: “I noticed that some of you seem to think that 
+1.024 is a larger number than 1.1. I think you were noticing the number of digits to the right of the decimal point 
+rather than thinking about the place value.”  
+• 
+Pointing to underlying meaning when responding to errors: “I noticed that some of you seem to think that 1.024 is a 
+larger number than 1.1. Both numbers start with 1. But what value do they have in the tenths place? Zero tenths, 
+one tenth.”   
+ 
+Procedural remediation corrects student problems with procedures (e.g., re-demonstrating the procedure for addition of 
+fractions with unlike denominators without reference to why the procedure works or sense-making around the quantities). 
+To score an instance of procedural remediation, there must be more than a simple correction of a student mistake.  
+ 
+Examples such as “no, that is not correct” or “you should have gotten 9” should be considered simple corrections rather 
+than remediation because they do not address student difficulty. Examples of corrections could include correcting a 
+misunderstanding about a definition (“This is an expression.” “No, it’s an equation.”) or correcting the result of the 
+calculation without talking about the calculation.  
+ 
+If some portion of the remediation muddles the mathematics, the score may be adjusted downward. 
+ 
+Notes:  
+• 
+Remediation can occur during active instruction or small group/partner/individual work time. 
+• 
+Remediation must have mathematical content. 
+• 
+If teacher prompts a student to remediate another student, it can be scored as present as long as the remediation 
+is correct.  
+• 
+Pre-remediation (calling students’ attention to a common error) counts as a Mid or High, depending upon the 
+amount of detail and clarity. It demonstrates teacher familiarity with student thinking. 
+Not Present 
+Low 
+Mid 
+High 
+No remediation occurs for any 
+of the following reasons:  
+• 
+There are no student 
+misunderstandings or 
+difficulties with the 
+content  
+• 
+Remediation does not go 
+beyond correcting 
+students’ answers 
+• 
+The teacher chooses not to 
+remediate 
+• 
+The teacher remediation is 
+confusing or off-track 
+Brief conceptual 
+remediation occurs. 
+ 
+OR  
+ 
+Brief or moderate 
+procedural remediation 
+occurs.  
+ 
+ 
+Moderate (neither brief 
+nor at length) conceptual 
+remediation or extensive 
+procedural remediation 
+occurs.  
+ 
+OR 
+ 
+Brief pre-remediation 
+occurs. 
+Teacher engages in conceptual 
+remediation systematically and 
+at length. Examples include: 
+• 
+Identifying the source of 
+student errors or 
+misconceptions 
+• 
+Discussing how student 
+errors illustrate broader 
+misunderstanding and 
+then addressing those 
+errors 
+• 
+Extended pre-remediation 
+Back to Table of Contents 
+ 
+ 
+
+
+--- page 15 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+15
+Scoring Help - Remediation of Student Errors and Difficulties 
+In scoring this code, it is helpful to first identify whether any student difficulty exists in the segment. If there is any student 
+difficulty, then the teacher’s response can be categorized according to whether or not it was remediation and if so, what 
+type. 
+Examples - Remediation of Student Errors and Difficulties 
+Not Present 
+Low 
+Mid 
+High 
+[correction, not 
+remediation] 
+Teacher notices 
+student has gotten 
+the wrong answer 
+and says, “No, that 
+is not correct. You 
+should have gotten 
+9.” 
+[brief conceptual 
+remediation] 
+“Remember, you need 
+to keep both sides of 
+your equation 
+equivalent to each 
+other, so you can’t 
+perform an operation 
+on only one side.” 
+[moderate conceptual remediation] 
+“I noticed that some of you forgot to 
+multiply both sides of the equation by 
+x. What happens if you multiply one 
+side by x and not the other?” 
+A few students offer reasons, and the 
+teacher summarizes their ideas by 
+saying, “The sides wouldn’t be 
+equivalent anymore.”   
+[systematic conceptual 
+remediation] 
+“I noticed that some of you 
+forgot to multiply both sides of 
+the equation by x. What 
+happens if you multiply one side 
+by x and not the other?” The 
+class continues to discuss at 
+length why you need to multiply 
+on both sides. 
+Back to Table of Contents 
+ 
+ 
+ 
+
+
+--- page 16 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+16
+ 
+Teacher uses Student Mathematical Contributions 
+This item captures the extent to which teacher uses student mathematical contributions to move instruction forward. 
+Contributions can include, but are not limited to, student answers to questions (including one-word answers), comments, 
+mathematical ideas, explanations, representations, generalizations, questions to the teacher, and student work. If some 
+portion of the response to students muddles the mathematics, the score may be adjusted downward. This code can be 
+used in whole-group or small-group/individual time segments.  
+Not Present 
+Low  
+Mid 
+High 
+No or very few student 
+responses and only pro 
+forma use of student ideas to 
+develop the mathematics.  
+For example, class may be 
+dominated by teacher talk 
+with very few student 
+comments.   
+ 
+OR 
+ 
+Teacher uses student 
+contributions but in a way 
+that muddles or confuses the 
+mathematics of the lesson. 
+ 
+OR 
+ 
+Student contributions occur 
+but the teacher ignores them 
+Students contribute and 
+the teacher responds in a 
+pro forma way.  
+ 
+ 
+The teacher uses student 
+contributions to some 
+degree in the development 
+of the mathematics.  
+ 
+Teacher may engage in 
+features listed under High 
+briefly, but instruction 
+generally proceeds 
+without strong use of 
+student mathematical 
+ideas.  
+Students’ mathematical ideas 
+are woven at length into the 
+development of mathematical 
+ideas during the segment. 
+Teacher “hears” what students 
+are saying, mathematically, and 
+responds appropriately during 
+instruction.  
+ 
+In particular, teacher may 
+comment on students’ 
+mathematical ideas, elicit 
+further student clarification of 
+ideas, ask other students to 
+comment on ideas, expand on 
+and reinforce student 
+utterances, etc.  
+ 
+Other markers include:  
+• Identifying key ideas in 
+student statement (“Mark 
+had an interesting idea…”)  
+• Highlighting key features of 
+student questions (“Mark was 
+asking about whether this 
+would work in all cases…”)  
+• Identifying a student with an 
+idea (“Mark’s method”)  
+Back to Table of Contents 
+ 
+ 
+ 
+
+
+--- page 17 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+17
+Scoring Help - Teacher uses Student Mathematical Contributions 
+This code is intended to measure how the teacher responds to and uses the mathematics that students contribute, 
+regardless of the quality of the student contribution. That is, student contributions can be brief and procedural in nature; 
+what we are looking for in this code is the length and quality of teacher uptake and use. 
+ 
+Note that this is not a quantity code. If a teacher responds to multiple student contributions throughout the segment, but 
+always does so in a pro forma way, score as a Low.  
+ 
+Several types of teacher responses may qualify as pro forma:  
+• 
+The students regularly contribute basic calculations or answer-bounded questions during instruction, and the 
+teacher acknowledges correct responses and uses them in the course of instruction, perhaps to move a 
+calculation forward on the board.  
+• 
+Different students contribute many solutions or explanations, but the teacher doesn’t make use of them beyond 
+acknowledging students who are correct.  
+• 
+A student provides a contribution, and the teacher recognizes that it is interesting but decides not to take it up at 
+that moment.  
+ 
+Do not count use of “student” ideas that are not truly coming from the students as a feature of High (e.g., calling Claire’s 
+repeating of the addition procedure “Claire’s idea” when the teacher just really wants to talk about the addition 
+algorithm.) 
+Back to Table of Contents 
+ 
+ 
+
+
+--- page 18 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+18
+Overall Working with Students and Mathematics 
+This code provides an overall evaluation of the teacher-student interactions around the content. 
+ 
+Note: This is an overall code for each segment. It is not an average of the codes in this dimension, but an overall estimate of 
+the teachers’ interactions with the students around the content. 
+ 
+If some portion of the response to students or remediation muddles the mathematics, the score may be adjusted 
+downward. 
+ 
+Not Present 
+Low 
+Mid 
+High 
+No or few interactions 
+between teacher and 
+students. There is no 
+remediation and little use of 
+student ideas  
+OR 
+Student mathematical 
+contributions or difficulties 
+occur, but teacher does not 
+respond to or use those 
+contributions.  
+OR 
+Teacher responses to student 
+contributions are unclear or 
+lead the segment off-track. 
+Teacher and students 
+interact over content, but 
+teacher responses are pro 
+forma – moving instruction 
+along with limited input 
+from students.  
+ 
+AND/OR 
+ 
+There may be brief 
+remediation.  
+ 
+ 
+ 
+Teacher and student 
+interaction goes beyond pro 
+forma exchanges to feature 
+some use of student ideas, 
+moderate conceptual 
+remediation or extended 
+procedural remediation. 
+Portions of the clip may also 
+feature a mix of strong and 
+weak elements, or less-than-
+skillful use of student ideas.  
+Teacher weaves student 
+ideas into the development 
+of the mathematics and/or 
+conceptually addresses 
+misconceptions for clip. 
+This must be done with 
+some level of teacher skill 
+at “hearing,” 
+understanding, and 
+appropriately responding 
+to student contributions or 
+difficulties.  
+Back to Table of Contents 
+ 
+ 
+ 
+
+
+--- page 19 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+19
+Errors and Imprecision 
+This dimension is intended to capture teacher errors or imprecision in language and notation, or the lack of 
+clarity/precision in the teacher’s presentation of the content. 
+ 
+Do NOT count errors that are noticed and corrected within the segment. 
+Back to Table of Contents 
+ 
+ 
+ 
+ 
+Mathematical Content Errors 
+The code is intended to capture events in the segment that are mathematically incorrect. For example: 
+• 
+Solving problems incorrectly  
+• 
+Defining terms incorrectly 
+• 
+Forgetting a key condition in a definition 
+• 
+Equating two non-identical mathematical terms 
+  
+Mathematical errors that are made by students and endorsed by the teacher (e.g., leaving it on the board, saying it is 
+correct, adopting an incorrect definition of fractions) should be counted here. Also score here if the teacher evaluates a 
+correct solution method as incorrect.  
+ 
+Do not count  
+• 
+Intentional errors (teacher following a wrong student idea or doing a procedure incorrectly to make a point) 
+• 
+Errors that are corrected within the segment 
+Not Present 
+Low 
+Mid 
+High 
+None. 
+A brief content error. 
+Does not obscure the 
+mathematics of the 
+segment. 
+Content errors occur in 
+part(s) of the segment. 
+ 
+OR 
+ 
+Error(s) obscure the 
+mathematics, but for only 
+part of the segment. 
+Content errors occur in most or 
+all of the segment. 
+ 
+OR 
+ 
+The errors obscure the 
+mathematics of the segment. 
+Examples -  Mathematical Content Errors 
+Not Present 
+Low 
+Mid 
+High 
+ 
+When solving a multi-step 
+problem, the teacher 
+makes a calculation error 
+in the last step, which 
+results in an incorrect 
+answer. Other similar 
+problems are solved 
+correctly.   
+The teacher’s discussion of 
+the solution to a problem 
+is incorrect. This discussion 
+is more than brief, but 
+correct mathematics also 
+occurs more than briefly 
+during the segment.  
+The teacher uses an inappropriate 
+metaphor for most of the segment 
+(e.g., in a graph comparing 
+distance and time, the teacher 
+refers to the upward slope as 
+runner going up the hill, flat slope 
+as runner running straight). 
+Back to Table of Contents 
+ 
+ 
+
+
+--- page 20 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+20
+Imprecision in Language or Notation  
+This code is intended to capture problematic uses of mathematical language or notation. For example: 
+• 
+Errors in notation (mathematical symbols) 
+• 
+Errors in mathematical language  
+• 
+Errors in general language 
+ 
+Definitions 
+• 
+Notation includes conventional mathematical symbols (such as +, -, =) or symbols for fractions and decimals, square 
+roots, angle notation, functions, probabilities, exponents, etc. Errors in notation might include inaccurate use of the 
+equals sign, parentheses, or division symbol. By “conventional notation,” we do not mean use of numerals or 
+mathematical terms.                                                                                                                                                                                
+• 
+Mathematical language includes technical mathematical terms, such as “angle,” “equation,” “perimeter,” and 
+“capacity.” If the teacher uses these terms incorrectly, record as an error. When the focus is on a particular term or 
+definition, also score errors in spelling or grammar. 
+• 
+Teachers often use “general language” to convey mathematical concepts (i.e., explaining mathematical ideas or 
+procedures in non-technical terms). General language also includes analogies, metaphors, and stories. Appropriate use 
+of terms includes care in distinguishing everyday meanings different from their mathematical meanings. If the teacher 
+is unclear in his/her general talk about mathematical ideas, terms, concepts, or procedures, record as an error. 
+Not Present 
+Low 
+Mid 
+High 
+None. 
+Brief instance of imprecision. 
+Does not obscure the 
+mathematics of the segment. 
+Imprecision occurs in part(s) 
+of the segment. 
+ 
+OR 
+ 
+Imprecision obscures the 
+mathematics, but for only 
+part of the segment. 
+Imprecision occurs in most or 
+all of the segment. 
+ 
+OR 
+ 
+Imprecision obscures the 
+mathematics of the segment. 
+Back to Table of Contents 
+ 
+ 
+ 
+ 
+
+
+--- page 21 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+21
+Scoring Help -  Imprecision in Language or Notation 
+We have specifically identified some commonly used imprecise terms and phrases that raters should be on the lookout for. 
+These fall into two categories: phrases whose usage automatically results in a score of (at least) a Low, and “gray area” 
+phrases whose isolated usage should not necessarily result in a score above Not Present, but can be considered in 
+conjunction with other language use. If gray area phrases occur once or twice, we typically ignore them. However, if they 
+occur repeatedly, or if they occur in combination with other linguistic or notational imprecision, we do consider them when 
+scoring Imprecision. 
+ 
+Note that these are not exhaustive lists of all phrases that might count towards score above Not Present. 
+ 
+Automatically score as an imprecision:  
+• 
+referring to “bigger” or “smaller” equivalent fractions 
+• 
+different variations on “you can’t subtract a bigger number from a smaller”  
+• 
+different variations on “multiplication makes a number bigger” 
+• 
+misuse of “expression” and “equation” 
+• 
+misuse of equals sign 
+• 
+“reducing” fractions (instead of simplifying) 
+“Gray area” phrases:  
+• 
+“timesing”, “minusing” 
+• 
+“top” and “bottom” for numerator and denominator 
+• 
+“alligator mouth” for greater-than and less-than symbols 
+• 
+“carrying” 
+• 
+“canceling” 
+• 
+“borrowing” (instead of regrouping) 
+• 
+“line” instead of line segment 
+• 
+brief reference that pi is 3.14 without mentioning this is an approximation. 
+ 
+Examples -  Imprecision in Language or Notation 
+Not Present 
+Low 
+Mid 
+High 
+ 
+1) The teacher misuses 
+“expression” or “equation” 
+once or twice in a lesson 
+on representing patterns. 
+ 
+2) Teacher uses term like 
+“reduce” instead of 
+“simplify”, and this does 
+not obscure the 
+mathematics being taught.  
+ 
+1) The teacher uses the 
+word “expression” instead 
+of “equation” one or two 
+times during a segment 
+specifically about 
+equations or the nature of 
+equality. 
+ 
+2) The teacher uses terms 
+like “reduce” and tells 
+students that reducing 
+makes fractions smaller. 
+The teacher’s language and 
+notation is sloppy throughout the 
+segment. 
+ 
+ 
+Back to Table of Contents 
+ 
+ 
+
+
+--- page 22 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+22
+ 
+Lack of Clarity in Presentation of Mathematical Content 
+This code is intended to capture when a teacher’s utterances cannot be understood. For example:  
+• 
+Mathematical point is muddled, confusing, or distorted  
+• 
+Language or major errors make it difficult to discern the point 
+• 
+Teacher neglects to clearly solve the problem or explain content 
+Teacher’s launch of a task/activity lacks clarity (the “launch” is the teacher’s effort to get the mathematical tasks/activities 
+into play). If the launch is problematic, score for the launch plus amount of time students are confused/off-task/engaging in 
+non-productive explorations    
+Not Present 
+Low 
+Mid 
+High 
+None. 
+Brief lack of clarity. Does not 
+obscure the mathematics of 
+the segment. 
+Lack of clarity occurs in 
+part(s) of the segment. 
+ 
+OR 
+ 
+Lack of clarity obscures the 
+mathematics, but for only 
+part of the segment. 
+Lack of clarity occurs in most or 
+all of the segment. 
+ 
+OR 
+ 
+Lack of clarity obscures the 
+mathematics of the segment. 
+Scoring Help -  Lack of Clarity 
+Definition: You have to ask: “What, mathematically, was the teacher trying to say?”  
+Examples:  
+• 
+Discussion of why 7 + -3 = 4 heads toward “-4 is too small to be the answer”  
+o 
+This is not wrong, but the mathematical point is not clear.  
+• 
+Teacher endorses conflicting definitions for same concept  
+o 
+“The area is a number of square units needed to cover the figure, and we've talked before about the box like a 
+gift that somebody gives you. The box itself and everything inside the box is the area, but the wrapping paper 
+around it would be like surface area and we talked about that and we talked about the perimeter is walking 
+around the fence around an area.”  
+• 
+Talking through a division problem and alternating back and forth between “making 3 groups” and “making groups of 
+3.”  
+• 
+Garbling a task launch, e.g., by asking initially “How much TV is watched in the US?” when students really must draw a 
+graph to show “How many TVs in US vs. Europe vs. rest of the world?” 
+Examples -   
+Not Present 
+Low 
+Mid 
+High 
+ 
+The launch of task is 
+unclear, but the teacher 
+clarifies quickly.  
+ 
+A sentence or phrase is 
+unclear, but the main 
+mathematical point is not 
+affected. 
+To introduce inverse 
+operations, teacher 
+explains that multiplication 
+and division are “best 
+friends” and “if you know 
+something about one, you 
+know something about the 
+other.” Examples later in 
+the segment make the 
+point clearer. 
+Teacher states that the lesson is 
+going to be on surface area and 
+volume. When students are asked 
+to describe a cardboard box using 
+math terms, the teacher endorses 
+correct and incorrect student 
+suggestions. The teacher then tries 
+to define volume by asking 
+whether a twelve foot TV would fit 
+into the box. Surface area is 
+mentioned numerous times but 
+never defined. It is unclear if the 
+teacher is using surface area as a 
+synonym for volume or whether 
+the term is simply never defined. 
+Back to Table of Contents 
+ 
+
+
+--- page 23 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+23
+Overall Errors and Imprecision 
+This code intends to capture the overall presence of teacher errors in doing and talking about mathematics.  
+ 
+Note: This is an overall code for each segment. It is not an average of the codes in this dimension, but an overall estimate 
+of the errors and imprecision in instruction. 
+Not Present 
+Low 
+Mid 
+High 
+No errors occur. Do not 
+score as Not present if Low, 
+Mid or High is marked in any 
+category above. 
+Small, momentary error(s) 
+occur. For example, small 
+slips in language, a brief lack 
+of clarity, or a minor error in 
+solving an exercise.  These 
+typically do not obscure the 
+mathematics of the 
+segment.   
+One or more errors, for 
+example, persistent misuse 
+of language, a lack of clarity 
+in a portion of the segment 
+and/or mathematical errors, 
+but these typically obscure 
+the math for part of the 
+segment.  
+Either there are many small 
+errors, a consistent lack of 
+clarity, or one large error 
+that obscures the 
+mathematics of the 
+segment. 
+Back to Table of Contents 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+--- page 24 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+24
+Common Core Aligned Student Practices (CCASP) 
+This dimension attempts to capture evidence of students’ involvement in tasks that ask them to “do” mathematics and the 
+extent to which students participate in and contribute to meaning-making and reasoning. During active instructional 
+segments, this mainly occurs through student mathematical statements, including reasoning, explanations, and asking 
+questions. During small group/partner/individual work times, this mainly occurs through work on a non-routine task. 
+ 
+The CCASP dimension captures the same kind of student meaningful engagement with mathematics envisioned in the eight 
+Standards of Mathematical Practices listed in the Common Core State Standards for Mathematics1, which say that students 
+should: 
+1. Make sense of problems and persevere in solving problems 
+2. Reason abstractly and quantitatively 
+3. Construct viable arguments and critique the reasoning of others 
+4. Model with mathematics 
+5. Use appropriate tools strategically 
+6. Attend to precision 
+7. Look for and make use of structure 
+8. Look for and express regularity in repeated reasoning 
+ 
+Although there is not a one-to-one correspondence between the CCASP codes and the 8 Common Core Standards, the 
+CCASP dimension includes many of the observable student behaviors contained in the Common Core.  For instance, the 
+Common Core practice “Model with mathematics” is addressed in the MQI code Students Work with Contextualized 
+Problems.  
+ 
+ 
+ 
+1 National Governors Association Center for Best Practices, Council of Chief State School Officers (2010). Common Core State Standards Mathematics. Washington, DC: National Governors 
+Association Center for Best Practices, Council of Chief State School Officers 
+ 
+Back to Table of Contents 
+ 
+ 
+ 
+ 
+
+
+--- page 25 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+25
+Students Provide Explanations 
+Students provide a mathematical explanation for an idea, procedure, or solution.  
+ 
+Examples: 
+• 
+Students explain why a procedure works 
+• 
+Students explain the procedure they used to solve a particular problem by attending to the meaning of the steps 
+involved in this procedure rather than simply listing those steps 
+• 
+Students explain what an answer means 
+• 
+Students explain why a solution method is suitable or better than another method 
+• 
+Students explain an answer based on an estimate or other number-sense reasoning 
+ 
+Notes:  
+• 
+Explanations can be initiated by the teacher or self-initiated 
+• 
+Explanations can be co-constructed with the teacher or constructed individually 
+• 
+Explanations do not have to be complete or correct 
+• 
+If a student’s explanation meets the criteria for the Explanations code in Richness, it should be counted in both places 
+• 
+Only give credit for things you actually hear students say 
+Not Present 
+Low 
+Mid 
+High 
+No instances of student 
+explanation are present.  
+One or two brief student 
+explanations are present.  
+Student explanations are 
+more sustained or more 
+frequent, but they are not 
+characteristic of the 
+segment. 
+Student explanations 
+characterize much of the 
+segment.  
+Scoring Help – Students Provide Explanations 
+When students are working independently or in groups and you cannot hear anything they say, assign the segment a score 
+of Not Present. If you can hear student explanations or reasoning during these times, score them as usual. 
+Back to Table of Contents 
+
+
+--- page 26 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+26
+Student Mathematical Questioning and Reasoning (SMQR) 
+Students engage in mathematical thinking that has features of important mathematical practices. There must be clear 
+evidence of students engaging in such practices. Examples include but are not limited to: 
+ 
+• 
+Students provide counter-claims in response to a proposed mathematical statement or idea (whether from another 
+student, the teacher, or a text) 
+• 
+Students ask mathematically motivated questions requesting explanations (e.g., “Why does this rule work?” “What 
+happens if all the numbers are negative?”) 
+• 
+Students make conjectures about the mathematics discussed in the lesson (e.g., “I’ve been trying to make a triangle 
+with two obtuse angles, and I don’t think you can.”) 
+• 
+Students form conclusions based on patterns they identify or on other forms of evidence (e.g., “It looks like, for 
+polygons, every time we add a side we add another 180 degrees.”) 
+• 
+Students engage in reasoning about a hypothetical or general case (e.g., “Because the sum of the angles of any 
+triangle is 180 degrees, a triangle should have at least two acute angles.”) 
+• 
+Students use ideas from a different mathematical topic to reason about the content of the lesson (e.g., student uses 
+ideas from symmetry to reason about equivalent fractions in a pie chart) 
+• 
+Students make a connection between the topic of the lesson and another mathematical area (e.g., a student notes the 
+connection between area models for multiplication and area in measurement) 
+• 
+Students comment on the mathematics of one another’s contributions (this must go beyond stating “I did it another 
+way” or simply agreeing or disagreeing) 
+ 
+An explanation captured under the Student Explanations code should also be coded as SMQR only if the statement 
+includes an additional SMQR element.  For example, a conjecture and an explanation of the conjecture should be counted 
+under both codes. (e.g., “I don’t think that the output in that table will ever be 0 because all of the other outputs are odd 
+numbers.”) 
+ 
+Notes: 
+• 
+Students’ contributions do not have to be complete or correct 
+• 
+Only give credit for things you actually hear students say 
+Not Present 
+Low 
+Mid 
+High 
+No instances of student 
+mathematical questioning 
+or reasoning are present.  
+One or two instances of 
+brief student mathematical 
+questioning or reasoning are 
+present.  
+Student mathematical 
+questioning or reasoning is 
+more sustained or more 
+frequent, but it is not 
+characteristic of the 
+segment. 
+Student mathematical 
+questioning or reasoning 
+characterizes much of the 
+segment.  
+Scoring Help - SMQR 
+When students are working independently or in groups and you cannot hear anything they say, assign the segment a score 
+of Not Present. If you can hear student explanations or reasoning during these times, score them as usual. 
+Back to Table of Contents 
+ 
+ 
+
+
+--- page 27 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+27
+Students Communicate about the Mathematics of the Segment 
+This item captures the extent to which students communicate their mathematical ideas during the course of the segment, 
+either in whole-group or small group settings. Examples of substantive student contributions include, but are not limited to, 
+students presenting solution methods publicly (with or without words), asking mathematical questions, describing the 
+meaning of a term, offering an explanation, discussing solution methods, commenting on the reasoning of others, etc.  
+ 
+In cases in which students are working in pairs or small groups, code substantive student contributions when you can a) 
+hear them (e.g., a student and teacher are talking as teacher circulates, or you can overhear pairs of students) or b) the 
+teacher’s directions are very clear, and we can reasonably expect students to be having a substantive exchange for the 
+duration of the small group work (e.g., a turn and talk). However, if it is not clear what students are talking about in small 
+groups/pair work, score as Not Present.  
+Not Present 
+Low 
+Mid 
+High 
+Not present or minimally present. 
+Students may contribute a word or 
+phrase infrequently during whole-
+group instruction, but the segment 
+primarily features teacher talk.  
+Student contributions are 
+very brief. For example, 
+students offer one- or two- 
+word answers to questions or 
+a partial description of steps, 
+and they occur regularly 
+during the segment.  
+There are some 
+substantive student 
+contributions, but these 
+do not characterize the 
+segment.  
+Substantive student 
+contributions 
+characterize the 
+segment.  
+Scoring Help -  Students Communicate About The Mathematics Of The Segment 
+Note that the difference between Not Present and Low is the prevalence of brief, one- or two-word answers, and the 
+difference between Mid and High is the prevalence of substantive student contributions. The difference between Not 
+Present/Low and Mid/High is whether there exist any substantive student contributions (i.e. a segment with a single 
+substantive student contribution must be scored at least a Mid, and a segment with no substantive student contributions 
+may not score above a Low). For instance, a student may provide one step of a procedure, followed by the teacher giving 
+the next step. This would count as a Low. If the student narrates a complete set of steps for a problem, it would be counted 
+as a Mid.  
+ 
+Student explanations and SMQR-type responses count here. In addition, this code encompasses additional types of 
+substantive student contributions under Mid and High, including descriptions of choices students made while solving word 
+problems, definitions, and so forth. 
+Back to Table of Contents 
+ 
+ 
+
+
+--- page 28 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+28
+Task Cognitive Demand 
+This code captures student engagement in tasks in which they think deeply and reason about mathematics. This code 
+refers to the enactment of the task, regardless of the initial demand of the curriculum/textbook task or how the teacher 
+sets up the task for students. 
+ 
+Notes: 
+• 
+Student confusion does not necessarily suggest that students are engaging with the content at a high cognitive level. 
+• 
+Working on review tasks or on ideas discussed in previous lessons does not necessarily mean that students use lower 
+order thinking skills. 
+• 
+This code should not be confounded with the difficulty of the task or whether it is appropriate for a certain grade-
+level. 
+• 
+Code a student presentation of a solution method at the same level of cognitive demand as the task itself was coded.  
+Not Present 
+Low 
+Mid 
+High 
+Students are engaged in 
+cognitively undemanding 
+activities. 
+ 
+Examples of cognitively 
+undemanding activities 
+include:  
+• 
+Recalling and applying 
+well-established 
+procedures  
+• 
+Recalling or reproducing 
+known facts, rules, or 
+formulas  
+• 
+Listening to a teacher 
+presentation with 
+limited student input 
+• 
+Going over homework 
+with little additional 
+student work (e.g., 
+reporting numerical 
+answers) 
+• 
+Unsystematic 
+exploration (i.e., 
+students do not make 
+systematic and 
+sustained progress in 
+developing 
+mathematical strategies 
+or understanding) 
+There is a brief example of a 
+cognitively demanding 
+activity, e.g. 
+ 
+• 
+A momentary think-
+pair-share where 
+students define a term 
+• 
+Direct instruction with 
+one or two examples of 
+student explanations or 
+SMQR   
+• 
+Tasks with a 
+momentary high 
+cognitive demand 
+element  
+• 
+Tasks that are not 
+completely routine, but 
+are heavily scaffolded 
+for students with hints 
+or directions 
+Segment features mix of 
+demanding and 
+undemanding tasks and 
+activities, e.g.  
+ 
+• 
+Tasks with variable 
+enactment (e.g., 
+demanding tasks 
+followed by a transition 
+to undemanding tasks; 
+or, when working in 
+small groups, some 
+groups work on a high-
+demand task while  
+some groups work on 
+an undemanding task)  
+• 
+Direct instruction with 
+student explanations 
+and/or SMQR input at 
+certain points 
+• 
+Tasks with middling 
+cognitive demand 
+Students engage with 
+content at a high level of 
+cognitive demand. 
+ 
+Examples of cognitively 
+demanding activities include 
+when students:  
+• 
+Determine the meaning 
+of mathematical 
+concepts, processes, or 
+relationships 
+• 
+Draw connections 
+among different 
+representations or 
+concepts 
+• 
+Make and test 
+conjectures 
+• 
+Look for patterns 
+• 
+Examine constraints 
+• 
+Explain and justify 
+Back to Table of Contents 
+ 
+ 
+ 
+ 
+
+
+--- page 29 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+29
+Students Work with Contextualized Problems 
+Students work with contextualized problems (e.g., story problems, real-world applications, experiments that generate 
+data). This includes solving such problems; discussing solutions to such problems; writing expressions or equations to 
+represent contextualized situations; making sense of contextualized relationships through tables, graphs or other 
+representations; or creating contextualized problems/situations to match expressions/equations. 
+ 
+Note: Do not count when the teacher or student mentions a contextualized example for illustrative purposes (e.g., “you can 
+think of 1/4 as a quarter and 1 whole as a dollar when you are converting fractions to decimals“ or “remember yesterday 
+when we solved the hat problem?”), but the students do not work on it. 
+ 
+Note: This is not a duration code; the difference between a Low, Mid, and High is amount of teacher scaffolding, not length. 
+In the case of two or more different tasks with different levels, score to the highest level.  
+Not Present 
+Low 
+Mid 
+High 
+Students do not work 
+with contextualized 
+problems or a 
+contextualized problem 
+is mentioned but not 
+worked on. 
+The contextualized problems 
+are executed as mostly 
+rote/routine exercises. Teacher 
+heavily scaffolds the 
+presentation, for example, by 
+telling students which 
+procedure is to be applied, 
+helping them write out the 
+expression or equation, and so 
+forth.  
+ 
+Also include here times where 
+there is data collection without 
+reference to the underlying 
+relationships or shape of the 
+data. For instance, students 
+may be collecting and marking 
+down ice cream preferences in 
+preparation for later plotting 
+the graph and discussing.  
+Some student reasoning 
+about contextualized 
+problems is required for at 
+least a portion of the 
+problem execution; 
+however, solution paths may 
+be co-constructed or 
+scaffolded by teacher to 
+some extent. For instance: 
+• Students play some role 
+in deciding how to solve 
+the problem 
+• The problem starts off as 
+non-routine but teacher 
+hints at a solution 
+method 
+ 
+ 
+Students are allowed 
+significant opportunities to 
+think and reason 
+mathematically about 
+contextualized problems. 
+Students might need to 
+choose which operation to 
+apply, decide which kind of 
+graph is appropriate for their 
+data, or figure out how to 
+write an expression that 
+represents a pattern. The 
+characterizing feature of this 
+segment is that the teacher 
+will not be doing much of the 
+cognitive work of solving the 
+problem. 
+ 
+ 
+Back to Table of Contents 
+ 
+ 
+ 
+
+
+--- page 30 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+30
+Scoring Help - Students Work with Contextualized Problems 
+When scoring, first determine if a contextualized problem is present during the segment. When determining whether or 
+not a problem is contextualized, it may be necessary to refer to previous segments to determine what problem or task was 
+assigned.  
+ 
+Special cases: 
+• 
+Probability experiments (such as rolling dice, spinning a spinner, or pulling colored chips out of a bag) are NOT 
+contextualized problems, unless there is an additional context (such as pulling colored chips out of a bag that 
+represent socks in a drawer).  
+• 
+Working with data is generally contextualized. If the data are completely void of context (for example, if students 
+are asked to find the median of a set of numbers), it is not contextualized; but, if there is any meaning to the data 
+involved (for example, students take a list of names, count the letters in each name, and then find the median), 
+then it should be counted as contextualized.  
+ 
+If there is a contextualized problem, determine whether students are working on it (they do not have to finish or ‘solve’ the 
+problem, just work on it in some way).  
+ 
+If students are working on a contextualized problem, determine how much scaffolding or support the students are given. It 
+may be necessary to refer to previous tasks and segments in order to infer whether the task is routine or not. Use your best 
+judgment.   
+Back to Table of Contents 
+ 
+ 
+ 
+
+
+--- page 31 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+31
+ 
+ 
+Overall Common Core Aligned Student Practices 
+This code attempts to capture evidence of students’ involvement in “doing” mathematics and the extent to which students 
+participate in and contribute to meaning-making and reasoning.  
+• 
+During active instruction segments, this mainly occurs through student mathematical statements: 
+reasoning, explanations, question-asking.  
+• 
+During small group/partner/individual work time, this mainly occurs through work on a non-routine 
+task.  
+ 
+Note: This is an overall code for each segment. It is not an average of the codes in this dimension, but an overall estimate 
+of the student participation in meaning-making and reasoning. 
+Not Present 
+Low 
+Mid 
+High 
+There are no examples of 
+student involvement in 
+cognitively demanding 
+classroom work. Tasks are 
+largely procedural in nature 
+or heavily scaffolded by the 
+teacher.  
+ 
+For example, there may be 
+inquiry-response-evaluation-
+type teacher lectures with 
+no examples of student 
+explanation, questioning, or 
+reasoning.  
+ 
+Also score as Not Present if 
+there are unproductive 
+explorations in which the 
+majority of the students are 
+off-track mathematically.  
+ 
+There are few examples 
+of student engagement 
+in mathematical 
+practices such as 
+explanation, 
+questioning, and 
+reasoning. Tasks may be 
+largely procedural in 
+nature, but occasional 
+student participation or 
+a brief cognitively 
+demanding task occurs. 
+Students engage with content at 
+mixed level. Students may provide 
+substantive explanations or ask 
+mathematically motivated 
+questions. This may also include 
+tasks with variable enactment 
+(high and then low during 
+segment). This can also include 
+instances in which some 
+students/groups are engaged in 
+tasks at a high level and others 
+are not. 
+Students may also engage in a 
+task with middling cognitive 
+demand. 
+Students contribute 
+substantially to the 
+building of mathematical 
+ideas through posing 
+questions, offering 
+explanations, looking for 
+patterns, making 
+conjectures, and engaging 
+in other types of reasoning. 
+Such contributions are a 
+major feature of the 
+segment, with many 
+student contributions or 
+extended work on a 
+cognitively demanding 
+task.   
+Back to Table of Contents 
+ 
+ 
+ 
+ 
+
+
+--- page 32 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+32
+WHOLE LESSON CODES 
+ 
+Lesson Time is Used Efficiently 
+This code captures the extent to which lesson time is used efficiently; class is on task, and behavior issues do not disrupt the 
+flow of the class.  
+Not at all true of this lesson 
+1 
+ 
+2 
+ 
+(Default Score) 
+3 
+ 
+ 
+4 
+Very true of this lesson 
+5 
+There is a fair to large amount of 
+wasted time. For instance: 
+• 
+Teacher passes out materials at 
+length while students are waiting. 
+• 
+Transitions take a long time and 
+require lots of teacher repetition of 
+instructions. 
+• 
+Teacher engages in off-topic 
+conversation, distracting from the 
+mathematics. 
+• 
+Behavior management takes away 
+from instructional time. 
+• 
+Directions for launch are unclear, 
+causing students to flounder 
+mathematically until the teacher 
+repeats them. 
+ 
+Lesson proceeds from 
+one task/problem to 
+another, yet there are 
+minor distractions 
+from the flow of the 
+lesson. For instance:  
+• 
+Transitions are not 
+highly efficient. 
+• 
+There is a brief off-
+task conversation. 
+• 
+Behavior 
+management 
+briefly takes away 
+from instruction 
+time.  
+ 
+The class is almost continuously 
+working on mathematics. For 
+instance: 
+• 
+Teacher hands out 
+materials during a time in 
+which students are already 
+working on another task.  
+• 
+Transitions between 
+groups and tasks are 
+smooth and quick; 
+students seem to know 
+what to expect and get 
+right down to business in 
+their new stations. 
+• 
+Teacher does not allow 
+excessive time for students 
+to solve problems. 
+Back to Table of Contents 
+ 
+ 
+ 
+ Lesson is Mathematically Dense 
+This code captures the amount of mathematics – problems, tasks or concepts – worked on relative to the length of the 
+lesson. 
+Not at all true of this lesson 
+1 
+ 
+2 
+(Default Score) 
+3 
+ 
+ 
+4 
+Very true of this lesson 
+5 
+The class does not get through 
+many problems/tasks/concepts, 
+and the reason was not "rich" 
+or "cognitively demanding" 
+explorations of the 
+mathematics.  
+Also score here for 
+mathematically vacuous tasks 
+(e.g. coloring, cutting, pasting). 
+ 
+Teacher and students work 
+through a reasonable 
+number of problems, or 
+cover a reasonable number 
+of mathematical topics. 
+(Fewer topics or problems 
+covered in reasonable 
+depth can also count here.)  
+ 
+The class works through many problems 
+or concepts; teacher covers a lot of 
+mathematical ground. 
+ 
+OR  
+ 
+The class works on a few problems or 
+concepts in meaningful ways. For 
+instance, they may have had a long 
+discussion of a conceptual student error 
+to a problem, or done an extended 
+exploration with many connections to 
+the underlying mathematics, etc. 
+Back to Table of Contents 
+ 
+ 
+ 
+
+
+--- page 33 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+33
+Students are Engaged 
+This code describes the extent to which the classroom environment is characterized by student engagement. This is not 
+about Task Cognitive Demand or other Common Core Aligned Student Practices; it is about engagement with the lesson.  
+Not at all true of this lesson 
+1 
+ 
+2 
+ 
+(Default Score) 
+3 
+ 
+ 
+4 
+Very true of this lesson 
+5 
+Students are not engaged with 
+the lesson; many are off task 
+for all or part of the lesson.   
+ 
+ 
+Students complete the 
+requests made by the 
+teacher, but do not appear 
+eager to participate.  
+ 
+Students are eager to 
+participate in the lesson. 
+They raise their hands or call 
+out answers. Most students 
+are engaged in this fashion. 
+Back to Table of Contents 
+ 
+ 
+ 
+ Lesson Contains Rich Mathematics 
+This code captures the depth of the mathematics offered to students. This can include a focus either on meaning or on 
+mathematical practices, as described by the segment-level Richness codes. In all cases, ignore incorrect elements of 
+richness in assigning a score. 
+Not at all true of this lesson 
+1 
+ 
+2 
+ 
+(Default Score) 
+3 
+ 
+ 
+4 
+Very true of this lesson 
+5 
+Elements of rich mathematics 
+are not present, or are present 
+but largely incorrect. 
+ 
+ 
+ 
+Some elements of rich 
+mathematics are present.  
+For instance, there may be 
+occasional explanations, 
+linked representations or 
+comparisons of multiple 
+solution methods. 
+However, these may not be 
+consistent or especially well 
+executed. 
+ 
+May include lessons in 
+which elements of rich 
+mathematics appear 
+regularly but are of weaker 
+quality.  
+ 
+Elements of rich mathematics 
+are consistently present, with 
+a strong focus on 
+mathematical meaning and/or 
+practices throughout the 
+lesson.  
+ 
+OR  
+ 
+There is truly outstanding rich 
+mathematics in a significant 
+portion of the lesson.  
+ 
+ 
+ 
+Back to Table of Contents 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+--- page 34 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+34
+Teacher Attends to and Remediates Student Difficulty 
+This code describes the extent to which the teacher attends to student difficulty with the material. 
+ 
+We are not distinguishing here between conceptual and procedural remediation. This item should capture how attentive 
+the teacher is to student difficulty, not how conceptual the remediation is.  
+ 
+Note: At the whole lesson level, attentive remediation can include cases in which the teacher notices student difficulty and 
+chooses not to address it immediately, but ultimately does remediate.  
+Not at all true of this lesson 
+1 
+ 
+2 
+ 
+(Default Score) 
+3 
+ 
+ 
+4 
+Very true of this lesson 
+5 
+Student responses indicate 
+that many of them do not 
+understand the material, 
+but the teacher does not 
+slow down to 
+attend/remediate. Also 
+score here if teacher 
+attends to difficulty, but the 
+instruction is confusing or 
+off-track. 
+ 
+ 
+Teacher consistently 
+attends to and remediates 
+student difficulty, but in a 
+pro forma way, e.g., 
+correcting errors by asking 
+again until a student gets 
+the correct answer. May 
+be brief instances of more 
+substantive remediation. 
+ 
+Also score here if there is 
+no student difficulty. 
+ 
+Teacher is very attentive to 
+student difficulty, and is correct 
+and effective at remediating. 
+Teacher addresses student 
+difficulty by doing one or more of 
+the following:  
+• 
+Remediating during 
+individual/pair work time 
+• 
+Re-teaching material 
+• 
+Slowing down instruction 
+• 
+Understanding and 
+addressing the root of 
+student difficulty 
+Back to Table of Contents 
+ 
+ 
+ 
+Teacher Uses Student Ideas 
+This code describes the extent to which the teacher uses student ideas and solutions to move the lesson forward. 
+Not at all true of this lesson 
+1 
+ 
+2 
+ 
+(Default Score) 
+3 
+ 
+ 
+4 
+Very true of this lesson 
+5 
+Student talk does not include 
+substantive contributions 
+such as student explanations 
+or reasoning.  
+ 
+OR 
+ 
+There are some substantive 
+comments, but teacher 
+either ignores them  or 
+cannot make use of them 
+instructionally, including 
+failed attempts to take up 
+the comments. 
+ 
+Students contribute an 
+occasional substantive idea 
+to the lesson, but teacher 
+use is pro forma.  
+ 
+Pro forma use includes 
+acknowledging or endorsing 
+a correct student comment 
+with nothing further.  
+ 
+Teacher weaves in 
+substantive student ideas 
+and solutions to help build 
+the mathematical point(s) 
+of the lesson. 
+Back to Table of Contents 
+ 
+ 
+ 
+ 
+ 
+
+
+--- page 35 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+35
+Mathematics is Clear and not Distorted 
+This code describes the extent to which the mathematics of the lesson is clear and not distorted. This is an overall 
+judgment, but raters can use their thinking from the errors dimension. A lesson with consistent problems should be scored 
+as a 1.  
+Not at all true of this lesson 
+1 
+ 
+2 
+ 
+3 
+ 
+ 
+4 
+Very true of this lesson 
+5 
+The mathematics of the 
+lesson is severely 
+undermined by errors, 
+imprecision, poor task 
+launches, lack of clarity, or 
+other problems with the 
+lesson.  
+ 
+Minor problems arise 
+in the course of the 
+lesson, but they do not 
+significantly detract 
+from the mathematics 
+of the lesson.  
+  
+No problems arise in the 
+presentation of the 
+mathematics, i.e., all segment 
+level errors codes are scored as 
+Not Present. 
+ 
+ 
+Back to Table of Contents 
+ 
+ 
+Tasks and Activities Develop Mathematics 
+This code describes the extent to which the tasks and activities done by the class contribute to the development of the 
+mathematics of the lesson. In other words, this code refers to the architecture of the lesson, i.e., whether the 
+tasks/activities help move the mathematics along. More generally, does the lesson have directionality, in the sense that it is 
+appropriately developing mathematical ideas?    
+ 
+Notes: 
+• 
+We are defining “tasks and activities” very broadly here, including class discussions, teacher presentation of new 
+content, etc.  
+• 
+Do not score here for other problems with the lesson, such as slow pacing or minor to moderate mathematical 
+errors. 
+Not at all true of this lesson 
+1 
+ 
+2 
+ 
+(Default Score) 
+3 
+ 
+ 
+4 
+Very true of this lesson 
+5 
+Lesson architecture hinders 
+development of the 
+mathematics. For instance: 
+• 
+Tasks are so convoluted 
+that they do not elucidate 
+mathematical ideas 
+• 
+Poor examples (e.g., 
+introducing slope and 
+intercept with the 
+equation y=x+1) obscure 
+important points 
+• 
+Mathematical distortions 
+are severe enough to 
+significantly hinder the 
+development of the math 
+ 
+Mathematics happens in 
+the lesson. 
+ 
+The lesson does not 
+include the special 
+features of a 5, and the 
+lesson architecture does 
+not hinder the 
+development of the 
+math. 
+ 
+OR 
+ 
+There is a mix of strong 
+and weak features.  
+  
+ 
+Tasks and activities are 
+carefully designed to 
+contribute to key 
+mathematical points. Lesson 
+includes both:  
+• 
+Tasks that build 
+sequentially 
+• 
+Implementation of tasks 
+that leads to an 
+overarching mathematical 
+point 
+Lesson may also include: 
+• 
+Teacher making 
+connections to larger 
+mathematical ideas 
+• 
+Teacher drawing 
+important points of the 
+lesson together 
+ 
+Back to Table of Contents 
+ 
+ 
+
+
+--- page 36 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+36
+ Lesson is Characterized by Common Core Aligned Student Practices 
+This code describes the extent to which students participate in the mathematics of the lesson in a substantive way, by 
+engaging in the practices described by the codes in the Common Core Aligned Student Practices dimension.  
+ 
+For example:  
+• 
+Students ask mathematically-motivated questions 
+• 
+Students notice patterns and form conclusions based on them 
+• 
+Students make connections across content areas 
+• 
+Students provide mathematical explanations 
+• 
+Students comment on the reasoning of others 
+• 
+Students work on  cognitively demanding tasks 
+• 
+Students engage in sense-making 
+ 
+Not at all true of this lesson 
+1 
+ 
+2 
+ 
+(Default Score) 
+3 
+ 
+ 
+4 
+Very true of this lesson 
+5 
+Classroom environment is 
+one in which students never 
+participate substantively in 
+the mathematics.  Student 
+participation is limited to 
+students answering fill-in-the-
+blank type questions or 
+working on cognitively 
+undemanding activities. Score 
+here for lessons that never 
+move beyond  
+inquiry/response/ 
+evaluation (IRE) instruction.  
+ 
+ 
+Students occasionally 
+participate in the mathematics 
+in a substantive way. 
+However, much of the class 
+may be characterized by 
+inquiry/response/evaluation 
+(IRE) instruction or students 
+completing a low or medium 
+cognitive demand task at 
+length.    
+ 
+Lesson is characterized by 
+mathematically substantive 
+student participation.  
+ 
+Back to Table of Contents 
+ 
+ 
+ 
+ 
+
+
+--- page 37 ---
+Mathematical Quality of Instruction (MQI) 4-point 
+ 
+March 11, 2014 
+ 
+ 
+37
+Overall MQI: 
+ 
+ 
+Whole-Lesson Mathematical Quality of Instruction  
+This code is intended to capture the overall mathematical quality of instruction for the lesson (MQI) as suggested by the 
+teacher’s work during the lesson. 
+Low 
+1 
+Low/Mid 
+2 
+Mid 
+3 
+Mid/High 
+4 
+High 
+5 
+Instruction is characterized by 
+one or more of the following:  
+• 
+Systematic teacher errors, 
+imprecision, or lack of 
+clarity around the 
+mathematics 
+• 
+Major teacher conceptual 
+error in a significant 
+portion of the lesson 
+• 
+Unproductive teacher-
+student interactions 
+around the content (e.g., 
+teacher cannot effectively 
+remediate) 
+• 
+Lack of directionality/ 
+unsystematic exploration 
+• 
+Lack of connection of 
+classroom activities to 
+mathematical content 
+ 
+Instruction does not 
+have characteristics of 
+Low and is mostly error-
+free, but it lacks the 
+mathematical richness, 
+appropriate use and 
+discussion of 
+procedures, and the 
+sharp mathematical 
+focus detailed under 
+High. 
+ 
+Examples: 
+• 
+Mostly error-free 
+instruction, perhaps 
+with occasional but 
+not consistent 
+elements of 
+richness 
+• 
+Mainly pro forma 
+interactions with 
+students (inquiry, 
+response, 
+evaluation-type 
+discussion) 
+ 
+Instruction is error-free (save for 
+minor slips) and characterized by 
+combinations of the following:  
+• 
+Mathematical richness in terms 
+of explanations and linking 
+between representations  
+• 
+Focus on mathematical 
+practices (developed 
+generalizations, mathematical 
+efficiency) that is sustained and 
+detailed  
+• 
+Instruction has a clear and 
+sharp mathematical focus and 
+directionality that allows 
+students to develop the 
+important mathematical ideas 
+under consideration 
+• 
+Instruction is characterized by 
+at least some productive 
+teacher-student interactions 
+around the content (either 
+working with student 
+ideas/errors OR Common Core 
+aligned student practices ) 
+ 
+Back to Table of Contents 
+ 
+ 
+ 

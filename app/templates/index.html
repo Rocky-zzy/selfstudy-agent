@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>自学辅助 Agent · 最小闭环</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#fff; --line:#e3e6ea; --ink:#1b1f24; --muted:#6b7280;
+    --a:#2563eb; --a-soft:#eff4ff; --b:#0f766e; --b-soft:#effaf7; --warn:#b45309;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:15px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+  .wrap{max-width:1180px;margin:0 auto;padding:22px 18px 80px}
+  h1{font-size:19px;margin:0 0 4px}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:16px}
+  .bar{display:flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--line);
+       border-radius:10px;padding:10px;margin-bottom:14px;flex-wrap:wrap}
+  input[type=text]{flex:1;min-width:260px;padding:9px 11px;border:1px solid var(--line);
+       border-radius:7px;font:inherit;background:#fff}
+  input[type=text]:focus{outline:2px solid var(--a-soft);border-color:var(--a)}
+  select,button{padding:9px 12px;border:1px solid var(--line);border-radius:7px;font:inherit;background:#fff}
+  button.primary{background:var(--a);color:#fff;border-color:var(--a);font-weight:600;cursor:pointer}
+  button.primary:disabled{opacity:.55;cursor:default}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+  .chip{background:#eef1f4;border-radius:99px;padding:3px 10px;font-size:12px;color:#374151}
+  .chip.hit{background:var(--a-soft);color:#1d4ed8;font-weight:600}
+  .note{background:#fffbeb;border:1px solid #fde68a;color:#78350f;border-radius:9px;
+        padding:10px 12px;font-size:13px;margin-bottom:14px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:920px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:11px;
+        display:flex;flex-direction:column;overflow:hidden}
+  .card.a{border-top:3px solid var(--a)} .card.b{border-top:3px solid var(--b)}
+  .card.cur{border-color:#111827;box-shadow:0 0 0 3px var(--a-soft)}
+  .slotbadge{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
+        border-radius:7px;background:#111827;color:#fff;font-weight:700;font-size:14px;
+        margin-right:9px;vertical-align:-6px}
+  .slotmeta{font-size:11.5px;color:var(--muted);font-weight:400}
+  /* A/B 页签：随时自由切换对比 */
+  .tabs{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+  .tab{min-width:64px;padding:9px 16px;font-size:15px;font-weight:700;border-radius:9px;
+        border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer}
+  .tab:hover{border-color:#9ca3af;color:var(--ink)}
+  .tab.on{background:#111827;color:#fff;border-color:#111827}
+  .tab .tabmark{font-size:12px;font-weight:400;margin-left:6px;opacity:.9}
+  .tabhint{font-size:12.5px;color:var(--muted)}
+  .card h2{font-size:14px;margin:0;padding:11px 14px;border-bottom:1px solid var(--line);
+        background:#fbfcfd;display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+  .meta{font-size:11.5px;color:var(--muted);font-weight:400}
+  .body{padding:14px;word-break:break-word;flex:1;
+        max-height:60vh;overflow:auto;font-size:14.5px}
+  .body.err{color:#b91c1c;background:#fef2f2}
+  /* 讲解正文的排版（原来是 white-space:pre-wrap 一整块，代码和文字糊在一起） */
+  .body h1,.body h2,.body h3{font-size:15px;margin:14px 0 6px}
+  .body h1:first-child,.body h2:first-child,.body h3:first-child{margin-top:0}
+  .body p{margin:0 0 9px}
+  .body ul,.body ol{margin:0 0 9px;padding-left:22px}
+  .body li{margin:0 0 4px}
+  .body strong{font-weight:700}
+  .body code.inline{background:#eef1f4;border-radius:4px;padding:1px 5px;
+        font-family:Consolas,"Cascadia Mono",monospace;font-size:13px}
+  .body pre.code{background:#0f172a;color:#e2e8f0;border-radius:8px;padding:11px 13px;
+        overflow:auto;margin:0 0 11px;font-family:Consolas,"Cascadia Mono",monospace;
+        font-size:13px;line-height:1.55;white-space:pre}
+  .body pre.code .lang{color:#7dd3fc;font-size:11px;display:block;margin-bottom:6px;opacity:.85}
+  .body .kbd{background:#eef1f4;border-radius:4px;padding:1px 5px;font-family:Consolas,monospace}
+  /* 数学：块级独立居中；MathML 由浏览器原生排版 */
+  .body .mathblock{margin:10px 0;overflow-x:auto;text-align:center}
+  .body math{font-size:1.06em}
+  .body .mathfail{background:#fef3c7;color:#92400e;font-family:Consolas,monospace;
+        font-size:12px;padding:1px 5px;border-radius:4px;word-break:break-all}
+  .rate{border-top:1px solid var(--line);padding:11px 14px;background:#fbfcfd}
+  .stars{display:flex;gap:5px;align-items:center;margin-bottom:7px;flex-wrap:wrap}
+  .stars button{width:34px;height:32px;padding:0;font-weight:600;cursor:pointer}
+  .stars button.on{background:var(--a);color:#fff;border-color:var(--a)}
+  .card.b .stars button.on{background:var(--b);border-color:var(--b)}
+  .stars .lab{font-size:12px;color:var(--muted);margin-left:4px}
+  .rate textarea{width:100%;min-height:48px;padding:8px 10px;border:1px solid var(--line);
+        border-radius:7px;font:inherit;font-size:13.5px;resize:vertical}
+  .rate .row{display:flex;justify-content:space-between;align-items:center;margin-top:7px;gap:8px}
+  .rate button.save{padding:7px 13px;background:var(--a);color:#fff;border-color:var(--a);
+        border-radius:7px;font-weight:600;cursor:pointer}
+  .card.b .rate button.save{background:var(--b);border-color:var(--b)}
+  .saved{font-size:12.5px;color:#15803d}
+  details.src{background:var(--card);border:1px solid var(--line);border-radius:10px;
+        margin-top:14px;padding:10px 14px}
+  details.src summary{cursor:pointer;font-size:13.5px;font-weight:600}
+  pre.src{white-space:pre-wrap;word-break:break-word;background:#f8fafc;border:1px solid var(--line);
+        border-radius:7px;padding:10px;font-size:12px;max-height:320px;overflow:auto;margin:9px 0 0}
+  .spin{display:inline-block;width:11px;height:11px;border:2px solid #cbd5e1;border-top-color:var(--a);
+        border-radius:50%;animation:r .7s linear infinite;vertical-align:-1px;margin-right:5px}
+  @keyframes r{to{transform:rotate(360deg)}}
+  .empty{color:var(--muted);text-align:center;padding:40px 10px;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>自学辅助 Agent · 最小闭环</h1>
+  <div class="sub">
+    课件 → 检索 → LLM 生成讲解 → 你读 → 打分。
+    <strong>输入是整讲直灌，输出只讲你问的那个点</strong>——范围约束两条件完全相同，
+    所以两段的差异只在"怎么讲"。
+    <span class="meta" id="envmeta">模型 {{ model }} · {{ base_url }}{% if strip_opt %} · ⚠️ APP_STRIP_OPT=1 已关掉优化约束{% endif %}</span>
+  </div>
+
+  {% if not has_key %}
+  <div class="note">⚠️ 服务器没读到 <code>DEEPSEEK_API_KEY</code>（工作区根目录 <code>.env</code>）。提问会报错，但检索通路可查。</div>
+  {% endif %}
+
+  <div class="bar">
+    <select id="material" title="课件素材"></select>
+    <input type="text" id="q" placeholder="例如：什么是仿射空间？它和向量空间差在哪？" autocomplete="off">
+    <select id="lecture" title="检索范围"></select>
+    <select id="teaching" title="讲法：决定这一次讲多全（两条件共用，不参与对照）">
+      <option value="brief" selected>概览 · 点到为止</option>
+      <option value="detailed">详细 · 范围内全讲</option>
+      <option value="followup">追问 · 只补这一点</option>
+    </select>
+    <select id="scope" title="喂给模型的课件范围（两个条件共用同一份）">
+      <option value="whole" selected>整讲（推荐起步）</option>
+      <option value="hits">仅命中页</option>
+    </select>
+    <select id="topk" title="仅命中页模式下：直接命中的页数（桥接页会额外补上）">
+      <option value="2">命中 2 页</option>
+      <option value="3" selected>命中 3 页</option>
+      <option value="4">命中 4 页</option>
+      <option value="6">命中 6 页</option>
+    </select>
+    <button class="primary" id="go">提问</button>
+    <label style="display:flex;align-items:center;gap:5px;font-size:13px;color:var(--muted);white-space:nowrap">
+      <input type="checkbox" id="rawmode"> 看原文
+    </label>
+  </div>
+
+  <div class="chips" id="chips"></div>
+  <div class="note" id="err" style="display:none"></div>
+
+  <div class="note" style="background:#eff6ff;border-color:#bfdbfe;color:#1e3a8a">
+    <strong>读法：</strong>两段讲解，<strong>A / B 可以随时点上面的页签自由切换对比</strong>。
+    打过分之前不告诉你是哪个条件；两段都打完后自动揭晓。
+  </div>
+
+  <div id="answerarea" style="display:none">
+    <div class="tabs">
+      <button class="tab on" data-slot="A" id="tab-A">A<span class="tabmark" id="mark-A"></span></button>
+      <button class="tab" data-slot="B" id="tab-B">B<span class="tabmark" id="mark-B"></span></button>
+      <span class="tabhint">点页签切换；两段都打完后揭晓哪个是哪个</span>
+    </div>
+
+    <div class="card cur" id="card-A">
+      <h2><span class="slotbadge">A</span><span class="slotmeta" id="meta-A"></span></h2>
+      <div class="body" id="body-A"></div>
+      <div class="rate">
+        <div class="stars" data-slot="A"></div>
+        <textarea id="reason-A" placeholder="一句话原因：哪里读得顺／哪里卡住（这是后面唯一能指导改动的东西）"></textarea>
+        <div class="row"><span></span><button class="save" data-slot="A">保存 A 的评分</button></div>
+      </div>
+    </div>
+
+    <div class="card" id="card-B" style="display:none">
+      <h2><span class="slotbadge">B</span><span class="slotmeta" id="meta-B"></span></h2>
+      <div class="body" id="body-B"></div>
+      <div class="rate">
+        <div class="stars" data-slot="B"></div>
+        <textarea id="reason-B" placeholder="一句话原因"></textarea>
+        <div class="row"><span></span><button class="save" data-slot="B">保存 B 的评分</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note" id="revealbox" style="display:none">
+    <div id="revealtext"></div>
+    <div class="chips" id="revealchips" style="margin:9px 0 0"></div>
+  </div>
+
+  <details class="src" id="srcdetails" style="display:none">
+    <summary>本次喂给模型的课件原文（<span id="srcn">0</span> 页）与检索依据</summary>
+    <div class="chips" id="srchips" style="margin-top:9px"></div>
+    <pre class="src" id="srctext"></pre>
+  </details>
+</div>
+
+<script>
+const SLOTS = ["A","B"];
+const state = { trace:null, scores:{}, saved:{}, cur:null, answers:{} };
+
+/* 每个槽位自己记分数；下单时只报槽位，不报条件——条件名在揭晓前根本不在前端 */
+function renderStars(slot){
+  const box = document.querySelector(`.stars[data-slot="${slot}"]`);
+  box.innerHTML = "";
+  const lab = document.createElement("span");
+  lab.className = "lab"; lab.textContent = "满意度";
+  box.appendChild(lab);
+  for(let s=1;s<=5;s++){
+    const b = document.createElement("button");
+    b.textContent = s; b.dataset.score = s;
+    if(state.scores[slot] === s) b.classList.add("on");
+    b.onclick = ()=>{ state.scores[slot]=s; renderStars(slot); renderTabMark(slot); };
+    box.appendChild(b);
+  }
+  const anchor = document.createElement("span");
+  anchor.className="lab";
+  anchor.textContent = {1:"完全没用",2:"用处不大",3:"一般",4:"较好",5:"很好"}[state.scores[slot]] || "";
+  box.appendChild(anchor);
+}
+
+function showSlot(slot){
+  state.cur = slot;
+  SLOTS.forEach(s=>{
+    document.getElementById("card-"+s).style.display = (s===slot) ? "" : "none";
+    document.getElementById("card-"+s).classList.toggle("cur", s===slot);
+    document.getElementById("tab-"+s).classList.toggle("on", s===slot);
+  });
+  // 不再强制滚到顶部：切换是为了"来回对比"，跳走反而打断阅读。
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+/* 页签上的状态标记：让"哪段还没打分"一眼可见（原来靠强制跳转提示，现在不跳了） */
+function renderTabMark(slot){
+  const el = document.getElementById("mark-"+slot);
+  const sc = state.scores[slot];
+  if(state.saved[slot]) el.textContent = `✓ ${sc} 分`;
+  else if(sc) el.textContent = `${sc} 分（未保存）`;
+  else el.textContent = "未打分";
+}
+
+/* ---- 讲解正文的轻量渲染 ----------------------------------------------------
+   为什么需要：用户 2026-09-18 反馈「代码块和字体等没有做渲染，讲得很割裂让人不舒服」。
+   原来 `.body` 是 white-space:pre-wrap，整段和代码糊在一起、没有层级、代码没有底色。
+   这里只做渲染，不改内容：代码块 / 行内代码 / LaTeX 都原样保留文本，
+   只是加上结构和样式。**不引任何 CDN**，离线可用。
+   原始纯文本始终留在 DOM 里（用 textContent 取回），保证落盘和复制不被渲染影响。
+---------------------------------------------------------------------------- */
+function esc(s){ return String(s).replace(/[&<>]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
+
+/* ---- 数学渲染 -------------------------------------------------------------
+   用户 2026-09-21（连提三次）：「公式没渲染处理，一堆杂乱的符号根本看不懂」。
+   服务端把 LaTeX 转成 MathML（latex2mathml），并把原文换成 ⦁MATH0⦁ 占位符。
+   这里做两件事：
+     ① 转义前**保护占位符**（否则 MathML 的尖括号会被转义吃掉）
+     ② 转义后再把占位符换回 MathML，交给浏览器原生渲染（Edge/Chrome 已支持）
+   转换失败的公式显示为等宽小字，**绝不显示成符号汤**。
+--------------------------------------------------------------------------- */
+let MATH_MAP = {};
+function protectMath(s){
+  return String(s).replace(/\u2981MATH(\d+)\u2981/g, (m, i) => `\u2981M${i}\u2981`);
+}
+function restoreMath(html){
+  return html.replace(/\u2981M(\d+)\u2981/g, (m, i) => {
+    const it = MATH_MAP[i];
+    if(!it) return "";
+    if(it.ok) return it.mathml;
+    return `<code class="mathfail" title="LaTeX 未能渲染">${esc(it.tex||"")}</code>`;
+  });
+}
+
+function inlineMd(t){
+  // 先保护数学占位符，再转义，再把数学换回来
+  let out = esc(protectMath(t));
+  out = restoreMath(out);
+  out = out.replace(/`([^`]+)`/g, '<code class="inline">$1</code>');
+  out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  return out;
+}
+
+function renderAnswer(el, text, mathItems){
+  MATH_MAP = {};
+  (mathItems||[]).forEach((it, i)=>{ MATH_MAP[i] = it; });
+  const lines = String(text).split("\n");
+  const html = [];
+  let para = [], list = null, code = null;
+
+  const flushPara = ()=>{ if(para.length){ html.push("<p>"+inlineMd(para.join(" "))+"</p>"); para=[]; } };
+  const flushList = ()=>{ if(list){ html.push(`<${list.tag}>`+list.items.map(i=>"<li>"+inlineMd(i)+"</li>").join("")+`</${list.tag}>`); list=null; } };
+
+  for(const raw of lines){
+    const line = raw.replace(/\s+$/,"");
+    // 围栏代码块
+    const fence = line.match(/^\s*```(\w*)\s*$/);
+    if(code){
+      if(fence){
+        html.push(`<pre class="code">${code.lang?`<span class="lang">${esc(code.lang)}</span>`:""}${esc(code.buf.join("\n"))}</pre>`);
+        code = null;
+      }else{ code.buf.push(raw); }
+      continue;
+    }
+    if(fence){ flushPara(); flushList(); code = {lang: fence[1]||"", buf: []}; continue; }
+
+    // 整行只有一个块级公式：独立居中显示（矩阵、多行推导）
+    const onlyMath = line.trim().match(/^\u2981MATH(\d+)\u2981$/);
+    if(onlyMath){
+      flushPara(); flushList();
+      const it = MATH_MAP[onlyMath[1]];
+      if(it && it.ok){ html.push(`<div class="mathblock">${it.mathml}</div>`); }
+      else if(it){ html.push(`<div class="mathblock"><code class="mathfail">${esc(it.tex||"")}</code></div>`); }
+      continue;
+    }
+
+    // 标题
+    const h = line.match(/^\s*(#{1,4})\s+(.*)$/);
+    if(h){ flushPara(); flushList(); const lv=Math.min(h[1].length+1,4); html.push(`<h${lv}>${inlineMd(h[2])}</h${lv}>`); continue; }
+
+    // 列表
+    const ul = line.match(/^\s*[-*]\s+(.*)$/);
+    const ol = line.match(/^\s*\d+[.)]\s+(.*)$/);
+    if(ul || ol){
+      flushPara();
+      const tag = ul ? "ul" : "ol";
+      if(!list || list.tag !== tag){ flushList(); list = {tag, items: []}; }
+      list.items.push((ul?ul[1]:ol[1]));
+      continue;
+    }
+    if(!line.trim()){ flushPara(); flushList(); continue; }
+    flushList();
+    para.push(line.trim());
+  }
+  if(code) html.push(`<pre class="code">${esc(code.buf.join("\n"))}</pre>`);
+  flushPara(); flushList();
+  el.innerHTML = html.join("");
+}
+
+/* 渲染/原文 切换：渲染好看，原文用来核对"模型到底写了什么" */
+let RAW_MODE = false;
+function paint(slot){
+  const el = document.getElementById("body-"+slot);
+  const a = state.answers[slot];
+  if(!a) return;
+  if(RAW_MODE){ el.textContent = a.text; el.style.whiteSpace = "pre-wrap"; }
+  else { renderAnswer(el, a.text_tpl || a.text, a.math); el.style.whiteSpace = "normal"; }
+  el.classList.toggle("err", !!a.error);
+}
+function repaintAll(){ SLOTS.forEach(paint); }
+
+/* 保存按钮的状态只在这一个地方改，避免"哪个代码路径忘了复位"再次发生 */
+function saveBtn(slot){
+  return document.querySelector(`button.save[data-slot="${slot}"]`);
+}
+function setSaveState(slot, mode, text){
+  const b = saveBtn(slot);
+  const holder = b.closest(".row").querySelector("span");
+  if(mode === "ready"){
+    b.disabled = false;
+    b.textContent = `保存 ${slot} 的评分`;
+    holder.innerHTML = "";
+  }else if(mode === "busy"){
+    b.disabled = true;
+    b.textContent = "保存中…";
+    holder.innerHTML = "";
+  }else if(mode === "saved"){
+    b.disabled = true;
+    b.textContent = "已保存";
+    holder.innerHTML = '<span class="saved">✓ 已保存</span>';
+  }else if(mode === "failed"){
+    b.disabled = false;
+    b.textContent = "重试保存";
+    holder.innerHTML = '<span class="saved" style="color:#b91c1c">保存失败</span>';
+  }
+  renderTabMark(slot);
+}
+
+async function ask(){
+  const q = document.getElementById("q").value.trim();
+  if(!q) return;
+  const go = document.getElementById("go");
+  go.disabled = true; go.textContent = "生成中…";
+  document.getElementById("err").style.display = "none";
+  document.getElementById("revealbox").style.display = "none";
+  document.getElementById("srcdetails").style.display = "none";
+  state.trace = null; state.scores = {}; state.saved = {};
+
+  const area = document.getElementById("answerarea");
+  area.style.display = "block";
+  SLOTS.forEach(s=>{
+    document.getElementById("body-"+s).innerHTML = '<span class="spin"></span>两个条件并行生成中…';
+    document.getElementById("body-"+s).classList.remove("err");
+    document.getElementById("reason-"+s).value = "";
+    document.getElementById("meta-"+s).textContent = "";
+    renderStars(s);
+    // 🔴 上一轮 rate() 把保存按钮设成了 disabled，这里必须复位：
+    // 否则第二次提问后两个按钮都是灰的，点了没反应，也跳不到另一段。
+    // 这类"跨轮残留状态"是真浏览器诊断抓出来的（见 scripts/_diag_switch_bug.py）。
+    setSaveState(s, "ready");
+  });
+  showSlot("A");
+
+  try{
+    // 讲次下拉框的值是 "topic:<i>" 或 "lecture:<L01>"，这里拆开解析
+    const sel = document.getElementById("lecture").value || "";
+    const isTopic = sel.startsWith("topic:");
+    const body = {
+      question: q,
+      material: document.getElementById("material").value,
+      whole_lecture: document.getElementById("scope").value === "whole",
+      top_k: parseInt(document.getElementById("topk").value, 10)
+    };
+    if(isTopic){ body.topic = parseInt(sel.slice(6), 10); }
+    else { body.lecture = sel.startsWith("lecture:") ? sel.slice(8) : sel; }
+    body.teaching = document.getElementById("teaching").value;
+
+    const r = await fetch("/api/ask", {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify(body)
+    });
+    const d = await r.json();
+    if(d.error){ showErr(d.error); return; }
+    state.trace = d.trace_id;
+
+    const chips = document.getElementById("chips");
+    const whole = d.mode === "whole_lecture";
+    chips.innerHTML = `<span class="chip">检索 ${d.retrieval_ms} ms</span>` +
+      (d.elapsed_ms?`<span class="chip">总耗时 ${(d.elapsed_ms/1000).toFixed(1)} s</span>`:"") +
+      `<span class="chip">${d.citations.length} 页课件 · ${d.ctx_chars} 字符</span>` +
+      `<span class="chip">${whole?"整讲直灌":"仅命中页"}</span>` +
+      (d.teaching_label?`<span class="chip hit">讲法：${esc(d.teaching_label)}</span>`:"") +
+      (d.topic?`<span class="chip hit">${esc(d.topic)}</span>`:"") +
+      (d.matched_terms||[]).slice(0,12).map(t=>`<span class="chip hit">${esc(t)}</span>`).join("") +
+      (d.dry_run?`<span class="chip">dry-run</span>`:"");
+    // 后端如果因为素材太大把「整讲」降级成命中页，必须让你看见，不能悄悄降级
+    if(d.downgrade) showErr("⚠️ " + d.downgrade);
+
+    const ans = d.answers || {};
+    state.answers = {};
+    SLOTS.forEach(s=>{
+      const a = ans[s];
+      const body = document.getElementById("body-"+s);
+      const meta = document.getElementById("meta-"+s);
+      if(!a){ body.textContent = d.dry_run ? "（dry-run 模式：没有调用模型）" : "该槽位没有返回结果"; body.classList.add("err"); return; }
+      if(a.error){ body.textContent = "生成失败："+a.error; body.classList.add("err"); return; }
+      state.answers[s] = a;
+      paint(s);   // 渲染成有结构的排版，而不是一整块 pre-wrap
+      // 刻意全用中性信息：不泄露条件
+      meta.textContent = `${a.chars} 字 · ${a.completion_tokens||"?"} tok` +
+                         (a.truncated?" · ⚠️被截断":"") + (a.attempts>1?` · 重试${a.attempts-1}次`:"");
+    });
+    // 盲测：后端只告诉我们"有几段失败"，不说是哪个条件
+    if(d.failed_count) showErr(`有 ${d.failed_count} 段生成失败（服务端控制台有含条件名的明细）`);
+
+    document.getElementById("srcdetails").style.display = "block";
+    document.getElementById("srcn").textContent = d.citations.length;
+    document.getElementById("srchips").innerHTML = d.citations.map(c=>{
+      // 整讲模式下也标出"哪几页跟这个问题对上了"——读的时候最有用
+      const hit = c.score > 0;
+      const tag = whole ? (hit ? `命中 ${c.score}` : "整讲") : (hit ? `score ${c.score}` : "桥接页");
+      return `<span class="chip ${hit?"hit":""}">${c.chunk_id} p${c.page} · ${tag}</span>`;
+    }).join("");
+    document.getElementById("srctext").textContent =
+      d.citations.map(c=>`===== ${c.chunk_id} | ${c.lecture_title} | page ${c.page} =====\n${c.text}`).join("\n\n");
+  }catch(e){
+    showErr("请求失败："+e);
+  }finally{
+    go.disabled=false; go.textContent="提问";
+  }
+}
+
+async function rate(slot, btn){
+  const s = state.scores[slot];
+  if(!s){ showErr("先点 1–5 分再保存"); return; }
+  if(state.saved[slot]) return;
+  setSaveState(slot, "busy");
+  try{
+    const r = await fetch("/api/rate", {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({trace_id:state.trace, slot:slot, score:s,
+                            reason:document.getElementById("reason-"+slot).value})
+    });
+    const d = await r.json();
+    if(d.error){ showErr(d.error); setSaveState(slot, "failed"); return; }
+    state.saved[slot] = true;
+    setSaveState(slot, "saved");
+    renderTabMark(slot);
+    // 不再自动跳到另一段——A/B 现在可以自由切换，跳转只会打断对比。
+    // 两段都存好后自动揭晓（这条保留：揭晓是打分的终点，不是限制）。
+    const other = SLOTS.find(x=>x!==slot);
+    if(state.saved[other]){
+      setTimeout(reveal, 350);
+    }else{
+      showErr(`已保存 ${slot} 的评分。还有 ${other} 段没打分——点页签切过去，或先对比再打。`);
+    }
+  }catch(e){
+    showErr("保存失败："+e);
+    setSaveState(slot, "failed");
+  }
+}
+
+async function reveal(){
+  try{
+    const r = await fetch("/api/reveal", {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({trace_id:state.trace})
+    });
+    const d = await r.json();
+    if(d.error){ showErr(d.error); return; }
+    const L = d.labels;
+    document.getElementById("revealtext").innerHTML =
+      `揭晓：<strong>A = ${esc(L.A.label)}</strong>　|　<strong>B = ${esc(L.B.label)}</strong>`;
+    document.getElementById("revealchips").innerHTML = SLOTS.map(s=>
+      `<span class="chip ${state.scores[s]>=4?"hit":""}">${s}（${esc(L[s].condition)}）你打了 ${state.scores[s]} 分</span>`
+    ).join("");
+    document.getElementById("revealbox").style.display = "block";
+  }catch(e){
+    showErr("揭晓失败："+e);
+  }
+}
+
+function showErr(m){ const e=document.getElementById("err"); e.textContent=m; e.style.display="block"; }
+
+document.getElementById("go").onclick = ask;
+document.getElementById("q").addEventListener("keydown", e=>{ if(e.key==="Enter") ask(); });
+SLOTS.forEach(s=>{
+  renderStars(s);
+  renderTabMark(s);
+  document.querySelector(`button.save[data-slot="${s}"]`).onclick = (ev)=>rate(s, ev.currentTarget);
+  // 页签：随时自由切换 A/B 对比（不再受"必须打完分"限制）
+  document.getElementById("tab-"+s).onclick = ()=>showSlot(s);
+});
+/* 渲染 / 原文 切换 */
+document.getElementById("rawmode").onchange = (ev)=>{
+  RAW_MODE = ev.target.checked;
+  repaintAll();
+};
+
+/* 整讲模式下"命中页数"不起作用，直接禁用，免得摆一个假控件 */
+const scopeSel = document.getElementById("scope");
+const topkSel = document.getElementById("topk");
+function syncTopk(){
+  const whole = scopeSel.value === "whole";
+  topkSel.disabled = whole;
+  topkSel.title = whole ? "整讲模式下不生效（整讲全部页都会喂进去）" : "直接命中的页数（桥接页会额外补上）";
+}
+scopeSel.addEventListener("change", syncTopk);
+syncTopk();
+
+/* ---- 素材与讲次：从服务端拉，不写死在模板里（换课件时 UI 自动跟着变） ---- */
+const matSel = document.getElementById("material");
+const lecSel = document.getElementById("lecture");
+let MATERIALS = {};
+
+async function loadMaterials(){
+  try{
+    const d = await (await fetch("/api/materials")).json();
+    MATERIALS = {};
+    matSel.innerHTML = "";
+    (d.materials||[]).forEach(m=>{
+      MATERIALS[m.key] = m;
+      const o = document.createElement("option");
+      o.value = m.key;
+      o.textContent = m.title + (m.temp ? " · 临时" : "");
+      if(!m.exists) o.textContent += "（缺文件）";
+      matSel.appendChild(o);
+    });
+    matSel.value = d.default && MATERIALS[d.default] ? d.default : (d.materials[0]||{}).key;
+  }catch(e){
+    showErr("素材清单加载失败：" + e);
+  }
+  syncLectures();
+}
+
+function syncLectures(){
+  const m = MATERIALS[matSel.value];
+  lecSel.innerHTML = "";
+  // 分区（页区间）：临时课件整份太大，按块学 —— "一个知识点一个知识点来"
+  if(m && m.topics && m.topics.length){
+    const g = document.createElement("optgroup");
+    g.label = "分区（推荐）";
+    m.topics.forEach((t, i)=>{
+      const o = document.createElement("option");
+      o.value = "topic:" + i;
+      o.textContent = `${t.title}（p${t.lo}–p${t.hi}）`;
+      g.appendChild(o);
+    });
+    lecSel.appendChild(g);
+  }
+  if(m && m.lectures && m.lectures.length){
+    const g = document.createElement("optgroup");
+    g.label = "整讲 / 全库";
+    m.lectures.forEach(l=>{
+      const o = document.createElement("option");
+      o.value = "lecture:" + (l.lecture || "");
+      o.textContent = (l.lecture ? l.lecture + " · " : "全部 · ") + (l.lecture_title||"")
+                      + `（${l.pages} 页 / ${l.chars} 字符）`;
+      g.appendChild(o);
+    });
+    lecSel.appendChild(g);
+  }
+  if(!lecSel.options.length){
+    const o = document.createElement("option");
+    o.value = ""; o.textContent = "全部";
+    lecSel.appendChild(o);
+  }
+  // 默认选第一个分区（如果素材有分区），否则选第一项
+  lecSel.selectedIndex = 0;
+  scopeSel.value = "whole";
+  syncTopk();
+  const hint = m && m.note ? m.note : "";
+  if(hint) scopeSel.title = hint;
+}
+matSel.addEventListener("change", syncLectures);
+loadMaterials();
+</script>
+</body>
+</html>

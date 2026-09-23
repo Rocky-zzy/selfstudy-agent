@@ -1,0 +1,2351 @@
+--- page 1 ---
+ORIGINALARBEIT/ORIGINAL ARTICLE
+https://doi.org/10.1007/s13138-021-00190-7
+J Math Didakt (2022) 43:281–310
+Verstehensangebote von YouTube-Erklärvideos –
+Konzeptualisierung und Analyse am Beispiel
+algebraischer Konzepte
+Stefan Korntreff
+· Susanne Prediger
+Eingegangen: 15. Dezember 2020 / Angenommen: 7. September 2021 / Online publiziert: 13. Oktober
+2021
+© Der/die Autor(en) 2021
+Zusammenfassung Öffentlich zugängliche Erklärvideos werden immer häuﬁger
+genutzt. In Frage gestellt wurde jedoch ihre fachdidaktische Qualität, vor allem
+inwiefern sie hinreichende Lerngelegenheiten zum Aufbau von konzeptuellem Ver-
+ständnis für tiefgreifende mathematische Konzepte wie Variable und Term anbieten.
+Zur theoretisch fundierten und forschungsbasierten Klärung dieser Frage schlägt der
+Artikel eine fachdidaktische Konzeptualisierung und gegenstandsbezogene Opera-
+tionalisierung für Verstehensangebote von Erklärvideos vor: als Vorkommen, Auf-
+falten und Vernetzen relevanter Verstehenselemente der Konzepte. Für eine solche
+Operationalisierung sind die relevanten Verstehenselemente der elementaren Alge-
+bra zunächst stoffdidaktisch zu speziﬁzieren. Die empirische Studie berichtet aus
+der gegenstandsbezogenen qualitativen Analyse von 50 YouTube-Videos, ausge-
+wählt von den meistgeschauten Kanälen. Die Analyse zeigt, dass alle zu erwar-
+tenden Verstehenselemente in den Erklärvideos vorkommen, wenn auch mit unter-
+schiedlichen Priorisierungen (z.B. wenig Unbestimmten-Deutung). Explizit aufge-
+faltet werden Variablendeutungen im Zusammenhang mit Termen und Gleichun-
+gen selten, das Vernetzungspotential ist sehr heterogen. Einige positive Ausnahmen
+geben Aufschluss darüber, wie Auffalten und Vernetzen umgesetzt und wie hohe
+Digitaler Anhang mit den Operationalisierungen der Kodes unter http://www.mathematik.tu-
+dortmund.de/~prediger/veroeff/22-JMD-YouTube-Korntreff-Prediger-Erklaervideos-Anhang.pdf
+Stefan Korntreff () · Susanne Prediger
+Institut für Entwicklung und Erforschung des Mathematikunterrichts, Technische Universität
+Dortmund, Vogelpothsweg 87, 44227 Dortmund, Deutschland
+E-Mail: stefan.korntreff@math.tu-dortmund.de
+Susanne Prediger
+E-Mail: prediger@math.tu-dortmund.de
+Susanne Prediger
+IPN Leibniz-Institut für die Pädagogik der Naturwissenschaften und Mathematik, Kiel/Berlin,
+Deutschland
+K
+
+
+--- page 2 ---
+282
+S. Korntreff, S. Prediger
+Erklärqualität sprachlich realisiert werden kann. Die vorgeschlagene Konzeptuali-
+sierung und Operationalisierung der Verstehensangebote von Erklärvideos über die
+gegenstandsspeziﬁsche Analyse der vorkommenden, aufgefalteten und vernetzten
+Verstehenselemente kann auch für andere fachliche Konzepte adaptiert werden.
+Schlüsselwörter Erklärvideo · Verstehensorientierung · Verstehensangebote ·
+Variable · Term · Gleichung
+Conceptual Learning Opportunities of Instructional YouTube Videos –
+Conceptualization and Analysis for the Case of Algebraic Concepts
+Abstract Publicly available instructional videos are used more and more frequently.
+However, their subject-speciﬁc didactical quality was questioned, especially with re-
+spect to the offered learning opportunities to develop conceptual understanding of
+profound mathematical concepts such as variables and algebraic expressions. For
+a theoretically sound and research-based clariﬁcation of this question, the article
+suggests a didactical conceptualization and content-speciﬁc operationalization for
+the quality of conceptual learning opportunities in instructional videos, by means
+of occurrence, unfolding and connecting relevant concept elements. For such an
+operationalization, the relevant concept elements for algebraic concepts must ﬁrst
+be speciﬁed epistemologically. The empirical study reports a content-speciﬁc qual-
+itative analysis of 50 YouTube videos, selected from the most watched German-
+speaking channels. The analysis shows that all the expected concept elements oc-
+cur in the videos, albeit with different priorities (e.g. little attention to variables
+as generalizers). Explicitly unfolded interpretations of variables in connection with
+expressions and equations are rare, and the potential for connections is very het-
+erogeneous. A few positive exceptions provide insights about how unfolding and
+connecting can be implemented and by which language high quality explanations
+can be achieved. The proposed conceptualization and operationalization of quality
+of the conceptual learning opportunities in instructional videos achieved by content-
+speciﬁc analysis of the occurrence, unfolding and connecting of concept elements
+can also be adapted to other subject-related concepts.
+Keywords Instructional video · Conceptual focus · Conceptual learning
+opportunities · Variables · Expressions · Equations
+1 Einleitung
+Laut der JIM-Studie 2020 ist YouTube das mit Abstand beliebteste Internetangebot
+der deutschen Jugendlichen, wobei 21% der Jugendlichen YouTube-Erklärvideos
+mehrmals pro Woche auch zu Zwecken formaler Bildung nutzen (MPFS 2020,
+S. 37, 46). Im Zuge der coronabedingten Schulschließungen griffen mehr als 45%
+der von FORSA (2020) befragten 1031 Lehrkräfte (Sekundarstufe I) auf Erklärvi-
+deos als Unterrichtsmaterial zurück – die meistgenutzte Ressource nach Aufgaben-
+blättern.
+K
+
+
+--- page 3 ---
+Verstehensangebote von YouTube-Erklärvideos – Konzeptualisierung und Analyse am Beispiel...
+283
+Angesichts der Nutzungszahlen sind empirische Befunde aus Interventionsstudien
+zu begrüßen, die belegen, dass mit geeigneten Erklärvideos sowohl prozedurales als
+auch konzeptuelles Wissen lernwirksam erworben werden kann (Höfﬂer und Leutner
+2007; Kant et al. 2017). Hierbei ist der Lernerfolg bzgl. konzeptuellen Wissens aller-
+dings von der fachdidaktischen Angebotsqualität der Videos abhängig (Kulgemeyer
+2018). Diese Qualität wurde für online verfügbare Mathematik-Erklärvideos als sehr
+heterogen beschrieben (Rott 2020) und in Positionspapieren kritisiert (Bersch et al.
+2020; Klinger und Walter 2020), z.B. für fehlende Sinnstiftung und fachliche Fehler.
+Als zentrale fachdidaktische Schwachstelle online-verfügbarer Erklärvideos wurde
+eine Dominanz kalkülorientierter Erläuterungen von Rechenwegen identiﬁziert, also
+die Verstehensorientierung hinterfragt (Bersch et al. 2020; Rott 2020).
+Vor diesem Hintergrund stellt sich die Frage, inwiefern anspruchsvolle mathe-
+matische Konzepte überhaupt verstehensorientiert in Erklärvideos aufbereitet wer-
+den können. Um dieser Frage systematisch nachzugehen, ist eine theoretische und
+empirische Fundierung der vorliegenden fachdidaktischen Qualitätseinschätzungen
+notwendig, indem die Verstehensangebote von Erklärvideos theoretisch fundiert kon-
+zeptualisiert, gegenstandsbezogen operationalisiert und im Detail analysiert werden.
+Der vorliegende Artikel adressiert dieses Forschungsdesiderat exemplarisch für
+algebraische Konzepte durch eine gegenstandsspeziﬁsche Analyse der Verstehens-
+angebote von 50 der meistgeschauten deutschsprachigen YouTube-Erklärvideos zu
+Variablen, Termen und Gleichungen. Abschn. 2 des Artikels fasst den Hintergrund
+zu Verstehensangeboten von Erklärvideos und die notwendigen Verstehenselemen-
+te in der elementaren Algebra zusammen, Abschn. 3 stellt die herangezogenen
+Forschungsmethoden vor, während Abschn. 4 Analyseergebnisse berichtet, die in
+Abschn. 5 diskutiert werden.
+2 Theoretischer Hintergrund
+2.1 Instruktionspsychologische und fachdidaktische Qualitätskriterien für
+Erklärvideos
+Aus mediendidaktischer Perspektive sind Erklärvideos „eigenproduzierte, kurze Fil-
+me, in denen Inhalte, Konzepte und Zusammenhänge erklärt werden [...], mit der
+Intention, beim Betrachter ein Verständnis zu erreichen bzw. einen Lernprozess aus-
+zulösen“ (Findeisen et al. 2019, S. 18; ähnlich Wolf 2015). Sie umfassen sowohl
+Tutorial-Videos mit prozeduralem Fokus, die alltägliche oder mathematische Vor-
+gehensweisen erläutern, als auch Videos mit konzeptuellem Fokus; auf letztere legt
+dieser Artikel den Schwerpunkt. In der Regel sind Erklärvideos Filme von maximal
+20-minütiger Länge, die einen geringen oder mittleren Didaktisierungsgrad vorwei-
+sen (Findeisen et al. 2019; Wolf 2015). Manche Videos werden von ausgebilde-
+ten Lehrkräften bereitgestellt (bspw. die Kanäle Sebastian Schmidt, Lehrerschmidt,
+LehrerBros). Entsprechend ihrer prinzipiell didaktischen Intention sind Erklärvideos
+instruktionale Erklärungen im Videoformat, weshalb sich Qualitätsmerkmale für Er-
+klärvideos aus instruktionspsychologischen Befunden ableiten lassen: Gemäß dem
+Survey von Wittwer und Renkl (2008) müssen instruktionale Erklärungen (a) auf
+K
+
+
+--- page 4 ---
+284
+S. Korntreff, S. Prediger
+Tab. 1 Beispielkriterien mathematik- und physikdidaktischer Kataloge zur Qualitätserfassung von
+Erklärvideos. (Marquardt 2016; Bersch et al. 2020; Kulgemeyer und Peters 2016; Kulgemeyer 2018)
+Inhaltliche Qualität
+Kognitive Aktivierung
+Adaptivität
+– Fachliche Korrektheit
+– Sprachliche Korrektheit
+– Einbettung in sinnstiftende Kon-
+texte
+– Verstehensorientierung statt reiner
+Kalkülorientierung
+– Ausreichende Begründung der
+Aussagen
+– Partiell eigenständige Erarbeitung
+durch Zuschauende
+– Einbindung von Aufgaben zur aktiven
+Auseinandersetzung
+Mediale Gestaltung
+– Hervorhebung zentraler Inhalte
+– Sinnvolle Segmentierung des Inhalts
+– Passung zum
+aktuellen Un-
+terrichtsstand
+– Passung zum
+individuellen
+Vorwissen
+die für ein tieferes Verständnis relevanten Konzepte fokussieren, (b) an die kogniti-
+ven Aktivitäten der Lernenden anknüpfen, ohne diese zu ersetzen, und (c) adaptiv
+sein.
+Die in den Fachdidaktiken vorgeschlagenen Qualitätskriterien für Erklärvideos
+lassen sich den genannten Qualitätsdimensionen der inhaltlichen Qualität (insbe-
+sondere die Qualität der Verstehensangebote), der kognitiven Aktivierung und der
+Adaptivität zuordnen (vgl. Tab. 1). Zur Realisierung kognitiver Aktivierung werden
+zudem empirisch bestätigte Kriterien medialer Gestaltung betont (etwa Marquardt
+2016; Mayer 2009).
+In der Mathematikdidaktik wurden Kataloge zur Qualitätserfassung von Erklär-
+videos bisher vor allem zur praxisnahen Unterstützung von Lehrkräften bei der
+Videoauswahl formuliert (Marquardt 2016; Bersch et al. 2020), während in der Phy-
+sikdidaktik Annahmen zur Wirkung von Qualitätskriterien von Physik-Erklärvideos
+auch empirisch überprüft wurden. So operationalisierten Kulgemeyer und Peters
+(2016) die Erklärqualität von Online-Physikvideos mit 31 Qualitätskriterien ver-
+schiedener Kategorien (u.a. Inhalt, Struktur, Sprache, Mathematisierungsgrad) und
+zeigten, dass YouTube-speziﬁsche Oberﬂächenmerkmale (wie View-Anzahl) nicht
+mit Erklärqualität korrelieren. Kulgemeyer (2018) identiﬁzierte fachdidaktische und
+instruktionspsychologische Qualitätsmerkmale mit Auswirkung auf die Lernwirk-
+samkeit. Dies waren insbesondere Adaptivität bzgl. Vorwissen und Sprache sowie
+die Fokussierung auf relevante Inhalte. Letzteres ist der Fokus unseres Artikels.
+2.2 Konzeptualisierung der Verstehensangebote von Erklärvideos
+Wenn in diesem Artikel die Qualität der Verstehensangebote von Erklärvideos an-
+visiert wird, so wird damit also nur eines der verschiedenen unterrichtspraktisch
+und empirisch als wichtig identiﬁzierten Kriterien aus Tab. 1 fokussiert. Hiebert
+und Carpenter (1992, S. 65) beschreiben das Ziel der Verstehensorientierung als
+„[one] of the most widely accepted ideas within the mathematics [...]. But achieving
+this goal has been like searching for the Holy Grail“. Daher lohnt eine genauere
+Betrachtung der Angebotsseite, auch ohne empirische Verstehensprozesse von Ler-
+nenden zu analysieren. Ohne in Lehr-Lernprozessen auch das tatsächlich erreichte
+Verständnis der Lernenden erfassen zu können, fokussiert das Qualitätskriterium der
+Verstehensorientierung in erster Linie den inhaltlichen Fokus von Lernangeboten:
+Werden kalkülhafte Prozeduren oder Konzepte erklärt? Dabei können sich verste-
+K
+
+
+--- page 5 ---
+Verstehensangebote von YouTube-Erklärvideos – Konzeptualisierung und Analyse am Beispiel...
+285
+hensorientierte Lernangebote durchaus hinsichtlich der Qualität unterscheiden, wie
+gut die fokussierten Konzepte erklärt werden. Um diese Qualitätsunterschiede zu
+erfassen, werden nachfolgend die Qualitäten von Verstehensangeboten genauer kon-
+zeptualisiert und operationalisiert. Hierfür wird zunächst in Abschn. 2.2.1 theore-
+tisch fundiert, was Verständnis und Prozesse des Verständnisaufbaus ausmacht. In
+Abschn. 2.2.2 werden daraus Anforderungen an qualitativ gute Verstehensangebote
+in Erklärungen abgeleitet.
+2.2.1 Theoretischer Hintergrund zu Verständnis und Prozessen des
+Verständnisaufbaus
+Die Erfassung der Qualität von Lernangeboten wurde in der Unterrichtsqualitäts-
+forschung empirisch systematisiert (vgl. Survey von Hiebert und Grouws 2007). In
+diesem Artikel wird auf einen Ansatz fokussiert, den Drollinger-Vetter (2011) inner-
+halb des Pythagoras-Projekts (Reusser und Pauli 2013) entwickelt hat und dieser auf
+die Analyse von Erklärvideos übertragen. Der Ansatz ist verankert in kognitions-
+wissenschaftlichen Modellen der Wissensorganisation, nach denen Wissen mental
+in Form strukturierter Wissensnetze repräsentiert wird (Aebli 1994; Hiebert und
+Carpenter 1992). Konzeptverständnis kann dann über die Vernetztheit relevanter
+mentaler Repräsentationen deﬁniert werden: Ein Konzept
+is understood if its mental representation is part of a network of representa-
+tions. The degree of understanding is determined by the number and the
+strength of the connections. [...] [It] is understood thoroughly if it is linked to
+existing networks with stronger or more numerous connections (Hiebert und
+Carpenter 1992, S. 67).
+Drollinger-Vetter (2011) hat in Anknüpfung an Aebli (1994) vorgeschlagen, Kon-
+zeptverständnis mathematikdidaktisch zu charakterisieren als mental repräsentierte
+Wissensnetze, in denen Konzepte über semantische Verknüpfungen durch Aussagen
+vernetzt werden. Bspw. werden in den Sätzen „In Bestimmungsgleichungen gibt
+es Variablen. Diese Variablen stehen für unbekannte Zahlen.“ die Konzepte Varia-
+ble, unbekannte Zahl und Bestimmungsgleichung zueinander in Beziehung gesetzt:
+Verständnis dieser Wissensstruktur umfasst, sowohl die Konzepte als auch deren
+semantische Beziehungen zueinander (x steht für y in z) mental zu konstruieren.
+Das Verständnis komplexer mathematischer Konzepte erfordert die mentale Kon-
+struktion unterschiedlicher Grundvorstellungen, d.h. unterschiedlicher normativ be-
+stimmbarer Standard-Deutungen der Konzepte (vom Hofe 1995). Drollinger-Vetter
+(2011) erfasst dies in ihrem Modell, indem sie die mentalen Repräsentationen ma-
+thematischer Konzepte als Zusammensetzung von Verstehenselementen beschreibt.
+Diese sind deﬁniert als „Teilkonzepte eines Konzepts, die man verstanden haben
+muss, um das Konzept als Ganzes zu verstehen“ (Drollinger-Vetter 2011, S. 201).
+Basierend auf dieser Konzeptualisierung von Verständnis kann Drollinger-Vetter
+auch Prozesse des Verständnisaufbaus beschreiben: In den Prozessen müssen die re-
+levanten Verstehenselemente mental konstruiert und vernetzt werden. Die Relevanz,
+Vernetzungen zwischen den Verstehenselementen mental zu konstruieren, ergibt sich
+aus der Deﬁnition von Konzeptverständnis. Sollen die immer komplexer werdenden
+K
+
+
+--- page 6 ---
+286
+S. Korntreff, S. Prediger
+Konzeptstrukturen allerdings mental (weiter-)verarbeitbar bleiben, so bedarf es ko-
+gnitiver Entlastungsprozesse, die als Verdichten bezeichnet werden:
+Der entscheidende Schritt, wie aus Bekanntem Neues entsteht, ist der Schritt
+des Bildens von Einheiten höherer Ordnung: Dies geschieht durch Verdichten
+(Objektivieren), das nicht mit Abstraktion verwechselt werden darf. [...] Objek-
+tivierungen ermöglichen es, komplexe Strukturen in umfassendere Zusammen-
+hänge einzubauen. Ergebnisse des bisherigen Aufbaus werden in eine Form ge-
+bracht, die eine weitere Verarbeitung ermöglicht [...]. (Drollinger-Vetter 2011,
+S. 64f.)
+Erfolgreiche Verdichtungsprozesse sind dadurch gekennzeichnet, dass einerseits
+im Verdichten zwar Informationen verloren gehen, diese andererseits aber „jederzeit
+durch Auffalten des entsprechenden Elementes in seine dazugehörigen Teilelemente
+und Beziehungen wieder vollständig hergestellt werden können“ (Drollinger-Vetter
+2011, S. 65). Bspw. ließe sich das verdichtete Verstehenselement der Unbekannten
+auffalten zu der Erläuterung, dass die Variable in Bestimmungsgleichungen für Zah-
+len steht, die man sucht. Sprachlich zeigen sich Auffaltungsprozesse also durch die
+ausführliche Explikation der Bestandteile, d.h. durch Erläuterung von Wissensele-
+menten.
+Ebenso wie Hiebert und Carpenter (1992) geht Drollinger-Vetter (2011, S. 188ff.)
+davon aus, dass sich die Verstehenselemente eines mathematischen Konzepts und
+deren Verknüpfungen zu bildlichen, sprachlichen und symbolischen Darstellungs-
+formen des Konzepts verdichten lassen. Dementsprechend sind solche Darstellungs-
+formen auch nur dann gehaltvoll interpretierbar, wenn sie zurück zu den relevanten
+Verstehenselementen und deren Beziehungen zueinander aufgefaltet werden kön-
+nen. Dass diese Auffaltungs-, Vernetzungs- und Verdichtungsprozesse entscheidend
+für einen inhaltlich gedeuteten Kalkül sind, haben Glade und Prediger (2017) am
+Beispiel des Brüche-Multiplizierens herausgearbeitet.
+2.2.2 Ableitung von Qualitätsanforderungen an Verstehensangebote (in
+Erklärungen und Erklärvideos)
+Entsprechend der vorgestellten Beschreibung von Prozessen des Verständnisaufbaus,
+lassen sich nun drei Anforderungen an Erklärungen ableiten, die darauf zielen, den
+Verständnisaufbau beim Nutzenden zu unterstützen.
+(a) Vorkommen von Verstehenselementen:
+Zwar ist eine hohe Angebotsqualität
+von Erklärungen kein Garant für lernendenseitigen Verständnisaufbau (Aebli 1994,
+S. 99). Trotzdem kann Verständnisaufbau durch Erklärangebote überhaupt nur dann
+unterstützt werden, wenn in den Erklärungen die relevanten Verstehenselemente des
+Konzepts bzw. der kalkülhaften Umformungen überhaupt vorkommen. Hiermit wird
+an den mathematikdidaktischen Konsens hinsichtlich der Verstehensorientierung von
+Lernangeboten angeknüpft: Erklärungen sollen auf konzeptuelle Gehalte fokussieren
+und nicht nur auf kalkülhafte Prozeduren (Malle 1993; Prediger 2009). Empirische
+Evidenzen der Interventions- und Unterrichtsqualitätsforschung, dass das Vorkom-
+men konzeptueller Gehalte in Unterrichtsszenarien lernwirksam für den Aufbau
+K
+
+
+--- page 7 ---
+Verstehensangebote von YouTube-Erklärvideos – Konzeptualisierung und Analyse am Beispiel...
+287
+von konzeptuellem (und prozeduralem) Verständnis ist, sind im Survey von Hiebert
+und Grouws (2007) zusammengetragen. Für den deutschsprachigen Raum zeigte
+Drollinger-Vetter (2011, S. 283), dass das Vorkommen von Verstehenselementen in
+Unterrichtsstunden zur Einführung des Satzes des Pythagoras in 38 Schulklassen
+prädiktiv ist für signiﬁkant höhere Lernzuwächse. Somit ist die Qualitätsanforde-
+rung des Vorkommens von relevanten Verstehenselementen sowohl theoretisch als
+auch empirisch von der Interventions- und Unterrichtsqualitätsforschung auf Verste-
+hensangebote in Erklärvideos zu übertragen.
+(b) Auffalten von Verstehenselementen:
+Wittwer und Renkl (2008) haben in ih-
+rem Survey herausgearbeitet, dass lernwirksame instruktionale Erklärungen die fach-
+lich relevanten Konzepte und Prinzipien explizieren müssen, da es andernfalls ins-
+besondere bei leistungsschwächeren Lernenden zu Fehlfokussierungen kommt. Für
+den lernendenseitigen Verständnisaufbau genügt es also nicht, dass Verstehensele-
+mente in Erklärungen implizit vorkommen, sie müssen auch ausführlich thematisiert
+werden, d.h. in Anknüpfung an Aebli (1994): Sie müssen aufgefaltet werden, also
+sprachlich expliziert werden. Da die Unterscheidung von implizit genutzt und ex-
+plizit aufgefaltet graduell ist, wird sie eine sorgfältige Operationalisierung erfordern
+(vgl. Methodenteil und digitaler Anhang).
+(c) Vernetzen von Verstehenselementen:
+Insofern Verständnis über die Vernetzt-
+heit relevanter mentaler Repräsentationen charakterisiert ist, ist es naheliegend, Ver-
+ständnisaufbau durch die Explikation dieser Vernetzungen in Erklärungen zu unter-
+stützen: „there is general consensus that connections between mathematical ideas
+should be discussed and that students should be encouraged to reﬂect on them“ (Hie-
+bert und Carpenter 1992, S. 86). Entsprechend stellen Wittwer und Renkl (2008) in
+ihrem Survey heraus, dass lernwirksame instruktionale Erklärungen besonders auch
+auf die Beziehungen zwischen Konzepten aufmerksam machen müssen.
+Die Qualität von Verstehensangeboten von Erklärvideos wird in diesem Arti-
+kel also über das Vorkommen, Auffalten und Vernetzen der Verstehenselemente
+der thematischen Konzepte charakterisiert. Hiermit wird die Verstehensorientierung
+nicht als Ja/Nein-Kriterium des Vorkommens der Konzepte aufgefasst, sondern einer
+tiefergehenden fachdidaktischen Exploration zugänglich gemacht. In Anschlussstu-
+dien kann die Qualität von Verstehensangeboten von Erklärvideos zu weiteren Qua-
+litätsmerkmalen wie kognitiver Aktivierung und lernendenseitigen Prozessen des
+Verständnisaufbaus in Beziehung gesetzt werden.
+Angesichts der häuﬁg geäußerten Problematisierung der Verstehensorientierung
+von existierenden Erklärvideos (Bersch et al. 2020; Rott 2020; Klinger und Wal-
+ter 2020) stellt sich jedoch zunächst die Frage, inwiefern die Verstehensangebote
+von Erklärvideos für mathematisch tieﬂiegende Konzepte, etwa die der elementaren
+Algebra, überhaupt die Qualitätsanforderungen erreichen können.
+K
+
+
+--- page 8 ---
+288
+S. Korntreff, S. Prediger
+2.3 Stoffdidaktischer Rahmen der gegenstandsbezogenen Operationalisierung
+von Verstehensangeboten: Verstehens- und Kalkülelemente zentraler
+algebraischer Konzepte
+Das in Abschn. 2.2 vorgeschlagene Konstrukt der Qualität von Verstehensangebo-
+ten muss gegenstandsbezogen operationalisiert werden, indem für den betrachteten
+Lerngegenstand der elementaren Algebra die relevanten Elemente im Einzelnen spe-
+ziﬁziert werden. Dies erfolgt in diesem Abschnitt unter Rückgriff auf den empirisch
+fundierten stoffdidaktischen Forschungsstand.
+Das wichtigste Konzept der elementaren Algebra ist das Variablenkonzept, weil
+dessen verschiedene Deutungen auch auf das Term- und Gleichungskonzept un-
+mittelbar Einﬂuss nehmen (Malle 1993). Die Verstehensangebote von Videos zum
+Variablenkonzept lassen sich demnach nicht analysieren, ohne die Vernetzung zu
+diesen Konzepten zu untersuchen (Malle 1993; Drollinger-Vetter 2011, S. 182f.).
+Je nach algebraischer Tätigkeit werden in der mathematikdidaktischen Literatur
+(unter verschiedenen Namen) mehrere Deutungen der Variable unterschieden und
+für die Terme und Gleichungen entsprechend abgeleitet (Malle 1993; Freudenthal
+1973; Usiskin 1988; Malisani und Spagnolo 2009):
+ Variable als Einsetzstelle in der Einsetz-Deutung: Eine zentrale algebraische
+Tätigkeit in operationaler Perspektive ist das Auswerten von Termen. In dieser
+Deutung ist die Variable eine Einsetzstelle für Zahlen und ein Term eine Rechen-
+vorschrift, in die Zahlen eingesetzt werden können. Gleichungen sind Aussagefor-
+men, die je nach Einsetzung verschiedene Wahrheitswerte haben, z.B. ist 3+ x= 7
+nur wahr für die Einsetzung x= 4 (Malle 1993).
+ Variable als Unbekannte in erster Zahl-Deutung: In der Zahl-Deutung wird die
+Variable nicht als Einsetzstelle, sondern als Zahl selbst gedeutet (bei Malle (1993)
+Gegenstandsaspekt genannt). Die Deutung als unbekannte Zahl ist relevant für die
+algebraische Tätigkeit des Ermittelns solcher Zahlen aus Bestimmungsgleichun-
+gen (Malisani und Spagnolo 2009; Usiskin 1988). Wird die Variable als unbekann-
+te Zahl gedeutet, so ist der Term eine Beschreibung für eine weitere, unbekannte
+Zahl, bspw. (x+ y) / 2 das unbekannte arithmetische Mittel von x und y, das nun
+gleichgesetzt werden kann mit einem vorgegebenen Wert.
+ Variable als Unbestimmte in zweiter Zahl-Deutung: Für die algebraisch hoch
+relevante Tätigkeit des Beschreibens allgemeiner Zusammenhänge (z.B. Bezie-
+hungen oder Muster, vgl. Prediger und Krägeloh 2016) wird die Variable eben-
+falls als Zahl gedeutet, jedoch nicht als unbekannte Zahl, sondern als allgemeine,
+beliebige Zahl (Kaput 2008; Freudenthal 1973; Usiskin 1988). Terme und Glei-
+chungen mit Variable als Unbestimmter werden in relationaler Sicht nicht als Re-
+chenvorschriften bzw. Aussageformen gedeutet, sondern als Beschreibungsmittel
+eines allgemeinen Zusammenhangs, z.B. G· h bzw. V= G· h, wenn G den Inhalt
+der Grundﬂäche und h die Höhe beschreibt.
+ Variable als Veränderliche in dritter Zahl-Deutung: Ein Spezialfall der Unbe-
+stimmten-Deutung ist die Deutung der Variable als Veränderliche. Sie wird hier als
+eigene Deutung aufgeführt, um die funktionale Sicht auf Terme und Gleichungen
+von einer relationalen Sicht zu trennen (bei Malle (1993) Simultan- und Verän-
+K
+
+
+--- page 9 ---
+Verstehensangebote von YouTube-Erklärvideos – Konzeptualisierung und Analyse am Beispiel...
+289
+derlichenaspekt). Bei der Tätigkeit des Erfassens funktionaler Zusammenhänge
+wird die Variable als veränderliche Zahl gedeutet. Der Term beschreibt dann eine
+davon abhängige Zahl, während die Gleichung diesen speziﬁschen funktionalen
+Zusammenhang erfasst, etwa f (x)= 3+ x.
+ Variable als Symbol ohne Deutung: Eine zentrale algebraische Tätigkeit ist das
+kalkülhafte Umformen, denn genau daraus bezieht die Algebra ihre große Kraft
+zur Bewältigung komplexer Zusammenhänge (Hefendehl-Hebeker 2001). Lernen-
+de sollten wissen, dass für diese Tätigkeit Variablen als nicht-gedeutete Symbole
+behandelt werden. Terme und Gleichungen werden dann als syntaktisch wohlge-
+formte Symbolketten behandelt, „deren eventuelle Bedeutung man während des
+Arbeitens vergessen kann“ (Malle 1993, S. 47), um sie ausschließlich nach vorge-
+gebenen Regeln umzuformen. Auch diese transformationale Sicht gehört zu einem
+Verstehen der Algebra (Kieran 2004). Um sie von den inhaltlichen Deutungen
+abzugrenzen, werden die nicht-gedeuteten Symbole als Kalkülelemente statt als
+Verstehenselemente bezeichnet.
+Sowohl die Unterschiede zwischen operationaler, relationaler und funktionaler
+Sicht als auch die Unterschiede zwischen der Deutung der Variable als Unbekannte
+und Unbestimmte wurden in der Algebradidaktik ausführlich diskutiert und empi-
+risch analysiert (Usiskin 1988; Bednarz et al. 1996; Prediger und Krägeloh 2016). Es
+herrscht inzwischen Konsens, dass Lernende im Laufe der Zeit alle vier Deutungen
+der Variable und die Konsequenzen für die Deutung von Term und Gleichung lernen
+müssen (vgl. Übersicht in Tab. 2 als Advance Organizer für weitere Erläuterungen),
+um die Vielfalt der algebraischen Tätigkeiten ausüben zu können (Bednarz et al.
+1996).
+Herausfordernd ist hierbei, dass die vier Deutungen der Variable ihre Sinnstif-
+tung aus unterschiedlichen Tätigkeiten beziehen. Bspw. motiviert sich die Variable
+als Unbekannte über die Tätigkeit, eine unbekannte Zahl aus einer Gleichung zu
+bestimmen, während die Variable als Unbestimmte aus Generalisierungstätigkeiten
+ihren Sinn bezieht, zu deren Zweck Zahlwerte absichtlich nicht weiter bestimmt
+werden, etwa in Rechengesetzen oder Formeln (Freudenthal 1973, S. 294f.).
+Auch der Beziehung zwischen den vier inhaltlichen Deutungen und den ungedeu-
+teten Symbolen beim kalkülhaften Umformen (rechte Spalte in Tab. 2) kommt im
+Aufbau eines Verständnisses für Algebra eine besondere Bedeutung zu (Hefendehl-
+Hebeker 2001). Diese Vernetzung ist jedoch bei vielen Lernenden nicht adäquat
+mental konstruiert, obwohl der Erwerb und Transfer gehaltvollen prozeduralen Wis-
+sens stets auf Bezüge zu konzeptuellen Bedeutungsgehalten angewiesen ist (Kieran
+2013; Malle 1993; Prediger 2009). Demnach muss zum Aufbau dieser Verknüpfung
+die Bedeutung zweier weiterer Konzepte aufgefaltet werden: Termgleichwertigkeit
+und Gleichungsäquivalenz, zu denen es neben den Kalkülelementen des regelhaf-
+ten Umformens (rechte Spalte in Tab. 2) auch Verstehenselemente (in den anderen
+Spalten) zu lernen gibt:
+In der Tätigkeit des kalkülhaften Umformens gelten zwei Terme als gleichwertig,
+wenn sie mithilfe der Termumformungsregeln ineinander überführt werden können.
+Um diese kalkülhaften Regeln inhaltlich begründen zu können, muss jedoch die
+Termgleichwertigkeit auch inhaltlich bestimmt werden (Malle 1993; Prediger 2009):
+K
+
+
+--- page 10 ---
+290
+S. Korntreff, S. Prediger
+Tab. 2 Wissenselemente (Verstehens- und Kalkülelemente) für Konzepte der elementaren Algebra.
+(Nach Prediger 2020, S. 163; Malle 1993, S. 47)
+Verstehenselemente für verschiedene algebraische Tätigkeiten
+Kalkül-
+elemente
+Tätig-
+keiten
+Auswerten
+Unbekannte
+ermitteln
+Zusammenhänge
+allgemein
+erfassen
+Veränderungen
+erfassen
+Kalkülhaftes
+Umformen
+Einsetz-Deu-
+tung
+Zahl-Deutung
+als Unbekann-
+te
+Zahl-Deutung
+als Unbe-
+stimmte
+Zahl-Deutung
+als Veränderli-
+che
+Symbol ohne
+Deutung
+Variable
+Einsetzstelle
+für Zahlen
+Steht für un-
+bekannte Zahl,
+die man sucht
+Steht für alle
+Zahlen, für die
+man verallge-
+meinert
+Steht für eine
+Größe, die
+sich verändert
+Nicht gedeute-
+tes Symbol
+Term
+Rechenvorschrift,
+in die Zahlen
+eingesetzt
+werden
+können
+(operationale
+Sicht)
+Beschreibung
+für eine weite-
+re unbekannte
+Zahl
+Allgemeine
+Beschreibung
+eines Zusam-
+menhangs
+(relationale
+Sicht)
+Allgemeine
+Beschreibung
+eines funk-
+tionalen Zu-
+sammenhangs
+(funktionale
+Sicht)
+Nicht gedeu-
+tete Symbol-
+Kette (nach
+Konstruktions-
+regeln)
+Term-
+gleich-
+wertig-
+keit
+Einsetzungs-
+gleichheit:
+2 Terme er-
+geben für alle
+Einsetzungen
+denselben
+Wert
+–
+Beschrei-
+bungsgleich-
+heit: 2 Terme
+beschreiben
+dasselbe (Bild,
+Situation,
+Zusammen-
+hang ...)
+Beschrei-
+bungsgleich-
+heit: 2 Terme
+beschreiben
+denselben
+funktionalen
+Zusammen-
+hang
+Umformungs-
+gleichheit:
+1. Term in
+2. Term nach
+festen Umfor-
+mungsregeln
+überführbar
+Glei-
+chung
+Aussageform,
+in der durch
+Einsetzen
+potenzielle
+Lösungen ge-
+prüft werden
+können
+Bestimmungs-
+gleichung als
+Bedingung,
+aus der unbe-
+kannte Zahl
+herauszuﬁnden
+ist
+Allgemein-
+gültige Bedin-
+gung für alle
+Zahlen
+Allgemeine
+Beschrei-
+bung eines
+(funktionalen)
+Zusammen-
+hangs
+Nicht gedeu-
+tete Symbol-
+Kette
+Glei-
+chungs-
+äquiva-
+lenz
+2 Gleichungen
+haben dieselbe
+Lösungsmenge
+(Wahrmacher)
+2 Gleichungen
+beschreiben
+dieselben
+unbekannten
+Zahlen
+–
+–
+1. Gleichung
+in 2. Glei-
+chung nach
+festen Äqui-
+valenzumfor-
+mungsregeln
+überführbar
+ Wird die Variable als Einsetzstelle gedeutet, so lässt sich die Gleichwertigkeit von
+Termen als Einsetzungsgleichheit interpretieren: Zwei Terme sind dann gleich-
+wertig, wenn sie für alle eingesetzten Zahlen denselben Wert ergeben.
+ Wird die Variable dagegen als Unbestimmte oder Veränderliche gedeutet, dann
+lässt sich die Gleichwertigkeit von Termen als Beschreibungsgleichheit interpre-
+tieren: Zwei Terme sind dann gleichwertig, wenn sie denselben (ggf. funktionalen)
+Zusammenhang beschreiben.
+K
+
+
+--- page 11 ---
+Verstehensangebote von YouTube-Erklärvideos – Konzeptualisierung und Analyse am Beispiel...
+291
+Analog lassen sich Äquivalenzumformungen von Gleichungen inhaltlich begrün-
+den, indem das Konzept Gleichungsäquivalenz in Einsetz- oder Unbekannten-Deu-
+tung gedeutet wird (Tab. 2).
+Zum Verständnis von Termen und Gleichungen gehört also auch, deren kalkül-
+hafte Umformungsregeln mit entsprechenden inhaltlichen Deutungen der Konzepte
+Termgleichwertigkeit und Gleichungsäquivalenz zu vernetzen (Malle 1993; Prediger
+2009). Dies geht über eine reine Darstellungsvernetzung von bildlicher, kontextueller
+und symbolischer Darstellung von Term und Gleichung hinaus, weil die Anforde-
+rungen an Termgleichwertigkeit bzw. Gleichungsäquivalenz inhaltlich verstanden
+werden müssen, damit die Regeln nicht beliebig sind (Hefendehl-Hebeker 2001).
+Somit erfordern auch die Gleichwertigkeitskonzepte, die den Umformungsregeln
+zugrunde liegen, eine inhaltliche Deutung (Kieran 2013).
+Für eine begrifﬂich scharfe Fassung der Beziehungen zwischen Inhalt und Kalkül
+werden in diesem Artikel also zusammenfassend folgende Bezeichnungen genutzt
+(vgl. Tab. 2):
+ die verschiedenen Grundvorstellungen der einzelnen Konzepte (in den Zellen)
+werden als Verstehenselemente bezeichnet,
+ die Verstehenselemente werden spaltenweise zu Deutungen zusammengefasst, in-
+dem die Vorstellungen von Term, Gleichung etc. den verschiedenen Variablen-
+Deutungen zugeordnet werden (bspw. Term in Einsetz-Deutung entspricht der
+operationalen Termvorstellung),
+ die symbolisch-kalkülhafte Vorstellungen der Konzepte (rechte Spalte) werden (in
+den Zellen) Kalkülelemente genannt,
+ Verstehenselemente und Kalkülelemente werden unter dem Oberbegriff Wissens-
+elemente erfasst.
+Die Analyse der Verstehensangebote der Erklärvideos wird somit über das Vor-
+kommen, Auffalten und Vernetzen der in Tab. 2 aufgeführten Wissenselemente ope-
+rationalisiert.
+Bei der Analyse von Erklärvideos stößt man unweigerlich auch auf typische
+Beispiele für didaktisch nicht tragfähige „Deutungen“ kalkülhafter Umformungen:
+etwa die „Obstsalat-Algebra“ (Arcavi et al. 2017) mit ihrer Fehlvorstellung des
+Buchstaben als Gegenstand (Küchemann 1981), in der Variablen nicht als Anzah-
+len, sondern als (physische) Gegenstände wie Obstsorten gedeutet werden. Diese oft
+für die Begründung der Termumformungsregel „Zusammenfassen“ herangezogene
+Fehlvorstellung wurde empirisch identiﬁziert als verstehenshinderlich und problema-
+tisch langlebig (Arcavi et al. 2017). MacGregor und Stacey (1997) betonen zudem,
+dass Lernende sie selten selbstständig entwickeln, sondern oft durch nicht tragfähige
+Instruktion erwerben. Die Nutzung der Obstsalat-Deutung kann also als Beispiel für
+eine gutgemeinte, aber unpassend realisierte Orientierung am Verstehen interpretiert
+werden, worauf in den nachfolgenden Analysen zurückzukommen sein wird.
+2.4 Forschungsfragen
+Zusammenfassend lässt sich festhalten: Ausgehend von Drollinger-Vetters (2011)
+Verstehensmodell wurden Qualitätsanforderungen an Verstehensangebote von Er-
+K
+
+
+--- page 12 ---
+292
+S. Korntreff, S. Prediger
+klärvideos zur elementaren Algebra konzeptualisiert als Vorkommen, Auffalten und
+Vernetzen der in Tab. 2 aufgeführten Wissenselemente (Verstehens- und Kalkülele-
+mente) für zentrale algebraische Konzepte. Für das Auffalten sind ausführliche Ex-
+plikationen der Konzepte und ihrer Wissenselemente bedeutsam, für das Vernetzen
+zusätzlich die sprachlich explizite Erläuterung der Beziehung zwischen den aufge-
+falteten Wissenselementen. Aus algebradidaktischer Sicht sind sowohl das Vernetzen
+der Deutungen als auch das Vernetzen verschiedener Konzepte relevant. Bezüglich
+der Kalkülelemente ist vor allem deren Vernetzung mit den Verstehenselementen in-
+haltlich bedeutsam. Aus dieser Operationalisierung ergeben sich zwei Forschungs-
+fragen:
+(FF1)
+Welche Verstehenselemente zu den Konzepten Variable, Term und Glei-
+chung kommen (a) in den YouTube-Erklärvideos vor, werden (b) aufgefaltet
+und (c) miteinander vernetzt?
+(FF2)
+Welche Kalkülelemente zu Variable, Term, Termgleichwertigkeit, Glei-
+chung und Gleichungsäquivalenz kommen (a) in den YouTube-Erklärvi-
+deos vor, werden (b) aufgefaltet und (c) mit relevanten Verstehenselementen
+vernetzt?
+3 Methodisches Vorgehen
+3.1 Methoden der Datenerhebung
+Das Datenkorpus für die Analyse der Verstehensangebote wurde zusammengestellt
+aus 50 Erklärvideos von 28 der meistgenutzten deutschsprachigen YouTube-Kanäle
+für Mathematik-Erklärvideos. Die 50 Erklärvideos sind zwischen 2:37 und 20:06min
+lang (im arithmetischen Mittel 6:34min). Die Kanalauswahl (Tab. 3) erfolgte über
+die Kanalreichweite, operationalisiert durch Anzahl der Kanalabos (am 07.09.2020).
+Dieses Samplingkriterium wurde gewählt, da der YouTube-Algorithmus den Zu-
+schauenden personalisiert „beliebte“ Videos vorschlägt (viele Views, Likes, Kom-
+mentare, etc.), daher ist die fachdidaktische Qualität beliebter Videos besonders ent-
+scheidend; beliebte Kanäle statt beliebte Videos ermöglichen zudem eine gewisse
+Breite der Anbieter.
+Zusätzlich wurden zwei Kanäle mit 5 Videos einbezogen, von denen eine hohe
+Qualität zu erwarten ist: Sebastian Schmidt als Gewinner des Deutschen Lehrer-
+preises 2019 für sein Konzept mit Erklärvideo-Einsatz und KhanAcademyDeutsch
+als deutschsprachiges YouTube-Angebot der einﬂussreichen US-amerikanischen vi-
+deobasierten Lernplattform, deren Lernwirksamkeit empirisch nachgewiesen wurde
+(Weeraratne und Chin 2018).
+Zentrales Sampling-Kriterium für die Auswahl der einzelnen Videos aus den
+Kanälen war der thematische Fokus auf die fünf Konzepte Variable, Term, Gleichung
+sowie Termgleichwertigkeit und Gleichungsäquivalenz. Ausgeschlossen wurden u.a.
+Videos zu binomischen Formeln, linearen Gleichungssystemen und Funktionen, um
+für die fünf fokussierten Konzepte ein thematisch homogeneres Datenkorpus zu
+K
+
+
+--- page 13 ---
+Verstehensangebote von YouTube-Erklärvideos – Konzeptualisierung und Analyse am Beispiel...
+293
+Tab. 3 Datenkorpus der 50 Erklärvideos mit Quellen und fokussierten algebraischen Konzepten
+Sample: 28 Kanäle
+50 Videos
+Fokussierte Konzepte
+Kanal
+Abos
+(07.09.2020)
+Nr.
+Eindeutige YouTube-
+Kennung
+(Link youtube.com/
+watch?v=...)
+V
+13x
+T
+18x
+TG
+20x
+G
+8x
+GÄ
+18x
+Mathe –
+simpleclub
+796.000
+V1
+v=sGjB6frA1LI
++
+–
+–
+–
+–
+V2
+v=EkfV1GkZ224
+–
++
+–
++
+–
+V3
+v= K8CNFqlxeM0
+–
+–
+–
+–
++
+Mathe by
+Daniel Jung
+681.000
+V4
+v=Yw-u7P39ChQ
+–
++
+–
++
+–
+V5
+v=gbkHViLUYfM
+–
++
+–
+–
+–
+V6
+v=1LZei3FUjMg
+–
+–
+–
++
++
+V7
+v=9UVkZFySE5I
+–
+–
+–
+–
++
+V8
+v=RWXxwPAwS0
+–
+–
+–
++
++
+Lehrerschmidt
+571.000
+V9
+v=pOMQNP5S8IE
+–
++
++
+–
+–
+V10
+v=_vN7NXvQbKE
+–
+–
++
+–
++
+V11
+v= G5XxS2OFsJU
+–
+–
+–
+–
++
+Schoolseasy
+131.000
+V12
+v=hvd_kUY0ETM
++
+–
+–
+–
+–
+V13
+v=Xq9oR45G2× 4
+–
++
++
+–
+–
+V14
+v=RwSBJROJe6Q
+–
+–
+–
++
++
+Lehrer MaPhy
+72.000
+V15
+v=pYzi70ooJGE
+–
+–
+–
+–
++
+Herr Mathe
+52.500
+V16
+v=CVnU-qdYXgU
+–
+–
++
+–
++
+Musstewissen
+Mathe
+52.400
+V17
+v=ox2BtxWyccY
++
+–
++
+–
+–
+V18
+v=3RWgrC6kNSU
+–
++
++
+–
+–
+V19
+v=0ioTiR0HLV0
+–
+–
+–
++
++
+Matheretter
+49.800
+V20
+v=OF2AZX9Dl08
++
++
+–
+–
++
+StrandMathe
+32.100
+V21
+v=VIEyxlxD7Dk
++
++
+–
+–
+–
+Koonys Schu-
+le
+31.000
+V22
+v=PWr2nTCK_LA
+–
+–
+–
+–
++
+KhanAca-
+demyDeutsch
+20.000
+V23
+v=8oFdV6F64tw
++
+–
+–
+–
+–
+V24
+v=JSY9Zd8vGMY
+–
+–
++
+–
+–
+V25
+v=Tk-RZAbcb48
+–
+–
++
+–
+–
+V26
+v=NomcIjSKqfY
+–
+–
+–
+–
++
+V27
+v=DztIUBit0SE
+–
+–
+–
++
++
+Mathematik
+Nachhilfe
+17.900
+V28
+v=uh4srYJkVe8
+–
++
++
+–
+–
+Mathias Pie-
+per
+14.400
+V29
+v=lAFGkbC8fTk
++
++
+–
++
+–
+Kapiert.de
+6550
+V30
+v=VUSSe2YPYzI
++
+–
+–
+–
+–
+Nachhilfe-
+channel
+6120
+V31
+v=Gmwsts0HtkA
+–
+–
++
+–
+–
+Sebastian
+Schmidt
+5940
+V32
+v=IW5rFKue1hw
+–
++
+–
+–
+–
+V33
+v=jMB4YiJq2qg
+–
++
+–
+–
+–
+V34
+v= b_fOzkX5xho
+–
+–
++
+–
+–
+V35
+v=BIlOPtIuZ9U
+–
+–
++
+–
+–
+V36
+v=Dz1UIlSQuQg
+–
+–
+–
+–
++
+K
+
+
+--- page 14 ---
+294
+S. Korntreff, S. Prediger
+Tab. 3 (Fortsetzung)
+Sample: 28 Kanäle
+50 Videos
+Fokussierte Konzepte
+Kanal
+Abos
+(07.09.2020)
+Nr.
+Eindeutige YouTube-
+Kennung
+(Link youtube.com/
+watch?v=...)
+V
+13x
+T
+18x
+TG
+20x
+G
+8x
+GÄ
+18x
+Young-
+Business-
+School
+5680
+V37
+v=VpeCrV2dS4s
++
++
+–
+–
+–
+LehrerBros
+4760
+V38
+v=auFMYVZDErw
+–
++
++
+–
+–
+52Volt
+4060
+V39
+v=cNCNsG_mjnE
+–
+–
+–
+–
++
+Classninjas
+3690
+V40
+v=cTyFYHhV8lA
++
++
+–
+–
+–
+Herr Mauch
+3580
+V41
+v=ap1ZTaIk-rE
++
++
+–
+–
+–
+ObachtMathe
+2290
+V42
+v=GrIY23QctJM
+–
+–
++
+–
+–
+Videolernen
+1380
+V43
+v=rJXF4XNI2Y0
+–
+–
++
+–
+–
+Mathe-lern-
+tipps.de
+529
+V44
+v=FQbFAPKMmDk
++
+–
++
+–
+–
+Vorneauf-
+derwelle
+148
+V45
+v=0mYrd9MDgU0
++
++
+–
+–
+–
+Kalkülvideos (Artikulierte Intention: Wiederholung von Kalkül)
+Herr Mathe
+52.500
+V46
+v=ge2cQgr9s4g
+–
+–
++
+–
+–
+StrandMathe
+32.100
+V47
+v=2gxaRrS5YD4
+–
+–
+–
+–
++
+Mathehilfe24
+31.400
+V48
+v=Py6BnvchTKA
+–
+–
++
+–
+–
+Mathema-
+Trick
+11.000
+V49
+v=7LBV09l3sLA
+–
+–
++
+–
+–
+Caaosstv
+1400
+V50
+v=zDctDgGKF58
+–
++
++
+–
++
+V Variable, T Term, TG Termgleichwertigkeit, G Gleichung, GÄ Gleichungsäquivalenz
+erhalten. In Fällen, in denen Kanäle mehrere Videos zu den untersuchten Konzepten
+anboten (bspw. Mathe by Daniel Jung), wurden die Videos zufällig ausgewählt.
+19 auf Umformungen fokussierende Videos wurden hinzugenommen, um die
+Vernetzung zu den Verstehenselementen zu untersuchen (FF2c). Von diesen 19 Vi-
+deos sind nur 5 allein auf das Wiederholen des Umform-Kalküls fokussiert. Die
+übrigen 14 Videos können auch darauf untersucht werden, inwiefern Rückgriffe auf
+Verstehenselemente zur Termgleichwertigkeit bzw. Gleichungsäquivalenz vorkom-
+men. Denn 9 der 14 Videos artikulieren in ihrem Videotitel oder im Video selbst
+die Intention, Umformungsverfahren neu einzuführen („Wir beschäftigen uns gleich
+mal zu Anfang [der 7. Klasse] mit dem wichtigen Thema Gleichungen lösen.“ V15,
+0:01), und die übrigen 5 wollen bei Verständnisproblemen bzgl. Umformungen un-
+terstützen („[D]iese Gleichungen soll man dann umstellen und das ﬁnden ganz schön
+viele Leute ziemlich verwirrend.“ V22, 0:07). Die Kontrastierung mit den 5 reinen
+Kalkülvideos (V46–V50 in Tab. 3) dient der Validierung des Kategoriensystems,
+denn eine Analyse der Verstehensangebote sollte es ermöglichen, kalkülorientierte
+Erklärungen ohne vorkommende Verstehenselemente zu identiﬁzieren.
+K
+
+
+--- page 15 ---
+Verstehensangebote von YouTube-Erklärvideos – Konzeptualisierung und Analyse am Beispiel...
+295
+3.2 Methoden der Datenanalyse und -auswertung
+Die 50 Erklärvideos wurden inklusive der relevanten Bildelemente (Screenshots) und
+Zeigegesten (kursiv in eckigen Klammern) transkribiert und dann in fünf Schritten
+qualitativ analysiert:
+1. Von Erklärvideos mit Fokus auf das Variablenkonzept ist nicht in gleichem Maße
+Vorkommen, Auffalten und Vernetzen von Verstehenselementen des Gleichungs-
+konzepts zu erwarten, wie von Videos mit explizitem Fokus auf das Gleichungs-
+konzept. Deshalb wurden für jedes Konzept diejenigen Fokusvideos identiﬁziert,
+in denen das Konzept fokussiert wird (unabhängig vom Vorkommen im Titel).
+Die Kodierung nach fokussierten Konzepten und die Anzahl der Fokusvideos zu
+jedem Konzept sind in Tab. 3 aufgeführt.
+2. Die deduktive Kodierung (Mayring 2015) erfolgte in kleinen Sinnabschnitten, um
+trotz hochinferentem Charakter Reliabilität zu erreichen. Dazu wurden die the-
+menbezogenen Phasen der Videos (Abschnitte ohne Werbung, Ankündigungen
+etc.) in Sinnabschnitte von zirka 30s unterteilt. Für jeden Sinnabschnitt wurden die
+vorkommenden Wissenselemente (FF1a und FF2a) mit den Kategorien aus Tab. 4
+kodiert, unter Berücksichtigung der Bildelemente und Zeigegesten. Die Operatio-
+nalisierung der Kodes ergibt sich durch die Erläuterung in Tab. 2. Das Vorkommen
+eines Wissenselements wird kodiert, wenn es nur genutzt wird oder sein Verständ-
+nis zur Erfassung eines anderen Wissenselements vorausgesetzt wird. Ein Auszug
+aus dem Kodiermanual ﬁndet sich im digitalen Anhang des Artikels. Die Deutun-
+gen der Veränderlichen kamen (durch Ausschließen von Videos zu Funktionen)
+insgesamt nur in 5 von 639 kodierten Abschnitten vor. Diese Stellen wurden da-
+her unter Unbestimmte subsumiert (vgl. Tab. 4). Die Fehlvorstellung des Buchsta-
+ben als Gegenstand kam in den Videos immer wieder vor und wurde deshalb als
+unpassende „Deutung“ unter dem Kode BuchstabeAlsGegenstand miterfasst. Ein
+Beispiel hierzu ﬁndet sich in Abschn. 4.2.1.
+3. Zur Erfassung des Auffaltens der Wissenselemente (FF1b und FF2b) wurde für
+jedes der in Schritt 2 identiﬁzierten Wissenselemente entschieden, ob es expli-
+Tab. 4 Kodes für die vorkommenden Wissenselemente
+Verstehenselemente des Konzepts
+Kalkülelemente
+Konzept
+Einsetz-Deutung
+Unbekannten-
+Deutung
+Unbestimmten-
+Deutung
+Symbol ohne
+Deutung
+Variable
+V-Einsetzstelle
+V-Unbekannte
+V-Unbestimmte
+V-Symbol
+Term
+T-Rechenvor-
+schrift
+T-Zahl
+T-Beschreibungs-
+mittel
+T-Symbolkette
+Termgleich-
+wertigkeit
+TG-Einsetzungs-
+gleichheit
+–
+TG-Beschreibungs-
+gleichheit
+TG-Umfor-
+mung
+Gleichung
+G-Aussageform
+G-Bestimmungs-
+gleichung
+G-allgemeine
+Bedingung
+G-Symbolkette
+Gleichungs-
+äquivalenz
+GÄ-gleiche
+Lösungsmenge
+GÄ-gleiche
+Unbekannte
+–
+GÄ-Umfor-
+mung
+Veränderliche wurde wegen geringem Vorkommen unter Unbestimmten-Deutung subsumiert
+K
+
+
+--- page 16 ---
+296
+S. Korntreff, S. Prediger
+zit erklärt wird, also aufgefaltet, oder ob es nur ohne weitere Explikation genutzt
+wird (vgl. Beispiele im digitalen Anhang). Das explizite Auffalten wurde mit Suf-
+ﬁx -auff am Kode gekennzeichnet. Rein kalkülorientierte Videos lassen sich dann
+dadurch charakterisieren, dass sie nur Kalkülelemente auffalten und keine Deu-
+tungen.
+4. Für das Vernetzen der Deutungen für ein Konzept (FF1c) wurden alle Videos
+identiﬁziert, die mehr als ein Verstehenselement eines Konzepts auffalten. Für
+die je zwei aufgefalteten Verstehenselemente wurde erfasst, ob eine Vernetzung
+zwischen den beiden Verstehenselementen im Video sprachlich expliziert wird.
+Analog wurde für das Vernetzen von Konzepten (FF1c) kodiert, ob aufgefaltete
+Verstehenselemente unterschiedlicher Konzepte sprachlich explizit zusammenge-
+führt wurden. Für das Vernetzen der Kalkülelemente mit den Verstehenselementen
+wurde die Explikation der Vernetzung zwischen aufgefalteten Kalkül- und Verste-
+henselementen eines Konzepts beurteilt (FF2c). Auszüge aus dem Kodiermanual
+ﬁnden sich im digitalen Anhang. Insgesamt wurde über 138 mögliche Vernetzun-
+gen entschieden.
+5. Schließlich wurde die Interraterreliabilität bestimmt. Dazu wurden die fokussier-
+ten Konzepte, die Fehlvorstellung des Buchstaben als Gegenstand und die Ver-
+netzung aller Videos von einer zweiten unabhängigen Raterin kodiert, für das
+Vorkommen und Auffalten der Verstehenselemente 20% des Datenmaterials. Ja/
+Nein-Entscheidungen werden mittels des Übereinstimmungsmaßes Yules Y be-
+richtet (Wirtz und Caspar 2002). Für die Kodierung der in den Videos fokussierten
+Konzepte ergab sich mindestens Y= 0,79; für die Kodierung des Vorkommens der
+Verstehenselemente mindestens Y= 0,87; für das Auffalten Y= 0,81 und für die
+Vernetzung Y= 0,64. Bzgl. des Vorkommens der Fehlvorstellung herrschte 100%
+Übereinstimmung. Die Übereinstimmung bzgl. der Vernetzung können damit als
+gut, die übrigen als sehr gut eingeschätzt werden (Wirtz und Caspar 2002). Nicht-
+übereinstimmungen wurden durch Konsensurteil bereinigt.
+4 Empirische Analyse
+4.1 Vorkommen, Auffalten und Vernetzen von Deutungen der Konzepte
+Variable, Term und Gleichung
+Forschungsfrage FF1 erfasst die Verstehensangebote eines Erklärvideos zu den Kon-
+zepten Variable, Term und Gleichung durch das Vorkommen, Auffalten und Vernet-
+zen der relevanten Verstehenselemente. Die Vernetzung zu den Kalkülelementen
+wird in Abschn. 4.2 untersucht. Konkretisierungen erfolgen in beiden Abschnitten
+an wenigen Beispiel-Videos, an denen sich in Passagen überschaubarer Länge viele
+für die Analyse relevante Beobachtungen nachvollziehen lassen.
+4.1.1 Vorkommen und Auffalten der Deutungen der Konzepte
+Gelegenheiten zum Konzeptverstehen bieten Erklärungen nur, wenn die notwendi-
+gen Verstehenselemente vorkommen (Abschn. 2.2). Das Transkript aus dem Video
+K
+
+
+--- page 17 ---
+Verstehensangebote von YouTube-Erklärvideos – Konzeptualisierung und Analyse am Beispiel...
+297
+Zeit Visuelle Elemente (nachgebaut) Gesprochener Text [Zeigegesten]
+Kodes
+0:23
+Was waren noch mal Variablen? 
+Irgendwo steht eine Zahl, die man aber noch nicht 
+kennt. Weil man nicht weiß, welche Zahl man dafür 
+schreiben soll, nimmt man einfach einen Buchstaben 
+als Platzhalter. Man kann damit rechnen, wie mit ei-
+ner normalen Zahl auch. Aber, man kennt sie eben 
+nicht.
+V-Unbekannte-auff
+G-Bestimmungsglei-
+chung
+V-Symbol-auff
+0:38
+Wenn ihr es genauer wissen wollt, schaut euch noch 
+mal das Video zu Variablen an.
+0:42
+0:56
+Kommen wir zum Term. Ein Term ist ein neues Wort 
+für etwas, was ihr eigentlich schon lange kennt. Ma-
+chen wir ein paar Beispiele: 5+2 wäre einer, oder 
+auch einfach nur 4 ist ein Term. Auch 7 mal die Wur-
+zel aus 4 ist ein Term.
+Was haben die gemeinsam? Das könntet ihr alles 
+ausrechnen. 5 plus 2 ist 7. 7 mal die Wurzel aus 4 ist 
+14. Ganz easy.
+T-Rechenvorschrift-
+auff
+1:06
+1:25
+Jetzt kommt aber das Besondere. Variablen sind ja 
+auch eigentlich Zahlen. Haben wir ja gerade eben ge-
+sagt. Mit Variablen kann man ganz normal rechnen. 
+Das bedeutet für unsere Terme, auch x+2 ist zum 
+Beispiel ein Term. Ist ja nichts anderes wie 5+2, nur 
+dass x eben so eine Zahl ist, die man aber nicht 
+kennt.
+Wenn x jetzt 3 wäre, dann könntet ihr x+2 ja ausrech-
+nen. Wäre einfach 5. Also könnte man auch x+2 aus-
+rechnen.
+V-Unbekannte-auff
+T-Rechenvorschrift-
+auff
+V-Einsetzstelle
+1:34
+1:52
+Wie ist ein Term jetzt allgemein aufgebaut? In einem 
+Term dürfen alle Sachen drin sein, mit denen ihr 
+rechnen könnt: Irgendwelche Zahlen, – leider, leider 
+schluchz – auch Variablen und Rechenzeichen, also 
+Minus, Plus, Mal und Geteilt, Klammern, Hochzah-
+len und dann noch Wurzeln.
+Die Sachen könnt ihr euch wie einen Baukasten vor-
+stellen. Die Bausteine könnt ihr jetzt fast egal wie an-
+einanderbauen. Das, was rauskommt, heißt dann ein-
+fach „Term“.
+T-Symbolkette-auff
+V-Symbol
+2:00
+So ein Term ist also alles, was man ausrechnen kann 
+oder könnte, wenn man alle Zahlen kennen würde.
+Weil ein Term ja insgesamt dann auch wieder nur 
+eine Zahl ist, dürft ihr auch Terme zusammenbauen. 
+Das gibt dann einen noch größeren Termbrocken.
+T-Rechenvorschr-auff
+V-Einsetzstelle
+V-Unbekannte
+T-Zahl-auff
+T- Symbolkette-auff
+V-Symbol
+Abb. 1
+Transkriptausschnitt zu Erklärvideo V2 (Simpleclub)
+V2 des Kanals Simpleclub (Abb. 1) zeigt, dass YouTube-Erklärvideos durchaus um-
+fassend die Deutungen des Variablen-, Term- und Gleichungskonzepts adressieren
+können.
+Analyse des Vorkommens:
+Variable und Term werden im Videoausschnitt in
+Abb. 1 in Einsetz- und in Unbekannten-Deutung thematisiert, während das Verste-
+henselement der Bestimmungsgleichung visuell aufgerufen wird. Neben der Vielfalt
+der vorkommenden Verstehenselemente zeigt der Transkriptausschnitt auch, dass
+Verstehenselemente in unterschiedlicher Qualität und Tiefe vorkommen: Während
+die Bestimmungsgleichung überhaupt nicht sprachlich expliziert wird, wird die Vari-
+able sprachlich fokussiert als „Zahl, die man aber noch nicht kennt“ (V2, 0:23), und
+im Rahmen einer kurzen Wiederholung aufgefaltet. Umfassend wird der Term als
+K
+
+
+--- page 18 ---
+298
+S. Korntreff, S. Prediger
+Rechenvorschrift aufgefaltet: Ausgehend von einer Verankerung in numerischen Bei-
+spielen (V2, 0:56) erfolgt eine Algebraisierung der Vorstellung der Rechenvorschrift
+durch den Einbezug unbekannter Zahlen (V2, 1:06), die in einem zusammenfassen-
+den Merksatz verdichtet wird: „ein Term ist also alles, was man ausrechnen kann
+oder könnte“ (V2, 2:00). Im Rahmen dieser umfassenden Auffaltung des Terms als
+Rechenvorschrift wird das Verstehenselement der Variable als Einsetzstelle zwar ge-
+nutzt (V2, 1:25) bzw. dessen Verständnis vorausgesetzt (V2, 2:00), aber selbst nicht
+explizit erklärt (etwa als „In Variablen lassen sich verschiedene Zahlen einsetzen“).
+Analyse des Auffaltens:
+Anknüpfend an Wittwer und Renkl (2008) ist davon aus-
+zugehen, dass vor allem leistungsschwächere Lernende für eine erfolgreiche Nut-
+zung der Erklärangebote auf eine Auffaltung der Verstehenselemente angewiesen
+sind. Bspw. erwarten die Videohersteller nicht, dass die implizit adressierte Be-
+stimmungsgleichung von Lernenden mit diesem Video neu mental konstruierbar ist,
+dazu verweisen sie (V2, 0:38) auf das Vorgängervideo (V1). Die Verstehensange-
+bote der Erklärvideos müssen daher auch über das Auffalten der vorkommenden
+Verstehenselemente erfasst werden.
+Tab. 5 zeigt im oberen Teil die Anzahl der 50 Erklärvideos, in denen die Deu-
+tungen der Konzepte Variable, Term und Gleichung vorkommen bzw. aufgefaltet
+werden, sowie die Anzahl der Videos, in denen keine Deutungen vorkommen bzw.
+aufgefaltet werden.
+Alle relevanten Deutungen kommen in den untersuchten Erklärvideos vor und
+werden auch aufgefaltet. Allerdings zeigt sich für alle Verstehenselemente ein mar-
+kanter Unterschied in den Häuﬁgkeiten des bloßen Adressierens der relevanten Ver-
+stehenselemente und dem für den Verständnisaufbau bedeutsamen Auffalten dersel-
+ben: Keine der Deutungen wird in mehr als 50% der Videos, in denen sie vorkommt,
+auch aufgefaltet. Für den Term dominiert die Einsetz-Deutung, während Gleichun-
+gen schwerpunktmäßig in der Unbekannten-Deutung angesprochen und aufgefaltet
+werden. Die Variable wird etwa gleichhäuﬁg als Unbekannte (25|12) und Unbe-
+stimmte (25|8) gedeutet. Insgesamt sind Vorkommen und Auffalten der Einsetz-
+Deutungen der drei Konzepte (33|23) ebenso häuﬁg wie die Unbestimmte und Un-
+bekannte zusammen (Videos, in denen mindestens eines von beiden vorkommt/
+aufgefaltet wird: 38|24). Die Häuﬁgkeiten des Vorkommens und Auffaltens spiegeln
+demnach die didaktische Relevanz der Verstehenselemente nicht angemessen wider,
+insbesondere nicht für die Unbestimmte.
+Der mittlere Teil der Tab. 5 zeigt die gleichen Zahlen für die Fokusvideos, bspw.
+fokussiert das obige Erklärvideo von Simpleclub (Abb. 1) auf Terme und Gleichun-
+gen und setzt das Variablenkonzept voraus (vgl. Tab. 3). Wie zu erwarten, kommen
+in vielen Fokusvideos Deutungen der fokussierten Konzepte tatsächlich vor und
+werden aufgefaltet. In lediglich zwei Term- und einem Gleichungsvideo kommen
+gar keine Deutungen vor, hier wird hinsichtlich Verstehensorientierung nicht über
+das Relevante der Konzepte gesprochen. In 18 Fokusvideos für Terme falten 7 (d.h.
+39%) keine Deutung für Terme auf, sondern verbleiben im Symbolischen. Auch
+die Einschränkung auf den Fokus der Videos ist also kein Garant für das didaktisch
+bedeutsame Auffalten der Verstehenselemente.
+K
+
+
+--- page 19 ---
+Verstehensangebote von YouTube-Erklärvideos – Konzeptualisierung und Analyse am Beispiel...
+299
+Tab. 5
+Vorkommen und Auffalten der Variablen-Deutungen in drei algebraischen Konzepten in allen
+50 YouTube-Erklärvideos (oben), den jeweiligen Fokusvideos (Mitte), den Kalkülvideos (unten)
+Einsetz-Deutung
+Unbekannten-
+Deutung
+Unbestimmten-
+Deutung
+Keine Deutung
+Anzahl
+Videos
+Vorkom-
+men
+Auffal-
+ten
+Vorkom-
+men
+Auffal-
+ten
+Vorkom-
+men
+Auffal-
+ten
+Vorkom-
+men
+Auffal-
+ten
+Alle 50 Videos
+Variable
+50
+32
+14
+25
+12
+25
+8
+8
+27
+Term
+50
+32
+15
+3
+1
+17
+7
+16
+35
+Gleichung
+50
+13
+6
+19
+9
+10
+1
+21
+37
+Gesamt
+50
+33
+23
+26
+15
+26
+10
+8
+20
+Fokusvideos
+Variable
+13
+11
+9
+10
+6
+11
+6
+0
+1
+Term
+18
+16
+11
+2
+1
+11
+7
+2
+7
+Gleichung
+8
+6
+5
+6
+4
+1
+0
+1
+2
+Kalkülvideos
+–
+5
+2
+1
+0
+0
+1
+0
+3
+4
+Der untere Teil von Tab. 5 zeigt, dass auch in den Kalkülvideos, die einen proze-
+duralen Fokus intendieren, Verstehenselemente vorkommen und aufgefaltet werden
+können, auch wenn dies erwartungsgemäß nicht die Regel ist.
+Sprachliche Realisierungen des Auffaltens:
+In jedem der 13 Fokusvideos zu Va-
+riablen werden entweder Unbestimmte oder Unbekannte angesprochen, davon in 11
+(85%) auch aufgefaltet. Die genaueren Analysen zeigen (nicht in Tab. 5), dass zwar
+in 8 dieser 13 Fokusvideos sowohl Unbekannte als auch Unbestimmte vorkommen,
+aber nur in einem dieser Videos beide aufgefaltet werden. Tab. 6 zeigt typische
+sprachliche Realisierungen der Auffaltungen der Unbekannten- und Unbestimmten-
+Deutungen der Variable in den Fokusvideos. Die Unbekannte wird in der sinnstif-
+tenden Tätigkeit des Findens der Unbekannten „aus der 1. Klasse“ (V17, 0:40) rein
+innermathematisch thematisiert, die Unbestimmte in reichhaltigen Sachkontexten
+(Streichholzmuster, Eintrittspreise) in Verallgemeinerungstätigkeiten entwickelt, um
+leichter „öfter mal das Gleiche“ (V37, 5:15) zu rechnen.
+Inhaltlich und sprachlich sind insbesondere die Auffaltungen der Unbestimmten
+von einer großen Bandbreite gekennzeichnet (Tab. 6). Während es in den Fokus-
+videos mit Schwerpunkt auf die Unbekannte selbstverständlich ist, dass die Suche
+nach unbekannten Zahlen als sinnstiftende Tätigkeit expliziert wird, wird der Zweck
+der kognitiven Entlastung durch das Beschreiben allgemeiner Zusammenhänge für
+die Unbestimmte nur in einem Video explizit aufgefaltet (V37, 5:15). Sprachlich
+zeigen sich Unterschiede im Allgemeinheitsgrad der Auffaltung der Unbestimmten:
+Lediglich 2 Erklärvideos (V23, V37) erläutern die Unbestimmte allgemein-abstrakt,
+während die übrigen 4 nur beispielgebundene Auffaltungen im Sachkontext anbieten.
+Abstraktion und sprachliche Verallgemeinerung werden hier also den Zuschauenden
+selbst überlassen.
+Zusammenfassend lassen sich die Forschungsfragen FF1a und FF1b wie folgt be-
+antworten: Die relevanten Deutungen der Konzepte Variable, Term und Gleichung
+K
+
+
+--- page 20 ---
+300
+S. Korntreff, S. Prediger
+Tab. 6
+Typische Auffaltungen der Unbekannten und Unbestimmten aus Fokusvideos der Variable
+Auffaltung der Unbekannten:
+– Auffaltung mit Explikation der sinnstiftenden Tätigkeit: „Ich zeig dir mal eine Aufgabe aus der
+1. Klasse. 4 plus Kästchen ist gleich 7. Das Kästchen stand für eine Zahl, die noch gefunden werden
+muss. [...] Mathematiker verwenden statt Kästchen für Variablen meistens kleine Buchstaben [...].
+Warum machen Mathematiker sowas? Ganz einfach, [...] wenn sie eine noch unbekannte Zahl suchen,
+so wie bei den Kästchen eben.“ (V17, 0:40)
+Auffaltung der Unbestimmten:
+– Auffaltung mit Explikation der sinnstiftenden Tätigkeit: „Solche Terme [7x– 3] werden dann auf-
+gestellt, wenn man öfter mal das Gleiche rechnen muss mit [...] verschiedenen Zahlen [...], das ist quasi
+wie ein kleines Computerprogramm, was abläuft.“ (V37, 5:15)
+– Allgemein-abstrakte Auffaltung: „Eine Variable ist eigentlich nichts anderes als ein Symbol, dessen
+Wert variieren kann, daher Variable. Also der Wert des Symbols kann von Mal zu Mal unterschiedlich
+sein, mal ist der Wert höher, mal ist der Wert niedriger.“ (V23, 4:58)
+– Beispielgebundene innermathematische Auffaltung: „Wir sollen hier jede Zahl, die wir für x einset-
+zen, mit 7 multiplizieren und danach noch 3 abziehen.“ (V37, 5:25)
+– Beispielgebundene Auffaltung im Sachkontext: „Pro Person würde man 17 C bezahlen, also 17 C
+mal die Personenanzahl. Und die halte ich jetzt einfach mal mit x hier [fest], das ist unsere Variable.
+Und es kommen immer, egal wie viele Personen dabei sind, noch [...] einmalige Kosten dazu [...].“
+(V21, 3:23)
+– Beispielgebundene Auffaltung im Sachkontext mit Aufzählung: „Was für einen Term kann ich
+denn hier nehmen, um rauszukriegen, wie viel Streichhölzer ich brauche für eine beliebige Größe [von
+Streichholzquadraten], [...] also x gleich 17, oder x gleich 1211, oder x gleich 7.“ (V45, 9:44)
+Vermischung der Auffaltung von Unbekannter (kursiv) und Unbestimmter (fett):
+– Und dieses x [...] [in der Gleichung 3+ x= 5] nennt man in der Mathematik Variable. [...] Und ja, wie
+der Name schon sagt, ein variabler Wert kann da hineingesteckt werden oder wir können auch sagen
+beliebiger Wert oder irgendein Wert. Merkt euch: x ist irgendeine Zahl, die wir herausbekommen
+sollen. (V20, 3:26)
+kommen in den analysierten YouTube-Erklärvideos vor. Sie werden allerdings in
+höchstens der Hälfte der Videos, in denen sie vorkommen, auch aufgefaltet; einige
+wesentlich seltener (insbesondere Unbestimmten-Deutung der Variable und Glei-
+chung). Auch in den Fokusvideos der Konzepte Variable, Term und Gleichung ist
+das Vorkommen und Auffalten der Deutungen nicht garantiert. Für den Term wurde
+die Einsetz-Deutung als Rechenvorschrift als dominant identiﬁziert, für die Glei-
+chung die Unbekannten-Deutung als Bestimmungsgleichung. Die Variable wird in
+den Fokusvideos als Unbekannte und Unbestimmte gedeutet. Vor allem hinsichtlich
+der Unbestimmten zeigen sich unterschiedliche Allgemeinheitsgrade der sprach-
+lichen Realisierungen der Auffaltungen: von beispielgebundenen Auffaltungen im
+Sachkontext bis hin zu allgemein-abstrakten Auffaltungen mit Explikation der sinn-
+stiftenden Tätigkeit.
+4.1.2 Vernetzung der Verstehenselemente von Variable, Term und Gleichung
+Die sprachliche explizite Vernetzung von Informationen ist zentral für ein tiefgrei-
+fendes Verständnis von Lernenden. Für die zuvor beschriebenen Auffaltungen der
+Unbestimmten und Unbekannten in den Fokusvideos zur Variable ist diesbezüglich
+auffällig, dass die sinnstiftenden Tätigkeiten (Unbekannte ﬁnden, Zusammenhänge
+verallgemeinern) sowie die beiden Variablen-Deutungen in keinem Video zueinan-
+der in Beziehung gesetzt werden – auch nicht in Video V30, das beide Deutungen
+K
+
+
+--- page 21 ---
+Verstehensangebote von YouTube-Erklärvideos – Konzeptualisierung und Analyse am Beispiel...
+301
+auffaltet. Stattdessen ﬁnden sich sogar immer wieder Passagen in den Videos, in de-
+nen die Deutungen der Unbestimmten und der Unbekannten mindestens auf Ebene
+der verwendeten Sprachmittel vermischt werden (Tab. 6). Die saubere (sprachliche)
+Abgrenzung der beiden Zahl-Deutungen der Variable ist also ebenso eine didaktisch
+nicht bewältigte Herausforderung der Fokusvideos wie das explizite Herstellen einer
+Beziehung zwischen diesen Deutungen und ihren sinnstiftenden Tätigkeiten.
+Die sprachlich explizite Vernetzung von Deutungen lässt sich anhand des Er-
+klärvideos von Simpleclub (Abb. 1) für das Termkonzept illustrieren: Terme sind
+Rechenvorschriften mit unbekannten Zahlen und weil Terme selbst nur (unbekannte)
+Zahlen sind, dürfen sie zu „größeren Termbrocken“ verbaut werden (V2, 2:00). Die
+Einsetz- und Unbekannten-Deutung des Terms werden also vernetzt, indem Bezie-
+hungen zwischen den verschiedenen Deutungen des gleichen Konzepts sprachlich
+explizit erklärt werden. Um verschiedene Deutungen explizit in Beziehung zu set-
+zen, müssen sie selbst hinreichend aufgefaltet werden, weshalb das Auffalten von
+Verstehenselementen als notwendige Bedingung für Vernetzung betrachtet wird.
+Insgesamt falten 15 verschiedene Videos mindestens zwei verschiedene Verste-
+henselemente eines der Konzepte Variable, Term oder Gleichung auf, nur 10 dieser
+Videos vernetzen die aufgefalteten Verstehenselemente auch sprachlich explizit: 7
+dieser Videos vernetzen Deutungen des Variablenkonzepts, 5 des Term- und 4 des
+Gleichungskonzepts. Abb. 2 zeigt, welche Verstehenselemente in wie vielen die-
+ser Videos sprachlich explizit vernetzt werden. Das Herausarbeiten der Beziehung
+zwischen Unbestimmten- und Unbekannten-Deutungen ist im Videokorpus auch für
+Term und Gleichung eine nicht bewältigte didaktische Herausforderung.
+Das Erklärvideo von Simpleclub (in Abb. 1) erinnert zur Erläuterung des Terms
+als Rechenvorschrift mit unbekannten Zahlen (V2, 1:06) an die Wiederholung des
+Variablenkonzepts zuvor (V2, 0:23) und vernetzt so die Deutung der Variable als
+Unbekannte und des Terms als Rechenvorschrift. Voraussetzung für eine solche
+Konzept-Vernetzung ist wiederum, dass beide Verstehenselemente aufgefaltet wer-
+den. Andernfalls obliegt es den Zuschauenden ihre bereits vorhandenen Konzept-
+Deutungen zu aktivieren – im Simpleclub-Video etwa dann, wenn die Unbekannte
+im Kontext einer Bestimmungsgleichung erläutert wird, die Gleichung aber nicht
+sprachlich thematisiert wird (V2, 0:23).
+Zwar kommen in 41 Videos Deutungen verschiedener Konzepte (nur Variable,
+Term, Gleichung) gemeinsam vor, allerdings werden nur in 18 Videos die Deutungen
+unterschiedlicher Konzepte auch aufgefaltet. Diese 18 Videos vernetzen dann auch
+mindestens 2 aufgefaltete Deutungen der verschiedenen Konzepte. Abb. 3 zeigt
+Abb. 2
+Sprachlich explizite Vernetzungen zwischen Wissenselementen von drei algebraischen Konzep-
+ten in 50 Erklärvideos
+K
+
+
+--- page 22 ---
+302
+S. Korntreff, S. Prediger
+Abb. 3
+Konzept-Vernetzung von fünf algebraischen Konzepten in allen bzw. einzelnen Deutungen in
+50 Erklärvideos (V Variable, T Term, G Gleichung, TG Termgleichwertigkeit, GÄ Gleichungsäquivalenz)
+oben links, welche Konzepte in wie vielen Videos vernetzt werden. Bspw. zählt
+das Simpleclub-Video, in dem der Term als Rechenvorschrift und die Variable als
+Unbekannte vernetzt wird, zu den 11 Videos, die Variablen- und Term-Deutungen
+vernetzen.
+Differenziert man die Vernetzungen nach den einzelnen Deutungen, so zeigen die
+übrigen vier Graphen in Abb. 3, wie wenig Deutungen über verschiedene Konzepte
+hinweg vernetzt werden. In diesen Graphen taucht das Simpleclub-Video (Abb. 1)
+unter vernetzt „in jeweils verschiedenen Deutungen“ auf, da hier der Term in der
+Einsetz-Deutung und die Variable als Unbekannte vernetzt wird. Die Konzept-Ver-
+netzungen in den erwartbaren (weil inhaltlich eng zusammenhängenden) Deutungen
+sind zwar am häuﬁgsten, dennoch aber selten: Variable und Gleichung werden in
+Unbekannten-Deutung in 6 Videos vernetzt, Variable als Einsetzstelle und Term als
+Rechenvorschrift in 9 Videos.
+Zusammenfassend kann Forschungsfrage FF1c also wie folgt beantwortet wer-
+den: Konzept- und Deutungs-Vernetzungen verschiedener Deutungen der Konzepte
+Variable, Term und Gleichung sind möglich, aber selten. Nur 10 der analysier-
+ten 50 Erklärvideos vernetzen überhaupt Deutungen innerhalb eines Konzepts und
+18 Videos die Deutungen verschiedener Konzepte. Hierbei zeigt sich für die Deu-
+tungs-Vernetzung insbesondere, dass Unbekannte und Unbestimmte für alle drei
+Konzepte in allen 50 Videos beziehungslos nebeneinander stehen bleiben und sie
+für die Variable auf sprachlicher Ebene sogar vermischt werden. Hinsichtlich der
+Konzept-Vernetzung werden vor allem eng verwandte Deutungen über verschiedene
+Konzepte vernetzt.
+4.2 Vorkommen und Auffalten der Kalkülelemente zu Variable, Term,
+Termgleichwertigkeit, Gleichung und Gleichungsäquivalenz und ihre
+Vernetzung zu Verstehenselementen
+In Abschn. 2.3 wurde herausgearbeitet, dass die kalkülhafte Nutzung der symboli-
+schen Darstellung von Variable, Term und Gleichung bedeutsam ist, da sie kogni-
+tive Entlastung schafft und dadurch den Weg für komplexe kognitive Operationen
+K
+
+
+--- page 23 ---
+Verstehensangebote von YouTube-Erklärvideos – Konzeptualisierung und Analyse am Beispiel...
+303
+freimacht (Kieran 2013; Hefendehl-Hebeker 2001). Allerdings ist ein verständiger
+Umgang mit dem Kalkül und den symbolischen Darstellungen auf eine solide Ver-
+ankerung der Kalkülelemente in den Verstehenselementen der Konzepte angewiesen
+(Prediger 2009). Daher werden nun das Vorkommen und Auffalten der Kalkülele-
+mente sowie ihre Vernetzung mit relevanten Verstehenselementen untersucht.
+4.2.1 Vorkommen und Auffalten der Kalkülelemente
+Im Erklärvideo von Simpleclub (Abb. 1) wird der Term als Symbolkette aufgefaltet,
+die bestimmte „Bausteine“ enthalten darf (V2, 1:34). Dabei wird auch die Varia-
+ble als möglicher Baustein genutzt, ohne aufzufalten, dass Symbole die Variablen
+darstellen. Tab. 7 stellt eine Erweiterung von Tab. 5 dar, die nicht nur die Verste-
+hens-, sondern auch die Kalkülelemente betrachtet sowie die Wissenselemente zu
+Termgleichwertigkeit und Gleichungsäquivalenz. Dabei wird wiederum zwischen
+der Auﬂistung für alle 50 Videos (oben), den jeweiligen Fokusvideos (Mitte) und
+den Kalkülvideos (unten) differenziert.
+Tab. 7 oben zeigt, dass Kalkülelemente in 49 der 50 Erklärvideos vorkommen
+und in 45 mindestens eines auch aufgefaltet wird. Sie kommen also häuﬁger vor
+als jedes Verstehenselement und werden mit wenigen Ausnahmen (Variable als Ein-
+setzstelle und Unbekannte, Gleichung als Bestimmungsgleichung) auch häuﬁger
+aufgefaltet. Besonders deutlich ist dieser Kontrast für die Termgleichwertigkeit und
+Gleichungsäquivalenz: Aufgefaltet werden 63% der vorkommenden Kalkülelemen-
+te (38|24 bzw. 19|12). D.h. tauchen Umformungen auf, werden ihre Regeln meist
+ausführlich erläutert. Die zugehörigen Verstehenselemente kommen jedoch selten
+vor und werden noch seltener aufgefaltet, selbst die am häuﬁgsten vorkommende
+Gleichungsäquivalenz in Unbekannten-Deutung wird nur viermal aufgefaltet (7|4).
+Die Dominanz der Kalkülelemente gilt auch für die Fokusvideos, wie Tab. 7
+(Mitte) zeigt. In den Fokusvideos zum Variablen-, Term- und Gleichungskonzept
+sind die Häuﬁgkeiten der Kalkülelemente denen der Einsetz-Deutung ähnlich, es ist
+also insgesamt ein ausgewogeneres Verhältnis des Vorkommens von Kalkül- und
+Verstehenselementen zu verzeichnen.
+Die große Präsenz der Kalkülelemente in den Erklärvideos ist durchaus erwart-
+bar, denn das Erklären elementarer Algebra erfordert stets auch das Sprechen über
+die Struktur von Symbolketten, was u.a. auch das obige Simpleclub-Erklärvideo
+(Abb. 1) verdeutlicht (V2, 1:34). Allerdings falten 17 der 50 Videos ausschließlich
+Kalkülelemente auf. 10 der 20 Fokusvideos zur Termgleichwertigkeit und 7 der
+18 Fokusvideos zur Gleichungsäquivalenz (Tab. 7 Mitte rechts in Klammern zeigt
+die Verteilung auf die Fokusvideos; 4 der 21 Videos haben mehr als einen Fokus).
+Von den 17 rein kalkül-auffaltenden Videos sind nur 4 der Intention nach Kalkülvi-
+deos (Tab. 7 unten rechts), d.h. 13 Videos werden den fachdidaktischen Ansprüchen
+an ihre konzeptuelle Absicht nicht gerecht.
+Ein repräsentatives Beispiel für ein solches rein kalkül-auffaltendes Erklärvideo
+zeigt Abb. 4. Hier wird explizit die Termumformungsregel formuliert und statt Deu-
+tungen derselbe „Nachname“ adressiert (V46, 21:03). Die Regel wird in mehreren
+Beispielen aufgefaltet (V46, 1:07ff.). Eine Auffaltung der Regel hin zu anderen Ver-
+K
+
+
+--- page 24 ---
+304
+S. Korntreff, S. Prediger
+Tab. 7
+Vorkommen und Auffalten der Wissenselemente zu allen fünf Konzepten in allen 50 YouTube-
+Erklärvideos (oben), den jeweiligen Fokusvideos (Mitte), den Kalkülvideos (unten)
+Einsetz-Deu-
+tung
+Unbekannten-
+Deutung
+Unbestimmten-
+Deutung
+Symbol ohne
+Deutung
+Anzahl
+Videos
+Vorkom-
+men
+Auffal-
+ten
+Vorkom-
+men
+Auffal-
+ten
+Vorkom-
+men
+Auffal-
+ten
+Vorkom-
+men
+Auffal-
+ten
+Alle Videos
+Variable
+50
+32
+14
+25
+12
+25
+8
+49
+12
+Term
+50
+32
+15
+3
+1
+17
+7
+46
+16
+Termgleich-
+wertigkeit
+50
+3
+2
+–
+–
+2
+1
+38
+24
+Gleichung
+50
+13
+6
+19
+9
+10
+1
+24
+7
+Gleichungs-
+äquivalenz
+50
+4
+3
+7
+4
+–
+–
+19
+12
+Gesamt
+50
+33
+25
+26
+15
+26
+10
+49
+45
+Fokusvideos
+Variable
+13
+11
+9
+10
+6
+11
+6
+13
+8 (1)
+Term
+18
+16
+11
+2
+1
+11
+7
+17
+14 (2)
+Termgleich-
+wertigkeit
+20
+3
+1
+–
+–
+2
+1
+20
+18 (10)
+Gleichung
+8
+6
+5
+6
+4
+1
+0
+8
+5 (1)
+Gleichungs-
+äquivalenz
+18
+3
+3
+7
+4
+–
+–
+17
+12 (7)
+Kalkülvideos
+–
+5
+2
+1
+0
+0
+1
+0
+5
+4 (4)
+In Klammern Anzahl der Fokus- und Kalkülvideos, in denen nur Kalkülelemente aufgefaltet werden
+stehenselementen der Termgleichwertigkeit (dass die Terme beim Einsetzen immer
+denselben Wert haben oder dasselbe beschreiben) erfolgt im gesamten Video nicht.
+Auffällig ist, dass in 9 der 17 rein kalkül-auffaltenden Videos die Fehlvorstel-
+lung des Buchstaben als Gegenstand (Küchemann 1981) vorkommt. Insgesamt lässt
+sich diese Fehlvorstellung in 13 der 50 Videos ﬁnden – insbesondere in 10 der
+20 Fokusvideos zur Termgleichwertigkeit, in denen sie genutzt wird, um die Um-
+formungsregel des Zusammenfassens zu erklären, wie in Abb. 5 veranschaulicht.
+Auffällig ist, dass die Erklärung über die Fehlvorstellung häuﬁg als besonders ver-
+ständlich betont wird, wie etwa der Transkriptausschnitt in Abb. 5 zeigt (V38, 0:16).
+In 53% der kalkülorientierten Videos (9 von 17) liegt also eine unpassend realisierte
+Orientierung am Verstehen der Lernenden vor: eine fachdidaktisch lautere Absicht,
+die mit fachdidaktisch nicht tragfähigen Mitteln realisiert wird.
+Bezüglich der Forschungsfragen FF2a und FF2b lässt sich also festhalten: Die
+Kalkülelemente sind in fast allen Erklärvideos präsent und werden häuﬁger aufgefal-
+tet als die inhaltlichen Deutungen. 17 Erklärvideos lassen sich als rein kalkülorien-
+tierte Nachhilfe (Rott 2020) beschreiben, 4 davon aus fachdidaktisch nachvollzieh-
+barem Grund (Intention reduziert auf Wiederholung von Verfahren). In 13 Videos
+ﬁndet sich durch Rückgriff auf die Obstsalat-Algebra eine unpassend realisierte
+Orientierung am Verstehen.
+K
+
+
+--- page 25 ---
+Verstehensangebote von YouTube-Erklärvideos – Konzeptualisierung und Analyse am Beispiel...
+305
+Zeit Visuelle Elemente 
+(nachgebaut)
+Gesprochener Text [Zeigegesten]
+Kodes
+0:41
+Wir fassen hier bei der Aufgabe a) einfach nur die 
+Zahlen zusammen. [...] Ich sag zu den Buchstaben-
+folgen immer Nachnamen [...] Es können nur Zahlen 
+zusammengefasst hab- werden, die denselben Nach-
+namen haben.
+TG-Umformung-auff
+T-Symbolkette
+V-Symbol
+1:07
+Der erste Nachname, den wir uns angucken wollen, 
+ist der Nachname ab2. Das ist das hier [unterstreicht 
+7ab2]. Haben wir irgendwo sonst noch Zahlen, die 
+denselben Nachnamen haben? […] Das haben wir 
+hier bei 5ab2 [unterstreicht] und das haben wir auch 
+hier bei -12ab2 [unterstreicht]. [...] Deswegen [...]
+T-Symbolkette
+V-Symbol
+TG-Umformung-auff
+Abb. 4
+Transkriptausschnitt zu Erklärvideo V46 (Herr Mathe)
+Zeit
+Visuelle Elemente (nachgebaut)
+Gesprochener Text [Zeigegesten]
+Kodes
+0:16
+Wir fangen […] an, einfach mal Terme zusammenzu-
+fassen. Wir machen es so, dass jeder es versteht, egal 
+auf welchem Niveau ihr seid. […]
+2:16
+2:26
+Schauen wir uns jetzt mal ein 3. Beispiel an. […] 
+Jetzt können wir natürlich nur Bananen mit Bananen 
+zusammenrechnen und Äpfel mit Äpfeln. […]
+Buchstabe 
+AlsGegen-
+stand
+2:48
+3:00
+Jetzt können wir wieder Bananen und Äpfel ersetzen 
+durch Buchstaben. Ganz wichtig ist, dass wir sie aber 
+mit verschiedenen Buchstaben ersetzen. […]
+Es gilt genau das Gleiche: Wir können nur bs mit bs 
+zusammenfassen. […]
+V-Symbol
+T-Symbol-
+kette
+TG-Umfor-
+mung-auff
+Abb. 5
+Transkriptausschnitt zu Erklärvideo V38 (LehrerBros)
+4.2.2 Vernetzung von Kalkülementen mit Verstehenselementen
+Rein kalkülorientierte Erklärvideos verpassen die Anbindung der Umformungsre-
+geln und Symbolketten an inhaltliche Deutungen. Im obigen Simpleclub-Video
+(Abb. 1) wird dagegen die symbolische Struktur des Terms aus seiner Deutung
+als Rechenvorschrift abgeleitet, indem erläutert wird, dass Terme zu immer größe-
+ren „Termbrocken“ zusammengebaut werden können, weil Terme letztlich auch nur
+(unbekannte) Zahlen seien (V2, 1:34). Kalkül- und Verstehenselemente können also
+in Erklärvideos vernetzt werden, was tatsächlich auch in 25 der analysierten Videos
+erfolgt. Wie bereits Abb. 2 zeigte, erfolgt die Rückbindung der Kalkülelemente an
+Verstehenselemente unterschiedlich häuﬁg für die einzelnen Konzepte: vor allem für
+Variablen (11 Videos) und Terme (8 Videos), weniger für Gleichungen (4 Videos).
+Das Simpleclub-Video (Abb. 1) zählt hier zu den 7 Erklärvideos, die den Term als
+Symbolkette und als Rechenvorschrift vernetzen.
+Abb. 6 zeigt analog die Vernetzung von Kalkül mit inhaltlichen Deutungen für
+Termgleichwertigkeit (1 Video) und Gleichungsäquivalenz (4 verschiedene Videos).
+Diese geringen Anzahlen sind dadurch bedingt, dass Deutungen der Umformungen
+im untersuchten Sample insgesamt sehr selten aufgefaltet werden (Tab. 7). Bzgl. der
+Umformungen wird in den YouTube-Erklärvideos also großﬂächig die Anbindung
+an inhaltliche Deutungen vernachlässigt.
+K
+
+
+--- page 26 ---
+306
+S. Korntreff, S. Prediger
+Abb. 6 Sprachlich explizite
+Vernetzungen zwischen Wis-
+senselementen von zwei alge-
+braischen Konzepten in 50 Er-
+klärvideos
+Zeit Visuelle Elemente 
+(nachgebaut)
+Gesprochener Text [Zeigegesten]
+Kodes
+2:20
+Da wir diese drei Terme [T1, T2, T3] nicht mithilfe der 
+uns bekannten Rechenregeln umformen können, müs-
+sen wir die Äquivalenz auf eine andere Art überprüfen. 
+Die Idee: Wir erstellen eine numerische Wertetabelle 
+und vergleichen die Termwerte. [Wertetabelle wird 
+eingeblendet] Wie du bereits kennen gelernt hast, be-
+deutet äquivalent gleichwertig. Wir setzen für x die 
+verschiedenen Zahlen der Grundmenge ein und berech-
+nen die zugehörigen Termwerte.
+TG-Umformung-auff
+T-Symbolkette
+V-Symbol
+TG-Einsetzungs-
+gleichheit-auff
+T-Rechenvorschrift
+V-Einsetzung
+Abb. 7
+Transkriptausschnitt zu Erklärvideo V43 (Videolernen)
+Eine positive Ausnahme für ein gehaltvolles Zusammenspiel von Inhalt und Kal-
+kül bietet Video V43 (in Abb. 7), in dem Termumformungsregeln wie das Distribu-
+tivgesetz gesichert werden und der Nachweis der Termgleichwertigkeit von 2(a+ 4)
+und 2a+ 8 mit Hilfe dieser Regeln „geübt“ wird. Nun folgen aber nicht, wie in den
+meisten Termumformungsvideos, weitere vorgerechnete Übungsaufgaben, stattdes-
+sen werden momentane Grenzen des Kalküls aufgezeigt und dadurch der Rückgriff
+auf die Einsetz-Deutung motiviert.
+Insgesamt muss Forschungsfrage FF2c also wie folgt beantwortet werden: Unter
+den Erklärvideos lassen sich solche ﬁnden, die gehaltvoll Kalkülelemente mit in-
+haltlichen Deutungen vernetzen, allerdings sind dies nur für die Variable mehr als
+16% der Videos. Nur 5 Erklärvideos verankern Umformungsregeln für Term und
+Gleichung in inhaltlichen Deutungen.
+5 Diskussion und Ausblick
+5.1 Zusammenfassung der Ergebnisse
+Die Analyse der Verstehensangebote von 50 YouTube-Erklärvideos kann die didakti-
+sche Einschätzung eines „breiten Spektrums“ (Rott 2020) bestätigen und präzisieren:
+Am einen Ende des Spektrums steht der Befund, dass 17 der 50 Erklärvideos tat-
+sächlich als „kalkülorientierte Nachhilfe“ (Rott 2020) bezeichnet werden müssen
+(Tab. 7) und 13 Videos eine Fehlvorstellung im Interesse einer „verständlichen“ Er-
+klärung nutzen (Abschn. 4.2.1). Dieses Ende des Spektrums bestätigt gängige Kritik
+(Bersch et al. 2020; Klinger und Walter 2020).
+Am anderen Ende sind jedoch auch Videos, die Verstehenselemente ansprechen,
+auffalten und vernetzen; ein Beispiel (Abb. 1) wurde ausführlich diskutiert. Ebenso
+K
+
+
+--- page 27 ---
+Verstehensangebote von YouTube-Erklärvideos – Konzeptualisierung und Analyse am Beispiel...
+307
+ﬁnden sich Erklärvideos, die Kalkülelemente gehaltvoll zu Konzept-Deutungen in
+Beziehung setzen (Abb. 7). Auch wenn diese eine Ausnahme sind, kann die Aus-
+gangsfrage bejaht werden: Ja, mit Erklärvideos über fachlich anspruchsvolle Kon-
+zepte können tatsächlich qualitätsvolle Verstehensangebote erreicht werden! Dies ist
+für den unterrichtspraktischen Umgang mit Erklärvideos ein weniger pessimistischer
+Befund als in gängiger Kritik, bestätigt jedoch die hohe Relevanz, für die eigene
+Lerngruppe eine kluge Wahl zu treffen (Bersch et al. 2020).
+Für differenziertere Einblicke wurde in diesem Artikel eine Konzeptualisierung
+der Qualität von Verstehensangeboten in Erklärvideos über das Vorkommen, Auf-
+falten und Vernetzen relevanter Wissenselemente entwickelt, der auf dem Verste-
+hensmodell von Drollinger-Vetter (2011) und seiner Übertragung auf die Beziehung
+von Inhalt und Kalkül von Glade und Prediger (2017) beruht. Fokussiert auf den
+exemplarischen Gegenstand Algebra (Tab. 2) wurden Verstehensangebote gegen-
+standsbezogen operationalisiert und insofern als genuin fachdidaktischer Kern von
+Erklärvideos untersucht.
+In der vorliegenden Analyse erwies sich die Charakterisierung der Verstehensan-
+gebote durch Vorkommen, Auffalten und Vernetzen als besonders gewinnbringend,
+da hierdurch wichtige Qualitätsunterschiede zwischen den analysierten Erklärvideos
+erfassbar wurden: Während die relevanten Verstehenselemente zwar in vielen Erklär-
+videos vorkommen (Einsetz-Deutung in 33 Videos, Unbekannte und Unbestimmte
+in je 26 Videos), wird kein Verstehenselement in mehr als 50% der Videos auch
+aufgefaltet, d.h. explizit erklärt (Tab. 5). Unbekannte und Unbestimmte werden je-
+weils in 6 der 11 Fokusvideos der Variable aufgefaltet, jedoch nicht zueinander in
+Beziehung gesetzt (Abschn. 4.1).
+Dieser Befund ist für die Algebra-Didaktik auch über Erklärvideos hinaus bedeut-
+sam: Da andere Deutungen in den Videos durchaus auf gelungene Weise miteinander
+vernetzt werden (etwa Einsetz- und Unbekannten-Deutung im Beispiel aus Abb. 1),
+liegt in der Vernetzung zwischen Unbestimmter und Unbekannter eine bislang un-
+bewältigte fachdidaktische Herausforderung, deren Prävalenz auch in Schulbüchern
+zu überprüfen wäre. Dies hängt vermutlich damit zusammen, dass beide Deutun-
+gen aus verschiedenen Tätigkeiten ihre Sinnstiftung beziehen (unbekannte Zahlen
+ﬁnden vs. Verallgemeinern). Jedoch werden in vielen Aufgaben, in denen zunächst
+allgemeine Bedingungen formuliert und dann in Bestimmungsgleichungen uminter-
+pretiert werden, beide Tätigkeiten verknüpft, ohne dass dies für Lernende expliziert
+wird. Die identiﬁzierten sprachlichen Vermischungen (Tab. 6) sind ein Indikator für
+diesbezüglich fehlendes didaktisches Problembewusstsein.
+Die theoretische Fokussierung der Verstehensangebote auf gegenstandsspeziﬁ-
+sche Wissenselemente als Verstehens- und Kalkülelemente ermöglicht es zudem,
+die oberﬂächliche Unterscheidung zwischen Verstehen und Kalkül aufzulösen und
+die Anbindung der Kalkülelemente an inhaltliche Verstehenselemente systematisch
+zu analysieren, auch im Hinblick auf die Auffaltbarkeit und Begründbarkeit der
+Umformungen (Glade und Prediger 2017). Die Analysen zeigen etwa, dass Kalkül-
+elemente zwar vorkommen (in 49 Videos) und aufgefaltet werden (in 45 Videos, vgl.
+Tab. 7), allerdings werden sie nur sehr selten in inhaltlichen Deutungen verankert
+(Abb. 2 und 6). Wir plädieren dringend dafür, die scheinbare Dichotomie zwischen
+Verstehen und Kalkül durch die vorgeschlagene Operationalisierung zu überwinden.
+K
+
+
+--- page 28 ---
+308
+S. Korntreff, S. Prediger
+Dies ist auch anschlussfähig an den algebradidaktischen Forschungsstand jenseits
+von Erklärvideos (Kieran 2013).
+5.2 Inhaltliche und methodische Grenzen und Anschlussfragen
+Wie jede Forschung unterliegt auch die hier vorliegende Studie methodischen Ein-
+schränkungen. Zunächst ist diesbezüglich festzuhalten, dass nur eines unter mehre-
+ren Qualitätsmerkmalen von Erklärvideos analysiert wurde (vgl. Tab. 1): die inhalt-
+liche Qualität der Verstehensangebote.
+Marquardt (2016, S. 67f.) hat bereits darauf hingewiesen, dass die inhaltliche
+Qualität von Erklärvideos nicht allein durch das Einzelvideo selbst, sondern über
+komplette Playlists eines Kanals zu einem Thema generiert wird. Daher seien Er-
+klärvideos mit einzelnen Lerneinheiten eines Schulbuchs zu vergleichen, während
+Playlists Schulbuchkapiteln entsprächen. Marquardts Beobachtung trifft sicherlich
+auch auf die Verstehensangebote der hier untersuchten Erklärvideos zu und konnte
+im Simpleclub-Video (Abb. 1) beobachtet werden. Durch die Herstellung von Play-
+lists haben die Kanäle die Möglichkeit, in einzelnen Videos gezielt Themenschwer-
+punkte zu setzen. Eine Analyse der Verstehensangebote gesamter Playlists könnte
+also weiteres Vernetzungspotential zu Tage fördern, da gewisse Auffaltungen von
+Verstehenselementen durch Verweis auf vorangegangene Videos unterlassen werden.
+Die Unterrichtsforschungen (Hiebert und Grouws 2007; Drollinger-Vetter 2011)
+konnten für Mathematikunterricht nachweisen, dass nicht allein die Verstehensan-
+gebote für fachlichen Lernerfolg prädiktiv sind, sondern ihre kognitiv aktivierende
+Verarbeitung durch die einzelnen Lernenden. Folgestudien sollten die Qualität von
+Verstehensangeboten in Erklärvideos daher auch in ihrem Zusammenspiel mit wei-
+teren Qualitätsmerkmalen (kognitiver Aktivierung, Adaptivität, Tab. 1) und bzgl.
+lernendenseitiger Verstehensprozesse empirisch untersuchen. Mit Blick auf die kog-
+nitive Aktivierung könnten Auslassungen und z.B. Selbsterklärungsprompts inter-
+essant sein, die Lernende zu eigenen Auffaltungen und Vernetzungen anregen. Die
+vorgelegte Konzeptualisierung der Verstehensangebote ermöglicht künftigen lernen-
+denseitigen Nutzungs-Studien die wichtige Unterscheidung zwischen gemeinsamem
+Auffalten von Verstehenselementen und explizitem sprachlichen Vernetzen.
+Die ersten sprachlichen Analysen der Auffaltungen (Tab. 6) geben zudem Hin-
+weise, dass weitere Analysen der sprachlichen Angebote der Videos sowie deren
+Einﬂuss auf das Verständnis der Lernenden vielversprechend sind. Zudem sollten
+die hier nur für 50 Videos zu Variablen, Termen und Gleichungen durchgeführten
+Analysen auf weitere Videos und andere mathematische Konzepte übertragen wer-
+den, denn gerade in den Sprachangeboten könnten relevante weitere Potenziale von
+Erklärvideos liegen.
+Aus unterrichtspraktischer Perspektive ist der Befund sehr heterogener Verste-
+hensangebote ein wichtiger Hinweis auf den Bedarf einer verlässlichen fachdidakti-
+schen Qualitätssicherung, der nicht nur durch Sensibilisierung von Lehrkräften für
+Qualitätsmerkmale (Marquardt 2016; Klinger und Walter 2020), sondern in künf-
+tigen Design-Research-Projekten auch mit eigenen Erklärvideos bearbeitet werden
+soll.
+K
+
+
+--- page 29 ---
+Verstehensangebote von YouTube-Erklärvideos – Konzeptualisierung und Analyse am Beispiel...
+309
+Danksagung Wir danken Aylina Westermann, Karin Eckerlin und Maja Motzko für die Mithilfe bei der
+Auswertung.
+Förderung
+Die Studie gehört zum Projekt MuM-Video – Erklärvideos als Ressource für fach- und
+sprachintegrierten Mathematikunterricht, das von 2020–24 vom Bundesministerium für Bildung und For-
+schung gefördert wird (Förderkennzeichen 01JD2001A, Projektleitung S. Prediger und M. Altieri).
+Funding Open Access funding enabled and organized by Projekt DEAL.
+Open Access Dieser Artikel wird unter der Creative Commons Namensnennung 4.0 International Li-
+zenz veröffentlicht, welche die Nutzung, Vervielfältigung, Bearbeitung, Verbreitung und Wiedergabe in
+jeglichem Medium und Format erlaubt, sofern Sie den/die ursprünglichen Autor(en) und die Quelle ord-
+nungsgemäß nennen, einen Link zur Creative Commons Lizenz beifügen und angeben, ob Änderungen
+vorgenommen wurden.
+Die in diesem Artikel enthaltenen Bilder und sonstiges Drittmaterial unterliegen ebenfalls der genannten
+Creative Commons Lizenz, sofern sich aus der Abbildungslegende nichts anderes ergibt. Sofern das betref-
+fende Material nicht unter der genannten Creative Commons Lizenz steht und die betreffende Handlung
+nicht nach gesetzlichen Vorschriften erlaubt ist, ist für die oben aufgeführten Weiterverwendungen des
+Materials die Einwilligung des jeweiligen Rechteinhabers einzuholen.
+Weitere Details zur Lizenz entnehmen Sie bitte der Lizenzinformation auf http://creativecommons.org/
+licenses/by/4.0/deed.de.
+Literatur
+Aebli, H. (1994). Denken: Das Ordnen des Tuns. Band II: Denkprozesse. Stuttgart: Klett-Cotta.
+Arcavi, A., Drijvers, P., & Stacey, K. (2017). The learning and teaching of algebra: ideas, insights, and
+activities. Abingdon: Routledge.
+Bednarz, N., Kieran, C., & Lee, L. (1996). Approaches to algebra: perspectives for research and teaching.
+In N. Bednarz, C. Kieran & L. Lee (Hrsg.), Approaches to algebra (S. 3–12). Dordrecht: Kluwer.
+Bersch, S., Merkel, A., Oldenburg, R., & Weckerle, M. (2020). Erklärvideos: Chancen und Risiken. Zwi-
+schen fachlicher Korrektheit und didaktischen Zielen. GDM-Mitteilungen, 109, 58–63.
+Drollinger-Vetter, B. (2011). Verstehenselemente und strukturelle Klarheit: Fachdidaktische Qualität der
+Anleitung von mathematischen Verstehensprozessen im Unterricht. Münster: Waxmann.
+Findeisen, S., Horn, S., & Seifried, J. (2019). Lernen durch Videos – Empirische Befunde zur Gestaltung
+von Erklärvideos. MedienPädagogik, 2019(Occasional Papers), 16–36.
+FORSA (2020). Das Deutsche Schulbarometer Spezial Corona-Krise. https://deutsches-schulportal.de/
+unterricht/das-deutsche-schulbarometer-spezial-corona-krise/. Zugegriffen: 11. Nov. 2020.
+Freudenthal, H. (1973). Mathematics as an educational task. Dordrecht: Reidel.
+Glade, M., & Prediger, S. (2017). Students’ individual schematization pathways—empirical reconstruc-
+tions for the case of part-of-part determination for fractions. Educational Studies in Mathematics,
+94(2), 185–203.
+Hefendehl-Hebeker, L. (2001). Die Wissensform des Formelwissens. In W. Weiser & B. Wollring (Hrsg.),
+Beiträge zur Didaktik der Primarstufe (S. 83–98). Hamburg: Dr. Kovac.
+Hiebert, J., & Carpenter, T.P. (1992). Learning and teaching with understanding. In D.A. Grouws (Hrsg.),
+Handbook of research on mathematics teaching and learning (S. 65–97). New York: Macmillan.
+Hiebert, J., & Grouws, D.A. (2007). The effects of classroom mathematics teaching on students’ learn-
+ing. In F.K. Lester (Hrsg.), Second handbook of research on mathematics teaching and learning
+(S. 371–404). Charlotte: Information Age.
+vom Hofe, R. (1995). Grundvorstellungen mathematischer Inhalte. Heidelberg: Spektrum.
+Höfﬂer, T.N., & Leutner, D. (2007). Instructional animation versus static pictures: a meta-analysis. Learn-
+ing and Instruction, 17(6), 722–738.
+Kant, J.M., Scheiter, K., & Oschatz, K. (2017). How to sequence video modeling examples and inquiry
+tasks to foster scientiﬁc reasoning. Learning and Instruction, 52, 46–58.
+Kaput, J.J. (2008). What is algebra? What is algebraic reasoning? In J.J. Kaput, D.W. Carraher &
+M.L. Blanton (Hrsg.), Algebra in the early grades (S. 5–17). New York: Lawrence Erlbaum.
+K
+
+
+--- page 30 ---
+310
+S. Korntreff, S. Prediger
+Kieran, C. (2004). The core of algebra: reﬂections on its main activities. In K. Stacey, H. Chick & M. Ken-
+dal (Hrsg.), The future of the teaching and learning of algebra. The 12th ICMI study. New ICMI
+study series, (Bd. 8, S. 21–33). Dordrecht: Kluwer.
+Kieran, C. (2013). The false dichotomy in mathematics education between conceptual understanding and
+procedural skills: an example from algebra. In K.R. Leatham (Hrsg.), Vital directions for mathematics
+education research (Bd. 7, S. 153–171). New York: Springer.
+Klinger, M., & Walter, D. (2020). „Ein wahrer Ehrenmann!“ – Wie mathematikhaltige Apps und Videos
+von Nutzenden bewertet werden. In H.-S. Siller, W. Weigel & J.F. Wörler (Hrsg.), Beiträge zum
+Mathematikunterricht 2020 (S. 513–516). Münster: WTM.
+Küchemann, D.E. (1981). Algebra. In K.M. Hart (Hrsg.), Children’s understanding of mathematics: 11–16
+(S. 102–119). London: John Murray.
+Kulgemeyer, C. (2018). A framework of effective science explanation videos informed by criteria for
+instructional explanations. Research in Science Education, 26(1), 1–22.
+Kulgemeyer, C., & Peters, C.H. (2016). Exploring the explaining quality of physics online explanatory
+videos. European Journal of Physics, 37(6), 1–14.
+MacGregor, M., & Stacey, K. (1997). Students’ understanding of algebraic notation: 11–15. Educational
+Studies in Mathematics, 33(1), 1–19.
+Malisani, E., & Spagnolo, F. (2009). From arithmetical thought to algebraic thought: the role of the “vari-
+able”. Educational Studies in Mathematics, 71(1), 19–41.
+Malle, G. (1993). Didaktische Probleme der elementaren Algebra. Wiesbaden: Vieweg+Teubner.
+Marquardt, K. (2016). Beurteilungsraster für Mathematik-Erklärvideos: Chancen, Grenzen und Durchfüh-
+rung mittels Resultaten aus der Schulbuchforschung (Diplomarbeit). tinyurl.com/y87hmhm3. Zuge-
+griffen: 11. Nov. 2020. Universität Wien.
+Mayer, R.E. (2009). Multimedia learning. Cambridge: Cambridge University Press.
+Mayring, P. (2015). Qualitative Inhaltsanalyse: Grundlagen und Techniken. Weinheim: Beltz.
+MPFS – Medienpädagogischer Forschungsverbund Südwest (2020). JIM-Studie 2020: Jugend, Informa-
+tion, Medien. Basisuntersuchung zum Medienumgang 12- bis 19-Jähriger. https://www.mpfs.de/
+ﬁleadmin/ﬁles/Studien/JIM/2020/JIM-Studie-2020_Web_ﬁnal.pdf. Zugegriffen: 24. Mai 2021.
+Prediger, S. (2009). Inhaltliches Denken vor Kalkül: Ein didaktisches Prinzip zur Vorbeugung und Förde-
+rung bei Rechenschwierigkeiten. In A. Fritz & S. Schmidt (Hrsg.), Fördernder Mathematikunterricht
+in der Sekundarstufe I (S. 213–234). Weinheim: Beltz.
+Prediger, S. (2020). Variable, Terme, Formeln und Gleichungen in Klasse 7–9. In S. Prediger (Hrsg.),
+Sprachbildender Mathematikunterricht in der Sekundarstufe (S. 162–166). Berlin: Cornelsen.
+Prediger, S., & Krägeloh, N. (2016). “X-arbitrary means any number, but you do not know which one”: the
+epistemic role of languages while constructing meaning for the variable as generalizers. In A. Halai
+& P. Clarkson (Hrsg.), Teaching and learning mathematics in multilingual classrooms (S. 89–108).
+Rotterdam: Sense.
+Reusser, K., & Pauli, C. (2013). Verständnisorientierung in Mathematikstunden erfassen. Ergebnisse eines
+methodenintegrativen Ansatzes. Zeitschrift für Pädagogik, 59(3), 308–335.
+Rott, B. (2020). Videos für die Fernlehre. Von einem der auszog, Videos zu produzieren. GDM-Mitteilun-
+gen, 109, 49–50.
+Usiskin, Z. (1988). Conceptions of school algebra and uses of variables. In A.F. Coxford (Hrsg.), Yearbook
+1988. The ideas of algebra, K-12 (S. 8–19). Reston: National Council of Teachers of Mathematics.
+Weeraratne, B., & Chin, B. (2018). Can Khan Academy e-learning video tutorials improve mathematics
+achievement in Sri Lanka? International Journal of Education and Development using Information
+and Communication Technology, 14(3), 93–112.
+Wirtz, M.A., & Caspar, F. (2002). Beurteilerübereinstimmung und Beurteilerreliabilität. Göttingen: Ho-
+grefe.
+Wittwer, J., & Renkl, A. (2008). Why instructional explanations often do not work: a framework for un-
+derstanding the effectiveness of instructional explanations. Educational Psychologist, 43(1), 49–64.
+Wolf, K.D. (2015). Bildungspotenziale von Erklärvideos und Tutorials auf YouTube. Medien + Erziehung,
+1(59), 30–36.
+K

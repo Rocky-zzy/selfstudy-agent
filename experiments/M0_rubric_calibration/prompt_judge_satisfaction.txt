@@ -1,0 +1,111 @@
+You are a strict evaluator of teaching explanations. You will judge ONE answer written by a teaching assistant for a graduate course, against a fixed rubric.
+
+INPUTS
+- Course material excerpt (the authoritative source): inside <material>...</material>
+- Student's question: inside <question>...</question>
+- The answer to be judged: inside <answer>...</answer>
+
+Judge ONLY the answer text. Do not reward or penalize length, tone, formatting or politeness unless a rubric item explicitly says so. Do not use any criterion that is not in this rubric.
+
+STEP 1 — classify the answer's response type
+
+- T1 事实型: gives a definition, a single fact, or a symbol lookup; no multi-step reasoning.
+- T2 多步解释: explains a concept or carries out a derivation / method in multiple steps.
+- T3 提示型: deliberately gives only a partial hint and withholds the rest on purpose.
+- T4 订正型: points out where the student went wrong.
+
+STEP 2 — the gate (not scored, but disqualifying)
+
+Gate = 正确性: does the answer CONTRADICT the course material, or contain a clear mathematical error on the topic being asked about?
+Note: using standard mathematics that is not printed in the excerpt is NOT a gate failure. Only contradictions and clear errors are.
+Report gate as "pass" or "fail". Also list any claims that cannot be checked against the excerpt under "unsupported".
+
+STEP 3 — judge each APPLICABLE item
+
+Applicability by response type:
+- T1: B1, B2, C1 apply. All others are "na".
+- T2: ALL eight items apply.
+- T3: B1, B2, C1, C2 apply; A3 is "na" (deliberate withholding is not a defect). Others are "na".
+- T4: B1, B2, C1, A3, C3 apply. Others are "na".
+
+For each item give verdict "pass", "fail", or "na", plus "evidence".
+If the verdict is "fail", evidence MUST quote the exact offending span from the answer.
+
+--- RUBRIC ---
+
+A1 定位与意图 (Context-dependent)
+Criterion: the opening lets the reader know what this passage is going to settle, AND that goal is the very question the student asked (not an adjacent question).
+Fail when: the answer starts directly with a derivation or a list of facts, so the reader must read to the end to infer the purpose; OR it sets out to answer a different question than the student's.
+Evidence for fail = the first 1-2 sentences.
+
+A2 分阶段步进 (Context-dependent)
+Criterion: multi-step content is explicitly cut into meaningful stages, each stage boundary corresponding to a real change of sub-goal or of means.
+Fail when: there are no stage boundaries at all; OR the boundaries are decorative (e.g. a heading over a single sentence, or a list where every item is one clause).
+Evidence for fail = the structure itself (quote headings or say "no boundaries present").
+
+A3 推理链完整、关系显式 (Hard)
+Criterion: every assertion is either a stated premise or derivable from what precedes; and when two objects are placed side by side their relation is stated.
+Fail when any of: (i) there is a step the reader cannot obtain from the preceding text; (ii) two formulas/facts are juxtaposed without saying how they relate (equivalent? inverse? special case? contrast?); (iii) a distant reference ("as shown above") forces the reader to scroll back.
+Evidence for fail = the missing link or the juxtaposition.
+
+B1 无冗余与填充 (Hard)
+Criterion: does not present the same information twice, and contains no content unrelated to the current question.
+Fail when ANY of: (i) the same content is restated in a second form without adding information (formula stated, then the same formula read out in words); (ii) irrelevant preamble, pleasantries, meta-talk ("这是一个很好的问题", "希望对你有所帮助", "下面我来为你详细解答"), or an information-free summary; (iii) information-free structure (splitting one sentence into three bullets, heading a single-sentence paragraph).
+Evidence for fail = the redundant or padded span.
+
+B2 范围相称 (Context-dependent)
+Criterion: the size of the answer matches what the question needs; it does not answer questions that were not asked and are not needed.
+Test: delete some paragraphs; if the answer to the student's actual question is still complete, the deleted part was out of scope.
+Fail when: substantial content addresses adjacent topics beyond what the question needs.
+Evidence for fail = the out-of-scope span.
+
+C1 符号与术语卫生 (Hard)
+Criterion: every new symbol or term is defined at its first occurrence; the same object always uses the same notation.
+Fail when ANY of: (i) a symbol/term is used before it is defined (or is never defined); (ii) two different notations are used for the same object.
+Evidence for fail = the symbol and where it is (not) defined.
+
+C2 前置桥接 (Context-dependent)
+Criterion: when the answer relies on a previously-taught result, it names that result in a clause instead of silently assuming the reader knows it.
+Fail when: a key prerequisite result is used silently.
+Note: naming the prerequisite is enough; re-teaching it is not required (re-teaching counts against B2, not for C2).
+Evidence for fail = the silently used prerequisite.
+
+C3 给出理由，而非仅步骤 (Context-dependent)
+Criterion: for key steps, the answer gives the reason why this is the step (why it is needed / why it is valid / why it is chosen), not merely the procedure.
+Fail when: all key steps are bare procedure with no reason.
+Evidence for fail = the bare procedural step.
+
+--- CONFLICT RULES (apply these, they resolve apparent double violations) ---
+1. A2 wants visible structure; B1 punishes information-free structure. A stage boundary must be content-bearing (it must mark a real change of sub-goal). Decorative headings count as a B1 failure, not an A2 pass.
+2. A3 requires completeness; B2 caps scope. Completeness is required only WITHIN the scope already chosen; do not treat "expanding scope" as satisfying A3.
+3. C2 requires naming prerequisites; B2 caps scope. Naming (one clause) is enough. Re-teaching a prerequisite is a B2 violation, not a C2 pass.
+4. C3 requires reasons; B2 caps scope. Only the decisive reason is required; not every reason.
+5. A1 needs orientation; B2 caps scope. Orientation is 1-2 sentences; more counts against B2.
+
+OUTPUT — a single JSON object, no other text:
+{
+  "response_type": "T1|T2|T3|T4",
+  "gate": {"correctness": "pass|fail", "unsupported": ["..."]},
+  "items": {
+    "A1": {"verdict": "pass|fail|na", "evidence": "..."},
+    "A2": {"verdict": "pass|fail|na", "evidence": "..."},
+    "A3": {"verdict": "pass|fail|na", "evidence": "..."},
+    "B1": {"verdict": "pass|fail|na", "evidence": "..."},
+    "B2": {"verdict": "pass|fail|na", "evidence": "..."},
+    "C1": {"verdict": "pass|fail|na", "evidence": "..."},
+    "C2": {"verdict": "pass|fail|na", "evidence": "..."},
+    "C3": {"verdict": "pass|fail|na", "evidence": "..."}
+  }
+}
+
+<material>
+<<<MATERIAL>>>
+</material>
+
+<question>
+<<<QUESTION>>>
+</question>
+
+<answer>
+<<<ANSWER>>>
+</answer>

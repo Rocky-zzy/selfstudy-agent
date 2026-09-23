@@ -1,0 +1,62 @@
+{
+  "_note": "M0.5 最小变式题。每题要求把同一知识点的解释**迁移到新实例**上，不是复述原题答案。gold 由人工手算核对。grading 是判分要点。",
+  "_design": "求解器只看【解释 + 变式题】，不给课件、不给原题；并加一个无解释对照组测区分度。",
+  "variants": [
+    {
+      "item_id": "q1",
+      "topic": "群与阿贝尔群",
+      "problem": "判断 $(\\mathbb{R}, \\cdot)$（普通乘法，集合包含 $0$）是否构成群。如果不构成，指出是哪一条公理不满足，并说明理由。",
+      "gold": "不构成群。不满足的是「逆元」：$0 \\in \\mathbb{R}$ 没有乘法逆元，因为不存在 $y$ 使 $0 \\cdot y = 1$。封闭性、结合律、单位元（$e=1$）都满足。",
+      "grading": "必须指出「逆元」这一条，且理由落到 $0$ 没有乘法逆元。只说『不是群』而没指出哪条公理 -> partially_correct。"
+    },
+    {
+      "item_id": "q2",
+      "topic": "向量投影与正交性条件",
+      "problem": "设 $U = \\mathrm{span}\\{(1,1,0)^T\\}$，$\\vec{x} = (1,2,3)^T$。求 $\\pi_U(\\vec{x})$ 和残差 $\\vec{r} = \\vec{x} - \\pi_U(\\vec{x})$，并验证 $\\vec{r} \\perp U$。",
+      "gold": "$\\pi_U(\\vec{x}) = \\frac{\\vec{u}^T\\vec{x}}{\\vec{u}^T\\vec{u}}\\vec{u} = \\frac{3}{2}(1,1,0)^T = (1.5, 1.5, 0)^T$；$\\vec{r} = (-0.5, 0.5, 3)^T$；$\\vec{u}^T\\vec{r} = -0.5 + 0.5 + 0 = 0$，故 $\\vec{r} \\perp U$。",
+      "grading": "投影公式用对、残差算对、并做了正交性验证 -> correct。只给出投影没验证正交 -> partially_correct。"
+    },
+    {
+      "item_id": "q3",
+      "topic": "Gram–Schmidt 正交化",
+      "problem": "对 $\\vec{b}_1 = (1,1,0)^T$、$\\vec{b}_2 = (1,0,1)^T$ 做 Gram–Schmidt，给出正交基 $\\vec{u}_1, \\vec{u}_2$（不必归一化）。",
+      "gold": "$\\vec{u}_1 = (1,1,0)^T$；$\\vec{u}_2 = \\vec{b}_2 - \\frac{\\vec{u}_1^T\\vec{b}_2}{\\vec{u}_1^T\\vec{u}_1}\\vec{u}_1 = (1,0,1)^T - \\frac{1}{2}(1,1,0)^T = (0.5, -0.5, 1)^T$。$\\vec{u}_1^T\\vec{u}_2 = 0$。",
+      "grading": "两步都对 -> correct。$\\vec u_2 = \\vec b_2 - \\vec b_1$ 这类错误（没乘投影系数）-> incorrect。"
+    },
+    {
+      "item_id": "q4",
+      "topic": "特征多项式与特征值",
+      "problem": "设 $A = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}$。写出特征多项式 $p_A(\\lambda)$，求出特征值，并验证你求出的每个 $\\lambda$ 都使 $\\det(A - \\lambda I) = 0$。",
+      "gold": "$p_A(\\lambda) = \\det\\begin{bmatrix} -\\lambda & 1 \\\\ 1 & -\\lambda \\end{bmatrix} = \\lambda^2 - 1$；特征值 $\\lambda = \\pm 1$。验证 $\\lambda = 1$：$\\det(A-I) = \\det\\begin{bmatrix} -1 & 1 \\\\ 1 & -1 \\end{bmatrix} = 1 - 1 = 0$。",
+      "grading": "$\\lambda^2-1$ 与 $\\pm 1$ 都对，并有验证 -> correct。只写特征值没写多项式 -> partially_correct。"
+    },
+    {
+      "item_id": "q5",
+      "topic": "SVD 的构造",
+      "problem": "设 $A = \\begin{bmatrix} 1 & 1 \\\\ 0 & 0 \\end{bmatrix}$。求 $A^TA$ 的特征值，并由此写出 $A$ 的全部奇异值。",
+      "gold": "$A^TA = \\begin{bmatrix} 1 & 1 \\\\ 1 & 1 \\end{bmatrix}$；特征多项式 $(1-\\lambda)^2 - 1 = \\lambda(\\lambda - 2)$，故特征值为 $2$ 和 $0$；奇异值 $\\sigma_1 = \\sqrt{2}$，$\\sigma_2 = 0$。",
+      "grading": "$A^TA$ 算对 + 特征值 $2,0$ + 奇异值 $\\sqrt2, 0$ -> correct。漏掉 $\\sigma_2 = 0$ -> partially_correct。"
+    },
+    {
+      "item_id": "q6",
+      "topic": "梯度为何是行向量",
+      "problem": "设 $f(x_1, x_2) = x_1^2 x_2$，$\\vec{x}(t) = (t, t^2)^T$。用本课程的行向量约定写出 $\\frac{\\partial f}{\\partial \\vec{x}}$，并用一次矩阵乘法求 $\\frac{df}{dt}$。",
+      "gold": "$\\frac{\\partial f}{\\partial \\vec{x}} = [2x_1x_2,\\ x_1^2]$（$1 \\times 2$ 行向量）；代入 $\\vec{x}(t)$ 得 $[2t^3,\\ t^2]$；$\\frac{d\\vec{x}}{dt} = (1, 2t)^T$；$\\frac{df}{dt} = 2t^3 \\cdot 1 + t^2 \\cdot 2t = 4t^3$。（直接算 $f = t^4$ 也得 $4t^3$）",
+      "grading": "梯度写成行向量 + 链式法则矩阵乘法做对 + 结果 $4t^3$ -> correct。梯度写成列向量 -> partially_correct（违反本题约定）。"
+    },
+    {
+      "item_id": "q7",
+      "topic": "联合熵与条件熵",
+      "problem": "设 $(X,Y)$ 的联合分布只在两个点非零：$p(0,0) = 0.5$，$p(1,1) = 0.5$，其余为 $0$。用 $H(X,Y) = H(X) + H(Y\\mid X)$ 求出 $H(X,Y)$ 与 $H(Y\\mid X)$（单位 bit），并说明为什么 $H(Y\\mid X)$ 是这个值。",
+      "gold": "$X$ 取 $0,1$ 各 $0.5$，故 $H(X) = 1$ bit。给定 $X$ 后 $Y$ 被完全确定（$Y=X$），剩余不确定性为 $0$，故 $H(Y\\mid X) = 0$。因此 $H(X,Y) = 1 + 0 = 1$ bit。直接算：$H(X,Y) = -2 \\times 0.5\\log_2 0.5 = 1$ bit，一致。",
+      "grading": "$H(Y\\mid X)=0$ 且理由落在「已知 X 后 Y 被确定」-> correct。答成 $H(Y\\mid X)=1$ -> incorrect。"
+    },
+    {
+      "item_id": "q8",
+      "topic": "梯度恒等式（事实型）",
+      "problem": "求 $\\frac{\\partial \\vec{a}^T \\vec{x}}{\\partial \\vec{x}}$，其中 $\\vec{a} = (1,2,3)^T$，并写出结果的形状（几行几列）。",
+      "gold": "结果是 $\\vec{a}^T = [1,2,3]$，形状为 $1 \\times 3$（行向量）。",
+      "grading": "数值 $[1,2,3]$ 与形状 $1\\times 3$ 都对 -> correct。只给数值没给形状 -> partially_correct。"
+    }
+  ]
+}
