@@ -86,6 +86,9 @@
 | `docs/11_评判准则_用已有量表.md` | 评判准则的**检索记录**（结论已并入 12） | 📎 仅检索记录 |
 | `docs/12_回填结果_两套准则.md` | **两套准则的实测结果与结论**（Rubrik 否决 / MQI 部分可用） | ✅ **准则结论** |
 | `docs/13_已否决_Rubriks_Cube.md` | Rubrik's Cube 的否决记录——**看到有人提议用它，先读这篇** | ❌ 已否决 |
+| `docs/14_课件勘误.md` | 课件里**确实算错**的地方 + 模型"假装算过"的模式 | ✅ 证据 |
+| `docs/15_下一步优化建议.md` | 5 条建议（各挂依据）+ **§五 落地状态** | ✅ 行动清单 |
+| `data/graph/rosen-ch1.json` | **主数据集的知识结构**：Rosen 第 1 章 8 节 120 页 → 114 节点 / 207 子目标 / 268 易错点 | ✅ 已上线 |
 | `docs/refs/` | 原始文献与逐字摘录（MQI 判据含 Explanations/Sense-Making、Thurm、KP2022、AutoTutor、L7 prompt 全文） | ✅ 证据 |
 | `temp_material/ml1` `temp_material/nlp6` | **临时素材**（用户明确"不进知识库"）：ML I（83 页 PPTX）、AIAA 4051 L6（31 页 PDF，关键定义在图里） | ⚪ 临时 |
 | `experiments/M0_rubric_calibration/report.md` | 已封存实验（自造评估量表的校准） | 📦 已封存 |
