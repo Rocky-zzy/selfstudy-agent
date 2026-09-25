@@ -140,6 +140,34 @@ def main() -> int:
     check("课件里真实存在的内容" in s_base,
           "追问推荐必须绑定课件（实测推荐过课件外的问题，见 docs/07 第 8 条）")
     check(DEFAULT_TEACHING in TEACHING_MODES, f"默认讲法合法（{DEFAULT_TEACHING}）")
+
+    # L0 知识结构挂载（2026-09-23）。契约有三条，都要锁住：
+    #   ① 问了某个知识点，**那个节点必须在注入里**（第一版按"页命中"选，曾把目标挤掉）；
+    #   ② 注入内容两条件完全相同（它在 user prompt 的课件原文里，不参与对照）；
+    #   ③ 命中不了目标就**不注入**，不要塞一堆无关节点。
+    print("-" * 72)
+    print("2b) L0 知识结构挂载")
+    from graph_inject import GraphError, build_injection, load_graph, wrap
+    try:
+        _g = load_graph("L01")
+        check(True, f"载入知识结构 L01（{len(_g['nodes'])} 个节点）")
+        _inj, _ids = build_injection(
+            _g, ["l01-p01", "l01-p02", "l01-p03", "l01-p04", "l01-p05", "l01-p06", "l01-p07", "l01-p08"],
+            "基变换的矩阵 T^{-1}A_φS 是怎么推出来的？")
+        check("basis_change" in _ids,
+              f"问「基变换」时 basis_change 被注入（实际 {_ids[:3]}）")
+        check(_ids and _ids[0] == "basis_change",
+              "目标节点排在注入列表第一位")
+        check("换到标准基" in _inj and "施加线性映射" in _inj and "换到目标基" in _inj,
+              "子目标标签进入注入文本（Morrison 等 2020：给标签优于自己生成）")
+        check("课件没交代" in _inj, "子目标的『课件没交代』提示进入注入文本")
+        _inj2, _ids2 = build_injection(_g, ["l01-p03"], "你喜欢什么颜色？")
+        check(not _ids2 or "basis_change" not in _ids2,
+              "与知识结构无关的问题**不注入**目标节点")
+        check(wrap("x").startswith("<<<KNOWLEDGE-STRUCTURE>>>"),
+              "注入块有独立标记（便于事后核对）")
+    except GraphError as e:
+        check(False, f"知识结构加载失败：{e}")
     up = user_prompt(ctx, q)
     check("<<<COURSEWARE>>>" not in up and "<<<STUDENT QUESTION>>>" not in up,
           "占位符已被替换（无残留 <<<...>>>）")
@@ -176,8 +204,10 @@ def main() -> int:
     check(d.get("mode") == "hit_pages", f"mode 标记正确（{d.get('mode')}）")
     check(d.get("dry_run") is True, "dry-run 标记正确")
 
-    # 不传 whole_lecture 时必须是整讲（起步默认值，UI 依赖它）
-    r = cli.post("/api/ask", json={"question": q, "lecture": "L01", "material": "kb"})
+    # 不传 whole_lecture 时必须是整讲（起步默认值，UI 依赖它）。
+    # 这里显式 use_graph=False：这条断言只测"检索拼出的整讲上下文"，
+    # 不该把知识结构注入的字数算进去（那是另一条断言的事）。
+    r = cli.post("/api/ask", json={"question": q, "lecture": "L01", "material": "kb", "use_graph": False})
     d2 = r.get_json() or {}
     check(d2.get("mode") == "whole_lecture", f"默认走整讲（{d2.get('mode')}）")
     check(len(d2.get("citations", [])) == 8, f"默认整讲返回 {len(d2.get('citations', []))} 页")
@@ -261,6 +291,48 @@ def main() -> int:
         check(r.status_code == 200, f"nlp6 分区 {ti}（{t['title']}）-> {r.status_code}")
         check(dd.get("downgrade") is None,
               f"nlp6 分区 {ti} 未被降级（{dd.get('ctx_chars')} 字符）")
+
+    print("-" * 72)
+    print("3d) 主数据集（Rosen 第 1 章 逻辑与证明，**不进 knowledge_base/**）")
+    mats = {m["key"]: m for m in (cli.get("/api/materials").get_json() or {}).get("materials", [])}
+    check("rosen-ch1" in mats, f"素材清单含 rosen-ch1（{sorted(mats)}）")
+    rosen_path = ROOT / "data" / "rosen" / "ch1" / "chunks.jsonl"
+    check(rosen_path.exists(), f"主数据集存在：{rosen_path.relative_to(ROOT)}")
+    check("rosen" not in kb_text, "知识库里没有 rosen 的 chunk（隔离成立）")
+    rows_r = [json.loads(x) for x in rosen_path.read_text(encoding="utf-8").splitlines() if x.strip()]
+    check(len(rows_r) == 120, f"rosen-ch1 共 {len(rows_r)} 页（1.1–1.8）")
+    # 页号守恒：解析器曾因"左右页页眉不对称"漏掉整半本书（见 docs/00 M13），
+    # 所以这里必须有守恒检查——数字对不上先怀疑解析器。
+    # 注意两个页号不是一回事：page=PDF 页（24–143），printed_page=书上印的页（1–120）。
+    check(sorted(x["printed_page"] for x in rows_r) == list(range(1, 121)),
+          "rosen-ch1 书上页码连续 1–120")
+    check(all(x["page"] == x["printed_page"] + 23 for x in rows_r),
+          "rosen-ch1 全部满足 PDF 页 = 书上页 + 23")
+    secs = {}
+    for x in rows_r:
+        secs[x["lecture"]] = secs.get(x["lecture"], 0) + 1
+    check(len(secs) == 8, f"rosen-ch1 分 8 节（{sorted(secs)}）")
+    check(all(v > 0 for v in secs.values()), f"每节都有页：{secs}")
+    check(len(mats["rosen-ch1"]["lectures"]) == 8,
+          f"rosen-ch1 登记了 {len(mats['rosen-ch1']['lectures'])} 节")
+    # 该素材没有 topics 分区（每节 38k–93k 字符，靠 topic 切页区间没有意义），
+    # 学习单位就是节：用 lecture 选节。
+    check(len(mats["rosen-ch1"]["topics"]) == 0, "rosen-ch1 不登记 topics（按节选）")
+    for lec in [l["lecture"] for l in mats["rosen-ch1"]["lectures"]]:
+        r = cli.post("/api/ask", json={
+            "question": "什么是命题？", "material": "rosen-ch1",
+            "lecture": lec, "whole_lecture": True, "top_k": 4, "use_graph": False})
+        dd = r.get_json() or {}
+        check(r.status_code == 200, f"rosen {lec} -> {r.status_code}")
+        check(dd.get("error") is None, f"rosen {lec} 无错误（{dd.get('error')}）")
+        check(dd.get("lecture") == lec, f"rosen {lec} 回传了节号（{dd.get('lecture')}）")
+        # 本节实测 38k–93k 字符 > WHOLE_LECTURE_CHAR_LIMIT(20000)，
+        # 所以"整节"必然被降级成命中页——这是**已知行为**，断言它被明确告知（有 downgrade 文案），
+        # 而不是断言"没降级"（那是愿望，不是当前行为）。
+        check(bool(dd.get("downgrade")) or dd.get("ctx_chars", 0) <= 20000,
+              f"rosen {lec} 要么未降级、要么明确告知降级（{dd.get('ctx_chars')} 字符）")
+        print(f"     {lec}: 命中 {len(dd.get('citations', []))} 页 / "
+              f"{dd.get('ctx_chars')} 字符 / 降级={bool(dd.get('downgrade'))}")
 
     if no_model:
         print("=" * 72)

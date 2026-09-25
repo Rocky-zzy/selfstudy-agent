@@ -13,97 +13,317 @@
   },
   "nodes": [
     {
+      "id": "abelian_group",
+      "title": "Abelian 群",
+      "type": "concept",
+      "sources": [
+        "l01-p02"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "漏掉封闭性（运算结果必须还在集合里）",
+        "把 (R, ·) 当成群——0 没有乘法逆元（课件正是用这个反例说明）"
+      ],
+      "keywords": [
+        "阿贝尔群",
+        "Abelian",
+        "群"
+      ]
+    },
+    {
       "id": "vector_space",
       "title": "向量空间",
       "type": "concept",
-      "sources": ["l01-p02"],
-      "prerequisites": [],
+      "sources": [
+        "l01-p02"
+      ],
+      "prerequisites": [
+        "abelian_group"
+      ],
       "broader": null,
-      "contrast": ["affine_space"],
+      "contrast": [
+        "affine_space"
+      ],
       "misconceptions": [
-        "以为「能加能乘」就够了，漏掉封闭性与八条公理",
-        "把 (R, ·) 也当成群（0 没有乘法逆元）"
+        "以为「能加能乘」就够了，漏掉封闭性与分配律那几条",
+        "忘了 (V, +) 本身必须是 Abelian 群"
+      ],
+      "keywords": [
+        "向量空间",
+        "Vector space",
+        "Abelian"
+      ]
+    },
+    {
+      "id": "matrix_vector_form",
+      "title": "线性映射的矩阵形式 y = Wx + b",
+      "type": "concept",
+      "sources": [
+        "l01-p01"
+      ],
+      "prerequisites": [
+        "vector_space"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "把 W 的下标记反（课件约定 W_ij 是 x_j → y_i 的权重）",
+        "把 b 当成另一个权重向量——课件把它写成「从常数 1 到 y_i 的权重」"
+      ],
+      "keywords": [
+        "矩阵形式",
+        "Wx+b",
+        "权重矩阵"
       ]
     },
     {
       "id": "linear_combination",
       "title": "线性组合",
       "type": "concept",
-      "sources": ["l01-p03"],
-      "prerequisites": ["vector_space"],
+      "sources": [
+        "l01-p03"
+      ],
+      "prerequisites": [
+        "vector_space"
+      ],
       "broader": "vector_space",
       "contrast": [],
-      "misconceptions": []
+      "misconceptions": [],
+      "keywords": [
+        "线性组合",
+        "linear combination"
+      ]
     },
     {
       "id": "linear_independence",
       "title": "线性无关 / 线性相关",
       "type": "concept",
-      "sources": ["l01-p03"],
-      "prerequisites": ["linear_combination"],
+      "sources": [
+        "l01-p03"
+      ],
+      "prerequisites": [
+        "linear_combination"
+      ],
       "broader": "vector_space",
-      "contrast": ["spanning_set"],
+      "contrast": [
+        "spanning_set"
+      ],
       "misconceptions": [
         "把「无关」理解成「彼此没关系」",
         "漏掉条件：必须是「只有平凡解」（λ 全为 0）才算无关"
+      ],
+      "keywords": [
+        "线性无关",
+        "线性相关",
+        "linearly independent"
       ]
     },
     {
       "id": "spanning_set",
       "title": "张成集 / 生成集",
       "type": "concept",
-      "sources": ["l01-p03"],
-      "prerequisites": ["linear_combination"],
+      "sources": [
+        "l01-p03"
+      ],
+      "prerequisites": [
+        "linear_combination"
+      ],
       "broader": "vector_space",
-      "contrast": ["linear_independence"],
+      "contrast": [
+        "linear_independence"
+      ],
       "misconceptions": [
         "以为「能张成」就等于「线性无关」"
+      ],
+      "keywords": [
+        "张成",
+        "生成集",
+        "spanning"
       ]
     },
     {
       "id": "linear_mapping",
       "title": "线性映射 φ: V → W",
       "type": "concept",
-      "sources": ["l01-p04"],
-      "prerequisites": ["vector_space"],
+      "sources": [
+        "l01-p04"
+      ],
+      "prerequisites": [
+        "vector_space",
+        "matrix_vector_form"
+      ],
       "broader": "vector_space",
       "contrast": [],
       "misconceptions": [
         "把它当成「任意从 V 到 W 的函数」",
         "只说「保持结构」而不验证 λx + ψy 这条定义式"
+      ],
+      "keywords": [
+        "线性映射",
+        "线性变换",
+        "linear mapping"
       ]
     },
     {
       "id": "rank",
       "title": "秩 rank(W) 与满秩",
       "type": "concept",
-      "sources": ["l01-p04", "l01-p05"],
-      "prerequisites": ["linear_mapping"],
+      "sources": [
+        "l01-p04",
+        "l01-p05"
+      ],
+      "prerequisites": [
+        "linear_mapping"
+      ],
       "broader": null,
-      "contrast": ["kernel_image"],
+      "contrast": [
+        "kernel_image"
+      ],
       "misconceptions": [
         "把 rank 当成矩阵的尺寸（rank = min{m,n}，不是 m×n）",
         "把升维/降维的方向搞反（rank = n < m 是升维，不是降维）"
+      ],
+      "keywords": [
+        "秩",
+        "rank",
+        "满秩",
+        "full rank",
+        "升维",
+        "降维"
       ]
     },
     {
       "id": "kernel_image",
       "title": "核与像（null space / column space）",
       "type": "concept",
-      "sources": ["l01-p06", "l01-p07"],
-      "prerequisites": ["linear_mapping"],
+      "sources": [
+        "l01-p06",
+        "l01-p07"
+      ],
+      "prerequisites": [
+        "linear_mapping"
+      ],
       "broader": "linear_mapping",
-      "contrast": ["rank"],
+      "contrast": [
+        "rank"
+      ],
       "misconceptions": [
         "把 kernel 与 image 的所属空间搞反（ker ⊆ V，im ⊆ W）"
+      ],
+      "keywords": [
+        "核",
+        "像",
+        "kernel",
+        "image",
+        "null space",
+        "column space"
+      ]
+    },
+    {
+      "id": "rank_full_rank_cases",
+      "title": "满秩时的三种情形（同维 / 升维 / 降维）",
+      "type": "procedure",
+      "sources": [
+        "l01-p04",
+        "l01-p05"
+      ],
+      "prerequisites": [
+        "rank"
+      ],
+      "broader": "rank",
+      "contrast": [],
+      "misconceptions": [
+        "把升维/降维的方向搞反（rank = n < m 是升维，不是降维）",
+        "把「同维」当成「同一个空间」——课件说的是用不同坐标表示同一个向量"
+      ],
+      "subgoals": [
+        {
+          "label": "判断满秩",
+          "source_line": "rank(W~) = min{m, n}",
+          "detail": "先确认 W 达到满秩，否则下面三种情形都不成立",
+          "not_in_source": "课件给了定义但没强调「必须先满秩才能分类」。"
+        },
+        {
+          "label": "比维度定方向",
+          "source_line": "① rank = n = m；② rank = n < m；③ rank = m < n",
+          "detail": "比较 n（输入维）与 m（输出维），决定是同维、升维还是降维"
+        },
+        {
+          "label": "读用途",
+          "source_line": "② upsampling / handling data in a lower dimension in a higher dimension；③ downsampling / dimensionality reduction",
+          "detail": "升维是「在更高维里处理低维数据」，降维是「取高维数据最重要的视角」",
+          "not_in_source": "课件只给了用途短语，没解释为什么升维有助于处理低维数据。"
+        }
+      ],
+      "keywords": [
+        "满秩",
+        "升维",
+        "降维",
+        "upsampling",
+        "downsampling"
+      ]
+    },
+    {
+      "id": "matrix_form_derivation",
+      "title": "从分量式到矩阵形式的合并",
+      "type": "procedure",
+      "sources": [
+        "l01-p01"
+      ],
+      "prerequisites": [
+        "matrix_vector_form"
+      ],
+      "broader": "matrix_vector_form",
+      "contrast": [],
+      "misconceptions": [
+        "以为矩阵形式是另一套东西，而不是分量式的紧凑写法"
+      ],
+      "subgoals": [
+        {
+          "label": "写出每个输出的分量式",
+          "source_line": "y_1 = W_11 x_1 + W_21 x_2 + W_31 x_3 + b_1（y_2、y_3 同理）",
+          "detail": "先把 y 的每个分量写成 x 各分量的加权和再加偏置",
+          "not_in_source": "课件直接列出三行，没说明为什么要先展开。"
+        },
+        {
+          "label": "把权重按列排成矩阵",
+          "source_line": "列向量 [W_11, W_12, W_13]^T 对应 x_1 的权重",
+          "detail": "注意课件把 x_j 的权重排成 W 的**第 j 列**（这正是行下标为 j 的原因）"
+        },
+        {
+          "label": "合成紧凑式",
+          "source_line": "y = W x + b（compact form）",
+          "detail": "矩阵乘 x 一次算出全部输出的加权和，b 单独加",
+          "not_in_source": "课件未说明这种「按列堆权重」的排法与「按行做内积」是同一件事。"
+        }
+      ],
+      "keywords": [
+        "分量式",
+        "紧凑式",
+        "compact form"
       ]
     },
     {
       "id": "basis_change",
-      "title": "基变换矩阵 Â_φ = T⁻¹A_φS",
+      "title": "基变换矩阵",
+      "keywords": [
+        "基变换",
+        "变换矩阵",
+        "换基",
+        "T^{-1}A",
+        "相似",
+        "等价",
+        "同一个线性映射在不同基下"
+      ],
       "type": "procedure",
-      "sources": ["l01-p06"],
-      "prerequisites": ["linear_mapping"],
+      "sources": [
+        "l01-p06"
+      ],
+      "prerequisites": [
+        "linear_mapping"
+      ],
       "broader": "linear_mapping",
       "contrast": [],
       "misconceptions": [
@@ -135,24 +355,45 @@
       "id": "affine_space",
       "title": "仿射空间 L = x₀ + U",
       "type": "concept",
-      "sources": ["l01-p07"],
-      "prerequisites": ["vector_space"],
+      "sources": [
+        "l01-p07"
+      ],
+      "prerequisites": [
+        "vector_space"
+      ],
       "broader": "vector_space",
-      "contrast": ["vector_space"],
+      "contrast": [
+        "vector_space"
+      ],
       "misconceptions": [
         "以为仿射空间也是向量空间（漏掉 x₀ ∉ U 这个前提）",
         "混淆 support point（x₀）与 direction space（U）的角色"
+      ],
+      "keywords": [
+        "仿射空间",
+        "affine space",
+        "支撑点",
+        "方向空间"
       ]
     },
     {
       "id": "affine_mapping",
       "title": "仿射映射 φ'(x) = a + φ(x)",
       "type": "concept",
-      "sources": ["l01-p08"],
-      "prerequisites": ["affine_space", "linear_mapping"],
+      "sources": [
+        "l01-p08"
+      ],
+      "prerequisites": [
+        "affine_space",
+        "linear_mapping"
+      ],
       "broader": "affine_space",
       "contrast": [],
-      "misconceptions": []
+      "misconceptions": [],
+      "keywords": [
+        "仿射映射",
+        "affine mapping"
+      ]
     }
   ]
 }

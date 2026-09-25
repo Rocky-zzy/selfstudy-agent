@@ -16,15 +16,21 @@ outputs/
 
 # ============================================================
 # 第三方素材：有版权、不属于本仓库，且体积大
-#   - 2711课件/        AIAA 2711 课程 PDF（69.8 MB）
-#   - temp_material/   临时课件（PPTX/PDF）+ 视觉转写渲染图（24.7 MB）
-#   - datasets/        第三方数据集（MathDial 等）
+#   - 2711课件/              AIAA 2711 课程 PDF（69.8 MB）
+#   - RosenDiscreteMath.pdf  Rosen 离散数学教材（36.7 MB，第三方版权）
+#   - temp_material/         临时课件（PPTX/PDF）+ 视觉转写渲染图（24.7 MB）
+#   - datasets/              第三方数据集（MathDial 等）
 #   这些不在仓库里 → clone 后无法直接跑完整流程。
 #   哪些需要保留、怎么恢复，见 DATA_NOT_INCLUDED.md
 # ============================================================
 2711课件/
+RosenDiscreteMath.pdf
 temp_material/
 datasets/
+
+# 从第三方教材抽取出的知识库：内容仍是第三方的（只换了格式），不入库。
+# 抽取脚本在 scripts/build_rosen_kb.py，有教材即可重建。
+data/rosen/
 
 # ============================================================
 # 知识库：文本产物入库（chunks.jsonl / manifest / transcripts），

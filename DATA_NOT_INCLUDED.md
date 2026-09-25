@@ -9,6 +9,8 @@
 | 路径 | 大小 | 为什么没入库 | 缺了会怎样 |
 |---|---|---|---|
 | `2711课件/` | 69.8 MB | AIAA 2711 课程 PDF，**第三方版权**，不是本项目的产出 | 无法重建知识库 |
+| `RosenDiscreteMath.pdf` | 36.7 MB | Rosen《离散数学及其应用》第 8 版，**第三方教材** | 无法重建第 1 章知识库 |
+| `data/rosen/` | ~0.4 MB | 从上面那本教材抽取的知识库——**内容仍是第三方的**，只换了格式 | 同上（跑一次抽取脚本即可） |
 | `temp_material/` | 24.7 MB | 用户提供的临时课件（PPTX/PDF）+ 视觉转写用的渲染图 | 临时素材相关的实验无法复现 |
 | `datasets/` | 6.8 MB | 第三方数据集（MathDial 等），当前未使用 | 无影响（本来就没用） |
 | `knowledge_base/_pages/` | 18.8 MB | 150 dpi 渲染出的页图；**可由课件 PDF 重建** | 无法回查原图核对公式（见下） |
@@ -48,6 +50,10 @@ python scripts\graph_check.py --selftest
 python scripts\transcribe_pages.py     # 无文本层的页走视觉转写
 python scripts\build_kb.py
 python scripts\verify_kb.py
+
+# 5) Rosen 离散数学第 1 章（主数据集）：把 RosenDiscreteMath.pdf 放到仓库根目录，然后：
+python scripts\build_rosen_kb.py --chapter 1 --out data\rosen\ch1\chunks.jsonl
+python scripts\survey_rosen.py --json  # 需要看全书章节结构时
 ```
 
 ## 一个必须知道的限制

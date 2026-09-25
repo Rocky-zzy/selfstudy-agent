@@ -39,6 +39,7 @@ from generator import (  # noqa: E402
 )
 from retrieval import build_context, list_lectures, load_chunks, search  # noqa: E402
 from mathrender import render_math  # noqa: E402
+from graph_inject import GraphError, build_injection, load_graph, wrap  # noqa: E402
 
 DATA_DIR = ROOT / "data"
 RATINGS_PATH = DATA_DIR / "ratings.jsonl"
@@ -89,8 +90,15 @@ MATERIALS: dict[str, dict] = {
             {"title": "CYK 算法：动态规划与 CNF 转换", "lo": 21, "hi": 31},
         ],
     },
+    "rosen-ch1": {
+        "key": "rosen-ch1",
+        "title": "Rosen 离散数学 第1章 逻辑与证明（主数据集）",
+        "path": ROOT / "data" / "rosen" / "ch1" / "chunks.jsonl",
+        "temp": False,
+        "note": "Rosen《离散数学及其应用》第8版，第 1 章 8 节 / 120 页。**第三方教材，不进仓库**（见 DATA_NOT_INCLUDED.md）。",
+    },
 }
-DEFAULT_MATERIAL = "nlp6"
+DEFAULT_MATERIAL = "rosen-ch1"
 
 # 「整讲直灌」的字符上限：超过就退回命中页模式，并且**必须报出去**（不静默降级）
 WHOLE_LECTURE_CHAR_LIMIT = 20000
@@ -210,6 +218,12 @@ def api_ask():
     if whole is None:
         whole = os.environ.get("APP_HIT_PAGES_ONLY", "") != "1"
     whole = bool(whole)
+    # L0 知识结构是否注入（**两条件共用**，与讲法/范围同理：它不参与对照）。
+    # 做成开关是为了能用同一批题跑开/关两轮，验证"图谱能不能改进讲解"这条通路。
+    use_graph = body.get("use_graph")
+    if use_graph is None:
+        use_graph = os.environ.get("APP_NO_GRAPH", "") != "1"
+    use_graph = bool(use_graph)
 
     if not question:
         return jsonify({"error": "问题为空"}), 400
@@ -242,10 +256,29 @@ def api_ask():
     except Exception as e:
         return jsonify({"error": f"检索失败：{type(e).__name__}: {e}"}), 500
 
+    # L0 知识结构注入：只注入"本次上下文真的出现过"的节点（可核对），命中不了就不注入。
+    # 注入文本**追加在课件原文之后**——两条件拿到完全相同的一份，所以它不参与对照。
+    graph_used: list[str] = []
+    graph_note = ""
+    if use_graph:
+        scope = "L01" if (lecture or "").startswith("L01") else None
+        candidates = [s for s in (["L01"] if scope else [])]
+        # 先试该讲的图；没有对应图就跳过（不报错，因为不是每讲都建了图）
+        for sc in candidates:
+            try:
+                g = load_graph(sc)
+            except GraphError:
+                continue
+            inj, ids = build_injection(g, [c.chunk_id for c in selected], question)
+            if inj:
+                context = context + "\n\n" + wrap(inj)
+                graph_used, graph_note = ids, f"已注入 {len(ids)} 个知识结构节点"
+            break
+    ctx_chars = len(context)
+
     citations = [c.to_dict() for c in selected]
     matched_terms = sorted({t for c in selected for t in c.matched})
     retrieval_ms = int((time.time() - t0) * 1000)
-    ctx_chars = len(context)
     # whole_lecture 模式下每页都带分数，若某页得分恒为 0 会被 UI 误标成"桥接页"，
     # 所以额外告诉 UI 这次是不是整讲模式
     mode = "whole_lecture" if effective_whole else "hit_pages"
@@ -276,6 +309,8 @@ def api_ask():
             "matched_terms": matched_terms,
             "retrieval_ms": retrieval_ms,
             "ctx_chars": ctx_chars,
+            "graph_used": graph_used,
+            "graph_note": graph_note,
             "dry_run": True,
             "answers": {},
         }
@@ -374,6 +409,8 @@ def api_ask():
         "matched_terms": matched_terms,
         "retrieval_ms": retrieval_ms,
         "ctx_chars": ctx_chars,
+        "graph_used": graph_used,
+        "graph_note": graph_note,
         "elapsed_ms": int((time.time() - t0) * 1000),
         "model": cfg.model,
         "answers": answers,
