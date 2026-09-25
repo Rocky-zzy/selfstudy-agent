@@ -166,6 +166,16 @@ def main() -> int:
               "与知识结构无关的问题**不注入**目标节点")
         check(wrap("x").startswith("<<<KNOWLEDGE-STRUCTURE>>>"),
               "注入块有独立标记（便于事后核对）")
+        # 主数据集（Rosen 第 1 章）：图必须按**素材**挂上，不能按"讲号像不像 L01"推。
+        # 这条断言是防回归的：改之前按讲号推导，Rosen 的图**永远挂不上且不报错**。
+        _r = load_graph("rosen-ch1")
+        check(len(_r["nodes"]) >= 100, f"载入知识结构 rosen-ch1（{len(_r['nodes'])} 个节点）")
+        _inj3, _ids3 = build_injection(
+            _r, ["rosen-c1.7-pdf0113", "rosen-c1.7-pdf0114"], "怎么用反证法证明？")
+        check(_ids3 and _ids3[0] == "s17__proof_by_contradiction",
+              f"问「反证法」时命中 s17__proof_by_contradiction（实际 {_ids3[:2]}）")
+        check("把待证命题的否定设为假设" in _inj3, "反证法的子目标标签进入注入文本")
+        check("<<<PAGE" not in _inj3, "注入块里没有混入课件原文页标记")
     except GraphError as e:
         check(False, f"知识结构加载失败：{e}")
     up = user_prompt(ctx, q)

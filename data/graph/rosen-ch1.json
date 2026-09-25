@@ -1,0 +1,4568 @@
+{
+  "scope": "rosen-ch1",
+  "lecture_title": "Rosen《离散数学及其应用》第 1 章 基础：逻辑与证明",
+  "kb": "data/rosen/ch1/chunks.jsonl",
+  "field_rationale": {
+    "prerequisites": "决定先讲什么；缺前置要先补（先行组织者 / pre-training）",
+    "broader": "决定讲多全（讲到上位就停还是下钻）",
+    "contrast": "给骨架的「常见的坑」与对比提供明确对象（MQI 编码 13）",
+    "misconceptions": "让「常见的坑」有清单可对，而不是自由发挥",
+    "subgoals": "仅程序性节点；给标签优于自己生成（Morrison 等 2020）",
+    "sources": "每个节点可回原文核对（chunk_id 真实存在 + 子目标原文可逐字命中）"
+  },
+  "nodes": [
+    {
+      "id": "s11__proposition",
+      "title": "命题（proposition）",
+      "keywords": [
+        "命题",
+        "proposition",
+        "陈述句",
+        "declarative sentence",
+        "真值",
+        "truth value",
+        "原子命题",
+        "atomic proposition"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.1-pdf0025",
+        "rosen-c1.1-pdf0026"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [
+        "s11__compound_proposition"
+      ],
+      "misconceptions": [
+        "把疑问句或祈使句当成命题（What time is it? / Read this carefully. 只是提问或命令，没有真值）",
+        "把含未赋值变量的句子当成命题（x + 1 = 2 既不为真也不为假，只有给变量赋值之后才成为命题）",
+        "因为自己不知道真假就断定某句不是命题（命题只要求客观上非真即假，不要求我们知道答案）"
+      ],
+      "subgoals": [],
+      "section": "1.1"
+    },
+    {
+      "id": "s11__compound_proposition",
+      "title": "复合命题与逻辑联结词（compound proposition / logical connectives）",
+      "keywords": [
+        "复合命题",
+        "compound proposition",
+        "逻辑运算符",
+        "logical operator",
+        "联结词",
+        "connective",
+        "命题变元",
+        "propositional variable",
+        "优先级",
+        "precedence"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.1-pdf0025",
+        "rosen-c1.1-pdf0026",
+        "rosen-c1.1-pdf0034"
+      ],
+      "prerequisites": [
+        "s11__proposition"
+      ],
+      "broader": null,
+      "contrast": [
+        "s11__proposition"
+      ],
+      "misconceptions": [
+        "把 ¬p ∧ q 读成 ¬(p ∧ q)（否定运算符先于所有二元运算符作用）",
+        "以为合取与析取之间没有优先级，把 p ∨ q ∧ r 读成 (p ∨ q) ∧ r",
+        "以为条件运算符优先于析取，把 p → q ∨ r 读成 (p → q) ∨ r"
+      ],
+      "subgoals": [],
+      "section": "1.1"
+    },
+    {
+      "id": "s11__truth_table",
+      "title": "真值表（truth table）",
+      "keywords": [
+        "真值表",
+        "truth table",
+        "真值组合",
+        "行",
+        "列",
+        "TT",
+        "TF",
+        "FT",
+        "FF"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.1-pdf0027",
+        "rosen-c1.1-pdf0034"
+      ],
+      "prerequisites": [
+        "s11__proposition"
+      ],
+      "broader": null,
+      "contrast": [
+        "s11__bit_string"
+      ],
+      "misconceptions": [
+        "命题变元只写一行真值，漏掉另一种可能（每个变元都要取遍真与假）",
+        "把中间子表达式的列当成最终结果，不知道最后一列才是整个复合命题的真值"
+      ],
+      "subgoals": [],
+      "section": "1.1"
+    },
+    {
+      "id": "s11__negation",
+      "title": "否定（negation）",
+      "keywords": [
+        "否定",
+        "negation",
+        "not",
+        "¬",
+        "真值取反"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.1-pdf0026",
+        "rosen-c1.1-pdf0027"
+      ],
+      "prerequisites": [
+        "s11__proposition"
+      ],
+      "broader": null,
+      "contrast": [
+        "s11__converse_contrapositive_inverse"
+      ],
+      "misconceptions": [
+        "把 has at least 32 GB of memory 的否定写成 has at most 32 GB（正确否定是 has less than 32 GB）",
+        "把否定理解成换一句意思相反的话，而不是把原命题的真值取反"
+      ],
+      "subgoals": [],
+      "section": "1.1"
+    },
+    {
+      "id": "s11__conjunction",
+      "title": "合取（conjunction）",
+      "keywords": [
+        "合取",
+        "conjunction",
+        "and",
+        "but",
+        "∧"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.1-pdf0027"
+      ],
+      "prerequisites": [
+        "s11__compound_proposition"
+      ],
+      "broader": null,
+      "contrast": [
+        "s11__disjunction"
+      ],
+      "misconceptions": [
+        "认为 but 不能算合取（The sun is shining, but it is raining 就是两个命题的合取）",
+        "把合取的真值条件记反，以为有一个为真就为真"
+      ],
+      "subgoals": [],
+      "section": "1.1"
+    },
+    {
+      "id": "s11__disjunction",
+      "title": "析取（disjunction）",
+      "keywords": [
+        "析取",
+        "disjunction",
+        "or",
+        "∨",
+        "相容或",
+        "inclusive or"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.1-pdf0027",
+        "rosen-c1.1-pdf0028"
+      ],
+      "prerequisites": [
+        "s11__compound_proposition"
+      ],
+      "broader": null,
+      "contrast": [
+        "s11__exclusive_or"
+      ],
+      "misconceptions": [
+        "把析取当成二者只能取其一（析取是相容或，两个都真时仍为真）",
+        "看到 or 就直接译成析取，不判断句子本意是相容或还是排斥或"
+      ],
+      "subgoals": [],
+      "section": "1.1"
+    },
+    {
+      "id": "s11__exclusive_or",
+      "title": "异或（exclusive or）",
+      "keywords": [
+        "异或",
+        "exclusive or",
+        "排斥或",
+        "⊕",
+        "XOR"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.1-pdf0028",
+        "rosen-c1.1-pdf0029"
+      ],
+      "prerequisites": [
+        "s11__disjunction"
+      ],
+      "broader": null,
+      "contrast": [
+        "s11__disjunction"
+      ],
+      "misconceptions": [
+        "把异或当成至少一个为真（异或要求恰好一个为真，两个都真时为假）",
+        "把自然语言里的 or 一律当成异或（学过微积分或计算机导论是相容或）"
+      ],
+      "subgoals": [],
+      "section": "1.1"
+    },
+    {
+      "id": "s11__conditional_statement",
+      "title": "条件语句（conditional statement / implication）",
+      "keywords": [
+        "条件语句",
+        "conditional statement",
+        "蕴含",
+        "implication",
+        "前件",
+        "hypothesis",
+        "后件",
+        "conclusion",
+        "充分条件",
+        "必要条件",
+        "only if",
+        "unless",
+        "→"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.1-pdf0029",
+        "rosen-c1.1-pdf0030",
+        "rosen-c1.1-pdf0031"
+      ],
+      "prerequisites": [
+        "s11__compound_proposition"
+      ],
+      "broader": null,
+      "contrast": [
+        "s11__biconditional"
+      ],
+      "misconceptions": [
+        "把 p only if q 当成 q → p（only 决定方向：p only if q 与 if p, then q 同义）",
+        "前件为假时以为条件语句为假（前件为假时条件语句为真）",
+        "把 q is necessary for p 与 p is sufficient for q 的方向搞反（两种说法都等价于 if p, then q）",
+        "要求前件与后件之间有因果或语义关联，因而否认 If Juan has a smartphone, then 2 + 3 = 5 是真命题",
+        "把编程语言里的 if p then S 当成逻辑蕴含（S 是程序段而不是命题）"
+      ],
+      "subgoals": [],
+      "section": "1.1"
+    },
+    {
+      "id": "s11__converse_contrapositive_inverse",
+      "title": "逆命题、否命题与逆否命题（converse, contrapositive, inverse）",
+      "keywords": [
+        "逆命题",
+        "converse",
+        "否命题",
+        "inverse",
+        "逆否命题",
+        "contrapositive",
+        "等价",
+        "equivalent"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.1-pdf0032"
+      ],
+      "prerequisites": [
+        "s11__conditional_statement"
+      ],
+      "broader": null,
+      "contrast": [
+        "s11__conditional_statement"
+      ],
+      "misconceptions": [
+        "认为逆命题或否命题与原条件语句等价（本节指出这是最常见的逻辑错误之一，只有逆否命题总与原命题同真值）",
+        "把逆否命题写成对前件和后件直接取否（逆否命题要先交换前件与后件、再分别取否）",
+        "当前件真而后件假时，以为逆命题和否命题也是假的（此时它们都是真的）",
+        "把中文的否命题与命题的否定混为一谈"
+      ],
+      "subgoals": [],
+      "section": "1.1"
+    },
+    {
+      "id": "s11__biconditional",
+      "title": "双条件语句（biconditional）",
+      "keywords": [
+        "双条件",
+        "biconditional",
+        "bi-implication",
+        "if and only if",
+        "iff",
+        "充要条件",
+        "↔"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.1-pdf0033"
+      ],
+      "prerequisites": [
+        "s11__conditional_statement"
+      ],
+      "broader": null,
+      "contrast": [
+        "s11__conditional_statement"
+      ],
+      "misconceptions": [
+        "把自然语言里的 if..., then... 直接当成双条件（If you finish your meal, then you can have dessert 字面上只断言一个方向，另一个方向只是隐含）",
+        "把双条件当成条件语句之外的第三种东西，不知道它与两个方向的条件语句的合取真值完全相同",
+        "在两个命题都假时把双条件判为假（同真或同假时双条件都为真）"
+      ],
+      "subgoals": [],
+      "section": "1.1"
+    },
+    {
+      "id": "s11__bit_string",
+      "title": "位与位串（bit, Boolean variable, bit string）",
+      "keywords": [
+        "位",
+        "bit",
+        "布尔变量",
+        "Boolean variable",
+        "位串",
+        "bit string",
+        "长度",
+        "length",
+        "按位运算",
+        "bitwise"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.1-pdf0035",
+        "rosen-c1.1-pdf0036"
+      ],
+      "prerequisites": [
+        "s11__truth_table"
+      ],
+      "broader": null,
+      "contrast": [
+        "s11__truth_table"
+      ],
+      "misconceptions": [
+        "把位串的长度当成它表示的数值（长度是位串中位的个数）",
+        "把按位运算当成整数的算术运算",
+        "记反位与真值的对应（1 表示真、0 表示假）"
+      ],
+      "subgoals": [],
+      "section": "1.1"
+    },
+    {
+      "id": "s11__build_truth_table",
+      "title": "构造复合命题的真值表",
+      "keywords": [
+        "真值表",
+        "truth table",
+        "构造步骤",
+        "子表达式",
+        "真值组合",
+        "列"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.1-pdf0027",
+        "rosen-c1.1-pdf0034"
+      ],
+      "prerequisites": [
+        "s11__truth_table",
+        "s11__compound_proposition"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [],
+      "subgoals": [
+        {
+          "label": "数清命题变元的个数，据此列出全部真值组合（每个组合占一行）",
+          "source_line": "Because this truth table involves two propositional variables p and q, there are four rows in this truth table, one for each of the pairs of truth values TT, TF, FT, and FF.",
+          "not_in_source": null
+        },
+        {
+          "label": "按由内向外的构造顺序，为出现的每个子表达式各开一列",
+          "source_line": "the truth value of each compound expression that occurs in the compound proposition as it is built up",
+          "not_in_source": null
+        },
+        {
+          "label": "逐列填完中间结果后，在最后一列读出整个复合命题的真值",
+          "source_line": "Finally, the truth value of (p ∨¬q) →(p ∧q) is found in the last column.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.1"
+    },
+    {
+      "id": "s11__translate_natural_language",
+      "title": "把自然语言语句翻译成命题逻辑表达式",
+      "keywords": [
+        "翻译",
+        "自然语言",
+        "命题逻辑表达式",
+        "联结词",
+        "only if",
+        "necessary",
+        "sufficient",
+        "unless",
+        "or 的歧义"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.1-pdf0028",
+        "rosen-c1.1-pdf0030",
+        "rosen-c1.1-pdf0033"
+      ],
+      "prerequisites": [
+        "s11__proposition",
+        "s11__compound_proposition",
+        "s11__conditional_statement",
+        "s11__biconditional"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [],
+      "subgoals": [
+        {
+          "label": "先找出句中的每个原子命题，并分别给它们命名",
+          "source_line": "using the propositions p: “A student who has taken calculus can take this class” and q: “A student who has taken introductory computer science can take this class.”",
+          "not_in_source": null
+        },
+        {
+          "label": "先按句子本意判断 or 是相容或还是排斥或，再选定对应的联结词",
+          "source_line": "We assume that this statement means that students who have taken both calculus and introductory computer science can take the class, as well as the students who have taken only one of the two subjects.",
+          "not_in_source": "教材只通过具体例句示范这种取舍（如 Example 9 用两个选择都要花掉全部积蓄来判定为排斥或），没有给出判断 or 是相容或还是排斥或的一般规则。"
+        },
+        {
+          "label": "遇到 only if / necessary / sufficient / unless 时先定方向，再写成条件语句",
+          "source_line": "To remember that “p only if q” expresses the same thing as “if p, then q,” note that “p only if q” says that p cannot be true when q is not true.",
+          "not_in_source": null
+        },
+        {
+          "label": "判断自然语言里是否还隐含了另一个方向，决定要不要写成双条件",
+          "source_line": "Instead, biconditionals are often expressed using an “if, then” or an “only if” construction.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.1"
+    },
+    {
+      "id": "s11__form_converse_contrapositive_inverse",
+      "title": "写出条件语句的逆命题、否命题和逆否命题",
+      "keywords": [
+        "逆命题",
+        "否命题",
+        "逆否命题",
+        "交换前件后件",
+        "取否",
+        "改写为标准条件句"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.1-pdf0032"
+      ],
+      "prerequisites": [
+        "s11__conditional_statement",
+        "s11__converse_contrapositive_inverse"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [],
+      "subgoals": [
+        {
+          "label": "先把原句改写成“如果……那么……”的标准条件句式",
+          "source_line": "Because “q whenever p” is one of the ways to express the conditional statement p →q, the original statement can be rewritten as “If it is raining, then the home team wins.”",
+          "not_in_source": null
+        },
+        {
+          "label": "交换前件与后件，得到逆命题",
+          "source_line": "The proposition q →p is called the converse of p →q.",
+          "not_in_source": null
+        },
+        {
+          "label": "对前件和后件分别取否，得到否命题；先交换再分别取否，得到逆否命题",
+          "source_line": "The contrapositive of p →q is the proposition ¬q →¬p. The proposition ¬p →¬q is called the inverse of p →q.",
+          "not_in_source": null
+        },
+        {
+          "label": "需要做等价替换时只使用逆否命题，不要用逆命题或否命题替换原命题",
+          "source_line": "Take note that one of the most common logical errors is to assume that the converse or the inverse of a conditional statement is equivalent to this conditional statement.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.1"
+    },
+    {
+      "id": "s11__apply_bitwise_operations",
+      "title": "对两个位串做按位运算",
+      "keywords": [
+        "按位运算",
+        "bitwise",
+        "OR",
+        "AND",
+        "XOR",
+        "对应位",
+        "等长位串"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.1-pdf0035",
+        "rosen-c1.1-pdf0036"
+      ],
+      "prerequisites": [
+        "s11__bit_string",
+        "s11__truth_table"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [],
+      "subgoals": [
+        {
+          "label": "确认两个位串长度相同（按位运算只对等长位串定义）",
+          "source_line": "bitwise XOR of two strings of the same length to be the strings that have as their bits the OR, AND, and XOR of the corresponding bits in the two strings, respectively.",
+          "not_in_source": "教材只定义了等长位串的按位运算，没有交代两个位串长度不同时该怎么办（例如是否要先补前导零）。"
+        },
+        {
+          "label": "逐位取出两个串对应位置上的位，分别按三种位运算规则求值",
+          "source_line": "Solution: The bitwise OR, bitwise AND, and bitwise XOR of these strings are obtained by taking the OR, AND, and XOR of the corresponding bits, respectively.",
+          "not_in_source": null
+        },
+        {
+          "label": "把逐位得到的结果按原顺序拼成一个新的位串",
+          "source_line": "01 1011 0110 11 0001 1101 11 1011 1111 bitwise OR",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.1"
+    },
+    {
+      "id": "s12__logic_circuit",
+      "title": "逻辑电路（logic circuit / digital circuit）",
+      "keywords": [
+        "逻辑电路",
+        "logic circuit",
+        "digital circuit",
+        "数字电路",
+        "输入信号",
+        "输出信号",
+        "比特"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.2-pdf0045"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [
+        "s12__logic_gate"
+      ],
+      "misconceptions": [
+        "以为一个逻辑电路可以同时给出多个输出信号（本节只讨论单输出的逻辑电路，多输出是一般数字电路的情形）",
+        "把逻辑电路的输入输出当成抽象命题真假值，忘了它们实际是比特 0（断开）或 1（接通）"
+      ],
+      "subgoals": [],
+      "section": "1.2"
+    },
+    {
+      "id": "s12__logic_gate",
+      "title": "逻辑门（gate）：反相器/非门、或门、与门",
+      "keywords": [
+        "逻辑门",
+        "gate",
+        "反相器",
+        "inverter",
+        "NOT 门",
+        "OR 门",
+        "AND 门",
+        "基本电路"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.2-pdf0045"
+      ],
+      "prerequisites": [],
+      "broader": "s12__logic_circuit",
+      "contrast": [
+        "s12__logic_circuit"
+      ],
+      "misconceptions": [
+        "把或门理解成“两个输入只能有一个成立”（两个输入都为 1 时或门输出仍然是 1）",
+        "把与门和或门的输出对调（与门输出两个输入的合取，或门输出两个输入的析取）",
+        "以为反相器要用与门或或门搭出来，而它本身就是三种基本门之一"
+      ],
+      "subgoals": [],
+      "section": "1.2"
+    },
+    {
+      "id": "s12__boolean_search",
+      "title": "布尔检索（Boolean search）",
+      "keywords": [
+        "布尔检索",
+        "Boolean search",
+        "检索词",
+        "AND",
+        "OR",
+        "NOT",
+        "网页搜索"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.2-pdf0042",
+        "rosen-c1.2-pdf0043"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "把 OR 当成“必须同时包含两个检索词”（OR 匹配含其中一个或两个的记录，要求同时包含的是 AND）",
+        "忽略 AND 的优先级高于 OR，把 (NEW AND MEXICO OR ARIZONA) 误读成 NEW AND (MEXICO OR ARIZONA)",
+        "以为检索词写得越多结果就越精确（教材指出结果里仍会混入无关页面，例如关于墨西哥的新大学的页面，需要再用 NOT 排除）"
+      ],
+      "subgoals": [],
+      "section": "1.2"
+    },
+    {
+      "id": "s12__system_specification",
+      "title": "系统规格及其一致性（system specification, consistent）",
+      "keywords": [
+        "系统规格",
+        "specification",
+        "一致性",
+        "consistent",
+        "需求",
+        "规格冲突"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.2-pdf0041",
+        "rosen-c1.2-pdf0042"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "只要每条规格单独看都能成立，就断定整套规格一致（一致性要求存在一个赋值让所有规格同时为真）",
+        "认为往一致的规格集合里再加一条规格不会破坏一致性（加入“诊断消息没有被重传”后四条规格就变得不一致）"
+      ],
+      "subgoals": [],
+      "section": "1.2"
+    },
+    {
+      "id": "s12__logic_puzzle",
+      "title": "逻辑谜题（logic puzzle）",
+      "keywords": [
+        "逻辑谜题",
+        "logic puzzle",
+        "逻辑推理",
+        "谜题"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.2-pdf0043"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "靠直觉逐句试猜答案，不为每个原子断言引入命题变元，也不检验哪种赋值能让全部陈述同时成立",
+        "漏掉谜题里的数量条件（例如“只有一句是真的”），只逐句判断真假"
+      ],
+      "subgoals": [],
+      "section": "1.2"
+    },
+    {
+      "id": "s12__knights_and_knaves",
+      "title": "骑士与无赖（knights and knaves）",
+      "keywords": [
+        "骑士",
+        "knights",
+        "无赖",
+        "knaves",
+        "真话",
+        "谎话",
+        "斯穆里安"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.2-pdf0044"
+      ],
+      "prerequisites": [],
+      "broader": "s12__logic_puzzle",
+      "contrast": [],
+      "misconceptions": [
+        "把无赖的话当成“有时假有时真”（无赖说的每个陈述都为假，骑士说的每个陈述都为真）",
+        "看到“某人说了某句话”就直接把这句话当成真的，忘了先判断说话者是骑士还是无赖"
+      ],
+      "subgoals": [],
+      "section": "1.2"
+    },
+    {
+      "id": "s12__translate_english_to_logic",
+      "title": "把英语句子翻译成逻辑表达式",
+      "keywords": [
+        "翻译",
+        "英语句子",
+        "命题变元",
+        "only if",
+        "unless",
+        "逻辑连接词"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.2-pdf0040",
+        "rosen-c1.2-pdf0041"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "把 only if 引出的部分当成充分条件，把条件句译成了相反的方向",
+        "把 unless 当成又一个合取项直接接上去，而不是把它处理成前件中的否定",
+        "为了省事把整句用一个命题变元表示（这样无法分析句子内部含义，也无法据此推理）"
+      ],
+      "subgoals": [
+        {
+          "label": "为句子的每个成分各指派一个命题变元",
+          "source_line": "possible to represent the sentence by a single propositional variable, such as p, this would not be\r\nuseful when analyzing its meaning or reasoning with it. Instead, we will use propositional vari-\r\nables to represent each sentence part and determine the appropriate logical connectives between\r\nthem. In particular, we let a, c, and f represent “You can access the Internet from campus,” “You\r\nare a computer science major,” and “You are a freshman,” respectively.",
+          "not_in_source": null
+        },
+        {
+          "label": "判断条件句哪个方向是充分条件（only if 引出的是必要条件那一边）",
+          "source_line": "Noting that “only if” is\r\none way a conditional statement can be expressed, this sentence can be represented as\r\na →(c ∨¬f).",
+          "not_in_source": null
+        },
+        {
+          "label": "把 unless 处理成“若不满足例外条件”这一前提的否定",
+          "source_line": "Let q, r, and s represent “You can ride the roller coaster,” “You are under 4 feet tall,”\r\nand “You are older than 16 years old,” respectively. Then the sentence can be translated to\r\n(r ∧¬s) →¬q.",
+          "not_in_source": "教材只直接给出了 (r ∧¬s) →¬q 这一译法，并说还可以有其他译法，没有说明为什么 unless 要处理成前件里那个被否定的条件。"
+        },
+        {
+          "label": "按句子原意补上合理假设，并确认译法够用",
+          "source_line": "Note that\r\nthis may involve making a set of reasonable assumptions based on the intended meaning of\r\nthe sentence.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.2"
+    },
+    {
+      "id": "s12__check_specification_consistency",
+      "title": "判定系统规格是否一致",
+      "keywords": [
+        "一致性判定",
+        "系统规格",
+        "真值赋值",
+        "真值表",
+        "约束传播"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.2-pdf0041",
+        "rosen-c1.2-pdf0042"
+      ],
+      "prerequisites": [
+        "s12__translate_english_to_logic",
+        "s12__system_specification"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "只检查每条规格各自能不能被满足，不去找让全部规格同时为真的赋值",
+        "找到一个满足赋值后就不再检查新加的规格是否与该赋值冲突"
+      ],
+      "subgoals": [
+        {
+          "label": "先把每条自然语言规格翻译成逻辑表达式",
+          "source_line": "To determine whether these speciﬁcations are consistent, we ﬁrst express them using\r\nlogical expressions. Let p denote “The diagnostic message is stored in the buﬀer” and let q\r\ndenote “The diagnostic message is retransmitted.” The speciﬁcations can then be written as",
+          "not_in_source": null
+        },
+        {
+          "label": "逐条施加约束，找出让所有规格同时为真的赋值",
+          "source_line": "An assignment of truth values that makes all three speciﬁcations true\r\nmust have p false to make ¬p true. Because we want p ∨q to be true but p must be false, q must\r\nbe true. Because p →q is true when p is false and q is true, we conclude that these speciﬁcations\r\nare consistent, because they are all true when p is false and q is true.",
+          "not_in_source": null
+        },
+        {
+          "label": "用真值表穷举所有赋值作为备选判定手段",
+          "source_line": "We could come to the same\r\nconclusion by use of a truth table to examine the four possible assignments of truth values to p\r\nand q.",
+          "not_in_source": null
+        },
+        {
+          "label": "新增规格后重新检查整体是否仍然可同时满足",
+          "source_line": "By the reasoning in Example 4, the three speciﬁcations from that example are true\r\nonly in the case when p is false and q is true. However, this new speciﬁcation is ¬q, which is\r\nfalse when q is true. Consequently, these four speciﬁcations are inconsistent.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.2"
+    },
+    {
+      "id": "s12__construct_boolean_search",
+      "title": "构造布尔检索式",
+      "keywords": [
+        "布尔检索式",
+        "检索词组合",
+        "AND",
+        "OR",
+        "NOT",
+        "引号短语"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.2-pdf0042",
+        "rosen-c1.2-pdf0043"
+      ],
+      "prerequisites": [
+        "s12__boolean_search"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "把检索式按自然语言词序来读，忽略连接词本身的逻辑含义",
+        "该同时出现的词用了 OR 连接，结果里混入大量无关页面"
+      ],
+      "subgoals": [
+        {
+          "label": "按 AND/OR/NOT 各自的匹配含义挑选连接词",
+          "source_line": "In Boolean searches, the connective AND is used to match records that contain both of\r\ntwo search terms, the connective OR is used to match one or both of two search terms, and the\r\nconnective NOT (sometimes written as AND NOT ) is used to exclude a particular search term.",
+          "not_in_source": null
+        },
+        {
+          "label": "用 OR 放宽匹配范围（命中其中一个或两个检索词）",
+          "source_line": "Next, to ﬁnd pages that deal with universities in New Mexico or Arizona, we can search\r\nfor pages matching (NEW AND MEXICO OR ARIZONA) AND UNIVERSITIES.",
+          "not_in_source": null
+        },
+        {
+          "label": "用 NOT 排除会让结果混入无关页面的检索词",
+          "source_line": "Finally, to ﬁnd\r\nWeb pages that deal with universities in Mexico (and not New Mexico), we might ﬁrst look\r\nfor pages matching MEXICO AND UNIVERSITIES, but because the results of this search will\r\ninclude pages about universities in New Mexico, as well as universities in Mexico, it might be\r\nbetter to search for pages matching (MEXICO AND UNIVERSITIES) NOT NEW. The results\r\nof this search include pages that contain both the words MEXICO and UNIVERSITIES but\r\ndo not contain the word NEW.",
+          "not_in_source": null
+        },
+        {
+          "label": "把固定短语用引号锁成一个整体再与其他词连接",
+          "source_line": "Most search engines support the use of quotation marks\r\nto search for speciﬁc phrases. So, it may be more eﬀective to search for pages matching “NEW\r\nMEXICO” AND UNIVERSITIES.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.2"
+    },
+    {
+      "id": "s12__solve_logic_puzzle_by_translation",
+      "title": "把逻辑谜题翻译成逻辑表达式并求解",
+      "keywords": [
+        "谜题求解",
+        "恰好一个为真",
+        "命题变元",
+        "等价化简",
+        "回到原文核对"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.2-pdf0043"
+      ],
+      "prerequisites": [
+        "s12__translate_english_to_logic",
+        "s12__logic_puzzle"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "只把每句话各自译出来，漏掉“恰好一句为真”这类数量条件",
+        "化简得出结论后不回原文核对哪句陈述为真、答案是否与全部题设相容"
+      ],
+      "subgoals": [
+        {
+          "label": "为每个原子断言引入命题变元，再把每句陈述写成它们的组合",
+          "source_line": "Let pi be the proposition that the treasure is in Trunk i, for i = 1, 2, 3. To translate into\r\npropositional logic the Queen’s statement that exactly one of the inscriptions is true, we observe\r\nthat the inscriptions on Trunk 1, Trunk 2, and Trunk 3, are ¬p1, ¬p2, and p2, respectively.",
+          "not_in_source": null
+        },
+        {
+          "label": "把“恰好一个成立”这类数量条件写成各情形的析取",
+          "source_line": "So,\r\nher statement can be translated to\r\n(¬p1 ∧¬(¬p2) ∧¬p2) ∨(¬(¬p1) ∧¬p2 ∧¬p2) ∨(¬(¬p1) ∧¬(¬p2) ∧p2)).",
+          "not_in_source": "教材只演示了这一处“恰好一个为真”的翻译实例，没有给出 n 个陈述中恰好一个为真的一般写法（各情形合取式的析取）。"
+        },
+        {
+          "label": "用等价变形把条件化简，读出哪些情形被排除",
+          "source_line": "Using the rules for propositional logic, we see that this is equivalent to (p1 ∧¬p2) ∨(p1 ∧p2). By\r\nthe distributive law, (p1 ∧¬p2) ∨(p1 ∧p2) is equivalent to p1 ∧(¬p2 ∨p2). But because ¬p2 ∨\r\np2 must be true, this is then equivalent to p1 ∧T, which is in turn equivalent to p1.",
+          "not_in_source": null
+        },
+        {
+          "label": "把结论代回原文，核对哪个陈述为真",
+          "source_line": "So the treasure\r\nis in Trunk 1 (that is, p1 is true), and p2 and p3 are false; and the inscription on Trunk 2 is the\r\nonly true one.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.2"
+    },
+    {
+      "id": "s12__solve_knights_and_knaves",
+      "title": "求解骑士与无赖谜题",
+      "keywords": [
+        "骑士与无赖",
+        "分情况假设",
+        "自洽检验",
+        "矛盾排除"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.2-pdf0043",
+        "rosen-c1.2-pdf0044"
+      ],
+      "prerequisites": [
+        "s12__knights_and_knaves",
+        "s12__solve_logic_puzzle_by_translation"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "只试一种身份假设就下结论，不检验相反身份下是否也自洽",
+        "发现某个假设与发言矛盾后就直接判定发言内容为假，而不去走完另一种身份假设"
+      ],
+      "subgoals": [
+        {
+          "label": "把每个人“是诚实者”设成命题变元，其身份决定发言的真假",
+          "source_line": "Let p and q be the statements that A is a knight and B is a knight, respectively, so that\r\n¬p and ¬q are the statements that A is a knave and B is a knave, respectively.",
+          "not_in_source": null
+        },
+        {
+          "label": "先假设某人属于诚实一方，把他的发言当真推出后果",
+          "source_line": "We ﬁrst consider the possibility that A is a knight; this is the statement that p is true. If A is\r\na knight, then he is telling the truth when he says that B is a knight, so that q is true, and A and B\r\nare the same type.",
+          "not_in_source": null
+        },
+        {
+          "label": "检验推出的后果与全部发言是否相容，不相容就否定该假设",
+          "source_line": "would have to be true, which it is not, because A and\r\nB are both knights. Consequently, we can conclude that A is not a knight, that is, that p is false.",
+          "not_in_source": null
+        },
+        {
+          "label": "改设相反身份再走一遍，两种身份都自洽才下结论",
+          "source_line": "If A is a knave, then because everything a knave says is false, A’s statement that B is\r\na knight, that is, that q is true, is a lie. This means that q is false and B is also a knave.\r\nFurthermore, if B is a knave, then B’s statement that A and B are opposite types is a lie,\r\nwhich is consistent with both A and B being knaves. We can conclude that both A and B are\r\nknaves.",
+          "not_in_source": "教材按“先假设某人是骑士、再假设他是无赖”演示了一遍，没有说明为什么必须把两种身份都试过才能下结论。"
+        }
+      ],
+      "section": "1.2"
+    },
+    {
+      "id": "s12__trace_circuit_output",
+      "title": "由电路求输出：逐门追踪",
+      "keywords": [
+        "电路求值",
+        "逐门追踪",
+        "门的输出",
+        "输入比特",
+        "组合电路"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.2-pdf0045"
+      ],
+      "prerequisites": [
+        "s12__logic_circuit",
+        "s12__logic_gate"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "从输出端往回猜结果，而不是从输入侧按门的先后顺序逐个算出中间输出",
+        "把某个门的输出重复接到它并没有连接的门上，凭公式形状而不是连线来读电路"
+      ],
+      "subgoals": [
+        {
+          "label": "从输入侧出发沿连线逐个门向前追踪",
+          "source_line": "Given a circuit built from the basic logic gates and the inputs to the circuit, we determine\r\nthe output by tracing through the circuit, as Example 10 shows.",
+          "not_in_source": null
+        },
+        {
+          "label": "把每个门的输出写成由已求出的信号构成的表达式，供下游门使用",
+          "source_line": "In Figure 2 we display the output of each logic gate in the circuit. We see that the\r\nAND gate takes input of p and ¬q, the output of the inverter with input q, and produces p ∧\r\n¬q. Next, we note that the OR gate takes input p ∧¬q and ¬r, the output of the inverter with\r\ninput r, and produces the ﬁnal output (p ∧¬q) ∨¬r.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.2"
+    },
+    {
+      "id": "s12__build_circuit_from_formula",
+      "title": "由逻辑公式搭建数字电路",
+      "keywords": [
+        "电路搭建",
+        "子公式",
+        "反相器",
+        "或门",
+        "与门",
+        "自底向上"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.2-pdf0046"
+      ],
+      "prerequisites": [
+        "s12__logic_gate",
+        "s12__trace_circuit_output"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "需要变元的否定时直接把变元本身接进门，忘了先用反相器取出否定",
+        "想用一个门把整个公式一次接完，而不是按子公式逐层搭建"
+      ],
+      "subgoals": [
+        {
+          "label": "按顶层连接词把公式拆成子公式，分别搭建后再用顶层门合并",
+          "source_line": "To construct the desired circuit, we build separate circuits for p ∨¬r and for ¬p ∨(q ∨\r\n¬r) and combine them using an AND gate.",
+          "not_in_source": null
+        },
+        {
+          "label": "用反相器从输入变元取出需要的否定信号",
+          "source_line": "To construct a circuit for p ∨¬r, we use an inverter\r\nto produce ¬r from the input r.",
+          "not_in_source": null
+        },
+        {
+          "label": "由最内层子公式往外，逐层用或门、与门接出中间表达式",
+          "source_line": "for ¬p ∨(q ∨¬r), we ﬁrst use an inverter to obtain ¬r. Then we use an OR gate with inputs q\r\nand ¬r to obtain q ∨¬r. Finally, we use another inverter and an OR gate to get ¬p ∨(q ∨¬r)\r\nfrom the inputs p and q ∨¬r.",
+          "not_in_source": null
+        },
+        {
+          "label": "最后用顶层连接词对应的门把各子电路接起来",
+          "source_line": "To complete the construction, we employ a ﬁnal AND gate, with inputs p ∨¬r and ¬p ∨\r\n(q ∨¬r). The resulting circuit is displayed in Figure 3.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.2"
+    },
+    {
+      "id": "s13__tautology_and_contradiction",
+      "title": "永真式、矛盾式与偶然式",
+      "keywords": [
+        "永真式",
+        "tautology",
+        "矛盾式",
+        "contradiction",
+        "偶然式",
+        "contingency",
+        "恒真",
+        "恒假",
+        "T",
+        "F"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.3-pdf0050",
+        "rosen-c1.3-pdf0053",
+        "rosen-c1.3-pdf0056"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [
+        "s13__satisfiability"
+      ],
+      "misconceptions": [
+        "把「可满足」当成「永真式」：只要找到一组赋值使命题为真，就说它是永真式",
+        "把偶然式（有的赋值真、有的赋值假）说成永真式或矛盾式",
+        "把永真式排除在可满足之外（永真式也满足「存在一组赋值使命题为真」）",
+        "记反否定关系：矛盾式的否定是永真式，永真式的否定是矛盾式"
+      ],
+      "subgoals": [],
+      "section": "1.3"
+    },
+    {
+      "id": "s13__logical_equivalence",
+      "title": "逻辑等价（logically equivalent）",
+      "keywords": [
+        "逻辑等价",
+        "logically equivalent",
+        "≡",
+        "↔",
+        "⇔",
+        "真值列相同",
+        "tautology"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.3-pdf0050",
+        "rosen-c1.3-pdf0051",
+        "rosen-c1.3-pdf0054"
+      ],
+      "prerequisites": [
+        "s13__tautology_and_contradiction"
+      ],
+      "broader": null,
+      "contrast": [
+        "s13__biconditional_equivalences"
+      ],
+      "misconceptions": [
+        "把两式逻辑等价当成一个复合命题，拿它去和别的式子做真值运算（它其实是「对应的双条件式是永真式」这一断言）",
+        "把表示逻辑等价的符号当成 ∧、∨ 那样的逻辑联结词",
+        "把逻辑等价理解成两个式子写法相同或可以互相「代入字母」",
+        "把原文里表示逻辑等价的符号 ⇔ 与双条件联结词 ↔ 当成同一个符号"
+      ],
+      "subgoals": [],
+      "section": "1.3"
+    },
+    {
+      "id": "s13__conditional_disjunction_equivalence",
+      "title": "条件-析取等价（conditional-disjunction equivalence）",
+      "keywords": [
+        "条件-析取等价",
+        "conditional-disjunction equivalence",
+        "消除条件语句",
+        "前件否定",
+        "后件保留"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.3-pdf0051",
+        "rosen-c1.3-pdf0052",
+        "rosen-c1.3-pdf0054"
+      ],
+      "prerequisites": [
+        "s13__logical_equivalence"
+      ],
+      "broader": null,
+      "contrast": [
+        "s13__conditional_equivalences"
+      ],
+      "misconceptions": [
+        "把条件式改写成析取式时把否定加到后件上（写成「后件的否定或前件」）",
+        "把前件与后件一起否定，得到「非前件或非后件」",
+        "把条件-析取等价与它的逆否形式当成同一个式子",
+        "以为改写后仍含有条件联结词"
+      ],
+      "subgoals": [],
+      "section": "1.3"
+    },
+    {
+      "id": "s13__conditional_equivalences",
+      "title": "条件语句的等价式（Table 7）",
+      "keywords": [
+        "条件语句等价式",
+        "Table 7",
+        "逆否命题",
+        "contrapositive",
+        "逆命题",
+        "否命题",
+        "条件式的否定"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.3-pdf0052",
+        "rosen-c1.3-pdf0054"
+      ],
+      "prerequisites": [
+        "s13__conditional_disjunction_equivalence"
+      ],
+      "broader": null,
+      "contrast": [
+        "s13__de_morgan_laws"
+      ],
+      "misconceptions": [
+        "把逆命题（交换前件后件）或否命题（前件后件都取否定）当成与原条件式等价，只有逆否命题才等价",
+        "把「条件式的否定」展开成「非前件蕴含非后件」或「前件蕴含非后件」（正确结果是「前件真而后件假」）",
+        "把两个条件式的合取与「后件的合取作为结论」这一条写反，前件后件位置对调",
+        "对条件式直接套用结合律、分配律或德摩根律来「拆括号」"
+      ],
+      "subgoals": [],
+      "section": "1.3"
+    },
+    {
+      "id": "s13__biconditional_equivalences",
+      "title": "双条件语句的等价式（Table 8）",
+      "keywords": [
+        "双条件",
+        "biconditional",
+        "Table 8",
+        "同真同假",
+        "两个条件式的合取"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.3-pdf0052",
+        "rosen-c1.3-pdf0054"
+      ],
+      "prerequisites": [
+        "s13__conditional_equivalences"
+      ],
+      "broader": null,
+      "contrast": [
+        "s13__logical_equivalence"
+      ],
+      "misconceptions": [
+        "把双条件式的否定写成「两个变元否定的双条件式」（Table 8 里等价的是原双条件式与「双否定后的双条件式」，否定式对应的是「其中一个变元取否定」的形式）",
+        "把双条件式展开成两个条件式的析取，而不是合取",
+        "把双条件联结词与表示逻辑等价的符号当成同一个符号"
+      ],
+      "subgoals": [],
+      "section": "1.3"
+    },
+    {
+      "id": "s13__de_morgan_laws",
+      "title": "德摩根律（De Morgan's laws）",
+      "keywords": [
+        "德摩根律",
+        "De Morgan",
+        "否定合取",
+        "否定析取",
+        "推广到有限多项",
+        "对偶"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.3-pdf0050",
+        "rosen-c1.3-pdf0052",
+        "rosen-c1.3-pdf0053"
+      ],
+      "prerequisites": [
+        "s13__logical_equivalence"
+      ],
+      "broader": null,
+      "contrast": [
+        "s13__basic_logical_identities"
+      ],
+      "misconceptions": [
+        "取否定后忘记把联结词换成相反的：把「合取的否定」写成「各成分否定的合取」",
+        "只否定其中一个成分，例如把「析取的否定」写成「一个成分否定后仍用析取联结」",
+        "把两条律的方向用反：否定合取应该得到各成分否定的析取",
+        "把德摩根律用在条件式或双条件式上，当作可以直接「把否定推进去」"
+      ],
+      "subgoals": [],
+      "section": "1.3"
+    },
+    {
+      "id": "s13__basic_logical_identities",
+      "title": "基本逻辑等价律（Table 6）",
+      "keywords": [
+        "等价律",
+        "Table 6",
+        "同一律",
+        "支配律",
+        "幂等律",
+        "双重否定律",
+        "交换律",
+        "结合律",
+        "分配律",
+        "吸收律",
+        "否定律"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.3-pdf0052",
+        "rosen-c1.3-pdf0053"
+      ],
+      "prerequisites": [
+        "s13__logical_equivalence"
+      ],
+      "broader": null,
+      "contrast": [
+        "s13__conditional_equivalences"
+      ],
+      "misconceptions": [
+        "把结合律、分配律或德摩根律用在合取与析取混合出现的表达式上（这些律只在所有运算符都相同时才适用）",
+        "把两个分配律的方向写错：析取分配到合取、合取分配到析取得到的展开式不同",
+        "把同一律与支配律记混（与恒真常元合取保持原式，与恒真常元析取得到恒真常元）",
+        "以为多个同种联结词串起来时结合顺序会改变真值，因而不承认可以不写括号"
+      ],
+      "subgoals": [],
+      "section": "1.3"
+    },
+    {
+      "id": "s13__satisfiability",
+      "title": "可满足性与不可满足性（satisfiability）",
+      "keywords": [
+        "可满足",
+        "satisfiable",
+        "不可满足",
+        "unsatisfiable",
+        "可满足性问题的解",
+        "solution",
+        "真值赋值",
+        "SAT"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.3-pdf0056",
+        "rosen-c1.3-pdf0060"
+      ],
+      "prerequisites": [
+        "s13__tautology_and_contradiction"
+      ],
+      "broader": null,
+      "contrast": [
+        "s13__tautology_and_contradiction"
+      ],
+      "misconceptions": [
+        "找到一组使其为真的赋值后，就宣称它是永真式（可满足不等于永真）",
+        "为证明不可满足只验证了几组赋值都为假，没有覆盖全部赋值",
+        "把「原式不可满足」与「原式的否定不可满足」混淆（原式不可满足等价于其否定是永真式）",
+        "认为永真式不算可满足"
+      ],
+      "subgoals": [],
+      "section": "1.3"
+    },
+    {
+      "id": "s13__dual",
+      "title": "对偶式（dual）",
+      "keywords": [
+        "对偶",
+        "dual",
+        "交换合取与析取",
+        "交换恒真与恒假常元",
+        "对偶式记号"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.3-pdf0062"
+      ],
+      "prerequisites": [
+        "s13__basic_logical_identities"
+      ],
+      "broader": null,
+      "contrast": [
+        "s13__de_morgan_laws"
+      ],
+      "misconceptions": [
+        "把对偶式当成否定式：求对偶只交换合取与析取、交换两个常元，不加否定号",
+        "对含条件联结词或双条件联结词的式子也照搬交换合取与析取（定义只覆盖只含析取、合取、否定的命题）",
+        "以为求两次对偶得到的是否定式，而不是原式"
+      ],
+      "subgoals": [],
+      "section": "1.3"
+    },
+    {
+      "id": "s13__functionally_complete",
+      "title": "功能完备的联结词集合（functionally complete）",
+      "keywords": [
+        "功能完备",
+        "functionally complete",
+        "NAND",
+        "NOR",
+        "谢弗竖",
+        "Peirce arrow",
+        "析取范式"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.3-pdf0062",
+        "rosen-c1.3-pdf0063"
+      ],
+      "prerequisites": [
+        "s13__logical_equivalence"
+      ],
+      "broader": null,
+      "contrast": [
+        "s13__logical_equivalence"
+      ],
+      "misconceptions": [
+        "以为功能完备要求两个复合命题写法完全相同，而不是逻辑等价即可",
+        "以为只有「否定、合取、析取」这一组是完备的，忽略只用否定加合取、只用否定加析取、只用 NOR、只用 NAND 也完备",
+        "把 NAND 与 NOR 记反（NAND 只在两个成分都为真时为假，NOR 只在两个成分都为假时为真）",
+        "以为 NAND 可以结合，把两种不同加括号方式得到的式子当成等价"
+      ],
+      "subgoals": [],
+      "section": "1.3"
+    },
+    {
+      "id": "s13__equivalence_by_truth_table",
+      "title": "用真值表判定两个复合命题是否逻辑等价",
+      "keywords": [
+        "真值表",
+        "truth table",
+        "逐行比较",
+        "取值组合数",
+        "等价判定"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.3-pdf0050",
+        "rosen-c1.3-pdf0051",
+        "rosen-c1.3-pdf0053"
+      ],
+      "prerequisites": [
+        "s13__logical_equivalence",
+        "s13__tautology_and_contradiction"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "只比较了部分行就下结论，没有覆盖全部取值组合",
+        "把两个待比较的式子算在同一列里，导致无法逐列对照",
+        "变元个数为 n 时行数算少（应为 2 的 n 次方行）",
+        "把两式真值列恰好相同的若干行当成「处处一致」"
+      ],
+      "subgoals": [
+        {
+          "label": "把「两式是否逻辑等价」改判为「对应的双条件式是否永真」",
+          "source_line": "The compound propositions p and q are called logically equivalent if p ↔q is a tautology.",
+          "not_in_source": null
+        },
+        {
+          "label": "并排算出两式的真值列，逐行比较两列是否处处一致",
+          "source_line": "One way to determine whether two compound propositions are equivalent is to use a truth table. In particular, the compound propositions p and q are equivalent if and only if the columns giving their truth values agree.",
+          "not_in_source": null
+        },
+        {
+          "label": "按固定顺序枚举所有真值组合，避免漏行或重复行",
+          "source_line": "These eight combinations of truth values are TTT, TTF, TFT, TFF, FTT, FTF, FFT, and FFF; we use this order when we display the rows of the truth table.",
+          "not_in_source": null
+        },
+        {
+          "label": "按变元个数确定表的规模（每多一个变元，取值组合数翻倍）",
+          "source_line": "In general, 2n rows are required if a compound proposition involves n propositional variables.",
+          "not_in_source": null
+        },
+        {
+          "label": "变元太多使真值表不可行时，改用已知的等价律来推导",
+          "source_line": "Because of the rapid growth of 2n, more eﬃcient ways are needed to establish logical equivalences, such as by using ones we already know.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.3"
+    },
+    {
+      "id": "s13__negation_by_de_morgan",
+      "title": "用德摩根律求复合命题（含自然语言陈述）的否定",
+      "keywords": [
+        "求否定",
+        "德摩根律应用",
+        "自然语言符号化",
+        "改联结词",
+        "推广形式"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.3-pdf0050",
+        "rosen-c1.3-pdf0052",
+        "rosen-c1.3-pdf0053"
+      ],
+      "prerequisites": [
+        "s13__de_morgan_laws"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "取否定后没有把联结词换成相反的，直接把否定号「分配」进去",
+        "自然语言陈述没有先符号化就凭语感改写，导致析取/合取判断错",
+        "否定的结果仍然带着原来的联结词，或只否定了其中一个成分",
+        "把适用于两个成分的律直接推广时漏掉某些项的否定"
+      ],
+      "subgoals": [
+        {
+          "label": "先看否定作用在合取还是析取上，据此决定否定后改用哪种联结词",
+          "source_line": "In particular, the equivalence ¬(p ∨q) ≡¬p ∧¬q tells us that the negation of a disjunction is formed by taking the conjunction of the negations of the component propositions.",
+          "not_in_source": null
+        },
+        {
+          "label": "把否定分别加到每个成分上，并把联结词换成相反的",
+          "source_line": "Similarly, the equivalence ¬(p ∧q) ≡¬p ∨¬q tells us that the negation of a conjunction is formed by taking the disjunction of the negations of the component propositions.",
+          "not_in_source": null
+        },
+        {
+          "label": "取完否定务必改变联结词，否则写出的是不等价的式子",
+          "source_line": "When using De Morgan’s laws, remember to change the logical connective after you negate.",
+          "not_in_source": null
+        },
+        {
+          "label": "自然语言陈述先符号化再套律，最后把结果译回自然语言",
+          "source_line": "Let r be “Heather will go to the concert” and s be “Steve will go to the concert.” Then “Heather will go to the concert or Steve will go to the concert” can be represented by r ∨s. By the second of De Morgan’s laws, ¬(r ∨s) is equivalent to ¬r ∧¬s.",
+          "not_in_source": null
+        },
+        {
+          "label": "把两条律推广到任意有限多项的合取或析取",
+          "source_line": "Furthermore, note that De Morgan’s laws extend to ¬(p1 ∨p2 ∨⋯∨pn) ≡(¬p1 ∧¬p2 ∧⋯∧¬pn)",
+          "not_in_source": "教材只给出推广形式并说明证明方法放在 5.1 节，本节没有说明该推广为什么不依赖项数的具体取值。"
+        }
+      ],
+      "section": "1.3"
+    },
+    {
+      "id": "s13__derive_equivalence_chain",
+      "title": "用已知等价律把待证式逐步化归，构造新的逻辑等价",
+      "keywords": [
+        "链式等价推导",
+        "逐步化简",
+        "每步注明依据",
+        "化归为恒真常元",
+        "等价的传递性"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.3-pdf0054",
+        "rosen-c1.3-pdf0055"
+      ],
+      "prerequisites": [
+        "s13__logical_equivalence",
+        "s13__basic_logical_identities"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "一步里同时用好几条等价式改写多处，出错后无法定位",
+        "把待证结论当作已知条件使用（用结论去替换式子）",
+        "改写时只变换了一边而另一边保持原样，最后两侧不同却宣布等价",
+        "证永真式时化归到某个偶然式就停下，没有化成恒真常元"
+      ],
+      "subgoals": [
+        {
+          "label": "利用「子式可替换为等价式而不改变整体真值」这一原理",
+          "source_line": "The reason for this is that a proposition in a compound proposition can be replaced by a compound proposition that is logically equivalent to it without changing the truth value of the original compound proposition.",
+          "not_in_source": null
+        },
+        {
+          "label": "每一步只套用一条已知等价式，并注明这一步的依据",
+          "source_line": "So, we will establish this equivalence by developing a series of logical equivalences, using one of the equivalences in Table 6 at a time, starting with ¬(p →q) and ending with p ∧¬q.",
+          "not_in_source": null
+        },
+        {
+          "label": "要证某式为永真式时，用等价变形把它化归为恒真的常元",
+          "source_line": "To show that this statement is a tautology, we will use logical equivalences to demon-strate that it is logically equivalent to T.",
+          "not_in_source": null
+        },
+        {
+          "label": "借助等价的传递性把多步变形串成一条链",
+          "source_line": "This technique is illustrated in Examples 6–8, where we also use the fact that if p and q are logically equivalent and q and r are logically equivalent, then p and r are logically equivalent (see Exercise 60).",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.3"
+    },
+    {
+      "id": "s13__decide_satisfiability",
+      "title": "判定一个复合命题是否可满足（不依赖真值表的推理与工具方法）",
+      "keywords": [
+        "可满足性判定",
+        "寻找赋值",
+        "证明不可满足",
+        "条件矛盾",
+        "求解程序"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.3-pdf0056",
+        "rosen-c1.3-pdf0060"
+      ],
+      "prerequisites": [
+        "s13__satisfiability"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "用几组赋值试不出真就宣布不可满足",
+        "把「否定式恒真」当作「原式恒真」",
+        "只对合取式中的一部分子句做了推理，漏掉其余子句的约束",
+        "变元稍多仍坚持手算真值表，忽略指数级增长"
+      ],
+      "subgoals": [
+        {
+          "label": "按定义区分「存在一组赋值使其为真」与「对所有赋值都为假」",
+          "source_line": "A compound proposition is satisﬁable if there is an assignment of truth values to its variables that makes it true (that is, when it is a tautology or a contingency). When no such assignments exists, that is, when the compound proposition is false for all assignments of truth values to its variables, the compound proposition is unsatisﬁable.",
+          "not_in_source": null
+        },
+        {
+          "label": "通过判断否定式是否恒真来间接判定可满足性",
+          "source_line": "Note that a compound proposition is unsatisﬁable if and only if its negation is true for all assignments of truth values to the variables, that is, if and only if its negation is a tautology.",
+          "not_in_source": null
+        },
+        {
+          "label": "证明可满足只需给出一组使其为真的赋值，并把它作为该问题的解",
+          "source_line": "When we ﬁnd a particular assignment of truth values that makes a compound proposition true, we have shown that it is satisﬁable; such an assignment is called a solution of this particular satisﬁability problem.",
+          "not_in_source": null
+        },
+        {
+          "label": "证明不可满足必须覆盖所有赋值，不能只举几组为假的例子",
+          "source_line": "However, to show that a compound proposition is unsatisﬁable, we need to show that every assignment of truth values to its variables makes it false.",
+          "not_in_source": null
+        },
+        {
+          "label": "把整体为真的要求拆成各部分同时为真，再看这些条件能否同时成立",
+          "source_line": "Finally, note that for (p ∨¬q) ∧(q ∨¬r) ∧(r ∨¬p) ∧(p ∨q ∨r) ∧(¬p ∨¬q ∨¬r) to be true, (p ∨¬q) ∧(q ∨¬r) ∧(r ∨¬p) and (p ∨q ∨r) ∧(¬p ∨¬q ∨¬r) must both be true.",
+          "not_in_source": null
+        },
+        {
+          "label": "变元很多时放弃真值表，改用计算机求解程序",
+          "source_line": "A truth table can be used to determine whether a compound proposition is satisﬁable, or equivalently, whether its negation is a tautology (see Exercise 64). This can be done by hand for a compound proposition with a small number of variables, but when the number of variables grows, this becomes impractical.",
+          "not_in_source": "教材只说明已有实用的可满足性求解程序、并指出相关算法在第 3 章讨论，本节没有给出可以照做的求解步骤。"
+        }
+      ],
+      "section": "1.3"
+    },
+    {
+      "id": "s13__model_as_satisfiability",
+      "title": "把约束型实际问题编码成可满足性问题并求解",
+      "keywords": [
+        "建模",
+        "编码",
+        "命题变元设计",
+        "至少一个",
+        "至多一个",
+        "断言合取",
+        "n 皇后",
+        "数独"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.3-pdf0056",
+        "rosen-c1.3-pdf0057",
+        "rosen-c1.3-pdf0058",
+        "rosen-c1.3-pdf0059",
+        "rosen-c1.3-pdf0060"
+      ],
+      "prerequisites": [
+        "s13__satisfiability"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "变元含义设计含糊，导致同一个变元被用来表示两件事",
+        "只写了「至少一个」类断言，漏掉「至多一个」类断言，得到的解不满足题目约束",
+        "把「至多一个」写成「所有候选都为假」，把该出现的那个也排除了",
+        "取合取时漏掉某条约束，或把几条断言用析取连起来",
+        "按块遍历时把下标设错，导致某些格子被漏掉或被重复断言"
+      ],
+      "subgoals": [
+        {
+          "label": "为「某个对象取某个值」这类断言各设一个命题变元",
+          "source_line": "To model the n-queens problem as a satisﬁability problem, we introduce n2 variables, p(i, j) for i = 1, 2, … , n and j = 1, 2, … , n.",
+          "not_in_source": null
+        },
+        {
+          "label": "先把题目已给定的取值编码成断言",
+          "source_line": "Given a particular Sudoku puzzle, we begin by encoding each of the given values.",
+          "not_in_source": null
+        },
+        {
+          "label": "把每条约束拆成「至少一个」与「至多一个」两类断言",
+          "source_line": "We can show that there is one queen in each row by verifying that every row contains at least one queen and that every row contains at most one queen.",
+          "not_in_source": null
+        },
+        {
+          "label": "「至多一个」用「不能同时为真」的析取式表达",
+          "source_line": "Observe that ¬p(i, j) ∨¬p(i, k) asserts that at least one of ¬p(i, j) and ¬p(i, k) is true, which means that at least one of p(i, j) and p(i, k) is false.",
+          "not_in_source": null
+        },
+        {
+          "label": "把所有断言取合取得到总公式，解就是使它为真的那组赋值",
+          "source_line": "Putting all this together, we ﬁnd that the solutions of the n-queens problem are given by the assignments of truth values to the variables p(i, j), i = 1, 2, … , n and j = 1, 2, … , n that make Q = Q1 ∧Q2 ∧Q3 ∧Q4 ∧Q5 true.",
+          "not_in_source": null
+        },
+        {
+          "label": "对每条约束先写「某个位置含有某个值」，再对所有取值、所有位置逐层加合取或析取",
+          "source_line": "We now explain how to construct the assertion that every row contains every number. First, to assert that row i contains the number n, we form ⋁9 j=1 p(i, j, n). To assert that row i contains all n numbers, we form the conjunction of these disjunctions over all nine possible values of n, giving us ⋀9 n=1 ⋁9 j=1 p(i, j, n).",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.3"
+    },
+    {
+      "id": "s14__propositional_function",
+      "title": "命题函数与谓词（propositional function / predicate）",
+      "keywords": [
+        "命题函数",
+        "propositional function",
+        "谓词",
+        "predicate",
+        "主语",
+        "subject",
+        "变量赋值",
+        "n 元谓词",
+        "n-place predicate"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.4-pdf0064",
+        "rosen-c1.4-pdf0065"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [
+        "s14__domain_of_discourse"
+      ],
+      "misconceptions": [
+        "把带自由变量的命题函数当成命题，说它有确定的真值",
+        "把“x is greater than 3”的主语 x 当成谓词（谓词是“is greater than 3”）",
+        "把谓词本身当成完整命题，忘了它必须配上主语/变量赋值才有真值",
+        "只给多变量谓词中的一部分变量赋值，就认为已经得到命题",
+        "把 n 元谓词的实参顺序写错，认为 P(a, b) 与 P(b, a) 是一回事"
+      ],
+      "subgoals": [],
+      "section": "1.4"
+    },
+    {
+      "id": "s14__universal_quantifier",
+      "title": "全称量化（universal quantification，∀）",
+      "keywords": [
+        "全称量词",
+        "universal quantifier",
+        "for all",
+        "全称量化",
+        "∀"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.4-pdf0067"
+      ],
+      "prerequisites": [
+        "s14__propositional_function",
+        "s14__domain_of_discourse"
+      ],
+      "broader": null,
+      "contrast": [
+        "s14__existential_quantifier"
+      ],
+      "misconceptions": [
+        "写 ∀xP(x) 却不交代论域，以为全称量化的真假与论域无关",
+        "把“for any x”当成无歧义的“for all”（教材明说 any 常歧义）",
+        "以为 ∀ 可以像分配律一样分配到析取上，写出 ∀x(P(x) ∨Q(x)) ≡∀xP(x) ∨∀xQ(x)"
+      ],
+      "subgoals": [],
+      "section": "1.4"
+    },
+    {
+      "id": "s14__existential_quantifier",
+      "title": "存在量化（existential quantification，∃）",
+      "keywords": [
+        "存在量词",
+        "existential quantifier",
+        "there exists",
+        "存在量化",
+        "∃",
+        "for some",
+        "at least one"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.4-pdf0068",
+        "rosen-c1.4-pdf0069"
+      ],
+      "prerequisites": [
+        "s14__propositional_function",
+        "s14__domain_of_discourse"
+      ],
+      "broader": null,
+      "contrast": [
+        "s14__universal_quantifier"
+      ],
+      "misconceptions": [
+        "不交代论域就使用 ∃xP(x)，把它当成有确定真值的命题",
+        "把“Some student in this class has visited Mexico”写成 ∃x(S(x) →M(x))，而不是用 ∧ 连接"
+      ],
+      "subgoals": [],
+      "section": "1.4"
+    },
+    {
+      "id": "s14__uniqueness_quantifier",
+      "title": "唯一性量词（uniqueness quantifier，∃!）",
+      "keywords": [
+        "唯一性量词",
+        "uniqueness quantifier",
+        "∃!",
+        "there is exactly one",
+        "恰好一个"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.4-pdf0069"
+      ],
+      "prerequisites": [
+        "s14__existential_quantifier",
+        "s14__universal_quantifier"
+      ],
+      "broader": null,
+      "contrast": [
+        "s14__existential_quantifier"
+      ],
+      "misconceptions": [
+        "把 ∃!xP(x) 当成 ∃xP(x) 的弱化形式（其实它是更强的断言）",
+        "以为 ∃!xP(x) 也保证 ∀xP(x) 成立",
+        "以为必须用 ∃! 才能表达唯一性（教材说用 ∃ 和 ∀ 就能表达，而且更便于用推理规则）"
+      ],
+      "subgoals": [],
+      "section": "1.4"
+    },
+    {
+      "id": "s14__counterexample",
+      "title": "量词化命题的真值判据与反例（counterexample）",
+      "keywords": [
+        "反例",
+        "counterexample",
+        "真值判据",
+        "When True",
+        "When False",
+        "for every x",
+        "for some x"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.4-pdf0067",
+        "rosen-c1.4-pdf0068"
+      ],
+      "prerequisites": [
+        "s14__universal_quantifier",
+        "s14__existential_quantifier"
+      ],
+      "broader": null,
+      "contrast": [
+        "s14__universal_quantifier"
+      ],
+      "misconceptions": [
+        "为了说明 ∃xP(x) 为真去找反例（反例只能驳 ∀）",
+        "举出多个反例才敢断定 ∀xP(x) 为假（其实一个就够）",
+        "用反例去反驳存在量化命题 ∃xP(x)",
+        "举的反例不在当前论域内，例如论域是整数却拿分数去反驳 ∀x(x2 ≥x)"
+      ],
+      "subgoals": [],
+      "section": "1.4"
+    },
+    {
+      "id": "s14__domain_of_discourse",
+      "title": "论域（domain of discourse）",
+      "keywords": [
+        "论域",
+        "domain of discourse",
+        "universe of discourse",
+        "domain",
+        "论域必须交代",
+        "非空"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.4-pdf0067",
+        "rosen-c1.4-pdf0069"
+      ],
+      "prerequisites": [
+        "s14__propositional_function"
+      ],
+      "broader": null,
+      "contrast": [
+        "s14__counterexample"
+      ],
+      "misconceptions": [
+        "换了论域却以为量词化命题的真值不变",
+        "以为论域可以是空的（教材默认论域非空），并据此乱套空论域下的真值"
+      ],
+      "subgoals": [],
+      "section": "1.4"
+    },
+    {
+      "id": "s14__finite_domain_expansion",
+      "title": "有限论域下量词的合取/析取展开",
+      "keywords": [
+        "有限论域",
+        "finite domain",
+        "合取",
+        "析取",
+        "展开",
+        "conjunction",
+        "disjunction"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.4-pdf0070"
+      ],
+      "prerequisites": [
+        "s14__universal_quantifier",
+        "s14__existential_quantifier"
+      ],
+      "broader": null,
+      "contrast": [
+        "s14__compute_truth_value_by_looping"
+      ],
+      "misconceptions": [
+        "对无穷论域也照搬这种展开写法",
+        "把 ∃ 展开成合取、把 ∀ 展开成析取（两者恰好相反）",
+        "以为展开时少列一个元素不影响真值"
+      ],
+      "subgoals": [],
+      "section": "1.4"
+    },
+    {
+      "id": "s14__bounded_and_free_variables",
+      "title": "约束变量、自由变量与量词辖域",
+      "keywords": [
+        "约束变量",
+        "bound variable",
+        "自由变量",
+        "free variable",
+        "辖域",
+        "scope"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.4-pdf0071",
+        "rosen-c1.4-pdf0072"
+      ],
+      "prerequisites": [
+        "s14__universal_quantifier",
+        "s14__existential_quantifier"
+      ],
+      "broader": null,
+      "contrast": [
+        "s14__propositional_function"
+      ],
+      "misconceptions": [
+        "把含自由变量的式子当成命题，认为它已经有真值",
+        "看不清辖域，把 ∃x(P(x) ∧Q(x)) ∨∀xR(x) 中两个量词的作用范围弄混",
+        "以为辖域不重叠时也必须给两个量词换用不同字母（教材说可以重名）"
+      ],
+      "subgoals": [],
+      "section": "1.4"
+    },
+    {
+      "id": "s14__logical_equivalence_involving_quantifiers",
+      "title": "含量词的逻辑等价",
+      "keywords": [
+        "逻辑等价",
+        "logically equivalent",
+        "S ≡T",
+        "谓词代入",
+        "论域无关"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.4-pdf0072"
+      ],
+      "prerequisites": [
+        "s14__universal_quantifier",
+        "s14__existential_quantifier"
+      ],
+      "broader": null,
+      "contrast": [
+        "s14__de_morgan_laws_for_quantifiers"
+      ],
+      "misconceptions": [
+        "只在某一个具体论域下验证真值相同，就宣称两个量化命题逻辑等价",
+        "把 ∀ 分配到析取、把 ∃ 分配到合取，当成普遍成立的等价式"
+      ],
+      "subgoals": [],
+      "section": "1.4"
+    },
+    {
+      "id": "s14__de_morgan_laws_for_quantifiers",
+      "title": "量词的德摩根律（量词否定的等价式）",
+      "keywords": [
+        "德摩根律",
+        "De Morgan's laws for quantifiers",
+        "量词否定",
+        "¬∀",
+        "¬∃"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.4-pdf0073",
+        "rosen-c1.4-pdf0074"
+      ],
+      "prerequisites": [
+        "s14__universal_quantifier",
+        "s14__existential_quantifier",
+        "s14__logical_equivalence_involving_quantifiers"
+      ],
+      "broader": null,
+      "contrast": [
+        "s14__logical_equivalence_involving_quantifiers"
+      ],
+      "misconceptions": [
+        "否定时只把 ¬ 写进括号里而不换量词，写出 ¬∀xP(x) ≡∀x¬P(x)",
+        "把 ¬∀xP(x) ≡∃x¬P(x) 记成 ¬∀xP(x) ≡∃xP(x)",
+        "把 ¬∃xP(x) ≡∀x¬P(x) 与 ¬∀xP(x) ≡∃x¬P(x) 两条律互相记反"
+      ],
+      "subgoals": [],
+      "section": "1.4"
+    },
+    {
+      "id": "s14__compute_truth_value_by_looping",
+      "title": "用循环/搜索判定量词化命题的真值",
+      "keywords": [
+        "真值判定步骤",
+        "循环",
+        "搜索",
+        "looping",
+        "searching",
+        "枚举论域"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.4-pdf0070"
+      ],
+      "prerequisites": [
+        "s14__universal_quantifier",
+        "s14__existential_quantifier",
+        "s14__counterexample"
+      ],
+      "broader": null,
+      "contrast": [
+        "s14__finite_domain_expansion"
+      ],
+      "misconceptions": [
+        "对无穷论域也声称已经用这种枚举法判定了真值",
+        "判断全称命题时只抽查几个元素为真就宣布它为真"
+      ],
+      "subgoals": [
+        {
+          "label": "把论域中的 n 个对象逐个代入，检查该性质是否在每一个对象上都成立",
+          "source_line": "Suppose that there are n objects in the domain for the variable x. To determine whether ∀xP(x) is true, we can loop through all n values of x to see whether P(x) is always true. If we encounter",
+          "not_in_source": null
+        },
+        {
+          "label": "一旦遇到使性质为假的对象，立即判该全称命题为假",
+          "source_line": "is true, we can loop through all n values of x to see whether P(x) is always true. If we encounter a value x for which P(x) is false, then we have shown that ∀xP(x) is false. Otherwise, ∀xP(x)",
+          "not_in_source": null
+        },
+        {
+          "label": "若始终没有遇到反例，则判该全称命题为真",
+          "source_line": "a value x for which P(x) is false, then we have shown that ∀xP(x) is false. Otherwise, ∀xP(x) is true. To see whether ∃xP(x) is true, we loop through the n values of x searching for a value",
+          "not_in_source": null
+        },
+        {
+          "label": "对存在命题改为搜索，找到一个使性质成立的对象即可判真",
+          "source_line": "is true. To see whether ∃xP(x) is true, we loop through the n values of x searching for a value for which P(x) is true. If we ﬁnd one, then ∃xP(x) is true. If we never ﬁnd such an x, then we",
+          "not_in_source": null
+        },
+        {
+          "label": "搜索完整个论域仍未找到，才判该存在命题为假",
+          "source_line": "for which P(x) is true. If we ﬁnd one, then ∃xP(x) is true. If we never ﬁnd such an x, then we have determined that ∃xP(x) is false. (Note that this searching procedure does not apply if there",
+          "not_in_source": null
+        },
+        {
+          "label": "确认论域是否有限：无限论域不能真的枚举，只能把这种方法当思考方式",
+          "source_line": "have determined that ∃xP(x) is false. (Note that this searching procedure does not apply if there are inﬁnitely many values in the domain. However, it is still a useful way of thinking about the truth values of quantiﬁcations.)",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.4"
+    },
+    {
+      "id": "s14__evaluate_quantifier_over_listed_domain",
+      "title": "把量词化命题改写成合取/析取后求值",
+      "keywords": [
+        "有限论域求值",
+        "合取式",
+        "析取式",
+        "逐项代入",
+        "有一项为假"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.4-pdf0070"
+      ],
+      "prerequisites": [
+        "s14__finite_domain_expansion",
+        "s14__propositional_function"
+      ],
+      "broader": null,
+      "contrast": [
+        "s14__compute_truth_value_by_looping"
+      ],
+      "misconceptions": [
+        "论域是 {1, 2, 3, 4} 却漏写或多写某一项",
+        "代入时把幂写错（例如把 42 当成四十二而不是 4 的平方）",
+        "以为要所有项都算成真才算全称命题真，忘了只要有一项为假整个合取即为假"
+      ],
+      "subgoals": [
+        {
+          "label": "确认论域有限且元素能一一列出，据元素个数定出要展开的项数",
+          "source_line": "When the domain of a quantiﬁer is ﬁnite, that is, when all its elements can be listed, quantiﬁed statements can be expressed using propositional logic. In particular, when the elements of the domain are x1, x2, …, xn, where n is a positive integer, the universal quantiﬁcation ∀xP(x) is the same as the conjunction P(x1) ∧P(x2) ∧⋯∧P(xn), because this conjunction is true if and only if P(x1), P(x2), … , P(xn) are all true.",
+          "not_in_source": null
+        },
+        {
+          "label": "把全称量化改写成对论域每个元素的合取式",
+          "source_line": "domain are x1, x2, …, xn, where n is a positive integer, the universal quantiﬁcation ∀xP(x) is the same as the conjunction",
+          "not_in_source": null
+        },
+        {
+          "label": "把存在量化改写成对论域每个元素的析取式",
+          "source_line": "Similarly, when the elements of the domain are x1, x2, … , xn, where n is a positive integer, the existential quantiﬁcation ∃xP(x) is the same as the disjunction P(x1) ∨P(x2) ∨⋯∨P(xn), because this disjunction is true if and only if at least one of P(x1), P(x2), … , P(xn) is true.",
+          "not_in_source": null
+        },
+        {
+          "label": "逐项代入求值：合取式里只要有一项为假，全称命题就是假",
+          "source_line": "because the domain consists of the integers 1, 2, 3, and 4. Because P(4), which is the statement “42 < 10,” is false, it follows that ∀xP(x) is false. ◂",
+          "not_in_source": null
+        },
+        {
+          "label": "析取式里只要有一项为真，存在命题就是真",
+          "source_line": "Solution: Because the domain is {1, 2, 3, 4}, the proposition ∃xP(x) is the same as the disjunction P(1) ∨P(2) ∨P(3) ∨P(4). Because P(4), which is the statement “42 > 10,” is true, it follows that ∃xP(x) is true.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.4"
+    },
+    {
+      "id": "s14__negate_quantified_statement",
+      "title": "否定量词化命题（把否定推进量词内部）",
+      "keywords": [
+        "求否定",
+        "量词否定步骤",
+        "换量词",
+        "否定谓词",
+        "改写等价式"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.4-pdf0073",
+        "rosen-c1.4-pdf0074"
+      ],
+      "prerequisites": [
+        "s14__de_morgan_laws_for_quantifiers",
+        "s14__logical_equivalence_involving_quantifiers"
+      ],
+      "broader": null,
+      "contrast": [
+        "s14__translate_english_to_quantified_expression"
+      ],
+      "misconceptions": [
+        "只把 ¬ 搬进括号、不把 ∀ 换成 ∃（或反过来）",
+        "否定后仍用“All ... are not ...”这类有歧义的英文表述，而不是改成“存在一个…不…”"
+      ],
+      "subgoals": [
+        {
+          "label": "按量词否定律把 ¬ 推过量词：全称换成存在、存在换成全称",
+          "source_line": "This example illustrates the following logical equivalence: ¬∀xP(x) ≡∃x ¬P(x).",
+          "not_in_source": null
+        },
+        {
+          "label": "量词换过之后，把否定加到原谓词上",
+          "source_line": "∀x ¬Q(x). This example illustrates the equivalence ¬∃xQ(x) ≡∀x ¬Q(x).",
+          "not_in_source": null
+        },
+        {
+          "label": "把 ¬(P(x) →Q(x)) 这类内层式子按命题逻辑等价式化简成合取形式",
+          "source_line": "Solution: By De Morgan’s law for universal quantiﬁers, we know that ¬∀x(P(x) →Q(x)) and ∃x(¬(P(x) →Q(x))) are logically equivalent. By the ﬁfth logical equivalence in Table 7 in Sec- tion 1.3, we know that ¬(P(x) →Q(x)) and P(x) ∧¬Q(x) are logically equivalent for every x.",
+          "not_in_source": null
+        },
+        {
+          "label": "消去谓词前的否定符号，改写成相反的谓词或关系（如把 x2 > x 写成 x2 ≤x）",
+          "source_line": "Solution: The negation of ∀x(x2 > x) is the statement ¬∀x(x2 > x), which is equivalent to ∃x¬(x2 > x). This can be rewritten as ∃x(x2 ≤x). The negation of ∃x(x2 = 2) is the statement ¬∃x(x2 = 2), which is equivalent to ∀x¬(x2 = 2). This can be rewritten as ∀x(x2 ≠2). The truth",
+          "not_in_source": null
+        },
+        {
+          "label": "改用不含歧义的英文把否定说出来，不写“All ... are not ...”",
+          "source_line": "is ¬∃xH(x), which is equivalent to ∀x¬H(x). This negation can be expressed as “Every politician is dishonest.” (Note: In English, the statement “All politicians are not honest” is ambiguous. In common usage, this statement often means “Not all politicians are honest.” Consequently, we do not use this statement to express this negation.)",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.4"
+    },
+    {
+      "id": "s14__translate_english_to_quantified_expression",
+      "title": "把英文语句翻译成带量词的逻辑表达式",
+      "keywords": [
+        "翻译",
+        "translation",
+        "改写句子",
+        "引入谓词",
+        "选择论域",
+        "连接词选择"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.4-pdf0075",
+        "rosen-c1.4-pdf0076"
+      ],
+      "prerequisites": [
+        "s14__universal_quantifier",
+        "s14__existential_quantifier",
+        "s14__domain_of_discourse",
+        "s14__propositional_function"
+      ],
+      "broader": null,
+      "contrast": [
+        "s14__negate_quantified_statement"
+      ],
+      "misconceptions": [
+        "论域取全体人时，把“所有学生都学过微积分”写成 ∀x(S(x) ∧C(x))",
+        "论域取全体人时，把“有的学生去过墨西哥”写成 ∃x(S(x) →M(x))",
+        "不先改写句子就直接硬套量词，结果连该用全称还是存在都没确定"
+      ],
+      "subgoals": [
+        {
+          "label": "先把原句改写成能看清量词的说法，再确定该用全称还是存在",
+          "source_line": "Solution: First, we rewrite the statement so that we can clearly identify the appropriate quanti- ﬁers to use. Doing so, we obtain:",
+          "not_in_source": null
+        },
+        {
+          "label": "引入变量，把句子改写成“对每个 x……”这种带变量的形式",
+          "source_line": "“For every student x in this class, x has studied calculus.”",
+          "not_in_source": null
+        },
+        {
+          "label": "为每个性质引入一个谓词符号，并写明它表示什么",
+          "source_line": "Continuing, we introduce C(x), which is the statement “x has studied calculus.” Consequently,",
+          "not_in_source": null
+        },
+        {
+          "label": "选定论域；若把论域放大到全体对象，全称句要改用条件式表达",
+          "source_line": "If we change the domain to consist of all people, we will need to express our statement as “For every person x, if person x is a student in this class, then x has studied calculus.” If S(x) represents the statement that person x is in this class, we see that our statement can",
+          "not_in_source": null
+        },
+        {
+          "label": "存在句在放大论域后要用合取把限定条件与性质连起来",
+          "source_line": "In this case, the domain for the variable x consists of all people. We introduce S(x) to represent “x is a student in this class.” Our solution becomes ∃x(S(x) ∧M(x)) because the statement is that there is a person x who is a student in this class and who has visited Mexico. [Caution! Our",
+          "not_in_source": null
+        },
+        {
+          "label": "翻译完回头检查连接词：全称句误用 ∧、存在句误用 → 都会把原意改掉",
+          "source_line": "be expressed as ∀x(S(x) →C(x)). [Caution! Our statement cannot be expressed as ∀x(S(x) ∧ C(x)) because this statement says that all people are students in this class and have studied calculus!]",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.4"
+    },
+    {
+      "id": "s14__prolog_facts_rules_queries",
+      "title": "用 Prolog 事实、规则与查询做逻辑编程",
+      "keywords": [
+        "Prolog",
+        "逻辑编程",
+        "事实",
+        "规则",
+        "查询",
+        "查询求值"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.4-pdf0078",
+        "rosen-c1.4-pdf0079"
+      ],
+      "prerequisites": [
+        "s14__propositional_function",
+        "s14__existential_quantifier",
+        "s14__universal_quantifier"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "把 Prolog 里的逗号当成分隔符，忘了它表示谓词的合取",
+        "把大写开头的名字当成常量（Prolog 把大写开头视为变量）",
+        "以为事实本身表达了“存在”，却把规则体部里暗含的存在量化当成全称条件"
+      ],
+      "subgoals": [
+        {
+          "label": "先把已知对象间的关系写成事实，用事实定义基本谓词",
+          "source_line": "rules. Prolog facts deﬁne predicates by specifying the elements that satisfy these predicates.",
+          "not_in_source": null
+        },
+        {
+          "label": "用已有事实定义新谓词时写出规则：头部是待定义谓词，体部把已定义的条件并列列出",
+          "source_line": "rules. Prolog facts deﬁne predicates by specifying the elements that satisfy these predicates. Prolog rules are used to deﬁne new predicates using those already deﬁned by Prolog facts.",
+          "not_in_source": null
+        },
+        {
+          "label": "对具体对象提问时，用查询检查该事实是否已被给出，直接得到是/否",
+          "source_line": "Prolog answers queries using the facts and rules it is given. For example, using the facts and rules listed, the query ?enrolled(kevin,math273) produces the response yes",
+          "not_in_source": null
+        },
+        {
+          "label": "查询里带变量提问时，把该变量在所有匹配事实中的取值全部列出来",
+          "source_line": "To produce this response, Prolog determines all possible values of X for which enrolled(X, math273) has been included as a Prolog fact. Similarly, to ﬁnd all the professors",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.4"
+    },
+    {
+      "id": "s15__nested_quantifiers",
+      "title": "嵌套量词（nested quantifiers）",
+      "keywords": [
+        "嵌套量词",
+        "nested quantifiers",
+        "辖域",
+        "多变量量化",
+        "量词叠用"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.5-pdf0084",
+        "rosen-c1.5-pdf0085"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [
+        "s15__order_of_quantifiers"
+      ],
+      "misconceptions": [
+        "把嵌套量词命题当成分开的几个单量词命题，忽略内层量词还依赖外层变量",
+        "读 ∀x∃y(x + y = 0) 时，把内层 ∃y 当成与外层 x 无关的独立命题"
+      ],
+      "subgoals": [],
+      "section": "1.5"
+    },
+    {
+      "id": "s15__order_of_quantifiers",
+      "title": "量词顺序（order of quantifiers）",
+      "keywords": [
+        "量词顺序",
+        "order of quantifiers",
+        "逻辑等价",
+        "依赖关系",
+        "常量"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.5-pdf0085",
+        "rosen-c1.5-pdf0086"
+      ],
+      "prerequisites": [
+        "s15__nested_quantifiers"
+      ],
+      "broader": "s15__nested_quantifiers",
+      "contrast": [
+        "s15__same_type_quantifier_order"
+      ],
+      "misconceptions": [
+        "因为两个命题只差量词的书写顺序，就断定 ∃y∀xP(x, y) 与 ∀x∃yP(x, y) 逻辑等价",
+        "由一种顺序的命题为真推出另一种顺序的命题为真，把单向蕴含当成双向等价",
+        "把外层存在量词选出的对象当成可以随内层变量的取值变化"
+      ],
+      "subgoals": [],
+      "section": "1.5"
+    },
+    {
+      "id": "s15__same_type_quantifier_order",
+      "title": "同类量词的顺序可交换",
+      "keywords": [
+        "量词交换",
+        "all universal",
+        "all existential",
+        "同序等价"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.5-pdf0085",
+        "rosen-c1.5-pdf0086"
+      ],
+      "prerequisites": [
+        "s15__order_of_quantifiers"
+      ],
+      "broader": "s15__order_of_quantifiers",
+      "contrast": [
+        "s15__order_of_quantifiers"
+      ],
+      "misconceptions": [
+        "把“全为全称或全为存在时可以交换顺序”推广到全称与存在混用的情形",
+        "把仅含同类量词的式子交换顺序后，又当作新命题重新判断真假"
+      ],
+      "subgoals": [],
+      "section": "1.5"
+    },
+    {
+      "id": "s15__two_variable_quantification_truth_conditions",
+      "title": "二元量化命题的真值条件（Table 1）",
+      "keywords": [
+        "真值条件",
+        "When True",
+        "When False",
+        "二元量化",
+        "量词组合"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.5-pdf0086"
+      ],
+      "prerequisites": [
+        "s15__nested_quantifiers"
+      ],
+      "broader": "s15__nested_quantifiers",
+      "contrast": [
+        "s15__order_of_quantifiers"
+      ],
+      "misconceptions": [
+        "把外层全称、内层存在的命题为假说成“存在一对取值使谓词为假”（正确条件是存在一个外层取值，使内层对每个取值都为假）",
+        "把两种异类量词顺序的真假条件互换",
+        "判断外层与内层都是存在的命题为假时，只找到一个反例就下结论"
+      ],
+      "subgoals": [],
+      "section": "1.5"
+    },
+    {
+      "id": "s15__prenex_normal_form",
+      "title": "前束范式（prenex normal form, PNF）",
+      "keywords": [
+        "前束范式",
+        "prenex normal form",
+        "PNF",
+        "量词前置",
+        "Q1x1Q2x2"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.5-pdf0095"
+      ],
+      "prerequisites": [
+        "s15__nested_quantifiers",
+        "s15__negate_nested_quantifiers"
+      ],
+      "broader": null,
+      "contrast": [
+        "s15__negate_nested_quantifiers"
+      ],
+      "misconceptions": [
+        "把 ∃xP(x) ∨∀xQ(x) 当成前束范式（量词没有全部出现在最前面）",
+        "以为只有一部分语句能化成前束范式（教材说每个这样的语句都能）"
+      ],
+      "subgoals": [],
+      "section": "1.5"
+    },
+    {
+      "id": "s15__evaluate_nested_quantification_truth",
+      "title": "用嵌套循环判定嵌套量化命题的真值",
+      "keywords": [
+        "真值判定",
+        "嵌套循环",
+        "nested loops",
+        "逐层扫描",
+        "判定流程"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.5-pdf0084",
+        "rosen-c1.5-pdf0085"
+      ],
+      "prerequisites": [
+        "s15__nested_quantifiers"
+      ],
+      "broader": null,
+      "contrast": [
+        "s15__two_variable_quantification_truth_conditions"
+      ],
+      "misconceptions": [
+        "对无限论域也声称已经用循环法遍历完了所有取值",
+        "判断外层全称的命题为真时，只检查了一部分外层取值就下结论",
+        "以为外层存在的命题也要把全部取值都检查完才能判定为真"
+      ],
+      "subgoals": [
+        {
+          "label": "把多变量量化想成嵌套循环：外层每取一个值，内层就把全部取值走一遍",
+          "source_line": "In working with quantiﬁcations of more\nthan one variable, it is sometimes helpful to think in terms of nested loops. (If there are inﬁnitely\nmany elements in the domain of some variable, we cannot actually loop through all values.\nNevertheless, this way of thinking is helpful in understanding nested quantiﬁers.)",
+          "not_in_source": "教材只说这种想法“有帮助”并提醒无限论域无法真的遍历，没有交代循环视角为什么与量词的真值条件一致。"
+        },
+        {
+          "label": "外层与内层都是全称：任取一对取值一旦使谓词为假，整个命题即为假",
+          "source_line": "For example, to see whether ∀x∀yP(x, y) is true, we loop through the values for x, and for each x we loop through the values for y.",
+          "not_in_source": null
+        },
+        {
+          "label": "外层全称、内层存在：每个外层取值都要找到一个内层取值使命题为真，某一个外层取值找不到即为假",
+          "source_line": "Similarly, to determine whether ∀x∃yP(x, y) is true, we loop through the values for x. For\neach x we loop through the values for y until we ﬁnd a y for which P(x, y) is true. If for every x we\nhit such a y, then ∀x∃yP(x, y) is true; if for some x we never hit such a y, then ∀x∃yP(x, y) is false.",
+          "not_in_source": null
+        },
+        {
+          "label": "外层存在、内层全称：找到一个外层取值使内层全部为真即为真，从未找到即为假",
+          "source_line": "To see whether ∃x∀yP(x, y) is true, we loop through the values for x until we ﬁnd an x for\nwhich P(x, y) is always true when we loop through all values for y. Once we ﬁnd such an x, we\nknow that ∃x∀yP(x, y) is true. If we never hit such an x, then we know that ∃x∀yP(x, y) is false.",
+          "not_in_source": null
+        },
+        {
+          "label": "外层与内层都是存在：找到一对使谓词为真的取值即为真，一对都找不到才为假",
+          "source_line": "Finally, to see whether ∃x∃yP(x, y) is true, we loop through the values for x, where for each\nx we loop through the values for y until we hit an x for which we hit a y for which P(x, y) is true.\nThe statement ∃x∃yP(x, y) is false only if we never hit an x for which we hit a y such that P(x, y)\nis true.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.5"
+    },
+    {
+      "id": "s15__read_nested_quantification_in_english",
+      "title": "把嵌套量化表达式逐层读成自然语言",
+      "keywords": [
+        "翻译成英文",
+        "逐层展开",
+        "unravel",
+        "自然语言表述",
+        "读题"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.5-pdf0084",
+        "rosen-c1.5-pdf0088"
+      ],
+      "prerequisites": [
+        "s15__nested_quantifiers"
+      ],
+      "broader": null,
+      "contrast": [
+        "s15__translate_english_sentence_to_nested_quantifiers"
+      ],
+      "misconceptions": [
+        "跳过“先写出量词和谓词的含义”，直接凭印象猜整句意思",
+        "只把量词翻成“对每个/存在”，不翻译谓词，得到读不通的句子",
+        "把主联结词是析取的式子读成合取，得出比原句更强的意思"
+      ],
+      "subgoals": [
+        {
+          "label": "把量词辖域内的整块式子当作一个命题函数，先分层再逐层读",
+          "source_line": "Note that everything within the scope of a quantiﬁer can be thought of as a propositional func-\ntion. For example,\n∀x∃y(x + y = 0)\nis the same thing as ∀xQ(x), where Q(x) is ∃yP(x, y), where P(x, y) is x + y = 0.",
+          "not_in_source": null
+        },
+        {
+          "label": "逐个弄清式中每个量词和谓词各自的含义，再合成整句",
+          "source_line": "To understand statements involving nested quantiﬁers, we need to unravel what the quantiﬁers\nand predicates that appear mean. This is illustrated in Examples 1 and 2.",
+          "not_in_source": null
+        },
+        {
+          "label": "先把量词与谓词的含义写全，再把它压缩成一句更简洁的自然语言",
+          "source_line": "Expressions with nested quantiﬁers expressing statements in English can be quite complicated.\nThe ﬁrst step in translating such an expression is to write out what the quantiﬁers and predicates\nin the expression mean. The next step is to express this meaning in a simpler sentence. This\nprocess is illustrated in Examples 9 and 10.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.5"
+    },
+    {
+      "id": "s15__compare_quantifier_order",
+      "title": "比较不同量词顺序的命题（等价性与蕴含方向）",
+      "keywords": [
+        "量词顺序比较",
+        "等价性",
+        "蕴含方向",
+        "固定对象还是依赖取值",
+        "判定流程"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.5-pdf0085",
+        "rosen-c1.5-pdf0086"
+      ],
+      "prerequisites": [
+        "s15__nested_quantifiers",
+        "s15__order_of_quantifiers"
+      ],
+      "broader": null,
+      "contrast": [
+        "s15__same_type_quantifier_order"
+      ],
+      "misconceptions": [
+        "只比较谓词是否相同就断定两个量词顺序不同的命题等价",
+        "以外层存在量词开头的命题为真时，以为内层对象可以随外层取值变化",
+        "把“同类量词可交换”当成“任何量词都可交换”来用"
+      ],
+      "subgoals": [
+        {
+          "label": "先看量词种类是否一致：全称与存在混用时，顺序不能随意调换",
+          "source_line": "Many mathematical statements involve multiple quantiﬁcations of propositional functions in-\nvolving more than one variable. It is important to note that the order of the quantiﬁers is impor-\ntant, unless all the quantiﬁers are universal quantiﬁers or all are existential quantiﬁers.\nThese remarks are illustrated by Examples 3–5.",
+          "not_in_source": null
+        },
+        {
+          "label": "同类量词（全为全称或全为存在）可以直接交换顺序而不改变意义",
+          "source_line": "This illustrates the principle that the order of nested universal quantiﬁers in a statement without\nother quantiﬁers can be changed without changing the meaning of the quantiﬁed statement.",
+          "not_in_source": null
+        },
+        {
+          "label": "确认两种顺序的命题是否逻辑等价：异类量词互换顺序后不等价",
+          "source_line": "Example 4 illustrates that the order in which quantiﬁers appear makes a diﬀerence. The\nstatements ∃y∀xP(x, y) and ∀x∃yP(x, y) are not logically equivalent.",
+          "not_in_source": null
+        },
+        {
+          "label": "外层存在、内层全称：要求存在一个与外层取值无关的固定对象，使谓词对每个取值都成立",
+          "source_line": "The statement ∃y∀xP(x, y)\nis true if and only if there is a y that makes P(x, y) true for every x. So, for this statement to\nbe true, there must be a particular value of y for which P(x, y) is true regardless of the choice\nof x.",
+          "not_in_source": null
+        },
+        {
+          "label": "外层全称、内层存在：内层对象允许随外层取值变化（可以依赖外层取值）",
+          "source_line": "On the other hand, ∀x∃yP(x, y) is true if and only if for every value of x there is a value\nof y for which P(x, y) is true. So, for this statement to be true, no matter which x you choose,\nthere must be a value of y (possibly depending on the x you choose) for which P(x, y) is true.\nIn other words, in the second case, y can depend on x, whereas in the ﬁrst case, y is a constant\nindependent of x.",
+          "not_in_source": null
+        },
+        {
+          "label": "定出蕴含方向：前者为真可推出后者为真，反之不成立",
+          "source_line": "From these observations, it follows that if ∃y∀xP(x, y) is true, then ∀x∃yP(x, y) must also\nbe true. However, if ∀x∃yP(x, y) is true, it is not necessary for ∃y∀xP(x, y) to be true. (See\nSupplementary Exercises 30 and 31.)",
+          "not_in_source": "教材只写“从这些观察可得”并把证明指向 Supplementary Exercises 30 和 31，本节没有给出该单向蕴含的证明。"
+        }
+      ],
+      "section": "1.5"
+    },
+    {
+      "id": "s15__translate_math_statement_to_nested_quantifiers",
+      "title": "把数学命题翻译成嵌套量化表达式",
+      "keywords": [
+        "数学命题翻译",
+        "隐含量词",
+        "论域选择",
+        "条件式",
+        "定义翻译"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.5-pdf0087",
+        "rosen-c1.5-pdf0088"
+      ],
+      "prerequisites": [
+        "s15__nested_quantifiers"
+      ],
+      "broader": null,
+      "contrast": [
+        "s15__translate_english_sentence_to_nested_quantifiers"
+      ],
+      "misconceptions": [
+        "论域已经取正整数，还在表达式里重复加上大于零的条件",
+        "论域取全体整数时漏掉“都是正数”这类条件，使命题比原句更宽",
+        "把“当…时”“只要…就…”这层条件漏掉，不写成蕴含"
+      ],
+      "subgoals": [
+        {
+          "label": "先把隐含的量词和论域显式写出来，再引入变量",
+          "source_line": "To translate this statement into a logical expression, we ﬁrst rewrite it so that the\nimplied quantiﬁers and a domain are shown: “For every two integers, if these integers are both\npositive, then the sum of these integers is positive.” Next, we introduce the variables x and y to\nobtain “For all positive integers x and y, x + y is positive.",
+          "not_in_source": "教材只示范“先把隐含的量词和论域写出来”，没有说明为什么必须先做这一步。"
+        },
+        {
+          "label": "也可以用缩小论域代替在表达式里加条件，使式子更简洁",
+          "source_line": "Note that we could also translate\nthis using the positive integers as the domain. Then the statement “The sum of two positive\nintegers is always positive” becomes “For every two positive integers, the sum of these integers\nis positive.” We can express this as\n∀x∀y(x + y > 0),\nwhere the domain for both variables consists of all positive integers.",
+          "not_in_source": null
+        },
+        {
+          "label": "把“除某个值以外”的限制改写成条件式，放在蕴含的前件",
+          "source_line": "We ﬁrst rewrite this as “For every real number x except zero, x has a multiplicative\ninverse.” We can rewrite this as “For every real number x, if x ≠0, then there exists a real\nnumber y such that xy = 1.” This can be rewritten as\n∀x((x ≠0) →∃y(xy = 1)).",
+          "not_in_source": null
+        },
+        {
+          "label": "按“对每个…存在…”的先后把定义逐层写成量词串，把“只要…就…”写成蕴含",
+          "source_line": "Recall that the deﬁnition of the statement\nlim\nx→a f(x) = L\nis: For every real number 𝜖> 0 there exists a real number 𝛿> 0 such that |f(x) −L| < 𝜖\nwhenever 0 < |x −a| < 𝛿. This deﬁnition of a limit can be phrased in terms of quantiﬁers by\n∀𝜖∃𝛿∀x(0 < |x −a| < 𝛿→|f(x) −L| < 𝜖),\nwhere the domain for the variables 𝛿and 𝜖consists of all positive real numbers and for x consists\nof all real numbers.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.5"
+    },
+    {
+      "id": "s15__translate_english_sentence_to_nested_quantifiers",
+      "title": "把英文语句翻译成嵌套量化表达式",
+      "keywords": [
+        "英文翻译",
+        "量词左移",
+        "关系谓词",
+        "全称加蕴含",
+        "多层对象"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.5-pdf0089",
+        "rosen-c1.5-pdf0090"
+      ],
+      "prerequisites": [
+        "s15__nested_quantifiers"
+      ],
+      "broader": null,
+      "contrast": [
+        "s15__read_nested_quantification_in_english"
+      ],
+      "misconceptions": [
+        "把“如果某对象满足条件，则存在另一对象…”写成合取而不是蕴含",
+        "用一个笼统的关系谓词代替分层谓词，掩盖各层变量之间的关系",
+        "把可以左移的量词留在原处，导致辖域与题意不一致"
+      ],
+      "subgoals": [
+        {
+          "label": "把“如果某对象满足条件，则存在另一对象与之有关系”写成全称量词加蕴含",
+          "source_line": "The statement “If a person is female and is a parent, then this person is someone’s\nmother” can be expressed as “For every person x, if person x is female and person x is a parent,\nthen there exists a person y such that person x is the mother of person y.” We introduce the\npropositional functions F(x) to represent “x is female,” P(x) to represent “x is a parent,” and\nM(x, y) to represent “x is the mother of y.” The original statement can be represented as\n∀x((F(x) ∧P(x)) →∃yM(x, y)).",
+          "not_in_source": null
+        },
+        {
+          "label": "把不依赖某变量的量词左移到合适位置，得到辖域正确的等价式",
+          "source_line": "Using the null quantiﬁcation rule in part (b) of Exercise 49 in Section 1.4, we can move ∃y to\nthe left so that it appears just after ∀x, because y does not appear in F(x) ∧P(x). We obtain the\nlogically equivalent expression\n∀x∃y((F(x) ∧P(x)) →M(x, y)).",
+          "not_in_source": null
+        },
+        {
+          "label": "为每一层对象分别引入关系谓词，避免一个笼统谓词掩盖变量之间的关系",
+          "source_line": "The statement could also be expressed as\n∃w∀a∃fR(w, f, a),\nwhere R(w, f, a) is “w has taken f on a.” Although this is more compact, it somewhat\nobscures the relationships among the variables. Consequently, the ﬁrst solution is usually\npreferable.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.5"
+    },
+    {
+      "id": "s15__express_exactly_one_quantification",
+      "title": "用嵌套量词表达“恰好一个”",
+      "keywords": [
+        "恰好一个",
+        "exactly one",
+        "唯一性",
+        "存在且其余都不是",
+        "唯一性量词"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.5-pdf0089"
+      ],
+      "prerequisites": [
+        "s15__nested_quantifiers",
+        "s15__translate_english_sentence_to_nested_quantifiers"
+      ],
+      "broader": null,
+      "contrast": [
+        "s15__translate_english_sentence_to_nested_quantifiers"
+      ],
+      "misconceptions": [
+        "把“恰好一个”只写成存在量词，丢掉“其余对象都不满足”这一支，退化成“至少一个”",
+        "把唯一性约束写成“还存在另一个对象满足关系”，方向写反"
+      ],
+      "subgoals": [
+        {
+          "label": "先把句子改写成“对每个对象，该对象恰好有一个…”的形式，再引入全称量词",
+          "source_line": "The statement “Everyone has exactly one best friend” can be expressed as “For every\nperson x, person x has exactly one best friend.” Introducing the universal quantiﬁer, we see\nthat this statement is the same as “∀x(person x has exactly one best friend),” where the domain\nconsists of all people.",
+          "not_in_source": null
+        },
+        {
+          "label": "把“恰好一个”拆成“存在一个满足关系的对象”与“其余任何对象都不满足”，并用合取连接、用内层全称量词写成条件式",
+          "source_line": "To say that x has exactly one best friend means that there is a person y who is the best friend\nof x, and furthermore, that for every person z, if person z is not person y, then z is not the best\nfriend of x. When we introduce the predicate B(x, y) to be the statement “y is the best friend of\nx,” the statement that x has exactly one best friend can be represented as\n∃y(B(x, y) ∧∀z((z ≠y) →¬B(x, z))).",
+          "not_in_source": null
+        },
+        {
+          "label": "也可以改用唯一性量词把整个表达式简写",
+          "source_line": "[Note that we can write this statement as ∀x∃!yB(x, y), where ∃! is the “uniqueness quantiﬁer”\ndeﬁned in Section 1.4.]",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.5"
+    },
+    {
+      "id": "s15__negate_nested_quantifiers",
+      "title": "否定嵌套量词命题（把否定推进到谓词前）",
+      "keywords": [
+        "否定",
+        "量词德摩根律",
+        "逐层内移",
+        "否定只留在谓词前",
+        "De Morgan"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.5-pdf0090",
+        "rosen-c1.5-pdf0091"
+      ],
+      "prerequisites": [
+        "s15__nested_quantifiers"
+      ],
+      "broader": null,
+      "contrast": [
+        "s15__prenex_normal_form"
+      ],
+      "misconceptions": [
+        "只把最外层量词取反就停下，没有把否定一路推到谓词前",
+        "把否定整句的嵌套量化写成量词不变、只给谓词加否定",
+        "否定落到蕴含上时对前件和后件分别取反，而不是用蕴含的否定等价式"
+      ],
+      "subgoals": [
+        {
+          "label": "先把整句识别成某个已知命题的否定，写出最外层的否定号",
+          "source_line": "This statement is the negation of the statement “There is a woman who has taken\na ﬂight on every airline in the world” from Example 13. By Example 13, our statement can\nbe expressed as ¬∃w∀a∃f(P(w, f) ∧Q( f, a)), where P(w, f) is “w has taken f” and Q( f, a) is\n“f is a ﬂight on a.",
+          "not_in_source": null
+        },
+        {
+          "label": "从最外层量词开始，逐次应用量词德摩根律把否定推到所有量词的内侧",
+          "source_line": "By successively applying De Morgan’s laws for quantiﬁers in Table 2 of\nSection 1.4, we can move the negation in ¬∀x∃y(xy = 1) inside all the quantiﬁers.",
+          "not_in_source": null
+        },
+        {
+          "label": "否定落到合取（或析取）上时，改用联结词的德摩根律处理最后一步",
+          "source_line": "By successively applying De Morgan’s laws for quantiﬁers in Table 2 of\nSection 1.4 to move the negation inside successive quantiﬁers and by applying De Morgan’s\nlaw for negating a conjunction in the last step, we ﬁnd that our statement is equivalent to each\nof this sequence of statements:",
+          "not_in_source": null
+        },
+        {
+          "label": "否定落到蕴含上时，改用蕴含的否定等价式把它拆成合取",
+          "source_line": "In the last step we used the equivalence ¬(p →q) ≡p ∧¬q, which follows from the ﬁfth\nequivalence in Table 7 of Section 1.3.",
+          "not_in_source": null
+        },
+        {
+          "label": "把谓词里的否定化简成更自然的写法",
+          "source_line": "Because\n¬(xy = 1) can be expressed more simply as xy ≠1, we conclude that our negated statement can\nbe expressed as ∃x∀y(xy ≠1).",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.5"
+    },
+    {
+      "id": "s16__valid_argument_form",
+      "title": "有效论证与论证形式（valid argument / argument form）",
+      "keywords": [
+        "论证",
+        "argument",
+        "前提",
+        "premise",
+        "结论",
+        "conclusion",
+        "有效",
+        "valid",
+        "论证形式",
+        "argument form",
+        "重言式",
+        "tautology"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.6-pdf0096",
+        "rosen-c1.6-pdf0097"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [
+        "s16__argument_construction"
+      ],
+      "misconceptions": [
+        "把“前提全真则结论必真”的形式有效性，说成“结论事实上为真”——前提为假时论证照样有效，但结论不能保证为真",
+        "只检验某一次代入后结论的真假，而不检验“所有代入下前提真是否都逼出结论真”",
+        "把论证形式有效误认为是在断言前提本身为真"
+      ],
+      "subgoals": [],
+      "section": "1.6"
+    },
+    {
+      "id": "s16__rules_of_inference",
+      "title": "推理规则（rules of inference）",
+      "keywords": [
+        "推理规则",
+        "rules of inference",
+        "有效论证形式",
+        "模板",
+        "building blocks"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.6-pdf0096",
+        "rosen-c1.6-pdf0098"
+      ],
+      "prerequisites": [
+        "s16__valid_argument_form"
+      ],
+      "broader": null,
+      "contrast": [
+        "s16__fallacies"
+      ],
+      "misconceptions": [
+        "把“规则”当成待证明的结论而不是可反复套用的模板，每遇到一个论证都从真值表重新算一遍",
+        "把与真值表判定并列的推理规则当成“更弱的近似方法”，以为规则推出的结论只是可能真"
+      ],
+      "subgoals": [],
+      "section": "1.6"
+    },
+    {
+      "id": "s16__tautology_validity_check",
+      "title": "用真值表判定论证形式有效（truth table method）",
+      "keywords": [
+        "真值表",
+        "truth table",
+        "重言式",
+        "tautology",
+        "有效性判定",
+        "前件合取后件"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.6-pdf0097",
+        "rosen-c1.6-pdf0098",
+        "rosen-c1.6-pdf0099"
+      ],
+      "prerequisites": [
+        "s16__valid_argument_form"
+      ],
+      "broader": null,
+      "contrast": [
+        "s16__fallacies",
+        "s16__rule_identification"
+      ],
+      "misconceptions": [
+        "以为只要找出“使结论为真”的一行就证明了有效",
+        "变量稍多就硬列真值表，忽略 2^n 行的代价与用推理规则替代的必要性"
+      ],
+      "subgoals": [
+        {
+          "label": "按重言式判据写出待检验的蕴含式",
+          "source_line": "Remark: From the deﬁnition of a valid argument form we see that the argument form with premises p1, p2, … , pn and conclusion q is valid exactly when (p1 ∧p2 ∧⋯∧pn) →q is a tautology.",
+          "sources": [
+            "rosen-c1.6-pdf0097"
+          ],
+          "not_in_source": null
+        },
+        {
+          "label": "穷举赋值，找前提全真而结论为假的行",
+          "source_line": "We can always use a truth table to show that an argument form is valid. We do this by showing that whenever the premises are true, the conclusion must also be true. However, this can be a tedious approach.",
+          "sources": [
+            "rosen-c1.6-pdf0098"
+          ],
+          "not_in_source": null
+        },
+        {
+          "label": "从已证重言式读出规则，替代逐行穷举",
+          "source_line": "The tautology (p ∧(p →q)) →q is the basis of the rule of inference called modus ponens, or the law of detachment.",
+          "sources": [
+            "rosen-c1.6-pdf0098"
+          ],
+          "not_in_source": null
+        }
+      ],
+      "section": "1.6"
+    },
+    {
+      "id": "s16__modus_ponens",
+      "title": "假言推理 / 肯定前件（modus ponens）",
+      "keywords": [
+        "modus ponens",
+        "假言推理",
+        "肯定前件",
+        "law of detachment",
+        "肯定式"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.6-pdf0098",
+        "rosen-c1.6-pdf0099"
+      ],
+      "prerequisites": [
+        "s16__valid_argument_form"
+      ],
+      "broader": "s16__rules_of_inference",
+      "contrast": [
+        "s16__fallacies"
+      ],
+      "misconceptions": [
+        "把肯定后件当成肯定前件使用：已知 p →q 与 q 就断言 p",
+        "条件句方向被读反，由 p →q 与 p 去推出前件不成立"
+      ],
+      "subgoals": [],
+      "section": "1.6"
+    },
+    {
+      "id": "s16__disjunctive_syllogism",
+      "title": "析取三段论（disjunctive syllogism）",
+      "keywords": [
+        "析取三段论",
+        "disjunctive syllogism",
+        "排除法",
+        "二选一"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.6-pdf0099",
+        "rosen-c1.6-pdf0100"
+      ],
+      "prerequisites": [
+        "s16__valid_argument_form"
+      ],
+      "broader": "s16__rules_of_inference",
+      "contrast": [
+        "s16__resolution_proof"
+      ],
+      "misconceptions": [
+        "在二选一里误用否定去消去“结论的那一支”而不是被否定的那一支",
+        "忽略析取是相容的，未排除两支同真的情形就下断言"
+      ],
+      "subgoals": [],
+      "section": "1.6"
+    },
+    {
+      "id": "s16__rule_identification",
+      "title": "判定一个论证用了哪条推理规则",
+      "keywords": [
+        "识别规则",
+        "argument form",
+        "命题变量",
+        "形式匹配",
+        "Table 1"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.6-pdf0098",
+        "rosen-c1.6-pdf0099",
+        "rosen-c1.6-pdf0100"
+      ],
+      "prerequisites": [
+        "s16__rules_of_inference"
+      ],
+      "broader": null,
+      "contrast": [
+        "s16__argument_construction"
+      ],
+      "misconceptions": [
+        "直接凭生活语义给论证贴规则标签，而不先把命题符号化再逐符号比对形式",
+        "把内容相近但形式不同的论证（如含传递的两步条件句）当成同一条规则"
+      ],
+      "subgoals": [
+        {
+          "label": "把论证的每个命题符号化",
+          "source_line": "In each argument, we ﬁrst use propositional variables to express the propositions in the argument.",
+          "sources": [
+            "rosen-c1.6-pdf0098"
+          ],
+          "not_in_source": null
+        },
+        {
+          "label": "写出论证形式",
+          "source_line": "We then show that the resulting argument form is a rule of inference from Table 1.",
+          "sources": [
+            "rosen-c1.6-pdf0098"
+          ],
+          "not_in_source": null
+        },
+        {
+          "label": "与已列出的规则模板逐一比对，指出所用规则",
+          "source_line": "State which rule of inference is the basis of the following argument: “It is below freezing now. Therefore, it is below freezing or raining now.”",
+          "sources": [
+            "rosen-c1.6-pdf0098"
+          ],
+          "not_in_source": null
+        }
+      ],
+      "section": "1.6"
+    },
+    {
+      "id": "s16__argument_construction",
+      "title": "由前提构造有效论证（build an argument）",
+      "keywords": [
+        "构造论证",
+        "valid argument",
+        "步骤",
+        "理由",
+        "Reason",
+        "多前提"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.6-pdf0096",
+        "rosen-c1.6-pdf0100",
+        "rosen-c1.6-pdf0101"
+      ],
+      "prerequisites": [
+        "s16__rules_of_inference",
+        "s16__modus_ponens",
+        "s16__rule_identification"
+      ],
+      "broader": null,
+      "contrast": [
+        "s16__valid_argument_form"
+      ],
+      "misconceptions": [
+        "只写结论不给每步理由，或理由写成“显然”",
+        "把结论的前提直接当成已获得的前提，中途引入没给出的假设",
+        "前提很多时仍拒绝分步，试图一步跳到结论"
+      ],
+      "subgoals": [
+        {
+          "label": "把英文论证符号化并写出前提与结论",
+          "source_line": "Then the premises are p →q, ¬p →r, and r →s. The desired conclusion is ¬q →s. We need to give a valid argument with premises p →q, ¬p →r, and r →s and conclusion ¬q →s.",
+          "sources": [
+            "rosen-c1.6-pdf0101"
+          ],
+          "not_in_source": null
+        },
+        {
+          "label": "逐步列出每行并标注依据",
+          "source_line": "This is illustrated by Examples 6 and 7, where the steps of arguments are displayed on separate lines, with the reason for each step explicitly stated.",
+          "sources": [
+            "rosen-c1.6-pdf0100"
+          ],
+          "not_in_source": null
+        },
+        {
+          "label": "把每一步归约到已确立的规则",
+          "source_line": "These examples also show how arguments in English can be analyzed using rules of inference.",
+          "sources": [
+            "rosen-c1.6-pdf0100"
+          ],
+          "not_in_source": null
+        },
+        {
+          "label": "把已证等价式（如逆否）当作中间步骤来用",
+          "source_line": "This argument form shows that the premises lead to the desired conclusion.",
+          "sources": [
+            "rosen-c1.6-pdf0101"
+          ],
+          "not_in_source": "教材给出了 Example 7 的完整步骤表（其中把 (1) 换成其逆否命题再作假言三段论），但没有单列“何时该用逆否式替换条件句”的选步规则，需要在例题里自行归纳。"
+        }
+      ],
+      "section": "1.6"
+    },
+    {
+      "id": "s16__fallacies",
+      "title": "谬误：肯定结论与否定假设（fallacies）",
+      "keywords": [
+        "谬误",
+        "fallacy",
+        "肯定结论",
+        "affirming the conclusion",
+        "否定假设",
+        "denying the hypothesis",
+        "非重言式"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.6-pdf0102"
+      ],
+      "prerequisites": [
+        "s16__valid_argument_form",
+        "s16__modus_ponens"
+      ],
+      "broader": null,
+      "contrast": [
+        "s16__modus_ponens"
+      ],
+      "misconceptions": [
+        "由 p →q 与 q 推出 p（肯定结论）",
+        "由 p →q 与 ¬p 推出 ¬q（否定假设）",
+        "把“前提假”当成论证无效的理由，或反过来把“结论假”当成形式无效的证据"
+      ],
+      "subgoals": [],
+      "section": "1.6"
+    },
+    {
+      "id": "s16__invalid_argument_detection",
+      "title": "识别并命名无效论证形式",
+      "keywords": [
+        "无效论证",
+        "反驳",
+        "反例赋值",
+        "not a tautology",
+        "错误推理"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.6-pdf0102"
+      ],
+      "prerequisites": [
+        "s16__valid_argument_form",
+        "s16__fallacies"
+      ],
+      "broader": null,
+      "contrast": [
+        "s16__tautology_validity_check"
+      ],
+      "misconceptions": [
+        "举出一个“结论碰巧为假”的实例当作形式无效的证明，而不是给出让前提全真结论为假的赋值",
+        "看出论证不对却说不出所用形式的名称与错因"
+      ],
+      "subgoals": [
+        {
+          "label": "给出前提全真而结论为假的一组赋值，说明它不是重言式",
+          "source_line": "The proposition ((p →q) ∧q) →p is not a tautology, because it is false when p is false and q is true.",
+          "sources": [
+            "rosen-c1.6-pdf0102"
+          ],
+          "not_in_source": null
+        },
+        {
+          "label": "把该形式归入已知谬误并指出错在哪一步",
+          "source_line": "This type of incorrect reasoning is called the fallacy of aﬃrming the conclusion.",
+          "sources": [
+            "rosen-c1.6-pdf0102"
+          ],
+          "not_in_source": null
+        }
+      ],
+      "section": "1.6"
+    },
+    {
+      "id": "s16__resolution_proof",
+      "title": "归结证明（resolution）",
+      "keywords": [
+        "归结",
+        "resolution",
+        "子句",
+        "clause",
+        "归结式",
+        "resolvent",
+        "自动定理证明"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.6-pdf0101",
+        "rosen-c1.6-pdf0102"
+      ],
+      "prerequisites": [
+        "s16__disjunctive_syllogism",
+        "s16__valid_argument_form"
+      ],
+      "broader": null,
+      "contrast": [
+        "s16__disjunctive_syllogism"
+      ],
+      "misconceptions": [
+        "把归结当成能直接作用于任意原句的规则，忘记必须先化子句",
+        "把 x ∨(y ∧z) 这样的合取误当成一个子句，不拆成两条",
+        "只用一条前提去归结，忽略两条前提各出一个互补文字才产生归结式"
+      ],
+      "subgoals": [
+        {
+          "label": "先把所有前提与结论化为子句",
+          "source_line": "To construct proofs in propositional logic using resolution as the only rule of inference, the hypotheses and the conclusion must be expressed as clauses, where a clause is a disjunction of variables or negations of these variables.",
+          "sources": [
+            "rosen-c1.6-pdf0101"
+          ],
+          "not_in_source": null
+        },
+        {
+          "label": "把非子句语句改写成等价子句",
+          "source_line": "We can replace a statement in propositional logic that is not a clause by one or more equivalent statements that are clauses.",
+          "sources": [
+            "rosen-c1.6-pdf0101"
+          ],
+          "not_in_source": null
+        },
+        {
+          "label": "消去互补文字，取其余文字的析取得归结式",
+          "source_line": "The ﬁnal disjunction in the resolution rule, q ∨r, is called the resolvent.",
+          "sources": [
+            "rosen-c1.6-pdf0101"
+          ],
+          "not_in_source": null
+        },
+        {
+          "label": "取两条子句归结，直到得到目标子句",
+          "source_line": "Using the two clauses p ∨r and ¬r ∨s, we can use resolution to conclude p ∨s.",
+          "sources": [
+            "rosen-c1.6-pdf0101"
+          ],
+          "not_in_source": null
+        }
+      ],
+      "section": "1.6"
+    },
+    {
+      "id": "s16__universal_instantiation",
+      "title": "全称例示（universal instantiation）",
+      "keywords": [
+        "全称例示",
+        "universal instantiation",
+        "∀xP(x)",
+        "代入个体",
+        "任意元素"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.6-pdf0102",
+        "rosen-c1.6-pdf0103"
+      ],
+      "prerequisites": [
+        "s16__valid_argument_form"
+      ],
+      "broader": null,
+      "contrast": [
+        "s16__existential_instantiation"
+      ],
+      "misconceptions": [
+        "例示出的个体自带了原语句没说的性质（例如由“所有女性都睿智”推出 Lisa 还额外满足别的条件）",
+        "把全称例示与存在例示混用，以为 ∀xP(x) 可以给出一个“满足某个额外条件的 c”"
+      ],
+      "subgoals": [],
+      "section": "1.6"
+    },
+    {
+      "id": "s16__existential_instantiation",
+      "title": "存在例示（existential instantiation）",
+      "keywords": [
+        "存在例示",
+        "existential instantiation",
+        "∃xP(x)",
+        "见证元",
+        "命名 c"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.6-pdf0103"
+      ],
+      "prerequisites": [
+        "s16__valid_argument_form"
+      ],
+      "broader": null,
+      "contrast": [
+        "s16__universal_instantiation",
+        "s16__existential_generalization"
+      ],
+      "misconceptions": [
+        "把存在例示出的见证元当成任意元素，对 c 附加额外假设",
+        "同一个见证元符号被两次存在例示复用，或把由存在例示得到的 c 再拿去作全称推广"
+      ],
+      "subgoals": [],
+      "section": "1.6"
+    },
+    {
+      "id": "s16__universal_generalization",
+      "title": "全称推广（universal generalization）",
+      "keywords": [
+        "全称推广",
+        "universal generalization",
+        "任意元素",
+        "arbitrary",
+        "∀xP(x)"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.6-pdf0102",
+        "rosen-c1.6-pdf0103"
+      ],
+      "prerequisites": [
+        "s16__valid_argument_form"
+      ],
+      "broader": null,
+      "contrast": [
+        "s16__universal_instantiation",
+        "s16__existential_instantiation"
+      ],
+      "misconceptions": [
+        "所用的 c 是特殊的（某个具体个体或额外假设下的个体），却据此断言 ∀xP(x)",
+        "对元素 c 偷偷加上论证中未获授权的前提后再作全称推广"
+      ],
+      "subgoals": [],
+      "section": "1.6"
+    },
+    {
+      "id": "s16__existential_generalization",
+      "title": "存在推广（existential generalization）",
+      "keywords": [
+        "存在推广",
+        "existential generalization",
+        "∃xP(x)",
+        "由个体到存在"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.6-pdf0103"
+      ],
+      "prerequisites": [
+        "s16__valid_argument_form"
+      ],
+      "broader": null,
+      "contrast": [
+        "s16__existential_instantiation"
+      ],
+      "misconceptions": [
+        "把只对某个特定个体成立的性质直接推广成对全体的断言",
+        "误以为存在推广要求掌握满足条件的具体是哪一个元素"
+      ],
+      "subgoals": [],
+      "section": "1.6"
+    },
+    {
+      "id": "s16__combined_quantifier_propositional_rules",
+      "title": "量词规则与命题规则的组合（universal modus ponens / universal modus tollens）",
+      "keywords": [
+        "组合规则",
+        "universal modus ponens",
+        "全称假言推理",
+        "universal modus tollens",
+        "全称拒取式"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.6-pdf0104",
+        "rosen-c1.6-pdf0105"
+      ],
+      "prerequisites": [
+        "s16__universal_instantiation",
+        "s16__modus_ponens",
+        "s16__argument_construction"
+      ],
+      "broader": null,
+      "contrast": [
+        "s16__fallacies"
+      ],
+      "misconceptions": [
+        "把 a 当成被全称量词覆盖的任意元素，而不是域中一个确定的个体",
+        "拿一个不满足前件 P(a) 的 a 去使用该组合规则",
+        "看到 ∀x(P(x) →Q(x)) 与 ¬Q(a) 时误用肯定式去推 Q(a)"
+      ],
+      "subgoals": [
+        {
+          "label": "先做全称例示，得到该个体的条件句",
+          "source_line": "To see this, note that by universal instantiation, P(a) →Q(a) is true.",
+          "sources": [
+            "rosen-c1.6-pdf0104"
+          ],
+          "not_in_source": null
+        },
+        {
+          "label": "确认该个体满足全称条件句的前件",
+          "source_line": "This rule tells us that if ∀x(P(x) →Q(x)) is true, and if P(a) is true for a particular element a in the domain of the universal quantiﬁer, then Q(a) must also be true.",
+          "sources": [
+            "rosen-c1.6-pdf0104"
+          ],
+          "not_in_source": null
+        },
+        {
+          "label": "用肯定式得到该个体的结论",
+          "source_line": "It follows by universal modus ponens that Q(100) is true, namely, that 1002 < 2100.",
+          "sources": [
+            "rosen-c1.6-pdf0104"
+          ],
+          "not_in_source": null
+        }
+      ],
+      "section": "1.6"
+    },
+    {
+      "id": "s17__theorem",
+      "title": "定理（theorem）",
+      "keywords": [
+        "定理",
+        "theorem",
+        "命题",
+        "proposition",
+        "事实",
+        "fact",
+        "结果",
+        "result",
+        "可被证明为真"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.7-pdf0108"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [
+        "s17__lemma_corollary_conjecture"
+      ],
+      "misconceptions": [
+        "把 1.1 里的命题（proposition，有真值的陈述句）与本节的命题（proposition，指不太重要的定理）当成同一回事",
+        "以为定理必须写成条件语句（教材指出定理也可以是完全不同形式的逻辑陈述）",
+        "把猜想当定理引用（猜想只是被提出为真的陈述，只有找到证明之后才成为定理）"
+      ],
+      "subgoals": [],
+      "section": "1.7"
+    },
+    {
+      "id": "s17__proof",
+      "title": "证明（proof）",
+      "keywords": [
+        "证明",
+        "proof",
+        "有效论证",
+        "valid argument",
+        "公理",
+        "axiom",
+        "postulate",
+        "前提",
+        "premise",
+        "已证定理",
+        "推理规则",
+        "形式证明",
+        "formal proof",
+        "非形式证明",
+        "informal proof"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.7-pdf0108",
+        "rosen-c1.7-pdf0109"
+      ],
+      "prerequisites": [
+        "s17__theorem"
+      ],
+      "broader": null,
+      "contrast": [
+        "s17__mistakes_in_proofs"
+      ],
+      "misconceptions": [
+        "把公理也当成需要证明的命题（公理是被假定为真、无须证明的陈述）",
+        "随手引用没有证明过的结论或凭直觉跳步（构造证明时只能用公理、定义和已证结果这些事实）",
+        "以为每一步都必须显式写出所用规则（面向人类读者的证明几乎都是非形式证明：一步里可以用多条规则、可以跳步、不显式声明公理与推理规则）",
+        "以为证明不写全就会被判错（教材明确说若把每一步都写出来，证明会长得无法阅读）"
+      ],
+      "subgoals": [],
+      "section": "1.7"
+    },
+    {
+      "id": "s17__lemma_corollary_conjecture",
+      "title": "引理、推论与猜想（lemma, corollary, conjecture）",
+      "keywords": [
+        "引理",
+        "lemma",
+        "lemmata",
+        "推论",
+        "corollary",
+        "猜想",
+        "conjecture",
+        "辅助结论"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.7-pdf0108"
+      ],
+      "prerequisites": [
+        "s17__theorem"
+      ],
+      "broader": null,
+      "contrast": [
+        "s17__theorem"
+      ],
+      "misconceptions": [
+        "以为引理本身就是不值钱的小结论（引理是为证明其他结果服务的辅助定理，复杂证明常先拆成一系列引理逐个证明）",
+        "把推论当成需要从头独立证明的新定理（推论是可以直接从已证定理得到的）",
+        "把猜想当成定理来引用（猜想在被证明之前不是定理，而且很多猜想最后被证明是假的）"
+      ],
+      "subgoals": [],
+      "section": "1.7"
+    },
+    {
+      "id": "s17__even_odd_parity",
+      "title": "偶数、奇数与奇偶性（even, odd, parity）",
+      "keywords": [
+        "偶数",
+        "even",
+        "奇数",
+        "odd",
+        "奇偶性",
+        "parity",
+        "same parity",
+        "opposite parity",
+        "整数"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.7-pdf0109"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "以为一个整数可以既是偶数又是奇数（定义明确说每个整数非偶即奇，且不会既偶又奇）",
+        "只把“是奇数”当成一个性质而不展开成可代入运算的形式（必须写成比某个整数大一倍的样子才能继续计算）",
+        "在逆否证明里把“不是奇数”当成不好用的否定式（在整数范围内它就是偶数，可以直接展开继续推导）"
+      ],
+      "subgoals": [],
+      "section": "1.7"
+    },
+    {
+      "id": "s17__rational_irrational",
+      "title": "有理数与无理数（rational, irrational）",
+      "keywords": [
+        "有理数",
+        "rational",
+        "无理数",
+        "irrational",
+        "整数之比",
+        "最低项",
+        "lowest terms",
+        "实数"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.7-pdf0112"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "忽略分母不能为零这一条（定义要求存在整数之比且分母非零）",
+        "把“不是有理数”当成一种正面描述，而不是“不存在满足条件的整数之比”这一否定（证明无理数要从假设能写成整数之比出发导出矛盾）",
+        "证明根号 2 无理时忘记把那个分数先约到最低项，于是最后得不到“分子分母同为偶数”与“互素”的对撞"
+      ],
+      "subgoals": [],
+      "section": "1.7"
+    },
+    {
+      "id": "s17__mistakes_in_proofs",
+      "title": "证明中的常见错误（mistakes in proofs）",
+      "keywords": [
+        "错误",
+        "mistake",
+        "谬误",
+        "fallacy",
+        "肯定结论",
+        "affirming the conclusion",
+        "否定假设",
+        "denying the hypothesis",
+        "循环论证",
+        "circular reasoning",
+        "begging the question",
+        "除以零"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.7-pdf0116",
+        "rosen-c1.7-pdf0117"
+      ],
+      "prerequisites": [
+        "s17__proof"
+      ],
+      "broader": null,
+      "contrast": [
+        "s17__proof_by_contraposition"
+      ],
+      "misconceptions": [
+        "由“若前件成立则后件成立”加上后件成立，反推前件成立（肯定结论的谬误）",
+        "由“若前件成立则后件成立”加上前件不成立，推出后件不成立（否定假设的谬误；正确的方向是逆否命题）",
+        "把要证的结论直接当前提用（循环论证：在证明过程中直接假设结论的等价说法成立，却不给任何理由）",
+        "在等式两边除以一个可能为零的式子（经典假证明里正是除以了一个等于零的差）",
+        "把算术与代数上的粗心错误当成逻辑错误，或反过来只查逻辑不查每一处计算"
+      ],
+      "subgoals": [],
+      "section": "1.7"
+    },
+    {
+      "id": "s17__prove_for_all_conditional",
+      "title": "证明全称量化的条件语句",
+      "keywords": [
+        "全称量化",
+        "universal quantification",
+        "论域",
+        "domain",
+        "任意元素",
+        "arbitrary element",
+        "全称推广",
+        "universal generalization",
+        "省略量词",
+        "定理的陈述"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.7-pdf0108",
+        "rosen-c1.7-pdf0109"
+      ],
+      "prerequisites": [
+        "s17__theorem"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [],
+      "subgoals": [
+        {
+          "label": "看清定理省略了全称量词，按“对论域中所有元素都成立”来读",
+          "source_line": "Many theorems assert that a property holds for all elements in a domain, such as the integers or the real numbers. Although the precise statement of such theo-rems needs to include a universal quantiﬁer, the standard convention in mathematics is to omit it.",
+          "not_in_source": null
+        },
+        {
+          "label": "取论域中一个任意元素，把目标降为该元素上的条件语句",
+          "source_line": "To prove a theorem of the form ∀x(P(x) →Q(x)), our goal is to show that P(c) →Q(c) is true, where c is an arbitrary element of the domain, and then apply universal generalization.",
+          "not_in_source": null
+        },
+        {
+          "label": "证完任意元素后引用全称推广，把结论提升到整个论域",
+          "source_line": "Finally, universal generalization implies that the theorem holds for all members of the domain.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.7"
+    },
+    {
+      "id": "s17__direct_proof",
+      "title": "直接证明（direct proof）",
+      "keywords": [
+        "直接证明",
+        "direct proof",
+        "假设前件",
+        "由假设推结论",
+        "推理规则",
+        "conditional statement"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.7-pdf0108",
+        "rosen-c1.7-pdf0109"
+      ],
+      "prerequisites": [
+        "s17__proof",
+        "s17__prove_for_all_conditional"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [],
+      "subgoals": [
+        {
+          "label": "假设前件为真，再用公理、定义、已证定理和推理规则推向结论",
+          "source_line": "In a direct proof, we assume that p is true and use axioms, deﬁnitions, and previously proven theorems, together with rules of inference, to show that q must also be true.",
+          "not_in_source": null
+        },
+        {
+          "label": "后续各步由推理规则接续，最后一步落到后件为真",
+          "source_line": "subsequent steps are constructed using rules of inference, with the ﬁnal step showing that q must also be true.",
+          "not_in_source": null
+        },
+        {
+          "label": "收尾时最后一步直接写出定理的结论",
+          "source_line": "In practice, the ﬁnal step of a proof is usually just the conclusion of the theorem.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.7"
+    },
+    {
+      "id": "s17__proof_by_contraposition",
+      "title": "逆否证明（proof by contraposition）",
+      "keywords": [
+        "逆否证明",
+        "proof by contraposition",
+        "间接证明",
+        "indirect proof",
+        "逆否命题",
+        "contrapositive",
+        "等价",
+        "否定结论"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.7-pdf0110",
+        "rosen-c1.7-pdf0111"
+      ],
+      "prerequisites": [
+        "s17__proof",
+        "s17__prove_for_all_conditional",
+        "s17__direct_proof"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [],
+      "subgoals": [
+        {
+          "label": "确认可以改用逆否命题：原条件语句与逆否命题等价",
+          "source_line": "Proofs by contraposition make use of the fact that the conditional statement p →q is equivalent to its contrapositive, ¬q →¬p.",
+          "not_in_source": null
+        },
+        {
+          "label": "把结论的否定取为前提，用公理、定义、已证定理推出前提的否定",
+          "source_line": "In a proof by contraposition of p →q, we take ¬q as a premise, and using axioms, deﬁnitions, and previously proven theorems, together with rules of inference, we show that ¬p must follow.",
+          "not_in_source": null
+        },
+        {
+          "label": "先把“结论为假”翻译成正面说法，变成可以展开计算的形式",
+          "source_line": "The ﬁrst step in a proof by contraposition is to assume that the conclusion of the conditional statement “If 3n + 2 is odd, then n is odd” is false; namely, assume that n is even.",
+          "not_in_source": null
+        },
+        {
+          "label": "推出前提为假后，据此断定原条件语句为真",
+          "source_line": "Because the negation of the conclusion of the conditional statement implies that the hypothesis is false, the original conditional statement is true.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.7"
+    },
+    {
+      "id": "s17__vacuous_proof",
+      "title": "空证明（vacuous proof）",
+      "keywords": [
+        "空证明",
+        "vacuous proof",
+        "假设为假",
+        "前件为假",
+        "平凡情形",
+        "positive integers"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.7-pdf0111"
+      ],
+      "prerequisites": [
+        "s17__proof",
+        "s17__prove_for_all_conditional"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [],
+      "subgoals": [
+        {
+          "label": "先确认假设本身是假的（假设为假时条件语句必真）",
+          "source_line": "We can quickly prove that a conditional statement p →q is true when we know that p is false, because p →q must be true when p is false.",
+          "not_in_source": null
+        },
+        {
+          "label": "证出假设为假即完成整条证明",
+          "source_line": "Con-sequently, if we can show that p is false, then we have a proof, called a vacuous proof, of the conditional statement p →q.",
+          "not_in_source": null
+        },
+        {
+          "label": "不去讨论结论的真假，它不影响条件语句的真值",
+          "source_line": "The fact that the conclusion of this conditional statement, 02 > 0, is false is irrelevant to the truth value of the conditional statement, because a conditional statement with a false hypothesis is guaranteed to be true.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.7"
+    },
+    {
+      "id": "s17__trivial_proof",
+      "title": "平凡证明（trivial proof）",
+      "keywords": [
+        "平凡证明",
+        "trivial proof",
+        "结论为真",
+        "后件为真",
+        "不需要假设"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.7-pdf0112"
+      ],
+      "prerequisites": [
+        "s17__proof",
+        "s17__prove_for_all_conditional"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [],
+      "subgoals": [
+        {
+          "label": "先确认结论已经为真",
+          "source_line": "We can also quickly prove a conditional statement p →q if we know that the conclusion q is true.",
+          "not_in_source": null
+        },
+        {
+          "label": "证明结论为真即完成整条证明",
+          "source_line": "By showing that q is true, it follows that p →q must also be true. A proof of p →q that uses the fact that q is true is called a trivial proof.",
+          "not_in_source": null
+        },
+        {
+          "label": "整个证明中不需要用到假设",
+          "source_line": "Note that the hypothesis, which is the statement “a ≥b,” was not needed in this proof.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.7"
+    },
+    {
+      "id": "s17__proof_by_contradiction",
+      "title": "反证法（proof by contradiction）",
+      "keywords": [
+        "反证法",
+        "proof by contradiction",
+        "矛盾",
+        "contradiction",
+        "间接证明",
+        "indirect proof",
+        "否定结论",
+        "假设命题为假"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.7-pdf0113",
+        "rosen-c1.7-pdf0114"
+      ],
+      "prerequisites": [
+        "s17__proof",
+        "s17__prove_for_all_conditional"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [],
+      "subgoals": [
+        {
+          "label": "把待证命题的否定设为假设，目标是导出某个自相矛盾的结论",
+          "source_line": "Because the statement r ∧¬r is a contradiction whenever r is a proposition, we can prove that p is true if we can show that ¬p →(r ∧¬r) is true for some proposition r.",
+          "not_in_source": null
+        },
+        {
+          "label": "待证的是条件语句时，改为假设“前提与结论的否定”同时为真，由它们推出矛盾",
+          "source_line": "Proof by contradiction can be used to prove conditional statements. In such proofs, we ﬁrst assume the negation of the conclusion. We then use the premises of the theorem and the negation of the conclusion to arrive at a contradiction.",
+          "not_in_source": null
+        },
+        {
+          "label": "手上已有一条逆否证明时，补上原前提作为额外假设即可改写成反证",
+          "source_line": "To rewrite a proof by contraposition of p →q as a proof by contradiction, we suppose that both p and ¬q are true.",
+          "not_in_source": null
+        },
+        {
+          "label": "导出矛盾后据此断定原命题成立",
+          "source_line": "Because q is false, but ¬p →q is true, we can conclude that ¬p is false, which means that p is true.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.7"
+    },
+    {
+      "id": "s17__proof_of_equivalence",
+      "title": "证明等价（双条件与多命题等价）",
+      "keywords": [
+        "等价",
+        "equivalence",
+        "双条件",
+        "biconditional",
+        "if and only if",
+        "互相等价",
+        "mutually equivalent",
+        "蕴含链",
+        "tautology"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.7-pdf0115"
+      ],
+      "prerequisites": [
+        "s17__proof",
+        "s17__direct_proof",
+        "s17__proof_by_contraposition"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [],
+      "subgoals": [
+        {
+          "label": "把双条件拆成两个方向，分别证明两个条件语句",
+          "source_line": "To prove a theorem that is a biconditional statement, that is, a statement of the form p ↔q, we show that p →q and q →p are both true.",
+          "not_in_source": null
+        },
+        {
+          "label": "命题多于两个时，只需证出一圈首尾相接的蕴含链",
+          "source_line": "This shows that if the n conditional statements p1 →p2, p2 →p3, … , pn →p1 can be shown to be true, then the propositions p1, p2, … , pn are all equivalent.",
+          "not_in_source": null
+        },
+        {
+          "label": "链条的顺序和起点可以自选，只要沿链能从任一命题走到任何另一命题",
+          "source_line": "When we prove that a group of statements are equivalent, we can establish any chain of conditional statements we choose as long as it is possible to work through the chain to go from any one of these statements to any other statement.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.7"
+    },
+    {
+      "id": "s17__choose_proof_method",
+      "title": "选择证明方法的策略",
+      "keywords": [
+        "证明策略",
+        "proof strategy",
+        "方法选择",
+        "rules of thumb",
+        "展开定义",
+        "直接证明失败",
+        "间接证明提示"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.7-pdf0112"
+      ],
+      "prerequisites": [
+        "s17__direct_proof",
+        "s17__proof_by_contraposition"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [],
+      "subgoals": [
+        {
+          "label": "拿到全称条件语句先评估直接证明是否可行",
+          "source_line": "When you want to prove a statement of the form ∀x(P(x) →Q(x)), ﬁrst evaluate whether a direct proof looks promising.",
+          "not_in_source": null
+        },
+        {
+          "label": "先展开假设里的定义，再用公理与手头定理往下推",
+          "source_line": "Begin by expanding the deﬁnitions in the hypotheses. Start to reason using these hypotheses, together with axioms and available theorems.",
+          "not_in_source": null
+        },
+        {
+          "label": "直接证明走不通时，换成逆否证明再试一遍",
+          "source_line": "If a direct proof does not seem to go anywhere, for instance when there is no clear way to use hypotheses as in Examples 3 and 4 to reach the conclusion, try the same thing with a proof by contraposition.",
+          "not_in_source": null
+        },
+        {
+          "label": "假设本身难以利用时（否定式、非零之类的条件），提示该走间接证明",
+          "source_line": "(Hypotheses such as x is irrational or x ≠0 that are diﬃcult to reason from are a clue that an indirect proof might be your best best.)",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.7"
+    },
+    {
+      "id": "s17__find_counterexample",
+      "title": "用反例反驳全称命题",
+      "keywords": [
+        "反例",
+        "counterexample",
+        "反驳",
+        "全称命题为假",
+        "找反例",
+        "证明尝试失败"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.7-pdf0116"
+      ],
+      "prerequisites": [
+        "s17__theorem"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [],
+      "subgoals": [
+        {
+          "label": "要驳倒全称命题，只需给出一个使它为假的具体例子",
+          "source_line": "to show that a statement of the form ∀xP(x) is false, we need only ﬁnd a counterexample, that is, an example x for which P(x) is false.",
+          "not_in_source": null
+        },
+        {
+          "label": "命题看似为假或反复证不出来时，转为去找反例",
+          "source_line": "When presented with a statement of the form ∀xP(x), which we believe to be false or which has resisted all proof attempts, we look for a counterexample.",
+          "not_in_source": null
+        },
+        {
+          "label": "验证候选反例：穷举相关取值，说明它确实不满足该性质",
+          "source_line": "note that the only perfect squares not exceeding 3 are 02 = 0 and 12 = 1. Furthermore, there is no way to get 3 as the sum of two terms each of which is 0 or 1.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.7"
+    },
+    {
+      "id": "s18__proof_by_cases",
+      "title": "分情形证明（proof by cases）",
+      "keywords": [
+        "分情形证明",
+        "proof by cases",
+        "情形",
+        "case",
+        "覆盖所有情形",
+        "析取假设"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.8-pdf0120",
+        "rosen-c1.8-pdf0121",
+        "rosen-c1.8-pdf0122"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [
+        "s18__exhaustive_proof"
+      ],
+      "misconceptions": [
+        "漏掉某个情形就宣布证完：讨论正负时漏掉等于零的那种情况（Example 9 的假证明就败在这里）",
+        "只验证了若干例子就当成覆盖了所有情形，把没证全的命题当定理用"
+      ],
+      "subgoals": [
+        {
+          "label": "把前提改写成覆盖全部可能的若干情形，再逐个情形证明同一个结论",
+          "source_line": "[(p1 ∨p2 ∨⋯∨pn) →q] ↔[(p1 →q) ∧(p2 →q) ∧⋯∧(pn →q)] can be used as a rule of inference. This shows that the original conditional statement with a hypothesis made up of a disjunction of the propositions p1, p2, … , pn can be proved by proving each of the n conditional statements pi →q, i = 1, 2, … , n, individually.",
+          "not_in_source": null
+        },
+        {
+          "label": "确认所分情形合起来覆盖所有可能（漏掉一个情形，证明就作废）",
+          "source_line": "A proof by cases must cover all possible cases that arise in a theorem.",
+          "not_in_source": null
+        },
+        {
+          "label": "判断值不值得分情形：没有明显入手点、而分情形能带来额外信息时才用",
+          "source_line": "Generally, look for a proof by cases when there is no obvious way to begin a proof, but when extra information in each case helps move the proof forward.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.8"
+    },
+    {
+      "id": "s18__exhaustive_proof",
+      "title": "穷举证明（exhaustive proof / proof by exhaustion）",
+      "keywords": [
+        "穷举证明",
+        "exhaustive proof",
+        "proof by exhaustion",
+        "逐个验证",
+        "情形有限"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.8-pdf0120",
+        "rosen-c1.8-pdf0121",
+        "rosen-c1.8-pdf0122"
+      ],
+      "prerequisites": [
+        "s18__proof_by_cases"
+      ],
+      "broader": "s18__proof_by_cases",
+      "contrast": [
+        "s18__proof_by_cases"
+      ],
+      "misconceptions": [
+        "把所有想得到的例子都验证过就当成证明了（正整数写成 18 个四次方之和，79 就是反例）"
+      ],
+      "subgoals": [
+        {
+          "label": "先确认要检查的实例数目足够少、真的能一个个列完",
+          "source_line": "People can carry out exhaustive proofs when it is necessary to check only a relatively small number of instances of a statement.",
+          "not_in_source": null
+        },
+        {
+          "label": "把每个允许的取值当成一个情形，逐个验证结论都成立",
+          "source_line": "An exhaustive proof is a special type of proof by cases where each case involves checking a single example.",
+          "not_in_source": null
+        },
+        {
+          "label": "先缩小候选范围、排除不可能的取值，再对剩下的少数情形逐一检查",
+          "source_line": "We can quickly reduce a proof to checking just a few simple cases because x2 > 8 when |x| ≥3 and 3y2 > 8 when |y| ≥2. This leaves the cases when x equals −2, −1, 0, 1, or 2 and y equals −1, 0, or 1.",
+          "not_in_source": null
+        },
+        {
+          "label": "判断能不能穷举：无法列出全部实例时，再多计算机验证也算不上证明",
+          "source_line": "Note that not even a computer can check all instances when it is impossible to list all instances to check.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.8"
+    },
+    {
+      "id": "s18__without_loss_of_generality",
+      "title": "不失一般性（without loss of generality, WLOG）",
+      "keywords": [
+        "不失一般性",
+        "without loss of generality",
+        "WLOG",
+        "对称情形",
+        "减少要讨论的情形数"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.8-pdf0123"
+      ],
+      "prerequisites": [
+        "s18__proof_by_cases"
+      ],
+      "broader": null,
+      "contrast": [
+        "s18__proof_by_cases"
+      ],
+      "misconceptions": [
+        "对并不对称的情形也写「不失一般性」，把没证的情形当成「同理」，结果证明不完整",
+        "把「不失一般性」理解成「只要证随便挑的一个特例」，说不出其余情形为什么能照样推出"
+      ],
+      "subgoals": [
+        {
+          "label": "只详细证一个情形，并说明其余情形做同样的改动就能得到",
+          "source_line": "Implicit in this statement is that we can complete the case with x < 0 and y ≥0 using the same argument as we used for the case with x ≥0 and y < 0, but with the obvious changes.",
+          "not_in_source": null
+        },
+        {
+          "label": "写「不失一般性」时要能指出各情形之间靠什么互换互推，把理由交代清楚",
+          "source_line": "(Note that our use of without loss of generality within the proof is justiﬁed because the proof when y is odd can be obtained by simply interchanging the roles of x and y in the proof we have given.)",
+          "not_in_source": null
+        },
+        {
+          "label": "检查情形之间是否真对称：某个情形差别很大时就不能略过它",
+          "source_line": "Sometimes assumptions are made that lead to a loss in generality. Such assumptions can be made that do not take into account that one case may be substantially diﬀerent from others. This can lead to an incomplete, and possibly unsalvageable, proof.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.8"
+    },
+    {
+      "id": "s18__existence_proof",
+      "title": "存在性证明（existence proof）",
+      "keywords": [
+        "存在性证明",
+        "existence proof",
+        "存在量词",
+        "证明存在",
+        "∃xP(x)"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.8-pdf0124"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [
+        "s18__uniqueness_proof"
+      ],
+      "misconceptions": [
+        "认为没把那个元素具体算出来的证明不算证明（其实非构造性的存在性证明同样成立）"
+      ],
+      "subgoals": [],
+      "section": "1.8"
+    },
+    {
+      "id": "s18__constructive_existence_proof",
+      "title": "构造性存在性证明（constructive existence proof）",
+      "keywords": [
+        "构造性存在性证明",
+        "constructive existence proof",
+        "见证元",
+        "witness",
+        "举出一个具体例子"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.8-pdf0124",
+        "rosen-c1.8-pdf0131"
+      ],
+      "prerequisites": [
+        "s18__existence_proof"
+      ],
+      "broader": "s18__existence_proof",
+      "contrast": [
+        "s18__nonconstructive_existence_proof"
+      ],
+      "misconceptions": [
+        "只算出或猜到某个候选对象，却不验证它满足所要求的性质，就宣布证明结束"
+      ],
+      "subgoals": [
+        {
+          "label": "找出一个具体的元素（见证元），并验证它满足所要求的性质",
+          "source_line": "Sometimes an existence proof of ∃xP(x) can be given by ﬁnding an element a, called a witness, such that P(a) is true. This type of existence proof is called constructive.",
+          "not_in_source": null
+        },
+        {
+          "label": "把找到的对象摆出来并说明它符合要求，存在性就算证完",
+          "source_line": "The existence of one such tiling completes a constructive existence proof.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.8"
+    },
+    {
+      "id": "s18__nonconstructive_existence_proof",
+      "title": "非构造性存在性证明（nonconstructive existence proof）",
+      "keywords": [
+        "非构造性存在性证明",
+        "nonconstructive existence proof",
+        "不给出具体元素",
+        "反证法"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.8-pdf0124",
+        "rosen-c1.8-pdf0125",
+        "rosen-c1.8-pdf0126"
+      ],
+      "prerequisites": [
+        "s18__existence_proof"
+      ],
+      "broader": "s18__existence_proof",
+      "contrast": [
+        "s18__constructive_existence_proof"
+      ],
+      "misconceptions": [
+        "在非构造性证明里以为自己已经找到了那个元素（其实只证了必有一个）"
+      ],
+      "subgoals": [
+        {
+          "label": "不去找具体元素，改用别的方式证明存在性",
+          "source_line": "It is also possible to give an existence proof that is nonconstructive; that is, we do not ﬁnd an element a such that P(a) is true, but rather prove that ∃xP(x) is true in some other way.",
+          "not_in_source": null
+        },
+        {
+          "label": "常用手段是用反证法：否定存在量化，推出矛盾",
+          "source_line": "One common method of giving a nonconstructive existence proof is to use proof by contradiction and show that the negation of the existential quantiﬁcation implies a contradiction.",
+          "not_in_source": null
+        },
+        {
+          "label": "确认「只证存在、不指出是哪一个」也算完成证明",
+          "source_line": "Note that we showed that a winning strategy exists, but we did not specify an actual winning strategy. Consequently, the proof is a nonconstructive existence proof.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.8"
+    },
+    {
+      "id": "s18__uniqueness_proof",
+      "title": "唯一性证明（uniqueness proof）",
+      "keywords": [
+        "唯一性证明",
+        "uniqueness proof",
+        "存在且唯一",
+        "exactly one",
+        "恰好一个"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.8-pdf0126",
+        "rosen-c1.8-pdf0127"
+      ],
+      "prerequisites": [
+        "s18__existence_proof"
+      ],
+      "broader": null,
+      "contrast": [
+        "s18__existence_proof"
+      ],
+      "misconceptions": [
+        "只证了唯一性（任意两个满足条件的对象相等）就宣布「存在唯一」，漏掉存在性这一半",
+        "把「我找到了一个解」当成唯一性证明，没说明不会有第二个"
+      ],
+      "subgoals": [
+        {
+          "label": "存在性部分：先证明确实有一个元素满足所要求的性质",
+          "source_line": "Existence: We show that an element x with the desired property exists.",
+          "not_in_source": null
+        },
+        {
+          "label": "唯一性部分：假设两个元素都满足性质，推出它们相等",
+          "source_line": "Uniqueness: We show that if x and y both have the desired property, then x = y.",
+          "not_in_source": null
+        },
+        {
+          "label": "必要时把目标写成量词形式：存在一个满足性质、其余都不满足",
+          "source_line": "Remark: Showing that there is a unique element x such that P(x) is the same as proving the statement ∃x(P(x) ∧∀y(y ≠x →¬P(y))).",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.8"
+    },
+    {
+      "id": "s18__forward_reasoning",
+      "title": "前向推理（forward reasoning）",
+      "keywords": [
+        "前向推理",
+        "forward reasoning",
+        "从前提出发",
+        "直接证明",
+        "间接推理"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.8-pdf0128"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [
+        "s18__backward_reasoning"
+      ],
+      "misconceptions": [
+        "结论很复杂时硬着头皮从头往前推，写了很多步也到不了结论（这时应换逆向推理）"
+      ],
+      "subgoals": [
+        {
+          "label": "从前提出发，配合公理和已知定理一步步推向结论",
+          "source_line": "To begin a direct proof of a conditional statement, you start with the premises. Using these premises, together with axioms and known theorems, you can construct a proof using a sequence of steps that leads to the conclusion. This type of reasoning, called forward reasoning, is the most common type of reasoning used to prove relatively simple results.",
+          "not_in_source": null
+        },
+        {
+          "label": "间接证明时换起点：从结论的否定出发，一步步推出前提的否定",
+          "source_line": "Similarly, with indirect reasoning you can start with the negation of the conclusion and, using a sequence of steps, obtain the negation of the premises.",
+          "not_in_source": null
+        },
+        {
+          "label": "判断前向推理够不够用：结论复杂、路径看不出来时就要换方法",
+          "source_line": "Unfortunately, forward reasoning is often diﬃcult to use to prove more complicated results, because the reasoning needed to reach the desired conclusion may be far from obvious.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.8"
+    },
+    {
+      "id": "s18__backward_reasoning",
+      "title": "逆向推理（backward reasoning）",
+      "keywords": [
+        "逆向推理",
+        "backward reasoning",
+        "从结论往回推",
+        "等价变形",
+        "倒着找"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.8-pdf0128",
+        "rosen-c1.8-pdf0129"
+      ],
+      "prerequisites": [
+        "s18__forward_reasoning"
+      ],
+      "broader": null,
+      "contrast": [
+        "s18__forward_reasoning"
+      ],
+      "misconceptions": [
+        "从结论出发时把方向用反：拿「结论能推出的东西」成立来说明结论成立（循环论证/乞题）",
+        "把逆向推理的草稿直接当正式证明交上去，没有倒过来写成前向证明"
+      ],
+      "subgoals": [
+        {
+          "label": "从要证的结论往回找：找一个已经能证明、且能推出结论的命题",
+          "source_line": "In such cases it may be helpful to use backward reasoning. To reason backward to prove a statement q, we ﬁnd a statement p that we can prove with the property that p →q.",
+          "not_in_source": null
+        },
+        {
+          "label": "别把推出方向搞反：不能由结论推出来的东西成立反过来断定结论成立",
+          "source_line": "(Note that it is not helpful to ﬁnd a statement r that you can prove such that q →r, because it is the fallacy of begging the question to conclude from q →r and r that q is true.)",
+          "not_in_source": null
+        },
+        {
+          "label": "把结论改写成一串彼此等价的式子，一直化到已知为真的式子",
+          "source_line": "To prove that (x + y)∕2 > √xy when x and y are distinct positive real numbers, we can work backward. We construct a sequence of equivalent inequalities.",
+          "not_in_source": null
+        },
+        {
+          "label": "逆推只是找路：最后把步骤倒过来，用前向推理写出正式证明",
+          "source_line": "Once we have carried out this backward reasoning, we can build a proof based on reversing the steps.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.8"
+    },
+    {
+      "id": "s18__adapting_existing_proofs",
+      "title": "改造已有证明（adapting existing proofs）",
+      "keywords": [
+        "改造已有证明",
+        "adapting existing proofs",
+        "类比",
+        "模仿已有证明的步骤"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.8-pdf0129"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "碰到新定理完全从零开始，不去找结构相近的老定理和它的证明"
+      ],
+      "subgoals": [
+        {
+          "label": "先找结构相似的老结论，看它的证明能不能直接搬过来用",
+          "source_line": "An excellent way to look for possible approaches that can be used to prove a statement is to take advantage of existing proofs of similar results.",
+          "not_in_source": null
+        },
+        {
+          "label": "整段搬不动时，至少借用老证明里的想法",
+          "source_line": "Often an existing proof can be adapted to prove other facts. Even when this is not the case, some of the ideas used in existing proofs may be helpful.",
+          "not_in_source": null
+        },
+        {
+          "label": "照搬之后标出哪些步骤在新定理里还缺依据、需要另补工具",
+          "source_line": "In turns out that we can, but we need some ammunition from number theory, which we will develop in Chapter 4. We sketch out the remainder of the proof, but leave the justiﬁcation of these steps until Chapter 4.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.8"
+    },
+    {
+      "id": "s18__counterexample_search",
+      "title": "寻找反例（looking for counterexamples）",
+      "keywords": [
+        "反例",
+        "counterexample",
+        "从小例子试起",
+        "最小的例子"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.8-pdf0130"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [
+        "s18__exhaustive_proof"
+      ],
+      "misconceptions": [
+        "试了很多个小例子都成立就断言命题为真（正整数写成 18 个四次方之和，79 处就失败）"
+      ],
+      "subgoals": [
+        {
+          "label": "先尝试证明；证不出来就从最小的例子开始找反例；还找不到就回头继续证",
+          "source_line": "When confronted with a conjecture, you might ﬁrst try to prove this conjecture, and if your attempts are unsuccessful, you might try to ﬁnd a counterexample, ﬁrst by looking at the simplest, smallest examples. If you cannot ﬁnd a counterexample, you might again try to prove the statement.",
+          "not_in_source": null
+        },
+        {
+          "label": "找反例的具体打法：把正整数按从小到大逐个代进去试",
+          "source_line": "To look for a counterexample, we try to write successive positive integers as a sum of three squares.",
+          "not_in_source": null
+        },
+        {
+          "label": "找到可疑的对象后，把可能的取值限制住，证明它确实不满足命题",
+          "source_line": "To show that there are not three squares that add up to 7, we note that the only possible squares we can use are those not exceeding 7, namely, 0, 1, and 4. Because no three terms where each term is 0, 1, or 4 add up to 7, it follows that 7 is a counterexample.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.8"
+    },
+    {
+      "id": "s18__checkerboard_tiling",
+      "title": "棋盘与铺砌（checkerboard / board / domino / tiling）",
+      "keywords": [
+        "棋盘",
+        "checkerboard",
+        "standard checkerboard",
+        "多米诺",
+        "domino",
+        "铺砌",
+        "tiled by dominoes",
+        "polyomino",
+        "多联骨牌",
+        "triomino",
+        "三格骨牌"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.8-pdf0131",
+        "rosen-c1.8-pdf0133"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "只比较棋子数或格子数的奇偶就下结论：格子数是偶数只是必要条件，62 格的棋盘照样可能铺不出来"
+      ],
+      "subgoals": [],
+      "section": "1.8"
+    },
+    {
+      "id": "s18__coloring_argument",
+      "title": "染色计数论证（coloring argument）",
+      "keywords": [
+        "染色",
+        "coloring",
+        "黑白格",
+        "不变量",
+        "计数矛盾",
+        "三色染色"
+      ],
+      "type": "procedure",
+      "sources": [
+        "rosen-c1.8-pdf0132",
+        "rosen-c1.8-pdf0133"
+      ],
+      "prerequisites": [
+        "s18__checkerboard_tiling"
+      ],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "只数格子总数，忘了按颜色分别计数，于是看不出「每种颜色各需多少格」这个矛盾"
+      ],
+      "subgoals": [
+        {
+          "label": "把棋盘交替染色，并观察每块骨牌覆盖各种颜色各几个",
+          "source_line": "We color the squares of this checkerboard using alternating white and black squares, as in Figure 2. Observe that a domino in a tiling of such a board covers one white square and one black square.",
+          "not_in_source": null
+        },
+        {
+          "label": "由「每块骨牌覆盖一黑一白」算出整块棋盘要铺满必须有多少黑格、多少白格",
+          "source_line": "Note that each domino in this tiling covers one white and one black square. Consequently, the tiling covers 31 white squares and 31 black squares.",
+          "not_in_source": null
+        },
+        {
+          "label": "假设铺砌存在，推出它与染色计数矛盾，从而否定存在性",
+          "source_line": "We can use these observations to prove by contradiction that a standard checkerboard with opposite corners removed cannot be tiled using dominoes.",
+          "not_in_source": null
+        },
+        {
+          "label": "换骨牌类型就换颜色数：用三格骨牌时改成三色染色",
+          "source_line": "Because we are using straight triominoes rather than dominoes, we color the squares using three colors rather than two colors",
+          "not_in_source": null
+        },
+        {
+          "label": "观察每块三格骨牌覆盖三种颜色各一个",
+          "source_line": "Next, we make the crucial observation that when a straight triomino covers three squares of the checkerboard, it covers one blue square, one black square, and one white square.",
+          "not_in_source": null
+        },
+        {
+          "label": "用旋转对称把缺格统一成同一种颜色，减少要讨论的情形",
+          "source_line": "Thus, without loss of generality, we may assume that we have rotated the coloring so that the missing square is colored blue.",
+          "not_in_source": null
+        }
+      ],
+      "section": "1.8"
+    },
+    {
+      "id": "s18__open_problems",
+      "title": "未解决问题与猜想（open problems）",
+      "keywords": [
+        "开放问题",
+        "open problems",
+        "猜想",
+        "conjecture",
+        "费马大定理",
+        "Fermat's last theorem",
+        "3x + 1 猜想",
+        "Collatz"
+      ],
+      "type": "concept",
+      "sources": [
+        "rosen-c1.8-pdf0134",
+        "rosen-c1.8-pdf0135"
+      ],
+      "prerequisites": [],
+      "broader": null,
+      "contrast": [],
+      "misconceptions": [
+        "把「已经被计算机验证到很大范围」当成「已经证明」（3x + 1 猜想验到 5.48 ⋅1018 仍未证明）"
+      ],
+      "subgoals": [],
+      "section": "1.8"
+    }
+  ]
+}

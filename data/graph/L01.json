@@ -241,18 +241,18 @@
       "subgoals": [
         {
           "label": "判断满秩",
-          "source_line": "rank(W~) = min{m, n}",
+          "source_line": "for $\\tilde{W} \\in \\mathbb{R}^{m \\times n}$, $\\text{rank}(\\tilde{W}) = \\min\\{m, n\\}$, then we say $\\tilde{W}$ has full rank.",
           "detail": "先确认 W 达到满秩，否则下面三种情形都不成立",
           "not_in_source": "课件给了定义但没强调「必须先满秩才能分类」。"
         },
         {
           "label": "比维度定方向",
-          "source_line": "① rank = n = m；② rank = n < m；③ rank = m < n",
+          "source_line": "① $\\text{rank}(\\tilde{W}) = n = m$, space $V$ and $W$ has the same dimension.",
           "detail": "比较 n（输入维）与 m（输出维），决定是同维、升维还是降维"
         },
         {
           "label": "读用途",
-          "source_line": "② upsampling / handling data in a lower dimension in a higher dimension；③ downsampling / dimensionality reduction",
+          "source_line": "handling data in a lower dimension in a higher dimension",
           "detail": "升维是「在更高维里处理低维数据」，降维是「取高维数据最重要的视角」",
           "not_in_source": "课件只给了用途短语，没解释为什么升维有助于处理低维数据。"
         }
@@ -283,18 +283,18 @@
       "subgoals": [
         {
           "label": "写出每个输出的分量式",
-          "source_line": "y_1 = W_11 x_1 + W_21 x_2 + W_31 x_3 + b_1（y_2、y_3 同理）",
+          "source_line": "$$y_1 = W_{11}x_1 + W_{21}x_2 + W_{31}x_3 + b_1$$",
           "detail": "先把 y 的每个分量写成 x 各分量的加权和再加偏置",
           "not_in_source": "课件直接列出三行，没说明为什么要先展开。"
         },
         {
           "label": "把权重按列排成矩阵",
-          "source_line": "列向量 [W_11, W_12, W_13]^T 对应 x_1 的权重",
+          "source_line": "\\begin{bmatrix} W_{11} & W_{21} & W_{31} \\\\ W_{12} & W_{22} & W_{32} \\\\ W_{13} & W_{23} & W_{33} \\end{bmatrix}",
           "detail": "注意课件把 x_j 的权重排成 W 的**第 j 列**（这正是行下标为 j 的原因）"
         },
         {
           "label": "合成紧凑式",
-          "source_line": "y = W x + b（compact form）",
+          "source_line": "compact form:",
           "detail": "矩阵乘 x 一次算出全部输出的加权和，b 单独加",
           "not_in_source": "课件未说明这种「按列堆权重」的排法与「按行做内积」是同一件事。"
         }
@@ -333,19 +333,19 @@
       "subgoals": [
         {
           "label": "换到标准基",
-          "source_line": "B~ → B : Sv",
+          "source_line": "$\\widetilde{B} \\to B : Sv$",
           "detail": "把在 B̃ 下表示的向量换成标准基 B 下的表示",
           "not_in_source": "课件只给了这一步的式子，**没说为什么第一步要换到标准基**（为什么要先回到 B 再出发）。讲解若补这个理由，属于补充解释而非课件内容。"
         },
         {
           "label": "施加线性映射",
-          "source_line": "B~ → B → C : A_φ Sv",
+          "source_line": "$\\widetilde{B} \\to B \\to C : A_\\phi Sv$",
           "detail": "在标准基下做 φ，得到 C 下的像",
           "not_in_source": "课件未解释为什么可以直接用 A_φ 作用在 Sv 上（即 A_φ 是 φ 在标准基下的矩阵这一点课件没明说）。"
         },
         {
           "label": "换到目标基",
-          "source_line": "B~ → B → C → C~ : T⁻¹A_φ Sv",
+          "source_line": "$\\widetilde{B} \\to B \\to C \\to \\widetilde{C} : T^{-1}A_\\phi Sv$",
           "detail": "再换到 C̃ 下，才是这个映射在新基下的矩阵",
           "not_in_source": "课件未解释为什么用 T⁻¹ 而不是 T（方向相反）。"
         }

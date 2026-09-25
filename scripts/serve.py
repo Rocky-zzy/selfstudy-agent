@@ -32,6 +32,15 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
+# Windows 控制台默认 GBK：脚本里带 ✅/⚠️ 时 print 会 UnicodeEncodeError。
+# 这个坑很坑人——服务**其实已经起来了**，但脚本在打印成功信息时崩掉、退出码非 0，
+# 看起来像"启动失败"。见 docs/00 M13 同源（外部环境假设没先核实）。
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 ROOT = Path(__file__).resolve().parent.parent
 LOG_DIR = ROOT / "logs"
 PID_FILE = LOG_DIR / "server.pid"

@@ -100,6 +100,13 @@ MATERIALS: dict[str, dict] = {
 }
 DEFAULT_MATERIAL = "rosen-ch1"
 
+# 素材 → L0 知识结构图（`data/graph/<scope>.json`）。
+# 按素材定图，不按讲号推导：Rosen 的"讲"是 1.1/1.2，按讲号推导会让图**静默失效**。
+GRAPH_SCOPE_BY_MATERIAL = {
+    "kb": "L01",
+    "rosen-ch1": "rosen-ch1",
+}
+
 # 「整讲直灌」的字符上限：超过就退回命中页模式，并且**必须报出去**（不静默降级）
 WHOLE_LECTURE_CHAR_LIMIT = 20000
 
@@ -261,9 +268,11 @@ def api_ask():
     graph_used: list[str] = []
     graph_note = ""
     if use_graph:
-        scope = "L01" if (lecture or "").startswith("L01") else None
-        candidates = [s for s in (["L01"] if scope else [])]
-        # 先试该讲的图；没有对应图就跳过（不报错，因为不是每讲都建了图）
+        # 用哪张图不能靠"讲号长得像 L01"来判断：Rosen 的"讲"是 1.1/1.2，
+        # 一旦按讲号推导，主数据集的图**永远加载不上**，而且不报错——静默失效。
+        # 所以按**素材**定图；没有对应图就跳过（不是每份素材都建了图）。
+        scope = GRAPH_SCOPE_BY_MATERIAL.get(material_key)
+        candidates = [scope] if scope else []
         for sc in candidates:
             try:
                 g = load_graph(sc)
@@ -273,6 +282,8 @@ def api_ask():
             if inj:
                 context = context + "\n\n" + wrap(inj)
                 graph_used, graph_note = ids, f"已注入 {len(ids)} 个知识结构节点"
+            else:
+                graph_note = f"有图（{sc}）但本次没命中可注入的节点"
             break
     ctx_chars = len(context)
 

@@ -29,6 +29,14 @@ ROOT = Path(__file__).resolve().parent.parent
 GRAPH_DIR = ROOT / "data" / "graph"
 KB = ROOT / "knowledge_base" / "chunks.jsonl"
 
+# Windows 控制台默认 GBK，报错信息里带数学符号（−、⇒、φ）时会 UnicodeEncodeError 崩掉——
+# 一个"校验器自己崩溃"比"没校验"更糟：它会把真实问题埋在 traceback 后面。
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 VALID_TYPES = {"concept", "procedure"}
 
 
@@ -36,20 +44,42 @@ class Bad(Exception):
     """图数据不合法。"""
 
 
-def load_chunk_ids() -> set[str]:
-    ids = set()
-    with KB.open(encoding="utf-8") as f:
+def load_chunk_ids(kb: Path | None = None) -> dict[str, str]:
+    """chunk_id → 正文。图的 sources 必须在这里面，否则"回原文核对"是假的。
+
+    每张图可以自带 `kb` 字段指定自己的知识库（Rosen 与 AIAA 是两份独立数据）。
+    """
+    ids: dict[str, str] = {}
+    with (kb or KB).open(encoding="utf-8") as f:
         for line in f:
             line = line.strip()
             if line:
-                ids.add(json.loads(line)["chunk_id"])
+                r = json.loads(line)
+                ids[r["chunk_id"]] = r.get("text") or ""
     return ids
 
 
-def validate(g: dict, chunk_ids: set[str]) -> list[str]:
+def _norm(s: str) -> str:
+    """去掉空白并统一排版变体再比。
+
+    PDF 抽出来的正文有换行/多余空格，还有连字（ﬁ/ﬂ）和多种破折号；
+    只去空白的话，**明明抄对了也会报找不到**——校验器一假报错，人就会开始忽略它。
+    """
+    s = s or ""
+    for a, b in (("\ufb01", "fi"), ("\ufb02", "fl"), ("\ufb00", "ff"),
+                 ("\ufb03", "ffi"), ("\ufb04", "ffl"),
+                 ("\u2013", "-"), ("\u2014", "-"), ("\u2212", "-"),
+                 ("\u2018", "'"), ("\u2019", "'"), ("\u201c", '"'), ("\u201d", '"'),
+                 ("\u00a0", " ")):
+        s = s.replace(a, b)
+    return re.sub(r"\s+", "", s)
+
+
+def validate(g: dict, chunk_text: dict[str, str]) -> list[str]:
     """返回问题列表；空列表 = 通过。"""
     bad: list[str] = []
     nodes = g.get("nodes")
+    chunk_ids = set(chunk_text)
     if not isinstance(nodes, list) or not nodes:
         return ["nodes 缺失或为空"]
 
@@ -95,6 +125,16 @@ def validate(g: dict, chunk_ids: set[str]) -> list[str]:
                 if not sg.get("source_line"):
                     bad.append(f"{nid}：第 {i+1} 个子目标缺 source_line"
                                f"（子目标必须能对回课件原文）")
+                # ★ 溯源检查：source_line 必须在**该节点自己的 sources 页**里真的出现过。
+                # 没有这一条，"对回原文"只是一句口号——模型（或人）可以凭印象写一段像原文的话。
+                else:
+                    hay = "".join(_norm(chunk_text.get(s, ""))
+                                  for s in n.get("sources", []))
+                    if _norm(sg["source_line"]) not in hay:
+                        bad.append(
+                            f"{nid}：第 {i+1} 个子目标的 source_line 在其 sources "
+                            f"（{'、'.join(n.get('sources', [])) or '空'}）里**找不到**"
+                            f"——不许凭印象写「原文」：{sg['source_line'][:40]!r}")
 
     # 前置关系不能成环
     deps = {n["id"]: list(n.get("prerequisites", [])) for n in nodes if n.get("id")}
@@ -179,12 +219,22 @@ def render(g: dict) -> str:
     return "\n".join(out)
 
 
+def _fake_source_line(g: dict) -> None:
+    """把某个子目标的 source_line 换成一段"像原文但原文里没有"的话。"""
+    for n in g["nodes"]:
+        if n.get("subgoals"):
+            n["subgoals"][0]["source_line"] = "this sentence is not in the source text"
+            return
+    g["nodes"][0]["prerequisites"] = []
+
+
 BAD_CASES = {
     "引用了不存在的页": lambda g: g["nodes"][0]["sources"].append("l01-p99"),
     "前置成环": lambda g: (g["nodes"][0]["prerequisites"].append(g["nodes"][1]["id"]),
                           g["nodes"][1]["prerequisites"].append(g["nodes"][0]["id"])),
     "子目标挂在概念上": lambda g: g["nodes"][0].update(
         {"subgoals": [{"label": "x", "source_line": "y"}]}),
+    "子目标的「原文」是编的": _fake_source_line,
 }
 
 
@@ -214,7 +264,12 @@ def main() -> int:
     ap.add_argument("--selftest", action="store_true")
     args = ap.parse_args()
 
-    chunk_ids = load_chunk_ids()
+    def chunks_for(g: dict) -> dict[str, str]:
+        """每张图自带 kb 路径（相对仓库根）；缺省 = AIAA 知识库。"""
+        rel = g.get("kb")
+        return load_chunk_ids(ROOT / rel if rel else None)
+
+    default_chunks = load_chunk_ids()
     files = sorted(GRAPH_DIR.glob("*.json"))
     if not files:
         print(f"没有图数据：{GRAPH_DIR}")
@@ -222,11 +277,13 @@ def main() -> int:
 
     total = 0
     base = None
+    base_chunks = default_chunks
     for p in files:
         g = json.loads(p.read_text(encoding="utf-8"))
         if base is None:
             base = g
-        problems = validate(g, chunk_ids)
+            base_chunks = chunks_for(g)
+        problems = validate(g, chunks_for(g))
         total += len(problems)
         print("=" * 78)
         print(f"{p.name}：{len(g.get('nodes', []))} 个节点")
@@ -244,7 +301,7 @@ def main() -> int:
     if args.render:
         p = GRAPH_DIR / f"{args.render}.json"
         g = json.loads(p.read_text(encoding="utf-8"))
-        if validate(g, chunk_ids):
+        if validate(g, chunks_for(g)):
             print("\n✗ 有结构问题，**拒绝渲染**（避免把坏数据固化成文档）")
             return 1
         out = GRAPH_DIR / f"{args.render}.md"
@@ -253,7 +310,7 @@ def main() -> int:
 
     if args.selftest and base is not None:
         print()
-        total += selftest(base, chunk_ids)
+        total += selftest(base, base_chunks)
 
     print()
     print("结论：" + ("全部通过" if total == 0 else f"{total} 处问题"))
