@@ -1,14 +1,20 @@
 # -*- coding: utf-8 -*-
-"""讲解生成层：两个条件。
+"""讲解生成层：**三个**条件。
 
 性质（见 docs/00_错题本.md §四）：**对照实现，不是"消融分组"**。
-两条件共用同一检索器、同一上下文拼装、同一模型、同一参数，
+各条件共用同一检索器、同一上下文拼装、同一模型、同一参数，
 **唯一差异是系统指令**：
 
-  baseline   —— 无任何"讲解方式"约束（=「同款 LLM 冷启动 + 整页课件原文直灌」）
-  optimized  —— 只用 docs/03 §六 里有出处的 4 条约束
+  raw        —— **裸 LLM**：只给课件原文 + 问题，零约束（=「同款 LLM 冷启动」）
+  baseline   —— 共用块（范围 + 格式 + 术语 + 骨架 + 讲法档）
+  optimized  —— 共用块 + docs/03 §六 里有出处的 4 条约束
 
-因此两组差异可归因到 prompt，而不是检索或模型。
+⚠️ 命名容易误导，说明白（用户 2026-09-26 纠正过）：
+**范围约束、输出格式、术语加注、教学骨架、知识结构图、那 4 条约束，全都是我们做的优化**。
+所以"优于同款 LLM 冷启动"要拿 **optimized vs raw** 来测；
+baseline 只是"优化内部的一档"（拿掉了 4 条约束），不是冷启动。
+`docs/05` §二 早期那条"不得说优于冷启动"的措辞纪律**已按此更正**。
+
 APP_STRIP_OPT=1 可关掉 optimized 的 4 条约束（变成与 baseline 同指令），
 用于自查"差异是否真的来自这些约束"。
 """
@@ -23,6 +29,11 @@ ROOT_ENV = ".env"
 
 DEFAULT_BASE_URL = "https://api.deepseek.com"
 DEFAULT_MODEL = "deepseek-chat"
+
+# 裸 LLM 的 system prompt：**只有一句话**。
+# 刻意不写"只回答问到的点""不要分章节""术语要加注""按骨架走"——那些都是我们的优化，
+# 在这里出现就等于把优化偷偷塞进了对照组。
+_RAW_SYSTEM = "你是一个课程自学辅助助手。学生就下面给出的课件内容提问，请回答他的问题。"
 
 # ---------------------------------------------------------------------------
 # 提示词
@@ -297,6 +308,9 @@ def system_prompt_for(
     """
     if teaching not in _TEACHING_BLOCK:
         raise ValueError(f"未知讲法：{teaching!r}（只支持 {TEACHING_MODES}）")
+    if condition == "raw":
+        # 裸 LLM：**不看讲法档、不加任何共用块**。讲法档也属于我们的优化。
+        return _RAW_SYSTEM
     common = _SHARED_SCOPE + "\n" + _TEACHING_BLOCK[teaching]
     if condition == "baseline":
         return number_constraints(_BASELINE_HEAD + "\n" + common)
@@ -304,7 +318,7 @@ def system_prompt_for(
         if strip_opt_constraints:
             return number_constraints(_BASELINE_HEAD + "\n" + common)
         return number_constraints(_OPTIMIZED_HEAD + "\n" + common + _OPTIMIZED_EXTRA)
-    raise ValueError(f"未知条件：{condition!r}（只支持 baseline / optimized）")
+    raise ValueError(f"未知条件：{condition!r}（只支持 raw / baseline / optimized）")
 
 
 def user_prompt(context: str, question: str) -> str:
@@ -335,6 +349,7 @@ def generate(
 
     teaching: 讲法三档（brief / detailed / followup）。**两条件共用**，
               所以它不参与对照——保证差异仍只来自"讲得好不好"。
+              （condition="raw" 时 teaching 会被忽略：讲法档本身也是我们的优化。）
 
     实现注意：**必须检查 finish_reason == 'length'**——
     因为 max_tokens 会把推理 token 也算进预算，截断是**静默**发生的，
