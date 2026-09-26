@@ -52,13 +52,52 @@ QUESTIONS: list[tuple[str, str, str]] = [
     ("L09", "detailed", "KL 散度是什么？它和交叉熵是什么关系？"),
 ]
 
+# 主数据集：Rosen《离散数学及其应用》第 1 章（8 节 120 页）。
+# 覆盖面刻意为：三档讲法各若干、概念与程序性各若干、8 节都至少被问到一次。
+QUESTIONS_ROSEN_CH1: list[tuple[str, str, str]] = [
+    ("1.1", "brief",    "1.1 这一节整体在讲什么？各部分是什么关系"),
+    ("1.1", "detailed", "什么是命题？为什么需要「真值」这个概念？"),
+    ("1.1", "detailed", "条件语句 p → q 的真值表为什么是那样？前件为假时为什么算真？"),
+    ("1.1", "followup", "追问：逆命题和逆否命题有什么区别？为什么只有逆否命题和原命题等价？"),
+    ("1.2", "brief",    "1.2 这一节主要讲了什么"),
+    ("1.2", "detailed", "怎么把一个逻辑谜题（骑士与无赖）翻译成逻辑表达式并求解？"),
+    ("1.3", "detailed", "什么是逻辑等价？怎么判断两个复合命题是否等价？"),
+    ("1.3", "detailed", "德摩根律是什么？为什么它对否定这么有用？"),
+    ("1.3", "detailed", "什么是可满足性？为什么它重要？"),
+    ("1.4", "brief",    "1.4 谓词与量词这一节主要讲了什么"),
+    ("1.4", "detailed", "全称量词和存在量词分别是什么？为什么需要论域？"),
+    ("1.4", "detailed", "怎么否定一个带量词的命题？"),
+    ("1.5", "detailed", "嵌套量词是什么？量词的顺序为什么重要？"),
+    ("1.6", "brief",    "1.6 推理规则这一节主要讲了什么"),
+    ("1.6", "detailed", "假言推理（modus ponens）是什么？为什么它是有效的？"),
+    ("1.6", "detailed", "什么是谬误「肯定结论」？它为什么是无效的？"),
+    ("1.7", "detailed", "怎么用反证法证明？它和逆否证明有什么区别？"),
+    ("1.7", "detailed", "直接证明、空证明、平凡证明分别在什么情况下用？"),
+    ("1.8", "detailed", "分情形证明怎么做？什么时候该想到用它？"),
+    ("1.8", "detailed", "什么是构造性存在性证明？它和非构造性证明差在哪？"),
+]
+
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--batch", required=True, help="批次名，如 r3")
+    ap.add_argument("--batch", required=True, help="批次名，如 r4")
     ap.add_argument("--export", action="store_true", help="只从已有 samples 导出盲评输入")
     ap.add_argument("--sleep", type=float, default=0.3)
+    ap.add_argument("--material", default="kb",
+                    help="素材 key：kb（AIAA 2711，即 r1–r3 用的）/ rosen-ch1（主数据集）")
+    ap.add_argument("--limit", type=int, default=0,
+                    help="只跑前 N 问（**小样本先走通全流程**，见 docs/00 M11）")
     args = ap.parse_args()
+
+    if args.material == "rosen-ch1":
+        questions = QUESTIONS_ROSEN_CH1
+    elif args.material == "kb":
+        questions = QUESTIONS
+    else:
+        print(f"未知素材 {args.material!r}：请加进 make_mqi_batch.py 的问题集")
+        return 2
+    if args.limit:
+        questions = questions[:args.limit]
 
     out_dir = ROOT / "data" / "mqi" / "batches" / args.batch
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -114,18 +153,19 @@ def main() -> int:
     cli = flask_app.test_client()
     rows = []
     t0 = time.time()
-    for i, (lec, teach, q) in enumerate(QUESTIONS, 1):
+    for i, (lec, teach, q) in enumerate(questions, 1):
         r = cli.post("/api/ask", json={
-            "question": q, "material": "kb", "lecture": lec,
+            "question": q, "material": args.material, "lecture": lec,
             "whole_lecture": True, "teaching": teach, "top_k": 4,
         })
         d = r.get_json() or {}
         if d.get("error") or not d.get("answers"):
-            print(f"[{i}/{len(QUESTIONS)}] FAIL {lec} {q[:30]} -> {d.get('error')}")
+            print(f"[{i}/{len(questions)}] FAIL {lec} {q[:30]} -> {d.get('error')}")
             continue
         rows.append({
-            "lecture": lec, "teaching": teach, "question": q,
+            "lecture": lec, "teaching": teach, "question": q, "material": args.material,
             "mode": d.get("mode"), "ctx_chars": d.get("ctx_chars"),
+            "graph_used": d.get("graph_used"),
             # 槽位→条件的映射**不在 /api/ask 的响应里**（盲测要求），
             # 生成完这一轮后调 /api/reveal 取回来。这一轮到此结束，不影响盲测。
             "conditions": {
@@ -146,7 +186,7 @@ def main() -> int:
         row = rows[-1]
         row["empty"] = [s for s, a in row["answers"].items() if not (a["text"] or "").strip()]
         a, b = d["answers"]["A"], d["answers"]["B"]
-        print(f"[{i}/{len(QUESTIONS)}] {lec} {teach:<8} {q[:26]:<28} "
+        print(f"[{i}/{len(questions)}] {lec} {teach:<8} {q[:26]:<28} "
               f"A={a['chars']:>5}字 B={b['chars']:>5}字 finish={a.get('finish_reason')}/"
               f"{b.get('finish_reason')}")
         time.sleep(args.sleep)

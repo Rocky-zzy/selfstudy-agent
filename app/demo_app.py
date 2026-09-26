@@ -281,7 +281,10 @@ def api_ask():
             inj, ids = build_injection(g, [c.chunk_id for c in selected], question)
             if inj:
                 context = context + "\n\n" + wrap(inj)
-                graph_used, graph_note = ids, f"已注入 {len(ids)} 个知识结构节点"
+                # 可能"没挑出该展开的节点，只给了本次页上的知识点目录"（ids 为空但确有注入）
+                graph_used = ids
+                graph_note = (f"已注入 {len(ids)} 个知识结构节点" if ids
+                              else "本次没挑出该展开的知识点，只注入了本次页上的知识点目录")
             else:
                 graph_note = f"有图（{sc}）但本次没命中可注入的节点"
             break

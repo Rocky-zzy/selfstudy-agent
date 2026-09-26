@@ -98,8 +98,8 @@ def main() -> int:
         label = TEACHING_LABEL[t]
         check(f"怎么讲：{label}" in b and f"怎么讲：{label}" in o,
               f"讲法「{label}」两条件都在（{t}）")
-    check("600–800 字" in system_prompt_for("optimized", teaching="brief"),
-          "概览档仍保留 600–800 字上限")
+    check("2000 字以内" in system_prompt_for("optimized", teaching="brief"),
+          "概览档保留 2000 字上限（2026-09-26 用户从 600–800 改的）")
     d_opt = system_prompt_for("optimized", teaching="detailed")
     for kw in ("范围内一个都不许漏", "只讲课件里有的", "代码逐行注释", "不设字数上限"):
         check(kw in d_opt, f"详细档含约束：「{kw}」")
@@ -118,7 +118,7 @@ def main() -> int:
           "追问档仍保留设问（追问场景没有骨架可依）")
     # 骨架的"逐段讲全"与专属约束的"不重复"必须能共存，否则两条会打架
     check("不冲突" in d_opt, "optimized 明确说明「骨架走一遍」与「不重复」不冲突")
-    check("600–800 字" not in d_opt, "详细档**不再有**字数上限（这是用户定义的核心）")
+    check("2000 字以内" not in d_opt, "详细档**不再有**字数上限（这是用户定义的核心）")
     # 约束编号必须**连续唯一**。曾经出过两个问题：拼起来有两个"13"（撞号）、
     # brief 档 11→22（断号）。现在各块只写 `- ` 占位符，由 number_constraints 统一编号，
     # 这条断言就是防止有人又把编号手写回去。
@@ -379,13 +379,13 @@ def main() -> int:
         check(aa.get("error") is None, f"槽位 {slot}: 无错误（{aa.get('error')}）")
         check(aa.get("finish_reason") != "length" and not aa.get("truncated"),
               f"槽位 {slot}: 未被截断（finish_reason={aa.get('finish_reason')}）")
-        # 用户 2026-09-17：一次读两段 1.5k–2.2k 字太重。范围约束是否收住了长度？
-        # 实测（见 docs/05 §六）：**软约束，收不住**。多轮实测 1049 / 1055 / 1176 / 1888 字符，
-        # 目标写的是 600–800，实际常超。所以这里只断言"没有回到整章串讲那个量级"，
-        # **不**断言 600–800（那是愿望，不是当前行为；按愿望写断言只会得到假红灯）。
-        check(len(txt) < 2400, f"槽位 {slot}: 输出 {len(txt)} 字符（未回到整章串讲量级）")
-        if len(txt) > 900:
-            print(f"     ⚠️ 槽位 {slot} 超出 600–800 字目标（实际 {len(txt)}）——软约束，已知会超")
+        # 长度是**软约束**（见 docs/05 §六）：多轮实测都超出目标值。
+        # 用户 2026-09-26 把概览档上限从 600–800 改成 2000（详细档本来就没有上限）。
+        # 这里只断言"没有回到整章串讲那个量级"，**不**断言正好落在上限内
+        # （那是愿望，不是当前行为；按愿望写断言只会得到假红灯）。
+        check(len(txt) < 4000, f"槽位 {slot}: 输出 {len(txt)} 字符（未回到整章串讲量级）")
+        if len(txt) > 2000:
+            print(f"     ⚠️ 槽位 {slot} 超出 2000 字目标（实际 {len(txt)}）——软约束，已知会超")
         print(f"     {slot}: {len(txt)} 字, {aa.get('completion_tokens')} tok, "
               f"{aa.get('attempts')} 次尝试")
         print("     ---- 开头 200 字 ----")

@@ -65,6 +65,8 @@ def main() -> int:
         print("失败：" + d["error"])
         return 1
     reveal = post("/api/reveal", {"trace_id": d["trace_id"]})
+    cond_of = {s: (lab or {}).get("condition")
+               for s, lab in (reveal.get("labels") or {}).items()}
 
     OUT.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
@@ -80,7 +82,7 @@ def main() -> int:
     ]
     for slot in ("A", "B"):
         a = (d.get("answers") or {}).get(slot) or {}
-        cond = (reveal.get("slots") or {}).get(slot) or "?"
+        cond = cond_of.get(slot) or "?"
         body = strip_math(a.get("text") or "", a.get("math") or [])
         lines += [f"{'=' * 78}", f"## 槽位 {slot}（真实条件：{cond}）  {len(body)} 字符",
                   f"{'=' * 78}", "", body, ""]
