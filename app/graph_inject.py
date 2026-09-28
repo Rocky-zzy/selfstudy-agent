@@ -29,6 +29,21 @@ r"""把 L0 知识结构挂进讲解：按本次上下文**只抽相关子图**�
    再按"页面命中数"补足到 `MAX_NODES`。
 
 **命中不了目标就不注入**（宁可不注入，也不注入一堆无关节点）。
+
+## 主干指定（2026-09-28，依据 `docs/16_讲解主干_必要性与设计.md`）
+
+r4 实测（`docs/12` §5）显示优化侧 High 只有 50%，9 个 Mid/Low 的判官理由**全部**是
+"解释存在但不成主干"，没有一个"无解释"。缺口不在 why 的数量，在 why 的**地位**——
+注入块把目标节点与辅助节点渲染成完全平等的块，模型拿到的信息里没有任何一处说
+"这次讲解应该围着谁转"。所以有了目标节点时，注入块头行现在**明示主干**，
+并要求「为什么」沿主干展开、成为全篇的主要特征（MQI 编码 3 High 的原文判据：
+"a focus of instruction / a major feature"，本地逐字见 `docs/refs/MQI判据_原文摘录.md`）。
+
+预先指定"这次教学覆盖什么、围着什么转"是 ITS 的既成架构（AutoTutor 的
+curriculum script：expectations 预写在脚本里，"posts the goal of covering the
+expectation"；本地原文 `docs/refs/autotutor_expectations_flairs05.txt`）。
+**无目标节点时不加主干行**（概览类问题没有单个知识点可指定）——
+这使概览类问题成为验证轮（r5）的内嵌对照组。
 """
 
 from __future__ import annotations
@@ -223,8 +238,13 @@ def _score_longest_first(question: str, node: dict,
     return (specific, title_hit, longest, -earliest, len(hits))
 
 
-def select_nodes(g: dict, present_chunk_ids: list[str], question: str = "") -> list[dict]:
+def select_nodes(g: dict, present_chunk_ids: list[str], question: str = ""
+                 ) -> tuple[list[dict], dict | None]:
     """只挑"该展开讲"的节点：目标 → 其前置/对比 → 与问题词面对上的（≤ MAX_NODES）。
+
+    返回 (picked, target)。**target 要单独返回**：主干指定（2026-09-28，`docs/16`）
+    需要知道哪个是目标节点——不能靠"picked[0]"猜（没有目标时 picked[0] 是
+    问题点名的其他节点，不是目标）。
 
     ⚠️ **不要拿"页命中的多少"去补足**。原来这么做，实测出过一次真事故：
     问"1.1 这一节整体在讲什么？"（没有任何节点标题能对上），补足规则把
@@ -243,7 +263,7 @@ def select_nodes(g: dict, present_chunk_ids: list[str], question: str = "") -> l
     distinctive = _distinctive_terms(g["nodes"])
 
     if section_outline(g, question):
-        return []
+        return [], None
 
     target = find_target(g, question, present, distinctive)
     picked: list[dict] = []
@@ -269,7 +289,7 @@ def select_nodes(g: dict, present_chunk_ids: list[str], question: str = "") -> l
                 break
             if ref in by_id and by_id[ref] not in picked:
                 picked.append(by_id[ref])
-    return picked[:MAX_NODES]
+    return picked[:MAX_NODES], target
 
 
 def page_index(g: dict, present: set[str], picked: set[str],
@@ -330,10 +350,11 @@ def section_outline(g: dict, question: str) -> str:
             + "、".join(rows))
 
 
-def _block_for(node: dict, by_id: dict[str, dict]) -> list[str]:
+def _block_for(node: dict, by_id: dict[str, dict], is_target: bool = False) -> list[str]:
     L: list[str] = []
     kind = "程序（有步骤）" if node["type"] == "procedure" else "概念"
-    L.append(f"◆ {node['title']}（{kind}）｜出处 {'、'.join(node.get('sources', []))}")
+    mark = "｜**★ 主干**" if is_target else ""
+    L.append(f"◆ {node['title']}（{kind}）{mark}｜出处 {'、'.join(node.get('sources', []))}")
 
     pre = node.get("prerequisites") or []
     if pre:
@@ -368,7 +389,7 @@ def build_injection(g: dict, present_chunk_ids: list[str], question: str = "") -
     问"这一节整体在讲什么"时挑不出目标节点（没有哪个知识点叫"整体"），
     但本次页上的知识点目录仍然有用——**这时也不能返回空**。
     """
-    nodes = select_nodes(g, present_chunk_ids, question)
+    nodes, target = select_nodes(g, present_chunk_ids, question)
     by_id = {n["id"]: n for n in g["nodes"]}
     # 目录行：问题点明了节号 → 给整节清单；否则只给本次页上的知识点
     index_line = (section_outline(g, question)
@@ -376,17 +397,30 @@ def build_injection(g: dict, present_chunk_ids: list[str], question: str = "") -
                                 question))
     if not nodes and not index_line:
         return "", []
+    header: list[str] = []
+    header.append("以下是这门课**已有的知识结构**里，与本次课件内容相关的部分。")
+    # 主干指定（`docs/16`）：有目标节点时**明示主干**——判据是 MQI 编码 3 High 的
+    # 原文措辞（"a focus of instruction"）。措辞只说"组织方式"，不新增验收标准；
+    # 没有 target（概览类/未命中）就保持原样，**不许硬指一个主干**。
+    if target is not None:
+        header.append(f"**本次讲解的主干知识点：【{target['title']}】**。全篇以它的「讲解步骤」为主线组织：")
+        header.append("   - 一步一段，整篇就是沿这条线走下来的一次解释；")
+        header.append("   - 其余节点（先修 / 易混对比）是**为主干服务的**，不要写成与主干并列的几个板块；")
+        header.append("   - 「为什么」要**沿这条主线展开，成为全篇的主要特征**"
+                      "（读者读完应能复述这条主线），而不是在每个部分末尾附一小节解释。")
+    header.append("请用它来组织讲解——尤其是「讲解步骤」那几行：**照那些标签讲，不要自己另编步骤**。")
+    header.append("凡标了「课件没交代」的地方，你若补充理由，必须说明那是补充解释而非课件内容。")
     L: list[str] = []
-    L.append("以下是这门课**已有的知识结构**里，与本次课件内容相关的部分。")
-    L.append("请用它来组织讲解——尤其是「讲解步骤」那几行：**照那些标签讲，不要自己另编步骤**。")
-    L.append("凡标了「课件没交代」的地方，你若补充理由，必须说明那是补充解释而非课件内容。")
+    L.extend(header)
+    # 目录行放**头部之后、节点块之前**——不能写死位置（主干行加入后头部变长，
+    # 旧版 insert(3) 会把目录插进主干说明的中间）。
+    if index_line:
+        L.append(index_line)
     L.append("")
     for n in nodes:
-        L.extend(_block_for(n, by_id))
+        L.extend(_block_for(n, by_id, is_target=(target is not None and n["id"] == target["id"])))
         L.append("")
     # 本次这几页上还有别的知识点 → 只列名（防止模型以为"这门课只有这两三个概念"）
-    if index_line:
-        L.insert(3, index_line)
     return "\n".join(L).rstrip() + "\n", [n["id"] for n in nodes]
 
 

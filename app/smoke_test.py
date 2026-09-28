@@ -175,6 +175,15 @@ def main() -> int:
         check(_ids3 and _ids3[0] == "s17__proof_by_contradiction",
               f"问「反证法」时命中 s17__proof_by_contradiction（实际 {_ids3[:2]}）")
         check("把待证命题的否定设为假设" in _inj3, "反证法的子目标标签进入注入文本")
+        # 主干指定（2026-09-28，docs/16）：有目标必须**明示主干**，无目标必须**没有**主干行。
+        # E 组教训：功能靠假设挂着、换数据后静默失效——"指定了没有"必须能看出来。
+        check("本次讲解的主干知识点：" in _inj3,
+              "有目标节点时注入块明示主干（步骤 4，docs/16）")
+        check(_inj3.index("主干知识点") < _inj3.index("把待证命题的否定设为假设"),
+              "主干行出现在子目标标签之前（先给主干、再给步骤）")
+        _inj2b, _ids2b = build_injection(_g, ["l01-p03"], "你喜欢什么颜色？")
+        check("主干知识点" not in _inj2b,
+              "无目标节点时不得出现主干行（不许硬指主干）")
         check("<<<PAGE" not in _inj3, "注入块里没有混入课件原文页标记")
     except GraphError as e:
         check(False, f"知识结构加载失败：{e}")

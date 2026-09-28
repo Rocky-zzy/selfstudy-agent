@@ -283,7 +283,9 @@ def api_ask():
                 context = context + "\n\n" + wrap(inj)
                 # 可能"没挑出该展开的节点，只给了本次页上的知识点目录"（ids 为空但确有注入）
                 graph_used = ids
-                graph_note = (f"已注入 {len(ids)} 个知识结构节点" if ids
+                # ids[0] 是目标节点（=主干指定，docs/16）；没有目标时 ids 里没有"目标"可言，
+                # note 里就不标主干——**指定了没有必须能看出来**（docs/00 E 组）。
+                graph_note = (f"已注入 {len(ids)} 个知识结构节点（主干：{ids[0]}）" if ids
                               else "本次没挑出该展开的知识点，只注入了本次页上的知识点目录")
             else:
                 graph_note = f"有图（{sc}）但本次没命中可注入的节点"
